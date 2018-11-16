@@ -23,6 +23,7 @@ var pokemonList = [
     new Pokemon(1, 'Bulbasaur', ['Grass', 'Poison']),
     new Pokemon(2, 'Ivysaur', ['Grass', 'Poison']),
     new Pokemon(3, 'Venausaur', ['Grass', 'Poison'])
+    new Pokemon(4, 'Squirtle', ['Water'])
 ]
 
 for (let p of pokemonList) {
