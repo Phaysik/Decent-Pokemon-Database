@@ -7,6 +7,7 @@ class Pokemon {
     }
 
     loadToPage() {
+      //Gets the hexcode for the background of the image and stores it in an array
       var typesToPrint = [];
         for (let t of this.types){
           var i = 0;
