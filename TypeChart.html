@@ -8,15 +8,14 @@
     <meta name="author" content="Matthew Moore">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="JS/JQuery.js">
-    </script>
+    <script src="JS/JQuery.js"></script>
+    <script src="JS/TypeChart.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="CSS/myCSS.css" type="text/css" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 </head>
 
@@ -27,74 +26,35 @@
                 Type Chart
             </h1>
 
-            <div id="navbar">
-                <a href="Index.html" id="index">Index</a>
-                <a class="active" href="TypeChart.html" id="typeChart">Type Chart</a>
-                <a href="About.html" id="about">About</a>
-            </div>
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+              <div class="container">
+                <div class="collapse navbar-collapse">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="Index.html" id="index">Index</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="TypeChart.html" id="typeChart">TypeChart</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="About.html" id="about">About</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
         </div>
     </header>
-    <main>
-        <table id="typeNames">
-            <tr>
-                <th><img height="70" width="90" src="Images/TypeChart/normalSymbol.png" alt="Pokemon normal symbol" /></th>
-                <th><img height="70" width="90" src="Images/TypeChart/fireSymbol.png" alt="Pokemon fire symbol" /></th>
-                <th><img height="70" width="90" src="Images/TypeChart/waterSymbol.png" alt="Pokemon water symbol" /></th>
-                <th><img height="70" width="90" src="Images/TypeChart/electricSymbol.png" alt="Pokemon electric symbol" /></th>
-                <th><img height="70" width="90" src="Images/TypeChart/grassSymbol.png" alt="Pokemon grass symbol" /></th>
-                <th><img height="70" width="90" src="Images/TypeChart/iceSymbol.png" alt="Pokemon ice symbol" /></th>
-            </tr>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <main role="main">
+            <h1 class="Center">Type Chart</h1>
+          </main>
+        </div>
+      </div>
+    </div>
 
-            <tr>
-                <td style="color: #808080;" class="Center">Normal</td>
-                <td style="color: #FF0000;" class="Center">Fire</td>
-                <td style="color: #0000FF;" class="Center">Water</td>
-                <td style="color: #FFFF00;" class="Center">Electric</td>
-                <td style="color: #00FF00;" class="Center">Grass</td>
-                <td style="color: #00FFFF;" class="Center">Ice</td>
-            </tr>
-
-            <tr>
-                <th><img height="70" width="90" src="Images/TypeChart/fightingSymbol.png" alt="Pokemon fighting symbol" /></th>
-                <th><img height="70" width="90" src="Images/TypeChart/poisonSymbol.png" alt="Pokemon poison symbol" /></th>
-                <th><img height="70" width="90" src="Images/TypeChart/groundSymbol.png" alt="Pokemon ground symbol" /></th>
-                <th><img height="70" width="90" src="Images/TypeChart/flyingSymbol.png" alt="Pokemon flying symbol" /></th>
-                <th><img height="70" width="90" src="Images/TypeChart/psychicSymbol.png" alt="Pokemon psychic symbol" /></th>
-                <th><img height="70" width="90" src="Images/TypeChart/bugSymbol.png" alt="Pokemon bug symbol" /></th>
-            </tr>
-
-            <tr>
-                <td style="color: #800000;" class="Center">Fighting</td>
-                <td style="color: #8b008b;" class="Center">Poison</td>
-                <td style="color: #964B00;" class="Center">Ground</td>
-                <td style="color: #76D7EA;" class="Center">Flying</td>
-                <td style="color: #660099;" class="Center">Psychic</td>
-                <td style="color: #006400;" class="Center">Bug</td>
-            </tr>
-
-            <tr>
-                <th><img height="70" width="90" src="Images/TypeChart/rockSymbol.png" alt="Pokemon rock symbol" /></th>
-                <th><img height="70" width="90" src="Images/TypeChart/ghostSymbol.png" alt="Pokemon ghost symbol" /></th>
-                <th><img height="70" width="90" src="Images/TypeChart/dragonSymbol.png" alt="Pokemon dragon symbol" /></th>
-                <th><img height="70" width="90" src="Images/TypeChart/darkSymbol.png" alt="Pokemon dark symbol" /></th>
-                <th><img height="70" width="90" src="Images/TypeChart/steelSymbol.png" alt="Pokemon steel symbol" /></th>
-                <th><img height="70" width="90" src="Images/TypeChart/fairySymbol.png" alt="Pokemon fairy symbol" /></th>
-            </tr>
-
-            <tr>
-                <td style="color: #696969;" class="Center">Rock</td>
-                <td style="color: #663399;" class="Center">Ghost</td>
-                <td style="color: #fafad2;" class="Center">Dragon</td>
-                <td style="color: #0000C8;" class="Center">Dark</td>
-                <td style="color: #2f4f4f;" class="Center">Steel</td>
-                <td style="color: #FF00FF;" class="Center">Fairy</td>
-            </tr>
-        </table>
-
-    </main>
-
-    <script src="JS/Scroll.js">
-    </script>
 </body>
 
 </html>
