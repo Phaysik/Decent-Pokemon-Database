@@ -25,7 +25,7 @@ class Pokemon {
         $('main').append(`
             <table style="display: inline-block; border: 1px solid black; border-radius: 25px; padding: 1em;">
                 <tr>
-                    <th><img height="100" width="100" src="Images/Pokemon/${this.name}.png" alt="${this.alt}"/></th>
+                    <th><img height="100" width="100" style="margin: 0 auto; display: block;" src="Images/Pokemon/${this.name}.png" alt="${this.alt}"/></th>
                 </tr>
                 <tr>
                   <td style="text-align: center; margin: 0 auto; display: inline-block; border: 1px solid black; border-radius: 25px; padding: .2em; margin-left: .2em; background-color: ${typesToPrint[0]}">${this.types[0]}</td>
