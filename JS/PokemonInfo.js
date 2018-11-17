@@ -7,17 +7,53 @@ class Pokemon {
     }
 
     loadToPage() {
+      var typesToPrint = [];
+        for (let t of this.types){
+          var i = 0;
+          for (let l of typeList){
+            if(t == l){
+              typesToPrint.push(hexCodes[i]);
+              break;
+            }
+            i++;
+          }
+        }
+
+        if(this.types.length == 2){
+
+
         $('main').append(`
             <table style="display: inline-block; border: 1px solid black; border-radius: 25px; padding: 1em;">
                 <tr>
-                    <th><img height="100" width="100" src="Images/Pokemon/${this.name}.png" alt="${this.alt}"/><hr style="border: 1px solid black;"/></th>
+                    <th><img height="100" width="100" src="Images/Pokemon/${this.name}.png" alt="${this.alt}"/></th>
                 </tr>
                 <tr>
-                    <td style="text-align: center;">${this.name}</td>
+                  <td style="text-align: center; margin: 0 auto; display: inline-block; border: 1px solid black; border-radius: 25px; padding: .2em; margin-left: .2em; background-color: ${typesToPrint[0]}">${this.types[0]}</td>
+                  <td style="text-align: center; margin: 0 auto; display: inline-block; border: 1px solid black; border-radius: 25px; padding: .2em; margin-left: .2em; background-color: ${typesToPrint[1]}">${this.types[1]}</td>
+                </tr>
+                <tr>
+                    <th style="font-weight: normal; text-align: center;">${this.name}</td>
                 </tr>
             </table>
         `)
-    }
+      }
+      else{
+        $('main').append(`
+            <table style="display: inline-block; border: 1px solid black; border-radius: 25px; padding: 1em;">
+                <tr>
+                    <th><img height="100" width="100" src="Images/Pokemon/${this.name}.png" alt="${this.alt}"/></th>
+                </tr>
+                <tr>
+                  <td style="text-align: center; margin: 0 auto; display: block; border: 1px solid black; border-radius: 25px; padding: .2em; margin-left: .2em; background-color: ${typesToPrint[0]}">${this.types[0]}</td>
+                </tr>
+                <tr>
+                    <th style="font-weight: normal; text-align: center;">${this.name}</td>
+                </tr>
+            </table>
+        `)
+      }
+
+      }
 }
 
 var pokemonList = [
@@ -76,6 +112,48 @@ var pokemonList = [
     new Pokemon(53, 'Persian', ['Normal'], 'Persian Image')
 ]
 
+var typeList = [
+  'Normal',
+  'Fire',
+  'Water',
+  'Electric',
+  'Grass',
+  'Ice',
+  'Fighting',
+  'Poison',
+  'Ground',
+  'Flying',
+  'Psychic',
+  'Bug',
+  'Rock',
+  'Ghost',
+  'Dragon',
+  'Dark',
+  'Steel',
+  'Fairy'
+]
+
+var hexCodes = [
+  '#808080',
+  '#FF0000',
+  '#0000FF',
+  '#FFFF00',
+  '#00FF00',
+  '#00FFFF',
+  '#800000',
+  '#8b008b',
+  '#964B00',
+  '#76D7EA',
+  '#660099',
+  '#006400',
+  '#696969',
+  '#663399',
+  '#fafad2',
+  '#0000C8',
+  '#2f4f4f',
+  '#FF00FF'
+]
+
 for (let p of pokemonList) {
-    p.loadToPage()
+    p.loadToPage();
 }
