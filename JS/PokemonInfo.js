@@ -1,3 +1,59 @@
+class DisplayTypes{
+  displayTypesToScreen(type){
+    $('main').empty().append(`<h1 class="Center">All ${type.toLowerCase()} Pokémon in database</h1>`);
+    for(let i of pokemonList){
+      if(i.types.includes(type)){
+
+        var typesToPrint = [];
+          for (let t of i.types){
+            var k = 0;
+            for (let l of typeList){
+              if(t == l){
+                typesToPrint.push(hexCodes[k]);
+                break;
+              }
+              k++;
+            }
+          }
+
+        if(i.types.length == 2){
+        $('main').append(`
+          <table style="display: inline-block; border: 1px solid black; border-radius: 25px; padding: 1em;">
+              <tr>
+                  <th><img height="100" width="100" style="margin: 0 auto; display: block;" src="Images/Pokemon/${i.name}.png" alt="${i.alt}"/></th>
+              </tr>
+              <tr style="float: left;">
+                <td><button style="text-align: center; border: 1px solid black; border-radius: 25px; padding: .2em; margin-left: .3em; background-color: ${typesToPrint[0]}" onclick="displaytyperino.displayTypesToScreen('${i.types[0]}')">${i.types[0]}</button></td>
+                <td><button style="text-align: center; border: 1px solid black; border-radius: 25px; padding: .2em; margin-left: .3em; background-color: ${typesToPrint[1]}" onclick="displaytyperino.displayTypesToScreen('${i.types[1]}')">${i.types[1]}</button></td>
+              </tr>
+              <tr>
+                  <th style="font-weight: normal; text-align: center;">${i.name}</td>
+              </tr>
+          </table>
+        `)
+      }
+      else{
+        $('main').append(`
+            <table style="display: inline-block; border: 1px solid black; border-radius: 25px; padding: 1em;">
+                <tr>
+                    <th><img height="100" width="100" src="Images/Pokemon/${i.name}.png" alt="${i.alt}"/></th>
+                </tr>
+                <tr>
+                  <td><button style="text-align: center; width: 100%; border: 1px solid black; border-radius: 25px; padding: .2em; margin-left: .3em; background-color: ${typesToPrint[0]}" onclick="displaytyperino.displayTypesToScreen('${i.types[0]}')">${i.types}</button></td>
+                </tr>
+                <tr>
+                    <th style="font-weight: normal; text-align: center;">${i.name}</td>
+                </tr>
+            </table>
+        `)
+      }
+    }
+  }
+}
+}
+
+var displaytyperino = new DisplayTypes();
+
 class Pokemon {
     constructor(id, name, types, alt) {
         this.id = id
@@ -28,9 +84,9 @@ class Pokemon {
                 <tr>
                     <th><img height="100" width="100" style="margin: 0 auto; display: block;" src="Images/Pokemon/${this.name}.png" alt="${this.alt}"/></th>
                 </tr>
-                <tr>
-                  <td style="text-align: center; margin: 0 auto; display: inline-block; border: 1px solid black; border-radius: 25px; padding: .3em; margin-left: .2em; background-color: ${typesToPrint[0]}">${this.types[0]}</td>
-                  <td style="text-align: center; margin: 0 auto; display: inline-block; border: 1px solid black; border-radius: 25px; padding: .3em; margin-left: .2em; background-color: ${typesToPrint[1]}">${this.types[1]}</td>
+                <tr style="float: left;">
+                  <td><button style="text-align: center; border: 1px solid black; border-radius: 25px; padding: .2em; margin-left: .3em; background-color: ${typesToPrint[0]}" onclick="displaytyperino.displayTypesToScreen('${this.types[0]}')">${this.types[0]}</button></td>
+                  <td><button style="text-align: center; border: 1px solid black; border-radius: 25px; padding: .2em; margin-left: .3em; background-color: ${typesToPrint[1]}" onclick="displaytyperino.displayTypesToScreen('${this.types[1]}')">${this.types[1]}</button></td>
                 </tr>
                 <tr>
                     <th style="font-weight: normal; text-align: center;">${this.name}</td>
@@ -45,7 +101,7 @@ class Pokemon {
                     <th><img height="100" width="100" src="Images/Pokemon/${this.name}.png" alt="${this.alt}"/></th>
                 </tr>
                 <tr>
-                  <td style="text-align: center; margin: 0 auto; display: block; border: 1px solid black; border-radius: 25px; padding: .2em; margin-left: .3em; background-color: ${typesToPrint[0]}">${this.types[0]}</td>
+                  <td><button style="text-align: center; width: 100%; border: 1px solid black; border-radius: 25px; padding: .2em; margin-left: .3em; background-color: ${typesToPrint[0]}" onclick="displaytyperino.displayTypesToScreen('${this.types[0]}')">${this.types[0]}</button></td>
                 </tr>
                 <tr>
                     <th style="font-weight: normal; text-align: center;">${this.name}</td>
@@ -55,6 +111,8 @@ class Pokemon {
       }
 
       }
+
+
 }
 
 var pokemonList = [
