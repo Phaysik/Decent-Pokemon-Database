@@ -1,7 +1,7 @@
 class DisplayTypes{
   displayTypesToScreen(type){
     $('main').empty().append(`<h1 class="Center">All ${type.toLowerCase()} Pokémon in database</h1>`);
-    for(let i of pokemonList){
+    for(let i of kantoPokemonList){
       if(i.types.includes(type)){
 
         var typesToPrint = [];
@@ -70,7 +70,7 @@ class Pokemon {
                 <tr>
                     <th id="parent"><img height="100" width="100" style="margin: 0 auto; display: block;" src="Images/Pokemon/${this.name}.png" alt="${this.alt}"/></th>
                 </tr>
-                <tr id="${this.id}">
+                <tr id="${this.nid}">
 
                 </tr>
                 <tr>
@@ -91,7 +91,7 @@ class Pokemon {
                 $("#" + this.id).append(`<span><td><button style="border: 1px solid black; border-radius: 25px; text-align: center; padding: .2em; margin-left: .3em; background-color: ${typesToPrint[t]}" onclick="displaytyperino.displayTypesToScreen('${this.types[t]}')">${this.types[t]}</button></td></span>`)
               }
               else{
-                $("#" + this.id).append(`<td><button style="border: 1px solid black; width: 100%; border-radius: 25px; text-align: center; padding: .2em; margin-left: .3em; background-color: ${typesToPrint[t]}" onclick="displaytyperino.displayTypesToScreen('${this.types[t]}')">${this.types[t]}</button></td>`)
+                $("#" + this.nid).append(`<td><button style="border: 1px solid black; width: 100%; border-radius: 25px; text-align: center; padding: .2em; margin-left: .3em; background-color: ${typesToPrint[t]}" onclick="displaytyperino.displayTypesToScreen('${this.types[t]}')">${this.types[t]}</button></td>`)
               }
               break;
             }
@@ -102,7 +102,7 @@ class Pokemon {
 
 }
 
-var pokemonList = [
+var kantoPokemonList = [
   new Pokemon(1, 1, 'Bulbasaur', ['Grass', 'Poison'], 'Bulbasaur Image'),
   new Pokemon(2, 2, 'Ivysaur', ['Grass', 'Poison'], 'Ivysaur Image'),
   new Pokemon(3, 3, 'Venausaur', ['Grass', 'Poison'], 'Venausaur Image'),
@@ -203,7 +203,57 @@ var pokemonList = [
   new Pokemon(98, 98, 'Krabby', ['Water'], 'Krabby Image'),
   new Pokemon(99, 99, 'Kingler', ['Water'], 'Kingler Image'),
   new Pokemon(100, 100, 'Voltorb', ['Electric'], 'Voltorb Image'),
-  new Pokemon(101, 101, 'Electrode', ['Electric'], 'Electrode Image')
+  new Pokemon(101, 101, 'Electrode', ['Electric'], 'Electrode Image'),
+  new Pokemon(102, 102, 'Exeggcute', ['Grass', 'Psychic'], 'Exeggcute Image'),
+  new Pokemon(103, 103, 'Exeggutor', ['Grass', 'Psychic'], 'Exeggutor Image'),
+  new Pokemon(104, 104, 'Cubone', ['Ground'], 'Cubone Image'),
+  new Pokemon(105, 105, 'Marowak', ['Ground'], 'Marowak Image'),
+  new Pokemon(106, 106, 'Hitmonlee', ['Fighting'], 'Hitmonlee Image'),
+  new Pokemon(107, 107, 'Hitmonchan', ['Fighting'], 'Hitmonchan Image'),
+  new Pokemon(108, 108, 'Lickitung', ['Normal'], 'Lickitung Image'),
+  new Pokemon(109, 109, 'Koffing', ['Poison'], 'Koffing Image'),
+  new Pokemon(110, 110, 'Weezing', ['Poison'], 'Weezing Image'),
+  new Pokemon(111, 111, 'Rhyhorn', ['Ground', 'Rock'], 'Rhyhorn Image'),
+  new Pokemon(112, 112, 'Rhydon', ['Ground', 'Rock'], 'Rhydon Image'),
+  new Pokemon(113, 113, 'Chansey', ['Normal'], 'Chansey Image'),
+  new Pokemon(114, 114, 'Tangela', ['Grass'], 'Tangela Image'),
+  new Pokemon(115, 115, 'Kangaskhan', ['Normal'], 'Kangaskhan Image'),
+  new Pokemon(116, 116, 'Horsea', ['Water'], 'Horsea Image'),
+  new Pokemon(117, 117, 'Seadra', ['Water'], 'Seadra Image'),
+  new Pokemon(118, 118, 'Goldeen', ['Water'], 'Goldeen Image'),
+  new Pokemon(119, 119, 'Seaking', ['Water'], 'Seaking Image'),
+  new Pokemon(120, 120, 'Staryu', ['Water'], 'Staryu Image'),
+  new Pokemon(121, 121, 'Starmie', ['Water', 'Psychic'], 'Starmie Image'),
+  new Pokemon(122, 122, 'Mr. Mime', ['Psychic'], 'Mr. Mime Image'),
+  new Pokemon(123, 123, 'Scyther', ['Bug', 'Flying'], 'Scyther Image'),
+  new Pokemon(124, 124, 'Jynx', ['Ice', 'Psychic'], 'Jynx Image'),
+  new Pokemon(125, 125, 'Electabuzz', ['Electric'], 'Electabuzz Image'),
+  new Pokemon(126, 126, 'Magmar', ['Fire'], 'Magmar Image'),
+  new Pokemon(127, 127, 'Pinsir', ['Bug'], 'Pinsir Image'),
+  new Pokemon(128, 128, 'Tauros', ['Normal'], 'Tauros Image'),
+  new Pokemon(129, 129, 'Magikarp', ['Water'], 'Magikarp Image'),
+  new Pokemon(130, 130, 'Gyarados', ['Water', 'Flying'], 'Gyrados Image'),
+  new Pokemon(131, 131, 'Lapras', ['Water', 'Ice'], 'Lapras Image'),
+  new Pokemon(132, 132, 'Ditto', ['Normal'], 'Ditto Image'),
+  new Pokemon(133, 133, 'Eevee', ['Normal'], 'Eevee Image'),
+  new Pokemon(134, 134, 'Vaporeon', ['Water'], 'Vaporeon Image'),
+  new Pokemon(135, 135, 'Jolteon', ['Electric'], 'Jolteon Image'),
+  new Pokemon(136, 136, 'Flareon', ['Fire'], 'Flareon Image'),
+  new Pokemon(137, 137, 'Porygon', ['Normal'], 'Porygon Image'),
+  new Pokemon(138, 138, 'Omanyte', ['Rock', 'Water'], 'Omanyte Image'),
+  new Pokemon(139, 139, 'Omastar', ['Rock', 'Water'], 'Omastar Image'),
+  new Pokemon(140, 140, 'Kabuto', ['Rock', 'Water'], 'Kabuto Image'),
+  new Pokemon(141, 141, 'Kabutops', ['Rock', 'Flying'], 'Kabutops Image'),
+  new Pokemon(142, 142, 'Aerodactyl', ['Rock', 'Flying'], 'Aerodactyl Image'),
+  new Pokemon(143, 143, 'Snorlax', ['Normal'], 'Snorlax Image'),
+  new Pokemon(144, 144, 'Articuno', ['Ice', 'Flying'], 'Articuno Image'),
+  new Pokemon(145, 145, 'Zapdos', ['Electric', 'Flying'], 'Zapdos Image'),
+  new Pokemon(146, 146, 'Moltres', ['Fire', 'Flying'], 'Moltres Image'),
+  new Pokemon(147, 147, 'Dratini', ['Dragon'], 'Dratini Image'),
+  new Pokemon(148, 148, 'Dragonair', ['Dragon'], 'Dragonair Image'),
+  new Pokemon(149, 149, 'Dragonite', ['Dragon', 'Flying'], 'Dragonite Image'),
+  new Pokemon(150, 150, 'Mewtwo', ['Psychic'], 'Mewtwo Image'),
+  new Pokemon(151, 151, 'Mew', ['Psychic'], 'Mew Image')
 ]
 
 var typeList = [
@@ -248,7 +298,7 @@ var hexCodes = [
   '#FF00FF'
 ]
 
-for (let p of pokemonList) {
+for (let p of kantoPokemonList) {
     p.loadToPage();
     p.ShowTypes();
 }
