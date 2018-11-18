@@ -2,14 +2,17 @@
 <html>
 
 <head>
-    <title>Pokemon Information</title>
+    <title>Johto Pokemon List</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Pokemon Information">
+    <meta name="description" content="Johto Pokemon">
     <meta name="author" content="Matthew Moore">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="JS/JQuery.js"></script>
-    <script src="JS/PokemonInfo.js" defer></script>
+    <script src="JS/KantoPokemon.js"></script>
+    <script src="JS/SinnohPokemon.js"></script>
+    <script src="JS/HoennPokemon.js"></script>
+    <script src="JS/JohtoPokemon.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
@@ -29,8 +32,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbar">
               <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" href="Index.html" id="index">Index</a>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown">
+                    Pokemon Regions
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="Kanto.html">Kanto</a>
+                    <a class="dropdown-item active" href="Johto.html">Johto</a>
+                    <a class="dropdown-item" href="Hoenn.html">Hoenn</a>
+                    <a class="dropdown-item" href="Sinnoh.html">Sinnoh</a>
+                  </div>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="TypeChart.html" id="typeChart">TypeChart</a>
@@ -45,7 +56,7 @@
     </header>
 
     <main class="container" role="main">
-      <h1 class="Center">Pokémon List</h1>
+      <h1 class="Center">Johto Pokémon List by Pokédex Number</h1>
     </main>
 </body>
 

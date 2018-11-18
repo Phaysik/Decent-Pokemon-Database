@@ -1,7 +1,72 @@
 class DisplayTypes{
   displayTypesToScreen(type){
-    $('main').empty().append(`<h1 class="Center">All ${type.toLowerCase()} Pokémon in database</h1>`);
-    for(let i of kantoPokemonList){
+    var typeList = [
+      'Normal',
+      'Fire',
+      'Water',
+      'Electric',
+      'Grass',
+      'Ice',
+      'Fighting',
+      'Poison',
+      'Ground',
+      'Flying',
+      'Psychic',
+      'Bug',
+      'Rock',
+      'Ghost',
+      'Dragon',
+      'Dark',
+      'Steel',
+      'Fairy'
+    ]
+
+    var hexCodes = [
+      '#808080',
+      '#FF0000',
+      '#0000FF',
+      '#FFFF00',
+      '#00FF00',
+      '#00FFFF',
+      '#800000',
+      '#8b008b',
+      '#964B00',
+      '#76D7EA',
+      '#660099',
+      '#006400',
+      '#696969',
+      '#663399',
+      '#fafad2',
+      '#0000C8',
+      '#2f4f4f',
+      '#FF00FF'
+    ]
+
+    var pokemonLists = [
+      kantoPokemonList,
+      johtoPokemonList,
+      hoennPokemonList,
+      sinnohPokemonList
+    ]
+
+    var pageName = [
+      'Kanto',
+      'Johto',
+      'Hoenn',
+      'Sinnoh'
+    ]
+
+    var listToUse;
+
+    for(var i = 0; i < pageName.length; i++){
+      if(window.location.href.indexOf(pageName[i]) > -1){
+        listToUse = pokemonLists[i];
+        $('main').empty().append(`<h1 class="Center">All ${pageName[i]} ${type.toLowerCase()} Pokémon in database</h1>`);
+
+        break;
+      }
+    }
+    for(let i of listToUse){
       if(i.types.includes(type)){
 
         var typesToPrint = [];
@@ -82,6 +147,48 @@ class Pokemon {
       }
 
     ShowTypes(){
+      var typeList = [
+        'Normal',
+        'Fire',
+        'Water',
+        'Electric',
+        'Grass',
+        'Ice',
+        'Fighting',
+        'Poison',
+        'Ground',
+        'Flying',
+        'Psychic',
+        'Bug',
+        'Rock',
+        'Ghost',
+        'Dragon',
+        'Dark',
+        'Steel',
+        'Fairy'
+      ]
+
+      var hexCodes = [
+        '#808080',
+        '#FF0000',
+        '#0000FF',
+        '#FFFF00',
+        '#00FF00',
+        '#00FFFF',
+        '#800000',
+        '#8b008b',
+        '#964B00',
+        '#76D7EA',
+        '#660099',
+        '#006400',
+        '#696969',
+        '#663399',
+        '#fafad2',
+        '#0000C8',
+        '#2f4f4f',
+        '#FF00FF'
+      ]
+
       var typesToPrint = [];
         for (let t = 0; t < this.types.length; t++){
           for (let l = 0; l < typeList.length; l++){
@@ -254,48 +361,6 @@ var kantoPokemonList = [
   new Pokemon(149, 149, 'Dragonite', ['Dragon', 'Flying'], 'Dragonite Image'),
   new Pokemon(150, 150, 'Mewtwo', ['Psychic'], 'Mewtwo Image'),
   new Pokemon(151, 151, 'Mew', ['Psychic'], 'Mew Image')
-]
-
-var typeList = [
-  'Normal',
-  'Fire',
-  'Water',
-  'Electric',
-  'Grass',
-  'Ice',
-  'Fighting',
-  'Poison',
-  'Ground',
-  'Flying',
-  'Psychic',
-  'Bug',
-  'Rock',
-  'Ghost',
-  'Dragon',
-  'Dark',
-  'Steel',
-  'Fairy'
-]
-
-var hexCodes = [
-  '#808080',
-  '#FF0000',
-  '#0000FF',
-  '#FFFF00',
-  '#00FF00',
-  '#00FFFF',
-  '#800000',
-  '#8b008b',
-  '#964B00',
-  '#76D7EA',
-  '#660099',
-  '#006400',
-  '#696969',
-  '#663399',
-  '#fafad2',
-  '#0000C8',
-  '#2f4f4f',
-  '#FF00FF'
 ]
 
 for (let p of kantoPokemonList) {
