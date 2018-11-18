@@ -61,7 +61,7 @@ class DisplayTypes{
     for(var i = 0; i < pageName.length; i++){
       if(window.location.href.indexOf(pageName[i]) > -1){
         listToUse = pokemonLists[i];
-        $('main').empty().append(`<h1 class="Center">All ${pageName[i]} ${type.toLowerCase()} Pokémon in database</h1>`);
+        $('main').empty().append(`<h1 id="Center">All ${pageName[i]} ${type.toLowerCase()} Pokémon in database</h1>`);
 
         break;
       }
