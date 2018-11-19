@@ -1,46 +1,25 @@
 class DisplayTypes{
   displayTypesToScreen(type){
-    var typeList = [
-      'Normal',
-      'Fire',
-      'Water',
-      'Electric',
-      'Grass',
-      'Ice',
-      'Fighting',
-      'Poison',
-      'Ground',
-      'Flying',
-      'Psychic',
-      'Bug',
-      'Rock',
-      'Ghost',
-      'Dragon',
-      'Dark',
-      'Steel',
-      'Fairy'
-    ]
-
-    var hexCodes = [
-      '#808080',
-      '#FF0000',
-      '#0000FF',
-      '#FFFF00',
-      '#00FF00',
-      '#00FFFF',
-      '#800000',
-      '#8b008b',
-      '#964B00',
-      '#76D7EA',
-      '#660099',
-      '#006400',
-      '#696969',
-      '#663399',
-      '#fafad2',
-      '#0000C8',
-      '#2f4f4f',
-      '#FF00FF'
-    ]
+    var typeColors = {
+      'Normal': '#808080',
+      'Fire': '#FF0000',
+      'Water': '#0000FF',
+      'Electric': '#FFFF00',
+      'Grass': '#00FF00',
+      'Ice': '#00FFFF',
+      'Fighting': '#800000',
+      'Poison': '#8b008b',
+      'Ground': '#964B00',
+      'Flying': '#76D7EA',
+      'Psychic': '#660099',
+      'Bug': '#006400',
+      'Rock': '#696969',
+      'Ghost': '#663399',
+      'Dragon': '#fafad2',
+      'Dark': '#0000C8',
+      'Steel': '#2f4f4f',
+      'Fairy': '#FF00FF'
+    }
 
     var pokemonLists = [
       kantoPokemonList,
@@ -61,57 +40,21 @@ class DisplayTypes{
     for(var i = 0; i < pageName.length; i++){
       if(window.location.href.indexOf(pageName[i]) > -1){
         listToUse = pokemonLists[i];
-        $('main').empty().append(`<h1 id="Center">All ${pageName[i]} ${type.toLowerCase()} Pokémon in database</h1>`);
-
+        $('#pokemon-container').empty();
+        $('#Center').empty().text(`All ${pageName[i]} ${type.toLowerCase()} Pokémon in database`);
         break;
       }
     }
-    for(let i of listToUse){
-      if(i.types.includes(type)){
-
-        var typesToPrint = [];
-          for (let t of i.types){
-            var k = 0;
-            for (let l of typeList){
-              if(t == l){
-                typesToPrint.push(hexCodes[k]);
-                break;
-              }
-              k++;
-            }
-          }
-
-        if(i.types.length == 2){
-        $('main').append(`
-          <table style="display: inline-block; border: 1px solid black; border-radius: 25px; padding: 1em;">
-              <tr>
-                  <th><img height="100" width="100" style="margin: 0 auto; display: block;" src="Images/Pokemon/${i.name}.png" alt="${i.alt}"/></th>
-              </tr>
-              <tr style="float: left;">
-                <td><button style="text-align: center; border: 1px solid black; border-radius: 25px; padding: .2em; margin-left: .3em; background-color: ${typesToPrint[0]}" onclick="displaytyperino.displayTypesToScreen('${i.types[0]}')">${i.types[0]}</button></td>
-                <td><button style="text-align: center; border: 1px solid black; border-radius: 25px; padding: .2em; margin-left: .3em; background-color: ${typesToPrint[1]}" onclick="displaytyperino.displayTypesToScreen('${i.types[1]}')">${i.types[1]}</button></td>
-              </tr>
-              <tr>
-                  <th style="font-weight: normal; text-align: center;">${i.name}</td>
-              </tr>
-          </table>
-        `)
-      }
-      else{
-        $('main').append(`
-            <table style="display: inline-block; border: 1px solid black; border-radius: 25px; padding: 1em;">
-                <tr>
-                    <th><img height="100" width="100" src="Images/Pokemon/${i.name}.png" alt="${i.alt}"/></th>
-                </tr>
-                <tr>
-                  <td><button style="text-align: center; width: 100%; border: 1px solid black; border-radius: 25px; padding: .2em; margin-left: .3em; background-color: ${typesToPrint[0]}" onclick="displaytyperino.displayTypesToScreen('${i.types[0]}')">${i.types}</button></td>
-                </tr>
-                <tr>
-                    <th style="font-weight: normal; text-align: center;">${i.name}</td>
-                </tr>
-            </table>
-        `)
-      }
+    for(var i = 0; i < listToUse.length; i++){
+      if(listToUse[i].types.includes(type)){
+            $('#pokemon-container').append(`
+              <div style="width:140px!important" class="d-flex mx-3 flex-column">
+                <img height="100" width="100" class="my-2 align-self-center" src="Images/Pokemon/${listToUse[i].name}.png" alt="${listToUse[i].alt}"/>
+                <div id="${listToUse[i].nid}" class="d-flex">
+                </div>
+                <h5 style="font-weight: normal; text-align: center;">${listToUse[i].name}</h5>
+              </div>
+              `)
     }
   }
 }
@@ -129,81 +72,42 @@ class Pokemon {
     }
 
     loadToPage() {
-
-        $('main').append(`
-            <table style="display: inline-block; border: 1px solid black; border-radius: 25px; padding: 1em;">
-                <tr>
-                    <th id="parent"><img height="100" width="100" style="margin: 0 auto; display: block;" src="Images/Pokemon/${this.name}.png" alt="${this.alt}"/></th>
-                </tr>
-                <tr id="${this.nid}">
-
-                </tr>
-                <tr>
-                    <th style="font-weight: normal; text-align: center;">${this.name}</td>
-                </tr>
-            </table>
-        `)
-
+          $('#pokemon-container').append(`
+            <div style="width:140px!important" class="d-flex mx-3 flex-column">
+              <img height="100" width="100" class="my-2 align-self-center" src="Images/Pokemon/${this.name}.png" alt="${this.alt}"/>
+              <div id="${this.nid}" class="d-flex"></div>
+              <h5 style="font-weight: normal; text-align: center;">${this.name}</h5>
+            </div>
+            `)
       }
 
     ShowTypes(){
-      var typeList = [
-        'Normal',
-        'Fire',
-        'Water',
-        'Electric',
-        'Grass',
-        'Ice',
-        'Fighting',
-        'Poison',
-        'Ground',
-        'Flying',
-        'Psychic',
-        'Bug',
-        'Rock',
-        'Ghost',
-        'Dragon',
-        'Dark',
-        'Steel',
-        'Fairy'
-      ]
+      var typeColors = {
+        'Normal': '#808080',
+        'Fire': '#FF0000',
+        'Water': '#0000FF',
+        'Electric': '#FFFF00',
+        'Grass': '#00FF00',
+        'Ice': '#00FFFF',
+        'Fighting': '#800000',
+        'Poison': '#8b008b',
+        'Ground': '#964B00',
+        'Flying': '#76D7EA',
+        'Psychic': '#660099',
+        'Bug': '#006400',
+        'Rock': '#696969',
+        'Ghost': '#663399',
+        'Dragon': '#fafad2',
+        'Dark': '#0000C8',
+        'Steel': '#2f4f4f',
+        'Fairy': '#FF00FF'
+      }
 
-      var hexCodes = [
-        '#808080',
-        '#FF0000',
-        '#0000FF',
-        '#FFFF00',
-        '#00FF00',
-        '#00FFFF',
-        '#800000',
-        '#8b008b',
-        '#964B00',
-        '#76D7EA',
-        '#660099',
-        '#006400',
-        '#696969',
-        '#663399',
-        '#fafad2',
-        '#0000C8',
-        '#2f4f4f',
-        '#FF00FF'
-      ]
-
-      var typesToPrint = [];
-        for (let t = 0; t < this.types.length; t++){
-          for (let l = 0; l < typeList.length; l++){
-            if(this.types[t] == typeList[l]){
-              typesToPrint.push(hexCodes[l]);
-              if(this.types.length == 2){
-                $("#" + this.id).append(`<span><td><button style="border: 1px solid black; border-radius: 25px; text-align: center; padding: .2em; margin-left: .3em; background-color: ${typesToPrint[t]}" onclick="displaytyperino.displayTypesToScreen('${this.types[t]}')">${this.types[t]}</button></td></span>`)
-              }
-              else{
-                $("#" + this.nid).append(`<td><button style="border: 1px solid black; width: 100%; border-radius: 25px; text-align: center; padding: .2em; margin-left: .3em; background-color: ${typesToPrint[t]}" onclick="displaytyperino.displayTypesToScreen('${this.types[t]}')">${this.types[t]}</button></td>`)
-              }
-              break;
-            }
-          }
-        }
+      for (let t of this.types) {
+        $(`#${this.nid}`).append(`
+          <button class="flex-grow-1 mx-1" style="border: 1px solid black; border-radius: 25px; text-align: center; background-color: ${typeColors[t]}" onclick="displaytyperino.displayTypesToScreen('${t}')">${t}</button>
+        `)
+      }
     }
 
 
