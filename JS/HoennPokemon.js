@@ -3,7 +3,9 @@ var hoennPokemonList = [
 ]
 
 
-for(var display of hoennPokemonList){
-  display.loadToPage();
-  display.ShowTypes();
+function loadHoenn(){
+  for(var display of hoennPokemonList){
+    display.loadToPage();
+    display.ShowTypes();
+  }
 }
