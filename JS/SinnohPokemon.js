@@ -3,6 +3,8 @@ var sinnohPokemonList = [
 ]
 
 function loadSinnoh(){
+  $('#Center').text("Sinnoh Pokémon List by Pokédex Number");
+  $('#pokemon-container').empty();
   for(var display of sinnohPokemonList){
     display.loadToPage();
     display.ShowTypes();

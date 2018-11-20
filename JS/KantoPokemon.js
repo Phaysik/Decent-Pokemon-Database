@@ -1,7 +1,7 @@
 var kantoPokemonList = [
   new Pokemon(1, 1, 'Bulbasaur', ['Grass', 'Poison'], 'Bulbasaur Image'),
   new Pokemon(2, 2, 'Ivysaur', ['Grass', 'Poison'], 'Ivysaur Image'),
-  new Pokemon(3, 3, 'Venausaur', ['Grass', 'Poison'], 'Venausaur Image'),
+  new Pokemon(3, 3, 'Venusaur', ['Grass', 'Poison'], 'Venusaur Image'),
   new Pokemon(4, 4, 'Charmander', ['Fire'], 'Charmander Image'),
   new Pokemon(5, 5, 'Charmeleon', ['Fire'], 'Charmeleon Image'),
   new Pokemon(6, 6, 'Charizard', ['Fire', 'Flying'], 'Charizard Image'),
@@ -153,6 +153,8 @@ var kantoPokemonList = [
 ]
 
 function KantoLoad() {
+  $('#Center').text("Kanto Pokémon List by Pokédex Number");
+  $('#pokemon-container').empty();
   for (let p of kantoPokemonList) {
     p.loadToPage();
     p.ShowTypes();

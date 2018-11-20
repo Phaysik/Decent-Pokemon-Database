@@ -41,23 +41,23 @@ class Pokemon {
 
     var textColors = {
       'Normal': '#FFFFFF',
-      'Fire': '#00ff00',
-      'Water': '#ffa500',
-      'Electric': '#800080',
-      'Grass': '#FF0000',
-      'Ice': '#808080',
-      'Fighting': '#BF5FFF',
-      'Poison': '#ffff00',
+      'Fire': '#FFFFFF',
+      'Water': '#FFFFFF',
+      'Electric': '#000',
+      'Grass': '#000',
+      'Ice': '#000',
+      'Fighting': '#FFF',
+      'Poison': '#FFF',
       'Ground': '#FFFFFF',
-      'Flying': '#808080',
-      'Psychic': '#ffff00',
-      'Bug': '#ffff00',
+      'Flying': '#000',
+      'Psychic': '#FFF',
+      'Bug': '#FFF',
       'Rock': '#FFFFFF',
-      'Ghost': '#ffff00',
-      'Dragon': '#FF0000',
-      'Dark': '#FF0000',
+      'Ghost': '#FFF',
+      'Dragon': '#000',
+      'Dark': '#FFF',
       'Steel': '#FFFFFF',
-      'Fairy': '#FF0000'
+      'Fairy': '#000'
     }
 
     for (let t of this.types) {
@@ -94,23 +94,23 @@ function displayTypesToScreen(type) {
 
   var textColors = {
     'Normal': '#FFFFFF',
-    'Fire': '#00ff00',
-    'Water': '#ffa500',
-    'Electric': '#800080',
-    'Grass': '#FF0000',
-    'Ice': '#808080',
-    'Fighting': '#BF5FFF',
-    'Poison': '#ffff00',
+    'Fire': '#FFFFFF',
+    'Water': '#FFFFFF',
+    'Electric': '#000',
+    'Grass': '#000',
+    'Ice': '#000',
+    'Fighting': '#FFF',
+    'Poison': '#FFF',
     'Ground': '#FFFFFF',
-    'Flying': '#808080',
-    'Psychic': '#ffff00',
-    'Bug': '#ffff00',
+    'Flying': '#000',
+    'Psychic': '#FFF',
+    'Bug': '#FFF',
     'Rock': '#FFFFFF',
-    'Ghost': '#ffff00',
-    'Dragon': '#FF0000',
-    'Dark': '#FF0000',
+    'Ghost': '#FFF',
+    'Dragon': '#000',
+    'Dark': '#FFF',
     'Steel': '#FFFFFF',
-    'Fairy': '#FF0000'
+    'Fairy': '#000'
   }
 
   var pokemonLists = [

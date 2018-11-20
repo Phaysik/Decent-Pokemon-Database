@@ -4,6 +4,8 @@ var hoennPokemonList = [
 
 
 function loadHoenn(){
+  $('#Center').text("Hoenn Pokémon List by Pokédex Number");
+  $('#pokemon-container').empty();
   for(var display of hoennPokemonList){
     display.loadToPage();
     display.ShowTypes();

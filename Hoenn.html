@@ -53,11 +53,11 @@
               </ul>
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown mr-auto">
-                  <a class="nav-link dropdown-toggle active mr-auto" href="#" id="navbardrop" data-toggle="dropdown">
+                  <a class="nav-link dropdown-toggle mr-auto" href="#" id="navbardrop" data-toggle="dropdown">
                     Sort by Pokémon Type
                   </a>
                   <div class="dropdown-menu">
-                    <a class="dropdown-item active" href="Hoenn.html">All Types</a>
+                    <a class="dropdown-item pointer" onclick="loadHoenn()">All Types</a>
                     <a class="dropdown-item pointer" onclick="displayTypesToScreen('Normal')">Normal</a>
                     <a class="dropdown-item pointer" onclick="displayTypesToScreen('Fire')">Fire</a>
                     <a class="dropdown-item pointer" onclick="displayTypesToScreen('Water')">Water</a>
@@ -85,7 +85,7 @@
     </header>
 
     <main class="container" role="main">
-      <h1 id="Center">Hoenn Pokémon List by Pokédex Number</h1>
+      <h1 id="Center"></h1>
       <div id="pokemon-container" class="container d-flex justify-content-around flex-wrap">
 
       </div>
