@@ -39,9 +39,30 @@ class Pokemon {
       'Fairy': '#FF00FF'
     }
 
+    var textColors = {
+      'Normal': '#FFFFFF',
+      'Fire': '#00ff00',
+      'Water': '#ffa500',
+      'Electric': '#800080',
+      'Grass': '#FF0000',
+      'Ice': '#808080',
+      'Fighting': '#BF5FFF',
+      'Poison': '#ffff00',
+      'Ground': '#FFFFFF',
+      'Flying': '#808080',
+      'Psychic': '#ffff00',
+      'Bug': '#ffff00',
+      'Rock': '#FFFFFF',
+      'Ghost': '#ffff00',
+      'Dragon': '#FF0000',
+      'Dark': '#FF0000',
+      'Steel': '#FFFFFF',
+      'Fairy': '#FF0000'
+    }
+
     for (let t of this.types) {
       $(`#${this.nid}`).append(`
-          <button class="flex-grow-1 mx-1" style="border: 1px solid black; border-radius: 25px; text-align: center; background-color: ${typeColors[t]}" onclick="displayTypesToScreen('${t}')">${t}</button>
+          <button class="flex-grow-1 mx-1" style="border: 1px solid black; color: ${textColors[t]}; font-weight: bold; border-radius: 25px; text-align: center; background-color: ${typeColors[t]}" onclick="displayTypesToScreen('${t}')">${t}</button>
         `)
     }
   }
@@ -69,6 +90,27 @@ function displayTypesToScreen(type) {
     'Dark': '#0000C8',
     'Steel': '#2f4f4f',
     'Fairy': '#FF00FF'
+  }
+
+  var textColors = {
+    'Normal': '#FFFFFF',
+    'Fire': '#00ff00',
+    'Water': '#ffa500',
+    'Electric': '#800080',
+    'Grass': '#FF0000',
+    'Ice': '#808080',
+    'Fighting': '#BF5FFF',
+    'Poison': '#ffff00',
+    'Ground': '#FFFFFF',
+    'Flying': '#808080',
+    'Psychic': '#ffff00',
+    'Bug': '#ffff00',
+    'Rock': '#FFFFFF',
+    'Ghost': '#ffff00',
+    'Dragon': '#FF0000',
+    'Dark': '#FF0000',
+    'Steel': '#FFFFFF',
+    'Fairy': '#FF0000'
   }
 
   var pokemonLists = [
@@ -101,7 +143,7 @@ function displayTypesToScreen(type) {
     if (listToUse[i].types.includes(type)) {
       holder = "";
       for (let t of listToUse[i].types) {
-        holder += `<button class="flex-grow-1 mx-1" style="border: 1px solid black; border-radius: 25px; text-align: center; background-color: ${typeColors[t]}" onclick="displayTypesToScreen('${t}')">${t}</button>`;
+        holder += `<button class="flex-grow-1 mx-1" style="border: 1px solid black; color: ${textColors[t]}; font-weight: bold; border-radius: 25px; text-align: center; background-color: ${typeColors[t]}" onclick="displayTypesToScreen('${t}')">${t}</button>`;
       }
       $('#pokemon-container').append(`
             <div style="width:140px!important" class="d-flex mx-3 flex-column">
