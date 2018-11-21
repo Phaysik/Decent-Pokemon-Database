@@ -201,7 +201,7 @@ var johtoPokemonList = [
   new Pokemon(200, 231, 'Phanpy', ['Ground'], 'Phanpy Image'),
   new Pokemon(201, 232, 'Donphan', ['Ground'], 'Donphan Image'),
   new Pokemon(202, 226, 'Mantine', ['Water', 'Flying'], 'Mantine Image'),
-  new Pokemon(203, 227, 'Skarmory', ['Steel', 'Poison'], 'Skarmory Image'),
+  new Pokemon(203, 227, 'Skarmory', ['Steel', 'Flying'], 'Skarmory Image'),
   new Pokemon(204, 84, 'Doduo', ['Normal', 'Flying'], 'Doduo Image'),
   new Pokemon(205, 85, 'Dodrio', ['Normal', 'Flying'], 'Dodrio Image'),
   new Pokemon(206, 77, 'Ponyta', ['Fire'], 'Ponyta Image'),
