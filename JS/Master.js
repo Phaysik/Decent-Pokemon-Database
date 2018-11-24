@@ -9,11 +9,13 @@ class Pokemon {
 
   loadToPage() {
     $('#pokemon-container').append(`
+      <li class="list-group-item" style="border: none;">
             <div style="width:140px!important" class="d-flex mx-3 flex-column">
               <img height="100" width="100" class="my-2 align-self-center" src="Images/Pokemon/${this.name}.png" alt="${this.alt}"/>
               <div id="${this.nid}" class="d-flex"></div>
               <h5 style="font-weight: normal; text-align: center;">${this.name}</h5>
             </div>
+            </li>
             `)
   }
 

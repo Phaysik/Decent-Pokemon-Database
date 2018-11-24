@@ -191,7 +191,7 @@ var johtoPokemonList = [
   new Pokemon(190, 116, 'Horsea', ['Water'], 'Horsea Image'),
   new Pokemon(191, 117, 'Seadra', ['Water'], 'Seadra Image'),
   new Pokemon(192, 230, 'Kingdra', ['Water', 'Dragon'], 'Kingdra Image'),
-  new Pokemon(193, 206, 'Gligar', ['Ground', 'Flying'], 'Gligar Image'),
+  new Pokemon(193, 207, 'Gligar', ['Ground', 'Flying'], 'Gligar Image'),
   new Pokemon(194, 225, 'Delibird', ['Ice', 'Flying'], 'Delibird Image'),
   new Pokemon(195, 220, 'Swinub', ['Ice', 'Ground'], 'Swinub Image'),
   new Pokemon(196, 221, 'Piloswine', ['Ice', 'Ground'], 'Piloswine Image'),
@@ -253,7 +253,7 @@ var johtoPokemonList = [
   new Pokemon(252, 249, 'Lugia', ['Psychic', 'Flying'], 'Lugia Image'),
   new Pokemon(253, 250, 'Ho-Oh', ['Fire', 'Flying'], 'Ho-Oh Image'),
   new Pokemon(254, 150, 'Mewtwo', ['Psychic'], 'Mewtwo Image'),
-  new Pokemon(255, 151, 'Mew', ['Psychic', 'Flying'], 'Mew Image'),
+  new Pokemon(255, 151, 'Mew', ['Psychic'], 'Mew Image'),
   new Pokemon(256, 251, 'Celebi', ['Psychic', 'Grass'], 'Celebi Image')
 ]
 
