@@ -53,6 +53,33 @@
               <li class="nav-item mr-auto">
                 <input class="form-control" id="myInput" type="text" placeholder="Search for Pokémon...">
               </li>
+
+              <li class="nav-item dropdown mr-auto">
+                <a class="nav-link dropdown-toggle mr-auto" href="#" id="navbardrop" data-toggle="dropdown">
+                  Sort by Pokémon Type
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item pointer" onclick="LoadAll()">All Types</a>
+                  <a class="dropdown-item pointer" onclick="displayTypesToScreen('Normal')">Normal</a>
+                  <a class="dropdown-item pointer" onclick="displayTypesToScreen('Fire')">Fire</a>
+                  <a class="dropdown-item pointer" onclick="displayTypesToScreen('Water')">Water</a>
+                  <a class="dropdown-item pointer" onclick="displayTypesToScreen('Electric')">Electric</a>
+                  <a class="dropdown-item pointer" onclick="displayTypesToScreen('Grass')">Grass</a>
+                  <a class="dropdown-item pointer" onclick="displayTypesToScreen('Ice')">Ice</a>
+                  <a class="dropdown-item pointer" onclick="displayTypesToScreen('Fighting')">Fighting</a>
+                  <a class="dropdown-item pointer" onclick="displayTypesToScreen('Poison')">Poison</a>
+                  <a class="dropdown-item pointer" onclick="displayTypesToScreen('Ground')">Ground</a>
+                  <a class="dropdown-item pointer" onclick="displayTypesToScreen('Flying')">Flying</a>
+                  <a class="dropdown-item pointer" onclick="displayTypesToScreen('Psychic')">Psychic</a>
+                  <a class="dropdown-item pointer" onclick="displayTypesToScreen('Bug')">Bug</a>
+                  <a class="dropdown-item pointer" onclick="displayTypesToScreen('Rock')">Rock</a>
+                  <a class="dropdown-item pointer" onclick="displayTypesToScreen('Ghost')">Ghost</a>
+                  <a class="dropdown-item pointer" onclick="displayTypesToScreen('Dragon')">Dragon</a>
+                  <a class="dropdown-item pointer" onclick="displayTypesToScreen('Dark')">Dark</a>
+                  <a class="dropdown-item pointer" onclick="displayTypesToScreen('Steel')">Steel</a>
+                  <a class="dropdown-item pointer" onclick="displayTypesToScreen('Fairy')">Fairy</a>  <!-- May get rid of Fairy seeing as how there are no Fairy type Hoenn pokemon -->
+                </div>
+              </li>
             </ul>
           </div>
         </div>

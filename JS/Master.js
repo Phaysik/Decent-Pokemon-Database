@@ -148,12 +148,13 @@ function displayTypesToScreen(type) {
         holder += `<button class="flex-grow-1 mx-1" style="border: 1px solid black; color: ${textColors[t]}; font-weight: bold; border-radius: 25px; text-align: center; background-color: ${typeColors[t]}" onclick="displayTypesToScreen('${t}')">${t}</button>`;
       }
       $('#pokemon-container').append(`
-            <div style="width:140px!important" class="d-flex mx-3 flex-column">
-              <img height="100" width="100" class="my-2 align-self-center" src="Images/Pokemon/${listToUse[i].name}.png" alt="${listToUse[i].alt}"/>
-              <div id="${listToUse[i].nid}" class="d-flex">${holder}
+        <li class="list-group-item" style="border: none;">
+              <div style="width:140px!important" class="d-flex mx-3 flex-column">
+                <img height="100" width="100" class="my-2 align-self-center" src="Images/Pokemon/${listToUse[i].name}.png" alt="${listToUse[i].alt}"/>
+                <div id="${listToUse[i].nid}" class="d-flex">${holder}</div>
+                <h5 style="font-weight: normal; text-align: center;">${listToUse[i].name}</h5>
               </div>
-              <h5 style="font-weight: normal; text-align: center;">${listToUse[i].name}</h5>
-            </div>
+              </li>
             `)
 
     }

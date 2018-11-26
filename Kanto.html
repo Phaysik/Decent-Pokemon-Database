@@ -53,6 +53,10 @@
             </li>
           </ul>
           <ul class="navbar-nav ml-auto">
+            <li class="nav-item mr-auto">
+              <input class="form-control" id="myInput" type="text" placeholder="Search for Pokémon...">
+            </li>
+            
             <li class="nav-item dropdown mr-auto">
               <a class="nav-link dropdown-toggle mr-auto" href="#" id="navbardrop" data-toggle="dropdown">
                 Sort by Pokémon Type
@@ -91,6 +95,17 @@
 
     </div>
   </main>
+
+  <script>
+  $(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#pokemon-container li").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+  </script>
 </body>
 
 </html>
