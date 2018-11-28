@@ -126,7 +126,7 @@ var johtoPokemonList = [
   new Pokemon(125, 209, 'Snubbull', ['Fairy'], 'Snubbull Image'),
   new Pokemon(126, 210, 'Granbull', ['Fairy'], 'Granbull Image'),
   new Pokemon(127, 37, 'Vulpix', ['Fire'], 'Vulpix Image'),
-  new Pokemon(128, 38, 'Ninetails', ['Fire'], 'Ninetails Image'),
+  new Pokemon(128, 38, 'Ninetales', ['Fire'], 'Ninetales Image'),
   new Pokemon(129, 58, 'Growlithe', ['Fire'], 'Growlithe Image'),
   new Pokemon(130, 59, 'Arcanine', ['Fire'], 'Arcanine Image'),
   new Pokemon(131, 234, 'Stantler', ['Normal'], 'Stantler Image'),

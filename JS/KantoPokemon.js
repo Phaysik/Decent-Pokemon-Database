@@ -36,7 +36,7 @@ var kantoPokemonList = [
   new Pokemon(35, 35, 'Clefairy', ['Fairy'], 'Clefairy Image'),
   new Pokemon(36, 36, 'Clefable', ['Fairy'], 'Clefable Image'),
   new Pokemon(37, 37, 'Vulpix', ['Fire'], 'Vulpix Image'),
-  new Pokemon(38, 38, 'Ninetails', ['Fire'], 'Ninetails Image'),
+  new Pokemon(38, 38, 'Ninetales', ['Fire'], 'Ninetales Image'),
   new Pokemon(39, 39, 'Jigglypuff', ['Normal', 'Fairy'], 'Jigglypuff Image'),
   new Pokemon(40, 40, 'Wigglytuff', ['Normal', 'Fairy'], 'Wigglytuff Image'),
   new Pokemon(41, 41, 'Zubat', ['Poison', 'Flying'], 'Zubat Image'),
