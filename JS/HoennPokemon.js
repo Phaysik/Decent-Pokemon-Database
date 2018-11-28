@@ -209,7 +209,7 @@ var hoennPokemonList = [
   new Pokemon(208, 383, 'Groudon', ['Ground'], 'Groudon Image'),
   new Pokemon(209, 384, 'Rayquaza', ['Dragon', 'Flying'], 'Rayquaza Image'),
   new Pokemon(210, 385, 'Jirachi', ['Steel', 'Psychic'], 'Jirachi Image'),
-  new Pokemon(211, 386, 'Deoxys', ['Psychic'], 'Deoxys Image'),
+  new Pokemon(211, 386, 'Deoxys', ['Psychic'], 'Deoxys Image')
 ]
 
 
