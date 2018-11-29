@@ -1,5 +1,5 @@
 class Pokemon {
-  constructor(id, nid, name) {
+  constructor(id, nid, name, types) {
     this.id = id
     this.nid = nid
     this.name = name
