@@ -208,7 +208,8 @@ var sinnohPokemonList = [
   new Pokemon(207, 362, 'Glalie', ['Ice'], 'Glalie Image'),
   new Pokemon(208, 478, 'Froslass', ['Ice', 'Ghost'], 'Froslass Image'),
   new Pokemon(209, 359, 'Absol', ['Dark'], 'Absol Image'),
-  new Pokemon(210, 487, 'Giratina', ['Ghost', 'Dragon'], 'Giratina Image')
+  new Pokemon(210, 487, 'Giratina', ['Ghost', 'Dragon'], 'Giratina Image'),
+  new Pokemon(211, 490, 'Hannah', ['Ghost'], 'Hannah Image')
 ]
 
 function loadSinnoh(){
