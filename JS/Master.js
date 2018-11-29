@@ -1,17 +1,16 @@
 class Pokemon {
-  constructor(id, nid, name, types, alt) {
+  constructor(id, nid, name) {
     this.id = id
     this.nid = nid
     this.name = name
     this.types = types
-    this.alt = alt;
   }
 
   loadToPage() {
     $('#pokemon-container').append(`
       <li class="list-group-item" style="border: none;">
             <div style="width:140px!important" class="d-flex mx-3 flex-column">
-              <img height="100" width="100" class="my-2 align-self-center" src="Images/Pokemon/${this.name}.png" alt="${this.alt}"/>
+              <img height="100" width="100" class="my-2 align-self-center" src="Images/Pokemon/${this.name}.png" alt="${this.name} Image"/>
               <div id="${this.nid}" class="d-flex"></div>
               <h5 style="font-weight: normal; text-align: center;">${this.name}</h5>
             </div>
@@ -119,14 +118,16 @@ function displayTypesToScreen(type) {
     kantoPokemonList,
     johtoPokemonList,
     hoennPokemonList,
-    sinnohPokemonList
+    sinnohPokemonList,
+    unovaPokemonList
   ]
 
   var pageName = [
     'Kanto',
     'Johto',
     'Hoenn',
-    'Sinnoh'
+    'Sinnoh',
+    'Unova'
   ]
 
   var listToUse;
@@ -150,7 +151,7 @@ function displayTypesToScreen(type) {
       $('#pokemon-container').append(`
         <li class="list-group-item" style="border: none;">
               <div style="width:140px!important" class="d-flex mx-3 flex-column">
-                <img height="100" width="100" class="my-2 align-self-center" src="Images/Pokemon/${listToUse[i].name}.png" alt="${listToUse[i].alt}"/>
+                <img height="100" width="100" class="my-2 align-self-center" src="Images/Pokemon/${listToUse[i].name}.png" alt="${listToUse[i].name} Image"/>
                 <div id="${listToUse[i].nid}" class="d-flex">${holder}</div>
                 <h5 style="font-weight: normal; text-align: center;">${listToUse[i].name}</h5>
               </div>

@@ -12,15 +12,19 @@
   <script src="JS/Master.js" defer></script>
   <script src="JS/KantoPokemon.js" defer></script>
   <script src="JS/SinnohPokemon.js" defer></script>
+  <script src="JS/UnovaPokemon.js" defer></script>
   <script src="JS/HoennPokemon.js" defer></script>
   <script src="JS/JohtoPokemon.js" defer></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="CSS/myCSS.css" type="text/css" />
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
 
 
 </head>
@@ -29,7 +33,8 @@
   <header>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
       <div class="container">
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar"
+          aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbar">
@@ -43,6 +48,7 @@
                 <a class="dropdown-item" href="Johto.html">Johto</a>
                 <a class="dropdown-item" href="Hoenn.html">Hoenn</a>
                 <a class="dropdown-item" href="Sinnoh.html">Sinnoh</a>
+                <a class="dropdown-item" href="Unova.html">Unova</a>
               </div>
             </li>
             <li class="nav-item">
@@ -56,7 +62,7 @@
             <li class="nav-item mr-auto">
               <input class="form-control" id="myInput" type="text" placeholder="Search for Pokémon...">
             </li>
-            
+
             <li class="nav-item dropdown mr-auto">
               <a class="nav-link dropdown-toggle mr-auto" href="#" id="navbardrop" data-toggle="dropdown">
                 Sort by Pokémon Type
@@ -80,7 +86,8 @@
                 <a class="dropdown-item pointer" onclick="displayTypesToScreen('Dragon')">Dragon</a>
                 <a class="dropdown-item pointer" onclick="displayTypesToScreen('Dark')">Dark</a>
                 <a class="dropdown-item pointer" onclick="displayTypesToScreen('Steel')">Steel</a>
-                <a class="dropdown-item pointer" onclick="displayTypesToScreen('Fairy')">Fairy</a>  <!-- May get rid of Fairy and Dark seeing as how there are no Dark or Fairy type Kanto pokemon -->
+                <a class="dropdown-item pointer" onclick="displayTypesToScreen('Fairy')">Fairy</a>
+                <!-- May get rid of Fairy and Dark seeing as how there are no Dark or Fairy type Kanto pokemon -->
               </div>
             </li>
           </ul>
@@ -97,14 +104,14 @@
   </main>
 
   <script>
-  $(document).ready(function(){
-    $("#myInput").on("keyup", function() {
-      var value = $(this).val().toLowerCase();
-      $("#pokemon-container li").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    $(document).ready(function () {
+      $("#myInput").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#pokemon-container li").filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
       });
     });
-  });
   </script>
 </body>
 

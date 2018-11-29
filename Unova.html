@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Unova Pokemon List</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Johto Pokemon">
+    <meta name="author" content="Matthew Moore">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="JS/JQuery.js"></script>
+    <script src="JS/Master.js"></script>
+    <script src="JS/KantoPokemon.js"></script>
+    <script src="JS/SinnohPokemon.js"></script>
+    <script src="JS/HoennPokemon.js"></script>
+    <script src="JS/JohtoPokemon.js"></script>
+    <script src="JS/UnovaPokemon.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="CSS/myCSS.css" type="text/css" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+</head>
+
+<body onload="loadUnova()">
+    <header>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+          <div class="container">
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown">
+                    Pokemon Regions
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="Kanto.html">Kanto</a>
+                    <a class="dropdown-item" href="Johto.html">Johto</a>
+                    <a class="dropdown-item" href="Hoenn.html">Hoenn</a>
+                    <a class="dropdown-item" href="Sinnoh.html">Sinnoh</a>
+                    <a class="dropdown-item active" href="Unova.html">Unova</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="TypeChart.html" id="typeChart">TypeChart</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="ShinyLookup.html" id="about">Shiny Lookup</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item mr-auto">
+                  <input class="form-control" id="myInput" type="text" placeholder="Search for Pokémon...">
+                </li>
+
+                <li class="nav-item dropdown mr-auto">
+                  <a class="nav-link dropdown-toggle mr-auto" href="#" id="navbardrop" data-toggle="dropdown">
+                    Sort by Pokémon Type
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item pointer" onclick="loadJohto()">All Types</a>
+                    <a class="dropdown-item pointer" onclick="displayTypesToScreen('Normal')">Normal</a>
+                    <a class="dropdown-item pointer" onclick="displayTypesToScreen('Fire')">Fire</a>
+                    <a class="dropdown-item pointer" onclick="displayTypesToScreen('Water')">Water</a>
+                    <a class="dropdown-item pointer" onclick="displayTypesToScreen('Electric')">Electric</a>
+                    <a class="dropdown-item pointer" onclick="displayTypesToScreen('Grass')">Grass</a>
+                    <a class="dropdown-item pointer" onclick="displayTypesToScreen('Ice')">Ice</a>
+                    <a class="dropdown-item pointer" onclick="displayTypesToScreen('Fighting')">Fighting</a>
+                    <a class="dropdown-item pointer" onclick="displayTypesToScreen('Poison')">Poison</a>
+                    <a class="dropdown-item pointer" onclick="displayTypesToScreen('Ground')">Ground</a>
+                    <a class="dropdown-item pointer" onclick="displayTypesToScreen('Flying')">Flying</a>
+                    <a class="dropdown-item pointer" onclick="displayTypesToScreen('Psychic')">Psychic</a>
+                    <a class="dropdown-item pointer" onclick="displayTypesToScreen('Bug')">Bug</a>
+                    <a class="dropdown-item pointer" onclick="displayTypesToScreen('Rock')">Rock</a>
+                    <a class="dropdown-item pointer" onclick="displayTypesToScreen('Ghost')">Ghost</a>
+                    <a class="dropdown-item pointer" onclick="displayTypesToScreen('Dragon')">Dragon</a>
+                    <a class="dropdown-item pointer" onclick="displayTypesToScreen('Dark')">Dark</a>
+                    <a class="dropdown-item pointer" onclick="displayTypesToScreen('Steel')">Steel</a>
+                    <a class="dropdown-item pointer" onclick="displayTypesToScreen('Fairy')">Fairy</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </header>
+
+    <main class="container" role="main">
+      <h1 id="Center"></h1>
+      <div id="pokemon-container" class="container d-flex justify-content-around flex-wrap">
+
+      </div>
+    </main>
+
+    <script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#pokemon-container li").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script>
+</body>
+
+</html>
