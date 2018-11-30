@@ -1,17 +1,16 @@
 class Pokemon {
-  constructor(id, nid, name, types, alt) {
+  constructor(id, nid, name, types) {
     this.id = id
     this.nid = nid
     this.name = name
     this.types = types
-    this.alt = alt;
   }
 
   loadToPage() {
     $('#pokemon-container').append(`
       <li class="list-group-item" style="border: none;">
             <div style="width:140px!important" class="d-flex mx-3 flex-column">
-              <img height="100" width="100" class="my-2 align-self-center" src="Images/Pokemon/${this.name}.png" alt="${this.alt}"/>
+              <img height="100" width="100" class="my-2 align-self-center" src="Images/Pokemon/${this.name}.png" alt="${this.name} Image"/>
               <div id="${this.nid}" class="d-flex"></div>
               <h5 style="font-weight: normal; text-align: center;">${this.name}</h5>
             </div>
@@ -115,44 +114,18 @@ function displayTypesToScreen(type) {
     'Fairy': '#000'
   }
 
-  var pokemonLists = [
-    kantoPokemonList,
-    johtoPokemonList,
-    hoennPokemonList,
-    sinnohPokemonList
-  ]
-
-  var pageName = [
-    'Kanto',
-    'Johto',
-    'Hoenn',
-    'Sinnoh'
-  ]
-
-  var listToUse;
-
-  for (var i = 0; i < pageName.length; i++) {
-    if (window.location.href.indexOf(pageName[i]) > -1) {
-      listToUse = pokemonLists[i];
-      $('#pokemon-container').empty();
-      $('#Center').empty().text(`All ${pageName[i]} ${type.toLowerCase()} Pokémon in database`);
-      break;
-    }
-  }
-
-
-  for (var i = 0; i < listToUse.length; i++) {
-    if (listToUse[i].types.includes(type)) {
+  for (var i = 0; i < pokemonList.length; i++) {
+    if (pokemonList[i].types.includes(type)) {
       holder = "";
-      for (let t of listToUse[i].types) {
+      for (let t of pokemonList[i].types) {
         holder += `<button class="flex-grow-1 mx-1" style="border: 1px solid black; color: ${textColors[t]}; font-weight: bold; border-radius: 25px; text-align: center; background-color: ${typeColors[t]}" onclick="displayTypesToScreen('${t}')">${t}</button>`;
       }
       $('#pokemon-container').append(`
         <li class="list-group-item" style="border: none;">
               <div style="width:140px!important" class="d-flex mx-3 flex-column">
-                <img height="100" width="100" class="my-2 align-self-center" src="Images/Pokemon/${listToUse[i].name}.png" alt="${listToUse[i].alt}"/>
-                <div id="${listToUse[i].nid}" class="d-flex">${holder}</div>
-                <h5 style="font-weight: normal; text-align: center;">${listToUse[i].name}</h5>
+                <img height="100" width="100" class="my-2 align-self-center" src="Images/Pokemon/${pokemonList[i].name}.png" alt="${pokemonList[i].name} Image"/>
+                <div id="${pokemonList[i].nid}" class="d-flex">${holder}</div>
+                <h5 style="font-weight: normal; text-align: center;">${pokemonList[i].name}</h5>
               </div>
               </li>
             `)
