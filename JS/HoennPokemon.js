@@ -1,4 +1,4 @@
-var hoennPokemonList = [
+var pokemonList = [
   new Pokemon(1, 252, 'Treecko', ['Grass']),
   new Pokemon(2, 253, 'Grovyle', ['Grass']),
   new Pokemon(3, 254, 'Sceptile', ['Grass']),
@@ -213,10 +213,10 @@ var hoennPokemonList = [
 ]
 
 
-function loadHoenn(){
+function loadHoenn() {
   $('#Center').text("Hoenn Pokémon List by Pokédex Number");
   $('#pokemon-container').empty();
-  for(var display of hoennPokemonList){
+  for (var display of pokemonList) {
     display.loadToPage();
     display.ShowTypes();
   }

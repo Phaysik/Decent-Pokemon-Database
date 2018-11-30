@@ -1,4 +1,4 @@
-var kantoPokemonList = [
+var pokemonList = [
   new Pokemon(1, 1, 'Bulbasaur', ['Grass', 'Poison']),
   new Pokemon(2, 2, 'Ivysaur', ['Grass', 'Poison']),
   new Pokemon(3, 3, 'Venusaur', ['Grass', 'Poison']),
@@ -155,7 +155,7 @@ var kantoPokemonList = [
 function KantoLoad() {
   $('#Center').text("Kanto Pokémon List by Pokédex Number");
   $('#pokemon-container').empty();
-  for (let p of kantoPokemonList) {
+  for (let p of pokemonList) {
     p.loadToPage();
     p.ShowTypes();
   }

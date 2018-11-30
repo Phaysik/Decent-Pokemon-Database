@@ -1,4 +1,4 @@
-var johtoPokemonList = [
+var pokemonList = [
   new Pokemon(1, 152, 'Chikorita', ['Grass']),
   new Pokemon(2, 153, 'Bayleef', ['Grass']),
   new Pokemon(3, 154, 'Meganium', ['Grass']),
@@ -260,7 +260,7 @@ var johtoPokemonList = [
 function loadJohto() {
   $('#Center').text("Johto Pokémon List by Pokédex Number");
   $('#pokemon-container').empty();
-  for (var display of johtoPokemonList) {
+  for (var display of pokemonList) {
     display.loadToPage();
     display.ShowTypes();
   }
