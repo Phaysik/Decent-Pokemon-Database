@@ -211,13 +211,12 @@ var unovaPokemonList = [
     new Pokemon(209, 359, 'Absol', ['Dark']),
     new Pokemon(210, 487, 'Giratina', ['Ghost', 'Dragon'])
   ]
-  
+
   function loadUnova() {
     $('#Center').text("Unova Pokémon List by Pokédex Number");
     $('#pokemon-container').empty();
-    for (var display of sinnohPokemonList) {
+    for (var display of unovaPokemonList) {
       display.loadToPage();
       display.ShowTypes();
     }
   }
-  
