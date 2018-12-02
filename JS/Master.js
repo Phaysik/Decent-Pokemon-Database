@@ -137,4 +137,10 @@ function displayTypesToScreen(type) {
 
     }
   }
+  
+  if ($("body").height() > $(window).height()) {
+    if($(window).scrollTop() !== 0) {
+      $("html, body").animate({scrollTop : 0}, 'slow');
+    }
+  }
 }
