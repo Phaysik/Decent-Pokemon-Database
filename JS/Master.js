@@ -1,6 +1,5 @@
 class Pokemon {
-  constructor(id, nid, name, types) {
-    this.id = id
+  constructor(nid, name, types) {
     this.nid = nid
     this.name = name
     this.types = types
@@ -20,24 +19,24 @@ class Pokemon {
 
   ShowTypes() {
     var typeColors = {
-      'Normal': '#A8A878',
-      'Fire': '#F08030',
-      'Water': '#6890F0',
-      'Electric': '#F8D030',
-      'Grass': '#78C850',
-      'Ice': '#98D8D8',
-      'Fighting': '#C03028',
-      'Poison': '#A040A0',
-      'Ground': '#E0C068',
-      'Flying': '#A890F0',
-      'Psychic': '#F85888',
-      'Bug': '#A8B820',
-      'Rock': '#B8A038',
-      'Ghost': '#705898',
-      'Dragon': '#fafad2',
-      'Dark': '#705848',
-      'Steel': '#B8B8D0',
-      'Fairy': '#FF00FF'
+      'Normal': 'background-color: #A3ACAF;',
+      'Fire': 'background-color: #FD7D24;',
+      'Water': 'background-color: #4592C4;',
+      'Electric': 'background-color: #EED535;',
+      'Grass': 'background-color: #9BCC50;',
+      'Ice': 'background-color: #51C4E7;',
+      'Fighting': 'background-color: #C03028;',
+      'Poison': 'background-color: #B97FC9;',
+      'Ground': 'background: linear-gradient(to bottom, #F7DE3F 50%, #AB9842 50%);',
+      'Flying': 'background: linear-gradient(to bottom, #3DC7EF 50%, #BDB9B8 50%);',
+      'Psychic': 'background-color: #F366B9;',
+      'Bug': 'background-color: #729F3F;',
+      'Rock': 'background-color: #A38C21;',
+      'Ghost': 'background-color: #7B62A3;',
+      'Dragon': 'background: linear-gradient(to bottom, #53A4CF 50%, #F16E57 50%);',
+      'Dark': 'background-color: #707070;',
+      'Steel': 'background-color: #9EB7B8;',
+      'Fairy': 'background-color: #FDB9E9;'
     }
 
     var textColors = {
@@ -50,7 +49,7 @@ class Pokemon {
       'Fighting': '#FFF',
       'Poison': '#FFF',
       'Ground': '#FFFFFF',
-      'Flying': '#FFF',
+      'Flying': '#000',
       'Psychic': '#FFF',
       'Bug': '#FFF',
       'Rock': '#FFFFFF',
@@ -63,7 +62,7 @@ class Pokemon {
 
     for (let t of this.types) {
       $(`#${this.nid}`).append(`
-          <button class="flex-grow-1 mx-1" style="border: 1px solid black; color: ${textColors[t]}; font-weight: bold; border-radius: 25px; text-align: center; background-color: ${typeColors[t]}" onclick="displayTypesToScreen('${t}')">${t}</button>
+          <button class="flex-grow-1 mx-1" style="border: 1px solid black; color: ${textColors[t]}; font-weight: bold; border-radius: 25px; text-align: center; ${typeColors[t]}" onclick="displayTypesToScreen('${t}')">${t}</button>
         `)
     }
   }
@@ -73,24 +72,24 @@ class Pokemon {
 
 function displayTypesToScreen(type) {
   var typeColors = {
-    'Normal': '#A8A878',
-    'Fire': '#F08030',
-    'Water': '#6890F0',
-    'Electric': '#F8D030',
-    'Grass': '#78C850',
-    'Ice': '#98D8D8',
-    'Fighting': '#C03028',
-    'Poison': '#A040A0',
-    'Ground': '#E0C068',
-    'Flying': '#A890F0',
-    'Psychic': '#F85888',
-    'Bug': '#A8B820',
-    'Rock': '#B8A038',
-    'Ghost': '#705898',
-    'Dragon': '#fafad2',
-    'Dark': '#705848',
-    'Steel': '#B8B8D0',
-    'Fairy': '#FF00FF'
+    'Normal': 'background-color: #A3ACAF;',
+    'Fire': 'background-color: #FD7D24;',
+    'Water': 'background-color: #4592C4;',
+    'Electric': 'background-color: #EED535;',
+    'Grass': 'background-color: #9BCC50;',
+    'Ice': 'background-color: #51C4E7;',
+    'Fighting': 'background-color: #C03028;',
+    'Poison': 'background-color: #B97FC9;',
+    'Ground': 'background: linear-gradient(to bottom, #F7DE3F 50%, #AB9842 50%);',
+    'Flying': 'background: linear-gradient(to bottom, #3DC7EF 50%, #BDB9B8 50%);',
+    'Psychic': 'background-color: #F366B9;',
+    'Bug': 'background-color: #729F3F;',
+    'Rock': 'background-color: #A38C21;',
+    'Ghost': 'background-color: #7B62A3;',
+    'Dragon': 'background: linear-gradient(to bottom, #53A4CF 50%, #F16E57 50%);',
+    'Dark': 'background-color: #707070;',
+    'Steel': 'background-color: #9EB7B8;',
+    'Fairy': 'background-color: #FDB9E9;'
   }
 
   var textColors = {
@@ -103,7 +102,7 @@ function displayTypesToScreen(type) {
     'Fighting': '#FFF',
     'Poison': '#FFF',
     'Ground': '#FFFFFF',
-    'Flying': '#FFF',
+    'Flying': '#000',
     'Psychic': '#FFF',
     'Bug': '#FFF',
     'Rock': '#FFFFFF',
@@ -114,11 +113,17 @@ function displayTypesToScreen(type) {
     'Fairy': '#000'
   }
 
+  var title = $('#Center').text();
+  title = title.split(' ');
+
+  $('#Center').empty().text(`All ${title[1] + " " + type} Pokémon in Database`);
+  $('#pokemon-container').empty();
+
   for (var i = 0; i < pokemonList.length; i++) {
     if (pokemonList[i].types.includes(type)) {
       holder = "";
       for (let t of pokemonList[i].types) {
-        holder += `<button class="flex-grow-1 mx-1" style="border: 1px solid black; color: ${textColors[t]}; font-weight: bold; border-radius: 25px; text-align: center; background-color: ${typeColors[t]}" onclick="displayTypesToScreen('${t}')">${t}</button>`;
+        holder += `<button class="flex-grow-1 mx-1" style="border: 1px solid black; color: ${textColors[t]}; font-weight: bold; border-radius: 25px; text-align: center; ${typeColors[t]}" onclick="displayTypesToScreen('${t}')">${t}</button>`;
       }
       $('#pokemon-container').append(`
         <li class="list-group-item" style="border: none;">

@@ -1,4 +1,4 @@
-var nationalPokeDex = [
+var pokemonList = [
   new Pokemon(1, 'Bulbasaur', ['Grass', 'Poison']),
   new Pokemon(2, 'Ivysaur', ['Grass', 'Poison']),
   new Pokemon(3, 'Venusaur', ['Grass', 'Poison']),
@@ -36,7 +36,7 @@ var nationalPokeDex = [
   new Pokemon(35, 'Clefairy', ['Normal']),
   new Pokemon(36, 'Clefable', ['Normal']),
   new Pokemon(37, 'Vulpix', ['Fire']),
-  new Pokemon(38, 'Ninetails', ['Fire']),
+  new Pokemon(38, 'Ninetales', ['Fire']),
   new Pokemon(39, 'Jigglypuff', ['Normal']),
   new Pokemon(40, 'Wigglytuff', ['Normal']),
   new Pokemon(41, 'Zubat', ['Poison', 'Flying']),
@@ -260,7 +260,7 @@ var nationalPokeDex = [
 function LoadAll() {
   $('#Center').text("National Pokémon List by Pokédex Number");
   $('#pokemon-container').empty();
-  for (let p of nationalPokeDex) {
+  for (let p of pokemonList) {
     p.loadToPage();
     p.ShowTypes();
   }
