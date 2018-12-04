@@ -9,7 +9,7 @@ var pokemonList = [
   new Pokemon(159, 'Croconaw', ['Water']),
   new Pokemon(160, 'Feraligatr', ['Water']),
   new Pokemon(16, 'Pidgey', ['Normal', 'Flying']),
-  new Pokemon(17, 'Pigeotto', ['Normal', 'Flying']),
+  new Pokemon(17, 'Pidgeotto', ['Normal', 'Flying']),
   new Pokemon(18, 'Pidgeot', ['Normal', 'Flying']),
   new Pokemon(21, 'Spearow', ['Normal', 'Flying']),
   new Pokemon(22, 'Fearow', ['Normal', 'Flying']),

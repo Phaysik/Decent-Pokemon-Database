@@ -15,7 +15,7 @@ var pokemonList = [
   new Pokemon(14, 'Kakuna', ['Bug', 'Poison']),
   new Pokemon(15, 'Beedrill', ['Bug', 'Poison']),
   new Pokemon(16, 'Pidgey', ['Normal', 'Flying']),
-  new Pokemon(17, 'Pigeotto', ['Normal', 'Flying']),
+  new Pokemon(17, 'Pidgeotto', ['Normal', 'Flying']),
   new Pokemon(18, 'Pidgeot', ['Normal', 'Flying']),
   new Pokemon(19, 'Rattata', ['Normal']),
   new Pokemon(20, 'Raticate', ['Normal']),
