@@ -455,7 +455,9 @@ var pokemonList = [
   new Pokemon(171, 'Lanturn', ['Water', 'Electric']),
   new Pokemon(594, 'Alomomola', ['Water']),
   new Pokemon(131, 'Lapras', ['Water', 'Ice']),
-  new Pokemon(144, 'Articuno', ['Ice', 'Flying'])
+  new Pokemon(144, 'Articuno', ['Ice', 'Flying']),
+  new Pokemon(145, 'Zapdos', ['Electric', 'Flying']),
+  new Pokemon(146, 'Moltres', ['Fire', 'Flying'])
 ]
 
 var regions = ["The Central Kalos Pokédex", "The Coastal Kalos Pokédex", "The Mountain Kalos Pokédex"]
@@ -464,11 +466,11 @@ var count = [153, 153, 151]
 
 function loadKalos() {
   $('#Center').text("The Kalos Pokémon List by Pokédex Number");
-  $('#pokemon-container').empty();
+  $('#pokemon-container').empty().append(`<p><span id="Central"></span></p><p><span id="Coastal"></span></p><p><span id="Mountain"></span></p>`);
   var j = 0;
   var regionCount = 153;
   for (var i = 0; i < regions.length; i++) {
-    $(`#${ids[i]}`).append(`<span style="color: red;">${regions[i]}</span>`);
+    $(`#${ids[i]}`).append(`${regions[i]}`);
     for (j; j < regionCount; j++) {
       pokemonList[j].loadToPage();
       pokemonList[j].ShowTypes();
