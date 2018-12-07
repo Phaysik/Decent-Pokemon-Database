@@ -460,19 +460,17 @@ var pokemonList = [
   new Pokemon(146, 'Moltres', ['Fire', 'Flying'])
 ]
 
-var regions = ["The Central Kalos Pokédex", "The Coastal Kalos Pokédex", "The Mountain Kalos Pokédex"]
 var ids = ["Central", "Coastal", "Mountain"]
 var count = [153, 153, 151]
 
 function loadKalos() {
   $('#Center').text("The Kalos Pokémon List by Pokédex Number");
-  $('#pokemon-container').empty().append(`<p><span id="Central"></span></p><p><span id="Coastal"></span></p><p><span id="Mountain"></span></p>`);
+  $('#pokemon-container').empty().append(`<div><h4 id="ids1" class="KalosTextStyle">The Central Kalos Pokédex</h4><span class="container d-flex justify-content-around flex-wrap" id="Central"></span></div><div><h4 id="ids2" class="KalosTextStyle">The Coastal Kalos Pokédex</h4><span class="container d-flex justify-content-around flex-wrap" id="Coastal"></span></div><div><h4 id="ids3" class="KalosTextStyle">The Mountain Kalos Pokédex</h4><span class="container d-flex justify-content-around flex-wrap" id="Mountain"></span></div>`);
   var j = 0;
   var regionCount = 153;
-  for (var i = 0; i < regions.length; i++) {
-    $(`#${ids[i]}`).append(`${regions[i]}`);
+  for (var i = 0; i < ids.length; i++) {
     for (j; j < regionCount; j++) {
-      pokemonList[j].loadToPage();
+      pokemonList[j].KalosLoadToPage(`${ids[i]}`);
       pokemonList[j].ShowTypes();
     }
     regionCount += count[i];

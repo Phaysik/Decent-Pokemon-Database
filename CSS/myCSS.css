@@ -9,3 +9,8 @@ main {
 a.pointer{
   cursor: pointer;
 }
+
+h4.KalosTextStyle{
+  font-style: italic;
+  text-align: center;
+}

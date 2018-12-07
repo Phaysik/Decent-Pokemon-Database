@@ -57,6 +57,17 @@
 
             <li class="nav-item dropdown mr-auto">
               <a class="nav-link dropdown-toggle mr-auto" href="#" id="navbardrop" data-toggle="dropdown">
+                Jump to Region
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item pointer" href="#ids1" onclick="setTimeout(() => {window.scrollBy(0, -55)}, 10)">Central</a>
+                <a class="dropdown-item pointer" href="#ids2" onclick="setTimeout(() => {window.scrollBy(0, -55)}, 10)">Coastal</a>
+                <a class="dropdown-item pointer" href="#ids3" onclick="setTimeout(() => {window.scrollBy(0, -55)}, 10)">Mountain</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown mr-auto">
+              <a class="nav-link dropdown-toggle mr-auto" href="#" id="navbardrop" data-toggle="dropdown">
                 Sort by Pokémon Type
               </a>
               <div class="dropdown-menu">
@@ -98,11 +109,21 @@
     $(document).ready(function() {
       $("#myInput").on("keyup", function() {
         var value = $(this).val().toLowerCase();
+        $('#ids1').css("visibility", "hidden");
+        $('#ids2').css("visibility", "hidden");
+        $('#ids3').css("visibility", "hidden");
         $("#pokemon-container li").filter(function() {
           $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
+        if($('#myInput').val() == ''){
+          $('#ids1').css("visibility", "visible");
+          $('#ids2').css("visibility", "visible");
+          $('#ids3').css("visibility", "visible");
+        }
       });
     });
+
+
   </script>
 </body>
 
