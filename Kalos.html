@@ -114,23 +114,13 @@
       $("#myInput").on("keyup", function() {
         var value = $(this).val();
 
-        $('#ids1').css("display", "block");
-        $('#ids2').css("display", "block");
-        $('#ids3').css("display", "block");
-
-        $("#pokemon-container li").filter(function() {
-          $(this).toggle($(this).text().indexOf(toTitleCase(value)) > -1)
-        });
-
         $(`#ids1:contains(${toTitleCase(value)})`).length > 0 ? $('#ids1').css("display", "block") : $('#ids1').css("display", "none");
         $(`#ids2:contains(${toTitleCase(value)})`).length > 0 ? $('#ids2').css("display", "block") : $('#ids2').css("display", "none");
         $(`#ids3:contains(${toTitleCase(value)})`).length > 0 ? $('#ids3').css("display", "block") : $('#ids3').css("display", "none");
 
-        if ($('#myInput').val() == '') {
-          $('#ids1').css("display", "block");
-          $('#ids2').css("display", "block");
-          $('#ids3').css("display", "block");
-        }
+        $("#pokemon-container li").filter(function() {
+          $(this).toggle($(this).text().indexOf(toTitleCase(value)) > -1)
+        });
       });
     });
   </script>
