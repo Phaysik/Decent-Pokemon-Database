@@ -71,7 +71,7 @@
                 Sort by Pokémon Type
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item pointer" onclick="loadJohto()">All Types</a>
+                <a class="dropdown-item pointer" onclick="loadKalos()">All Types</a>
                 <a class="dropdown-item pointer" onclick="displayTypesToScreen('Normal')">Normal</a>
                 <a class="dropdown-item pointer" onclick="displayTypesToScreen('Fire')">Fire</a>
                 <a class="dropdown-item pointer" onclick="displayTypesToScreen('Water')">Water</a>
@@ -108,17 +108,29 @@
   <script>
     $(document).ready(function() {
       $("#myInput").on("keyup", function() {
-        var value = $(this).val().toLowerCase();
-        $('#ids1').css("visibility", "hidden");
-        $('#ids2').css("visibility", "hidden");
-        $('#ids3').css("visibility", "hidden");
-        $("#pokemon-container li").filter(function() {
+        var value = $(this).val();
+        if($(`#ids1:contains(${value})`).length > 0){
+          $('#ids1').css("display", "block");
+          $('#ids2').css("display", "none");
+          $('#ids3').css("display", "none");
+        }
+        else if($(`#ids2:contains(${value})`).length > 0){
+          $('#ids1').css("display", "none");
+          $('#ids2').css("display", "block");
+          $('#ids3').css("display", "none");
+        }
+        else if($(`#ids3:contains(${value})`).length > 0){
+          $('#ids1').css("display", "none");
+          $('#ids2').css("display", "none");
+          $('#ids3').css("display", "block");
+        }
+        $("#ids2 li").filter(function() {
           $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
         if($('#myInput').val() == ''){
-          $('#ids1').css("visibility", "visible");
-          $('#ids2').css("visibility", "visible");
-          $('#ids3').css("visibility", "visible");
+          $('#ids1').css("display", "block");
+          $('#ids2').css("display", "block");
+          $('#ids3').css("display", "block");
         }
       });
     });
