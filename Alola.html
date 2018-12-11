@@ -2,16 +2,15 @@
 <html>
 
 <head>
-  <title>Kanto Pokemon List</title>
+  <title>Alola Pokemon List</title>
   <meta charset="UTF-8">
-  <meta name="description" content="Kanto Pokemon">
+  <meta name="description" content="Alola Pokemon">
   <meta name="author" content="Matthew Moore">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script src="JS/JQuery.js"></script>
-  <script src="JS/Master.js" defer></script>
-  <script src="JS/KantoPokemon.js" defer></script>
-
+  <script src="JS/Master.js"></script>
+  <script src="JS/AlolaPokemon.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
@@ -22,7 +21,7 @@
 
 </head>
 
-<body onload="KantoLoad()">
+<body onload="loadAlola()">
   <header>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
       <div class="container">
@@ -36,13 +35,13 @@
                 Pokemon Regions
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item active" href="Kanto.html">Kanto</a>
-                <a class="dropdown-item" href="Johto.html">Johto</a>
+                <a class="dropdown-item" href="Kanto.html">Kanto</a>
+                <a class="dropdown-item " href="Johto.html">Johto</a>
                 <a class="dropdown-item" href="Hoenn.html">Hoenn</a>
                 <a class="dropdown-item" href="Sinnoh.html">Sinnoh</a>
                 <a class="dropdown-item" href="Unova.html">Unova</a>
                 <a class="dropdown-item" href="Kalos.html">Kalos</a>
-                <a class="dropdown-item" href="Alola.html">Alola</a>
+                <a class="dropdown-item active" href="Alola.html">Alola</a>
               </div>
             </li>
             <li class="nav-item">
@@ -62,7 +61,7 @@
                 Sort by Pokémon Type
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item pointer" onclick="KantoLoad()">All Types</a>
+                <a class="dropdown-item pointer" onclick="loadAlola()">All Types</a>
                 <a class="dropdown-item pointer" onclick="displayTypesToScreen('Normal')">Normal</a>
                 <a class="dropdown-item pointer" onclick="displayTypesToScreen('Fire')">Fire</a>
                 <a class="dropdown-item pointer" onclick="displayTypesToScreen('Water')">Water</a>
@@ -81,7 +80,6 @@
                 <a class="dropdown-item pointer" onclick="displayTypesToScreen('Dark')">Dark</a>
                 <a class="dropdown-item pointer" onclick="displayTypesToScreen('Steel')">Steel</a>
                 <a class="dropdown-item pointer" onclick="displayTypesToScreen('Fairy')">Fairy</a>
-                <!-- May get rid of Fairy and Dark seeing as how there are no Dark or Fairy type Kanto pokemon -->
               </div>
             </li>
           </ul>
@@ -100,7 +98,9 @@
   <script>
     $(document).ready(function() {
       $("#myInput").on("keyup", function() {
+
         var value = $(this).val().toLowerCase();
+
         $("#pokemon-container li").filter(function() {
           $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
