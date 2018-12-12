@@ -324,7 +324,7 @@ function loadAkala() {
     new Pokemon(171, 'Lanturn', ['Water', 'Electric']),
     new Pokemon(786, 'Tapu Lele', ['Psychic', 'Fairy'])
   ]
-  $('#Center').text("The Melemele Pokémon List by Pokédex Number");
+  $('#Center').text("The Akala Pokémon List by Pokédex Number");
   $('#pokemon-container').empty();
 
   for (var j = 0; j < pokemonList.length; j++) {
