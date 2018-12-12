@@ -10,6 +10,7 @@
 
   <script src="JS/JQuery.js"></script>
   <script src="JS/Master.js" defer></script>
+  <script src="JS/SearchPokemon.js"></script>
   <script src="JS/KantoPokemon.js" defer></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -54,7 +55,7 @@
           </ul>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mr-auto">
-              <input class="form-control" id="myInput" type="text" placeholder="Search for Pokémon...">
+              <input class="form-control" id="myInput" type="text" onkeyup="KJHSUSearch()" placeholder="Search for Pokémon...">
             </li>
 
             <li class="nav-item dropdown mr-auto">
@@ -96,17 +97,6 @@
 
     </div>
   </main>
-
-  <script>
-    $(document).ready(function() {
-      $("#myInput").on("keyup", function() {
-        var value = $(this).val().toLowerCase();
-        $("#pokemon-container li").filter(function() {
-          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-        });
-      });
-    });
-  </script>
 </body>
 
 </html>
