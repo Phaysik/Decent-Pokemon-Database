@@ -497,7 +497,7 @@ var pokemonList = [
 ]
 
 function loadNational() {
-  $('#Center').text("National Pokémon List by Pokédex Number");
+  $('#Center').text("The National Pokémon List by Pokédex Number");
   $('#pokemon-container').empty();
   for (let p of pokemonList) {
     p.loadToPage();
