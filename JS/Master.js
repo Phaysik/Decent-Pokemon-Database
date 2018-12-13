@@ -1,3 +1,45 @@
+var typeColors = {
+  'Normal': 'background-color: #A3ACAF;',
+  'Fire': 'background-color: #FD7D24;',
+  'Water': 'background-color: #4592C4;',
+  'Electric': 'background-color: #EED535;',
+  'Grass': 'background-color: #9BCC50;',
+  'Ice': 'background-color: #51C4E7;',
+  'Fighting': 'background-color: #C03028;',
+  'Poison': 'background-color: #B97FC9;',
+  'Ground': 'background: linear-gradient(to bottom, #F7DE3F 50%, #AB9842 50%);',
+  'Flying': 'background: linear-gradient(to bottom, #3DC7EF 50%, #BDB9B8 50%);',
+  'Psychic': 'background-color: #F366B9;',
+  'Bug': 'background-color: #729F3F;',
+  'Rock': 'background-color: #A38C21;',
+  'Ghost': 'background-color: #7B62A3;',
+  'Dragon': 'background: linear-gradient(to bottom, #53A4CF 50%, #F16E57 50%);',
+  'Dark': 'background-color: #707070;',
+  'Steel': 'background-color: #9EB7B8;',
+  'Fairy': 'background-color: #FDB9E9;'
+}
+
+var textColors = {
+  'Normal': '#FFFFFF',
+  'Fire': '#FFFFFF',
+  'Water': '#FFFFFF',
+  'Electric': '#000',
+  'Grass': '#000',
+  'Ice': '#000',
+  'Fighting': '#FFF',
+  'Poison': '#FFF',
+  'Ground': '#FFFFFF',
+  'Flying': '#000',
+  'Psychic': '#FFF',
+  'Bug': '#FFF',
+  'Rock': '#FFFFFF',
+  'Ghost': '#FFF',
+  'Dragon': '#000',
+  'Dark': '#FFF',
+  'Steel': '#FFFFFF',
+  'Fairy': '#000'
+}
+
 class Pokemon {
   constructor(nid, name, types) {
     this.nid = nid
@@ -30,48 +72,6 @@ class Pokemon {
   }
 
   ShowTypes() {
-    var typeColors = {
-      'Normal': 'background-color: #A3ACAF;',
-      'Fire': 'background-color: #FD7D24;',
-      'Water': 'background-color: #4592C4;',
-      'Electric': 'background-color: #EED535;',
-      'Grass': 'background-color: #9BCC50;',
-      'Ice': 'background-color: #51C4E7;',
-      'Fighting': 'background-color: #C03028;',
-      'Poison': 'background-color: #B97FC9;',
-      'Ground': 'background: linear-gradient(to bottom, #F7DE3F 50%, #AB9842 50%);',
-      'Flying': 'background: linear-gradient(to bottom, #3DC7EF 50%, #BDB9B8 50%);',
-      'Psychic': 'background-color: #F366B9;',
-      'Bug': 'background-color: #729F3F;',
-      'Rock': 'background-color: #A38C21;',
-      'Ghost': 'background-color: #7B62A3;',
-      'Dragon': 'background: linear-gradient(to bottom, #53A4CF 50%, #F16E57 50%);',
-      'Dark': 'background-color: #707070;',
-      'Steel': 'background-color: #9EB7B8;',
-      'Fairy': 'background-color: #FDB9E9;'
-    }
-
-    var textColors = {
-      'Normal': '#FFFFFF',
-      'Fire': '#FFFFFF',
-      'Water': '#FFFFFF',
-      'Electric': '#000',
-      'Grass': '#000',
-      'Ice': '#000',
-      'Fighting': '#FFF',
-      'Poison': '#FFF',
-      'Ground': '#FFFFFF',
-      'Flying': '#000',
-      'Psychic': '#FFF',
-      'Bug': '#FFF',
-      'Rock': '#FFFFFF',
-      'Ghost': '#FFF',
-      'Dragon': '#000',
-      'Dark': '#FFF',
-      'Steel': '#FFFFFF',
-      'Fairy': '#000'
-    }
-
     for (let t of this.types) {
       $(`#${this.nid}`).append(`
           <button class="flex-grow-1 mx-1" style="border: 1px solid black; color: ${textColors[t]}; font-weight: bold; border-radius: 25px; text-align: center; ${typeColors[t]}" onclick="displayTypesToScreen('${t}')">${t}</button>
@@ -83,48 +83,6 @@ class Pokemon {
 }
 
 function displayTypesToScreen(type) {
-  var typeColors = {
-    'Normal': 'background-color: #A3ACAF;',
-    'Fire': 'background-color: #FD7D24;',
-    'Water': 'background-color: #4592C4;',
-    'Electric': 'background-color: #EED535;',
-    'Grass': 'background-color: #9BCC50;',
-    'Ice': 'background-color: #51C4E7;',
-    'Fighting': 'background-color: #C03028;',
-    'Poison': 'background-color: #B97FC9;',
-    'Ground': 'background: linear-gradient(to bottom, #F7DE3F 50%, #AB9842 50%);',
-    'Flying': 'background: linear-gradient(to bottom, #3DC7EF 50%, #BDB9B8 50%);',
-    'Psychic': 'background-color: #F366B9;',
-    'Bug': 'background-color: #729F3F;',
-    'Rock': 'background-color: #A38C21;',
-    'Ghost': 'background-color: #7B62A3;',
-    'Dragon': 'background: linear-gradient(to bottom, #53A4CF 50%, #F16E57 50%);',
-    'Dark': 'background-color: #707070;',
-    'Steel': 'background-color: #9EB7B8;',
-    'Fairy': 'background-color: #FDB9E9;'
-  }
-
-  var textColors = {
-    'Normal': '#FFFFFF',
-    'Fire': '#FFFFFF',
-    'Water': '#FFFFFF',
-    'Electric': '#000',
-    'Grass': '#000',
-    'Ice': '#000',
-    'Fighting': '#FFF',
-    'Poison': '#FFF',
-    'Ground': '#FFFFFF',
-    'Flying': '#000',
-    'Psychic': '#FFF',
-    'Bug': '#FFF',
-    'Rock': '#FFFFFF',
-    'Ghost': '#FFF',
-    'Dragon': '#000',
-    'Dark': '#FFF',
-    'Steel': '#FFFFFF',
-    'Fairy': '#000'
-  }
-
   var title = $('#Center').text();
   title = title.split(' ');
 
