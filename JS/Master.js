@@ -116,6 +116,7 @@ function displayTypesToScreen(type) {
   var title = $('#Center').text();
   title = title.split(' ');
 
+  $('#myInput').val('');
   $('#Center').empty().text(`All ${title[1] + " " + type} Pokémon in Database`);
   $('#pokemon-container').empty();
 
