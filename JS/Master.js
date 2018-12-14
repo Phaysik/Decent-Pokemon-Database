@@ -78,8 +78,38 @@ class Pokemon {
         `)
     }
   }
+}
 
+class Items {
+  constructor(name, category, description){
+    this.name = name;
+    this.category = category;
+    this.description = description;
+  }
 
+  loadItemsToPage(){
+    $('#Name').append(`
+      <li class="list-group-item" style="border: none;">
+        <div class="d-flex mx-3 flex-row">
+          <img height="60" width="60" src="Images/Items/${this.name}.png" alt="${this.name} Image"/>
+          <span class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">${this.name}</span>
+        </div>
+      </li>`);
+
+    $('#Category').append(`
+      <li class="list-group-item" style="border: none;">
+        <div class="d-flex mx-3 flex-row">
+          <h4 class="pt-3" style="font-weight: normal; font-size: 14pt;">${this.category}</h4>
+        </div>
+      </li>`);
+
+    $('#Description').append(`
+      <li class="list-group-item" style="border: none;">
+        <div class="d-flex mx-3 flex-row">
+          <h4 class="pt-3" style="font-weight: normal; font-size: 14pt;">${this.description}</h4>
+        </div>
+      </li>`);
+  }
 }
 
 function displayTypesToScreen(type) {
