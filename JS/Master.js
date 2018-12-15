@@ -81,22 +81,41 @@ class Pokemon {
 }
 
 class Items {
-  constructor(name, category, description){
+  constructor(name, category, description) {
     this.name = name;
     this.category = category;
     this.description = description;
   }
 
-  loadItemsToPage(){
-    $('#Name').append(`
-      <li class="list-group-item" style="border: none;">
-        <div class="d-flex mx-3 flex-row">
+  loadItemsToPage() {
+    /*$('#Name').append(`
+        <div class="d-flex mx-3 flex-row col-md-4">
           <img height="60" width="60" src="Images/Items/${this.name}.png" alt="${this.name} Image"/>
           <span class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">${this.name}</span>
         </div>
-      </li>`);
+        <div class="d-flex mx-3 flex-row col-md-3">
+          <span class="pt-3" style="font-weight: normal; font-size: 14pt;">${this.category}</span>
+        </div>
+        <div class="d-flex mx-3 flex-row col-md-5">
+          <span class="pt-3" style="font-weight: normal; font-size: 14pt;">${this.description}</span>
+        </div>`);*/
+    $('#items-container').append(`
+          <div class="container">
+            <div class="row">
+              <div class="d-flex flex-row col-md-3 mb-3">
+                <img height="60" width="60" src="Images/Items/${this.name}.png" alt="${this.name} Image"/>
+                <h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">${this.name}</h4>
+              </div>
+              <div class="d-flex flex-row col-md-3 mb-3 mx-auto">
+                <h4 class="mx-3 pt-3 pl-5" style="width: 100%; text-align: center; font-weight: normal; font-size: 14pt;">${this.category}</h4>
+              </div>
+              <div class="d-flex flex-row col-md-5 mb-3">
+                <h4 class="pt-3" style="font-weight: normal; font-size: 14pt;">${this.description}</h4>
+              </div>
+            </div>
+          </div>`);
 
-    $('#Category').append(`
+    /*$('#Category').append(`
       <li class="list-group-item" style="border: none;">
         <div class="d-flex mx-3 flex-row">
           <h4 class="pt-3" style="font-weight: normal; font-size: 14pt;">${this.category}</h4>
@@ -108,7 +127,7 @@ class Items {
         <div class="d-flex mx-3 flex-row">
           <h4 class="pt-3" style="font-weight: normal; font-size: 14pt;">${this.description}</h4>
         </div>
-      </li>`);
+      </li>`);*/
   }
 }
 
@@ -140,8 +159,10 @@ function displayTypesToScreen(type) {
   }
 
   if ($("body").height() > $(window).height()) {
-    if($(window).scrollTop() !== 0) {
-      $("html, body").animate({scrollTop : 0}, 'slow');
+    if ($(window).scrollTop() !== 0) {
+      $("html, body").animate({
+        scrollTop: 0
+      }, 'slow');
     }
   }
 }
