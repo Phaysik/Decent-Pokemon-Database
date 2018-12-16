@@ -54,7 +54,7 @@ function ItemSearch(){
 
       var value = $(this).val().toLowerCase();
 
-      $(".row li").filter(function() {
+      $(".searchVal").filter(function() {
         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
       });
     });
