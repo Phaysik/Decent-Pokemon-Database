@@ -81,8 +81,9 @@ class Pokemon {
 }
 
 class Items {
-  constructor(name, category, description) {
+  constructor(name, id, category, description) {
     this.name = name;
+    this.id = id;
     this.category = category;
     this.description = description;
   }
@@ -95,10 +96,13 @@ class Items {
                 <img height="50" width="50" src="Images/Items/${this.name}.png" alt="${this.name} Image"/>
                 <h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">${this.name}</h4>
               </div>
+              <div class="d-flex flex-row col-md-1 mb-3">
+                <h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${this.id}</h4>
+              </div>
               <div class="d-flex flex-row col-md-3 mb-3 mx-auto">
                 <h4 class="mx-3 pt-3 pl-5" style="width: 100%; font-weight: normal; font-size: 14pt;">${this.category}</h4>
               </div>
-              <div class="d-flex flex-row col-md-6 mb-3">
+              <div class="d-flex flex-row col-md-5 mb-3">
                 <h4 class="pt-3" style="font-weight: normal; font-size: 14pt;">${this.description}</h4>
               </div>
             </div>
