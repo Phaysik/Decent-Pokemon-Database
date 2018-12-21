@@ -7,6 +7,7 @@ var itemList = [
   new Items('Acro Bike', 'III', 'Key Items', 'A bicycle with which the player can do tricks such as jump sideways.'),
   new Items('Adamant Orb', 'IV', 'Hold Items', 'Increases the power of Dragon- and Steel-type moves when held by Dialga.'),
   new Items('Adrenaline Orb', 'VII', 'Hold Items', 'Using it makes wild Pokémon more likely to call for help. If held by a Pokémon, it boosts Speed when intimidated. It can be used only once.'),
+  new Items('Adventure Rules', 'VI', 'Key Items', 'Contains information new Trainers should know.'),
   new Items('Aerodactylite', 'VI', 'Hold Items', 'Enables Aerodactyl to Mega Evolve during battle.'),
   new Items('Aggronite', 'VI', 'Hold Items', 'Enables Aggron to Mega Evolve during battle.'),
   new Items('Aguav Berry', 'III', 'Berries', 'Restores HP if it\'s low, but may cause confusion.'),
@@ -27,6 +28,7 @@ var itemList = [
   new Items('Babiri Berry', 'IV', 'Berries', 'Weakens a supereffective Steel-type attack against the holding Pokémon.'),
 
 ]
+
 
 function loadItems() {
   $('#Center').text("Pokémon Item List");
