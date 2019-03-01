@@ -110,6 +110,29 @@ class Items {
   }
 }
 
+class Moves {
+  constructor(imgName, name, type) {
+    this.imgName = imgName;
+    this.name = name;
+    this.type = type;
+  }
+
+  loadMovesToPage() {
+    $('#items-container').append(`
+          <div class="container">
+            <div class="row searchVal">
+              <div class="d-flex flex-row col-md-6 mb-3">
+                <img height="50" width="50" src="Images/Items/${this.imgName}.png" alt="${this.name} Image"/>
+                <h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">${this.name}</h4>
+              </div>
+              <div class="d-flex flex-row col-md-6 mb-3">
+                <h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${this.type}</h4>
+              </div>
+            </div>
+          </div>`);
+  }
+}
+
 function displayTypesToScreen(type) {
   var title = $('#Center').text();
   title = title.split(' ');
