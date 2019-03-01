@@ -1,2 +1,2 @@
 # Pokemon-Things
-Just something to do in spare time
+Just want something easier on the eyes than the big Pokemon sites
