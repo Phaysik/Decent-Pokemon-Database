@@ -49,20 +49,73 @@ var moveList = [
   new Moves('TM48', 'Rock Slide', 'Rock'),
   new Moves('TM49', 'Tri Attack', 'Normal'),
   new Moves('TM50', 'Substitute', 'Normal'),
+  new Moves('TM01', 'DynamicPunch', 'Fighting'),
+  new Moves('TM02', 'Headbutt', 'Normal'),
+  new Moves('TM03', 'Curse', 'Ghost'),
+  new Moves('TM04', 'Rollout', 'Rock'),
+  new Moves('TM05', 'Roar', 'Normal'),
+  new Moves('TM06', 'Toxic', 'Poison'),
+  new Moves('TM07', 'Zap Cannon', 'Electric'),
+  new Moves('TM08', 'Rock Smash', 'Fighting'),
+  new Moves('TM09', 'Psych Up', 'Normal'),
+  new Moves('TM10', 'Hidden Power', 'Normal'),
+  new Moves('TM11', 'Sunny Day', 'Fire'),
+  new Moves('TM12', 'Sweet Scent', 'Normal'),
+  new Moves('TM13', 'Snore', 'Normal'),
+  new Moves('TM14', 'Blizzard', 'Ice'),
+  new Moves('TM15', 'Hyper Beam', 'Normal'),
+  new Moves('TM16', 'Icy Wind', 'Ice'),
+  new Moves('TM17', 'Protect', 'Normal'),
+  new Moves('TM18', 'Rain Dance', 'Water'),
+  new Moves('TM19', 'Giga Drain', 'Grass'),
+  new Moves('TM20', 'Endure', 'Normal'),
+  new Moves('TM21', 'Frustration', 'Normal'),
+  new Moves('TM22', 'SolarBeam', 'Grass'),
+  new Moves('TM23', 'Iron Tail', 'Steel'),
+  new Moves('TM24', 'DragonBreath', 'Dragon'),
+  new Moves('TM25', 'Thunder', 'Electric'),
+  new Moves('TM26', 'Earthquake', 'Ground'),
+  new Moves('TM27', 'Return', 'Normal'),
+  new Moves('TM28', 'Dig', 'Ground'),
+  new Moves('TM29', 'Psychic', 'Psychic'),
+  new Moves('TM30', 'Shadow Ball', 'Ghost'),
+  new Moves('TM31', 'Mud-Slap', 'Ground'),
+  new Moves('TM32', 'Double Team', 'Normal'),
+  new Moves('TM33', 'Ice Punch', 'Ice'),
+  new Moves('TM34', 'Swagger', 'Normal'),
+  new Moves('TM35', 'Sleep Talk', 'Normal'),
+  new Moves('TM36', 'Sludge Bomb', 'Poison'),
+  new Moves('TM37', 'Sandstorm', 'Ground'),
+  new Moves('TM38', 'Fire Blast', 'Fire'),
+  new Moves('TM39', 'Swift', 'Normal'),
+  new Moves('TM40', 'Defense Curl', 'Normal'),
+  new Moves('TM41', 'ThunderPunch', 'Electric'),
+  new Moves('TM42', 'Dream Eater', 'Psychic'),
+  new Moves('TM43', 'Detect', 'Fighting'),
+  new Moves('TM44', 'Rest', 'Psychic'),
+  new Moves('TM45', 'Attract', 'Normal'),
+  new Moves('TM46', 'Thief', 'Dark'),
+  new Moves('TM47', 'Steel Wing', 'Steel'),
+  new Moves('TM48', 'Fire Punch', 'Fire'),
+  new Moves('TM49', 'Fury Cutter', 'Bug'),
+  new Moves('TM50', 'Nightmare', 'Ghost'),
 ]
 
 var ids = ["Gen1", "Gen2", "Gen3", "Gen4", "Gen5", "Gen6", "Gen7"]
 var moves = [50, 50, 50, 92, 95, 100, 100]
+var counter = 0
 
 function loadMoves() {
   $('#Center').text("Pokémon Move List");
-  $('#myInput').val('');
+  $('#myInput').val('',);
   $('#moves-container').empty().append(`<div id="ids1" style="width: 100%;"><h4 class="KalosTextStyle">Gen 1 Moves</h4><span class="container d-flex justify-content-around flex-wrap" id="Gen1"></span></div><div id="ids2" style="width: 100%;"><h4 class="KalosTextStyle">Gen 2 Moves</h4><span class="container d-flex justify-content-around flex-wrap" id="Gen2"></span></div><div id="ids3" style="width: 100%;"><h4 class="KalosTextStyle">Gen 3 Moves</h4><span class="container d-flex justify-content-around flex-wrap" id="Gen3"></span></div><div id="ids4" style="width: 100%;"><h4 class="KalosTextStyle">Gen 4 Moves</h4><span class="container d-flex justify-content-around flex-wrap" id="Gen4"></span></div><div id="ids5" style="width: 100%;"><h4 class="KalosTextStyle">Gen 5 Moves</h4><span class="container d-flex justify-content-around flex-wrap" id="Gen5"></span></div><div id="ids6" style="width: 100%;"><h4 class="KalosTextStyle">Gen 6 Moves</h4><span class="container d-flex justify-content-around flex-wrap" id="Gen6"></span></div><div id="ids7" style="width: 100%;"><h4 class="KalosTextStyle">Gen 7 Moves</h4><span class="container d-flex justify-content-around flex-wrap" id="Gen7"></span></div>`);
 
-  for (var j = 0; j < 1; j++) {
+  for (var j = 0; j < 2; j++) {
     $('#' + ids[j]).append(`<div class="container mt-4"><div class="row"><div class="col-md-5"><h4 class="KalosTextStyle">Name</h4></div><div class="col-md-3"><h4 style="font-style: italic; text-align: center;" class="pr-3">TM</h4></div><div class="col-md-3"><h4 style="font-style: italic; text-align: center;" class="pr-3">Type</h4></div></div>`);
-    for (var i = 0; i < moves[j]; i++) {
+    for (var i = counter; i < moves[j] + counter; i++) {
       moveList[i].loadMovesToPage(ids[j]);
     }
+
+    counter += moves[j];
   }
 }
