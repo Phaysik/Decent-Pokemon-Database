@@ -153,6 +153,7 @@ function loadMelemele() {
     new Pokemon(785, 'Tapu Koko', ['Electric', 'Fairy'])
   ]
   $('#Center').text("The Melemele Pokémon List by Pokédex Number");
+  $('#myInput').val('');
   $('#pokemon-container').empty();
 
   for (var j = 0; j < pokemonList.length; j++) {
@@ -325,6 +326,7 @@ function loadAkala() {
     new Pokemon(786, 'Tapu Lele', ['Psychic', 'Fairy'])
   ]
   $('#Center').text("The Akala Pokémon List by Pokédex Number");
+  $('#myInput').val('');
   $('#pokemon-container').empty();
 
   for (var j = 0; j < pokemonList.length; j++) {
@@ -497,6 +499,7 @@ function loadUlaula() {
     new Pokemon(787, 'Tapu Bulu', ['Grass', 'Fairy'])
   ]
   $('#Center').text("The Ula'ula Pokémon List by Pokédex Number");
+  $('#myInput').val('');
   $('#pokemon-container').empty();
 
   for (var j = 0; j < pokemonList.length; j++) {
@@ -639,6 +642,7 @@ function loadPoni() {
     new Pokemon(788, 'Tapu Fini', ['Water', 'Fairy']),
   ]
   $('#Center').text("The Poni Pokémon List by Pokédex Number");
+  $('#myInput').val('');
   $('#pokemon-container').empty();
 
   for (var j = 0; j < pokemonList.length; j++) {

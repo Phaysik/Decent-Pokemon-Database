@@ -259,6 +259,7 @@ var pokemonList = [
 
 function loadJohto() {
   $('#Center').text("The Johto Pokémon List by Pokédex Number");
+  $('#myInput').val('');
   $('#pokemon-container').empty();
   for (var display of pokemonList) {
     display.loadToPage();

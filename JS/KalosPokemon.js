@@ -463,6 +463,7 @@ var count = [153, 151];
 
 function loadKalos() {
   $('#Center').text("The Kalos Pokémon List by Pokédex Number");
+  $('#myInput').val('');
   $('#pokemon-container').empty().append(`<div id="ids1"><h4 class="KalosTextStyle">The Central Kalos Pokédex</h4><span class="container d-flex justify-content-around flex-wrap" id="Central"></span></div><div id="ids2"><h4 class="KalosTextStyle">The Coastal Kalos Pokédex</h4><span class="container d-flex justify-content-around flex-wrap" id="Coastal"></span></div><div id="ids3"><h4 class="KalosTextStyle">The Mountain Kalos Pokédex</h4><span class="container d-flex justify-content-around flex-wrap" id="Mountain"></span></div>`);
   var j = 0;
   var regionCount = 153;

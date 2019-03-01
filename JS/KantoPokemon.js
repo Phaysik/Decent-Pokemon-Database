@@ -155,6 +155,7 @@ function KantoLoad() {
     new Pokemon(151, 'Mew', ['Psychic']),
   ]
   $('#Center').text("The Kanto Pokémon List by Pokédex Number");
+  $('#myInput').val('');
   $('#pokemon-container').empty();
   for (let p of pokemonList) {
     p.loadToPage();
@@ -319,6 +320,7 @@ function loadLetsGo() {
     new Pokemon(809, 'Melmetal', ['Steel'])
   ]
   $('#Center').text("The Expansion Pokémon List by Pokédex Number");
+  $('#myInput').val('');
   $('#pokemon-container').empty();
   for (let p of pokemonList) {
     p.loadToPage();

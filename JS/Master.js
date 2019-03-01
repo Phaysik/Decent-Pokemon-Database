@@ -117,15 +117,18 @@ class Moves {
     this.type = type;
   }
 
-  loadMovesToPage() {
-    $('#items-container').append(`
+  loadMovesToPage(id) {
+    $('#' + id).append(`
           <div class="container">
             <div class="row searchVal">
-              <div class="d-flex flex-row col-md-6 mb-3">
+              <div class="d-flex flex-row col-md-5 mb-3" style="position: realtive; left: 12%;">
                 <img height="50" width="50" src="Images/Items/${this.imgName}.png" alt="${this.name} Image"/>
                 <h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">${this.name}</h4>
               </div>
-              <div class="d-flex flex-row col-md-6 mb-3">
+              <div class="d-flex flex-row col-md-3 mb-2" style="position: relative; left: 7%;">
+                <h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${this.imgName}</h4>
+              </div>
+              <div class="d-flex flex-row col-md-3 mb-2" style="position: relative; left: 6%;">
                 <h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${this.type}</h4>
               </div>
             </div>

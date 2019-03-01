@@ -407,6 +407,7 @@ function loadAlola() {
   ]
 
   $('#Center').text("The Alolan Pokémon List by Pokédex Number");
+  $('#myInput').val('');
   $('#pokemon-container').empty();
 
   for (var j = 0; j < pokemonList.length; j++) {

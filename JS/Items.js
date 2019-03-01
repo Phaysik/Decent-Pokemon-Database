@@ -1,5 +1,5 @@
 var itemList = [
-  new Items('Ability Capsule', 'VI', 'Hold Items', 'A capsule that allows a Pokémon with two Abilities to switch between these Abilities when it is used.'),
+  new Items('Ability Capsule', 'VI', 'Medicine', 'A capsule that allows a Pokémon with two Abilities to switch between these Abilities when it is used.'),
   new Items('Ability Urge', 'V', 'Battle Items', 'When used, it activates the Ability of an ally Pokémon.'),
   new Items('Abomasite', 'VI', 'Hold Items', 'Enables Abomasnow to Mega Evolve during battle.'),
   new Items('Absolite', 'VI', 'Hold Items', 'Enables Absol to Mega Evolve during battle.'),
@@ -708,6 +708,7 @@ var itemList = [
 
 function loadItems() {
   $('#Center').text("Pokémon Item List");
+  $('#myInput').val('');
   $('#items-container').empty().append(`<div class="container mt-4"><div class="row"><div class="col-md-3"><h4 class="KalosTextStyle">Name</h4></div><div class="col-md-1"><h4 class="KalosTextStyle">Gen</h4></div><div class="col-md-3"><h4 style="font-style: italic; text-align: center;" class="pr-3">Category</h4></div><div class="col-md-5"><h4 class="KalosTextStyle pr-5">Description</h4></div></div></div>`);
 
   for (var j = 0; j < itemList.length; j++) {

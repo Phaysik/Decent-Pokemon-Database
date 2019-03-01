@@ -813,6 +813,7 @@ var pokemonList = [
 
 function loadNational() {
   $('#Center').text("The National Pokémon List by Pokédex Number");
+  $('#myInput').val('');
   $('#pokemon-container').empty();
   for (let p of pokemonList) {
     p.loadToPage();

@@ -304,6 +304,7 @@ var pokemonList = [
 
 function loadUnova() {
   $('#Center').text("The Unova Pokémon List by Pokédex Number");
+  $('#myInput').val('');
   $('#pokemon-container').empty();
   for (var display of pokemonList) {
     display.loadToPage();
