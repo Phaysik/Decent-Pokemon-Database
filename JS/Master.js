@@ -19,6 +19,109 @@ var typeColors = {
   'Fairy': 'background-color: #FDB9E9;'
 }
 
+var tmConversion = {
+  'TM01': 'Fighting',
+  'TM02': 'Dragon',
+  'TM03': 'Psychic',
+  'TM04': 'Psychic',
+  'TM05': 'Normal',
+  'TM06': 'Poison',
+  'TM07': 'Ice',
+  'TM08': 'Fighting',
+  'TM09': 'Poison',
+  'TM10': 'Normal',
+  'TM11': 'Fire',
+  'TM12': 'Dark',
+  'TM13': 'Ice',
+  'TM14': 'Ice',
+  'TM15': 'Normal',
+  'TM16': 'Psychic',
+  'TM17': 'Normal',
+  'TM18': 'Water',
+  'TM19': 'Grass',
+  'TM20': 'Normal',
+  'TM21': 'Normal',
+  'TM22': 'Grass',
+  'TM23': 'Ground',
+  'TM24': 'Electric',
+  'TM25': 'Electric',
+  'TM26': 'Ground',
+  'TM27': 'Normal',
+  'TM28': 'Ground',
+  'TM29': 'Psychic',
+  'TM30': 'Ghost',
+  'TM31': 'Fighting',
+  'TM32': 'Normal',
+  'TM33': 'Psychic',
+  'TM34': 'Poison',
+  'TM35': 'Fire',
+  'TM36': 'Poison',
+  'TM37': 'Ground',
+  'TM38': 'Fire',
+  'TM39': 'Rock',
+  'TM40': 'Flying',
+  'TM41': 'Dark',
+  'TM42': 'Normal',
+  'TM43': 'Fire',
+  'TM44': 'Psychic',
+  'TM45': 'Normal',
+  'TM46': 'Dark',
+  'TM47': 'Fighting',
+  'TM48': 'Normal',
+  'TM49': 'Normal',
+  'TM50': 'Fire',
+  'TM51': 'Steel',
+  'TM52': 'Fighting',
+  'TM53': 'Grass',
+  'TM54': 'Normal',
+  'TM55': 'Water',
+  'TM56': 'Dark',
+  'TM57': 'Electric',
+  'TM58': 'Flying',
+  'TM59': 'Fire',
+  'TM60': 'Dark',
+  'TM61': 'Fire',
+  'TM62': 'Flying',
+  'TM63': 'Dark',
+  'TM64': 'Normal',
+  'TM65': 'Ghost',
+  'TM66': 'Dark',
+  'TM67': 'Normal',
+  'TM68': 'Normal',
+  'TM69': 'Rock',
+  'TM70': 'Normal',
+  'TM71': 'Rock',
+  'TM72': 'Electric',
+  'TM73': 'Electric',
+  'TM74': 'Steel',
+  'TM75': 'Normal',
+  'TM76': 'Bug',
+  'TM77': 'Normal',
+  'TM78': 'Ground',
+  'TM79': 'Ice',
+  'TM80': 'Rock',
+  'TM81': 'Bug',
+  'TM82': 'Dragon',
+  'TM83': 'Bug',
+  'TM84': 'Poison',
+  'TM85': 'Psychic',
+  'TM86': 'Grass',
+  'TM87': 'Normal',
+  'TM88': 'Flying',
+  'TM89': 'Bug',
+  'TM90': 'Normal',
+  'TM91': 'Steel',
+  'TM92': 'Psychic',
+  'TM93': 'Electric',
+  'TM94': 'Fighting',
+  'TM95': 'Dark',
+  'TM96': 'Normal',
+  'TM97': 'Dark',
+  'TM98': 'Fighting',
+  'TM99': 'Fairy',
+  'TM100': 'Normal'
+}
+
 var textColors = {
   'Normal': '#FFFFFF',
   'Fire': '#FFFFFF',
@@ -86,14 +189,20 @@ class Items {
     this.id = id;
     this.category = category;
     this.description = description;
+    this.isTrue = false;
   }
 
+
   loadItemsToPage() {
+    if(!(this.name in tmConversion)) {
+      tmConversion[this.name] = this.name
+      this.isTrue = true;
+    }
     $('#items-container').append(`
           <div class="container">
             <div class="row searchVal">
               <div class="d-flex flex-row col-md-3 mb-3">
-                <img height="50" width="50" src="Images/Items/${this.name}.png" alt="${this.name} Image"/>
+                <img height="50" width="50" src="Images/Items/${tmConversion[this.name]}.png" alt="${this.name} Image"/>
                 <h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">${this.name}</h4>
               </div>
               <div class="d-flex flex-row col-md-1 mb-3">
@@ -107,6 +216,7 @@ class Items {
               </div>
             </div>
           </div>`);
+          if(this.isTrue == true) { delete tmConversion[this.name]; }
   }
 }
 
@@ -122,7 +232,7 @@ class Moves {
           <div class="container">
             <div class="row searchVal">
               <div class="d-flex flex-row col-md-5 mb-3" style="position: realtive; left: 12%;">
-                <img height="50" width="50" src="Images/Items/${this.imgName}.png" alt="${this.name} Image"/>
+                <img height="45" width="45" src="Images/Items/${this.type}.png" alt="${this.name} Image"/>
                 <h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">${this.name}</h4>
               </div>
               <div class="d-flex flex-row col-md-3 mb-2" style="position: relative; left: 7%;">
