@@ -1,4 +1,5 @@
-var pokemonList = [
+/* eslint-disable no-unused-vars */
+const pokemonList = [
   new Pokemon(650, 'Chespin', ['Grass']),
   new Pokemon(651, 'Quilladin', ['Grass']),
   new Pokemon(652, 'Chesnaught', ['Grass', 'Fighting']),
@@ -81,7 +82,7 @@ var pokemonList = [
   new Pokemon(1, 'Bulbasaur', ['Grass', 'Poison']),
   new Pokemon(2, 'Ivysaur', ['Grass', 'Poison']),
   new Pokemon(3, 'Venusaur', ['Grass', 'Poison']),
-  new Pokemon(4, "Charmander", ['Fire']),
+  new Pokemon(4, 'Charmander', ['Fire']),
   new Pokemon(5, 'Charmeleon', ['Fire']),
   new Pokemon(6, 'Charizard', ['Fire', 'Flying']),
   new Pokemon(7, 'Squirtle', ['Water']),
@@ -234,7 +235,7 @@ var pokemonList = [
   new Pokemon(136, 'Flareon', ['Fire']),
   new Pokemon(196, 'Espeon', ['Psychic']),
   new Pokemon(197, 'Umbreon', ['Dark']),
-  new Pokemon(470, "Leafeon", ['Grass']),
+  new Pokemon(470, 'Leafeon', ['Grass']),
   new Pokemon(471, 'Glaceon', ['Ice']),
   new Pokemon(700, 'Sylveon', ['Fairy']),
   new Pokemon(587, 'Emolga', ['Electric', 'Flying']),
@@ -387,7 +388,7 @@ var pokemonList = [
   new Pokemon(713, 'Avalugg', ['Ice']),
   new Pokemon(613, 'Cubchoo', ['Ice']),
   new Pokemon(614, 'Beartic', ['Ice']),
-  new Pokemon(238, "Smoochum", ['Ice', 'Psychic']),
+  new Pokemon(238, 'Smoochum', ['Ice', 'Psychic']),
   new Pokemon(124, 'Jynx', ['Ice', 'Psychic']),
   new Pokemon(582, 'Vanillite', ['Ice']),
   new Pokemon(583, 'Vanillish', ['Ice']),
@@ -455,22 +456,26 @@ var pokemonList = [
   new Pokemon(716, 'Xerneas', ['Fairy']),
   new Pokemon(717, 'Yveltal', ['Dark', 'Flying']),
   new Pokemon(718, 'Zygarde', ['Dragon', 'Ground']),
-  new Pokemon(150, 'Mewtwo', ['Psychic'])
-]
+  new Pokemon(150, 'Mewtwo', ['Psychic']),
+];
 
-var ids = ["Central", "Coastal", "Mountain"]
-var count = [153, 151];
+const ids = ['Central', 'Coastal', 'Mountain'];
+const count = [153, 151];
 
 function loadKalos() {
-  $('#Center').text("The Kalos Pokémon List by Pokédex Number");
+  $('#Center').text('The Kalos Pokémon List by Pokédex Number');
   $('#myInput').val('');
-  $('#pokemon-container').empty().append(`<div id="ids1"><h4 class="KalosTextStyle">The Central Kalos Pokédex</h4><span class="container d-flex justify-content-around flex-wrap" id="Central"></span></div><div id="ids2"><h4 class="KalosTextStyle">The Coastal Kalos Pokédex</h4><span class="container d-flex justify-content-around flex-wrap" id="Coastal"></span></div><div id="ids3"><h4 class="KalosTextStyle">The Mountain Kalos Pokédex</h4><span class="container d-flex justify-content-around flex-wrap" id="Mountain"></span></div>`);
-  var j = 0;
-  var regionCount = 153;
-  for (var i = 0; i < ids.length; i++) {
+  $('#pokemon-container').empty().append(`<div id="ids1"><h4 class="KalosTextStyle">The Central Kalos Pokédex</h4>
+  <span class="container d-flex justify-content-around flex-wrap" id="Central"></span></div><div id="ids2">
+  <h4 class="KalosTextStyle">The Coastal Kalos Pokédex</h4><span class="container d-flex justify-content-around flex-wrap" id="Coastal">
+  </span></div><div id="ids3"><h4 class="KalosTextStyle">The Mountain Kalos Pokédex</h4>
+  <span class="container d-flex justify-content-around flex-wrap" id="Mountain"></span></div>`);
+  let j = 0;
+  let regionCount = 153;
+  for (let i = 0; i < ids.length; i++) {
     for (j; j < regionCount; j++) {
-      pokemonList[j].KalosLoadToPage(`${ids[i]}`);
-      pokemonList[j].ShowTypes();
+      pokemonList[j].kalosLoadToPage(`${ids[i]}`);
+      pokemonList[j].showTypes();
     }
     regionCount += count[i];
   }

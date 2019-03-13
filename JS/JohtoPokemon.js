@@ -1,4 +1,5 @@
-var pokemonList = [
+/* eslint-disable no-unused-vars */
+const pokemonList = [
   new Pokemon(152, 'Chikorita', ['Grass']),
   new Pokemon(153, 'Bayleef', ['Grass']),
   new Pokemon(154, 'Meganium', ['Grass']),
@@ -254,15 +255,15 @@ var pokemonList = [
   new Pokemon(250, 'Ho-Oh', ['Fire', 'Flying']),
   new Pokemon(150, 'Mewtwo', ['Psychic']),
   new Pokemon(151, 'Mew', ['Psychic']),
-  new Pokemon(251, 'Celebi', ['Psychic', 'Grass'])
-]
+  new Pokemon(251, 'Celebi', ['Psychic', 'Grass']),
+];
 
 function loadJohto() {
-  $('#Center').text("The Johto Pokémon List by Pokédex Number");
+  $('#Center').text('The Johto Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
-  for (var display of pokemonList) {
+  for (const display of pokemonList) {
     display.loadToPage();
-    display.ShowTypes();
+    display.showTypes();
   }
 }

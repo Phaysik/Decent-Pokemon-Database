@@ -1,4 +1,5 @@
-var pokemonList = []
+/* eslint-disable no-unused-vars */
+const pokemonList = [];
 
 function KantoLoad() {
   pokemonList = [
@@ -84,7 +85,7 @@ function KantoLoad() {
     new Pokemon(80, 'Slowbro', ['Water', 'Psychic']),
     new Pokemon(81, 'Magnemite', ['Electric', 'Steel']),
     new Pokemon(82, 'Magneton', ['Electric', 'Steel']),
-    new Pokemon(83, "Farfetch" + "\'" + "d", ['Normal', 'Flying']),
+    new Pokemon(83, 'Farfetch' + '\'' + 'd', ['Normal', 'Flying']),
     new Pokemon(84, 'Doduo', ['Normal', 'Flying']),
     new Pokemon(85, 'Dodrio', ['Normal', 'Flying']),
     new Pokemon(86, 'Seel', ['Water']),
@@ -153,13 +154,13 @@ function KantoLoad() {
     new Pokemon(149, 'Dragonite', ['Dragon', 'Flying']),
     new Pokemon(150, 'Mewtwo', ['Psychic']),
     new Pokemon(151, 'Mew', ['Psychic']),
-  ]
-  $('#Center').text("The Kanto Pokémon List by Pokédex Number");
+  ];
+  $('#Center').text('The Kanto Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
-  for (let p of pokemonList) {
+  for (const p of pokemonList) {
     p.loadToPage();
-    p.ShowTypes();
+    p.showTypes();
   }
 }
 
@@ -247,7 +248,7 @@ function loadLetsGo() {
     new Pokemon(80, 'Slowbro', ['Water', 'Psychic']),
     new Pokemon(81, 'Magnemite', ['Electric', 'Steel']),
     new Pokemon(82, 'Magneton', ['Electric', 'Steel']),
-    new Pokemon(83, "Farfetch" + "\'" + "d", ['Normal', 'Flying']),
+    new Pokemon(83, 'Farfetch' + '\'' + 'd', ['Normal', 'Flying']),
     new Pokemon(84, 'Doduo', ['Normal', 'Flying']),
     new Pokemon(85, 'Dodrio', ['Normal', 'Flying']),
     new Pokemon(86, 'Seel', ['Water']),
@@ -317,13 +318,13 @@ function loadLetsGo() {
     new Pokemon(150, 'Mewtwo', ['Psychic']),
     new Pokemon(151, 'Mew', ['Psychic']),
     new Pokemon(808, 'Meltan', ['Steel']),
-    new Pokemon(809, 'Melmetal', ['Steel'])
-  ]
-  $('#Center').text("The Expansion Pokémon List by Pokédex Number");
+    new Pokemon(809, 'Melmetal', ['Steel']),
+  ];
+  $('#Center').text('The Expansion Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
-  for (let p of pokemonList) {
+  for (const p of pokemonList) {
     p.loadToPage();
-    p.ShowTypes();
+    p.showTypes();
   }
 }

@@ -1,4 +1,5 @@
-var pokemonList = [
+/* eslint-disable no-unused-vars */
+const pokemonList = [
   new Pokemon(252, 'Treecko', ['Grass']),
   new Pokemon(253, 'Grovyle', ['Grass']),
   new Pokemon(254, 'Sceptile', ['Grass']),
@@ -209,16 +210,16 @@ var pokemonList = [
   new Pokemon(383, 'Groudon', ['Ground']),
   new Pokemon(384, 'Rayquaza', ['Dragon', 'Flying']),
   new Pokemon(385, 'Jirachi', ['Steel', 'Psychic']),
-  new Pokemon(386, 'Deoxys', ['Psychic'])
-]
+  new Pokemon(386, 'Deoxys', ['Psychic']),
+];
 
 
 function loadHoenn() {
-  $('#Center').text("The Hoenn Pokémon List by Pokédex Number");
+  $('#Center').text('The Hoenn Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
-  for (var display of pokemonList) {
+  for (const display of pokemonList) {
     display.loadToPage();
-    display.ShowTypes();
+    display.showTypes();
   }
 }

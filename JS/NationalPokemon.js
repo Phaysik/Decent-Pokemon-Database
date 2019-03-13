@@ -1,4 +1,5 @@
-var pokemonList = [
+/* eslint-disable no-unused-vars */
+const pokemonList = [
   new Pokemon(1, 'Bulbasaur', ['Grass', 'Poison']),
   new Pokemon(2, 'Ivysaur', ['Grass', 'Poison']),
   new Pokemon(3, 'Venusaur', ['Grass', 'Poison']),
@@ -81,7 +82,7 @@ var pokemonList = [
   new Pokemon(80, 'Slowbro', ['Water', 'Psychic']),
   new Pokemon(81, 'Magnemite', ['Electric', 'Steel']),
   new Pokemon(82, 'Magneton', ['Electric', 'Steel']),
-  new Pokemon(83, "Farfetch" + "\'" + "d", ['Normal', 'Flying']),
+  new Pokemon(83, 'Farfetch' + '\'' + 'd', ['Normal', 'Flying']),
   new Pokemon(84, 'Doduo', ['Normal', 'Flying']),
   new Pokemon(85, 'Dodrio', ['Normal', 'Flying']),
   new Pokemon(86, 'Seel', ['Water']),
@@ -790,7 +791,7 @@ var pokemonList = [
   new Pokemon(788, 'Tapu Fini', ['Water', 'Fairy']),
   new Pokemon(789, 'Cosmog', ['Psychic']),
   new Pokemon(790, 'Cosmoem', ['Psychic']),
-  new Pokemon(791, "Solgaleo", ['Psychic', 'Steel']),
+  new Pokemon(791, 'Solgaleo', ['Psychic', 'Steel']),
   new Pokemon(792, 'Lunala', ['Psychic', 'Ghost']),
   new Pokemon(793, 'Nihilego', ['Rock', 'Poison']),
   new Pokemon(794, 'Buzzwole', ['Bug', 'Fighting']),
@@ -808,15 +809,15 @@ var pokemonList = [
   new Pokemon(806, 'Blacephalon', ['Fire', 'Ghost']),
   new Pokemon(807, 'Zeraora', ['Electric']),
   new Pokemon(808, 'Meltan', ['Steel']),
-  new Pokemon(809, 'Melmetal', ['Steel'])
-]
+  new Pokemon(809, 'Melmetal', ['Steel']),
+];
 
 function loadNational() {
-  $('#Center').text("The National Pokémon List by Pokédex Number");
+  $('#Center').text('The National Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
-  for (let p of pokemonList) {
+  for (const p of pokemonList) {
     p.loadToPage();
-    p.ShowTypes();
+    p.showTypes();
   }
 }

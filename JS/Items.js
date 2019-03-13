@@ -1,4 +1,5 @@
-var itemList = [
+/* eslint-disable no-unused-vars */
+const itemList = [
   new Items('Ability Capsule', 'VI', 'Medicine', 'A capsule that allows a Pokémon with two Abilities to switch between these Abilities when it is used.'),
   new Items('Ability Urge', 'V', 'Battle Items', 'When used, it activates the Ability of an ally Pokémon.'),
   new Items('Abomasite', 'VI', 'Hold Items', 'Enables Abomasnow to Mega Evolve during battle.'),
@@ -107,7 +108,7 @@ var itemList = [
   new Items('Discount Coupon', 'VI', 'General Items', 'This special coupon allows you to buy items at a discount when you are shopping at a boutique.'),
   new Items('Dive Ball', 'III', 'Pokeballs', 'A somewhat different Poké Ball that works especially well on Pokémon that live underwater.'),
   new Items('DNA Splicers', 'V', 'General Items', 'A splicer that fuses Kyurem and a certain Pokémon. They are said to have been one in the beginning.'),
-  new Items('Dome Fossil', 'III', 'General Items', '	A fossil of an ancient Pokémon that lived in the sea. It appears to be part of a shell.'),
+  new Items('Dome Fossil', 'III', 'General Items', 'A fossil of an ancient Pokémon that lived in the sea. It appears to be part of a shell.'),
   new Items('Douse Drive', 'V', 'Hold Items', 'Changes Techno Blast to a Water-type move when held by Genesect.'),
   new Items('Draco Plate', 'IV', 'Hold Items', 'Increases power of Dragon-type moves. Changes Arceus\' type to Dragon.'),
   new Items('Dragon Fang', 'II', 'Hold Items', 'Increases the power of Dragon-type moves.'),
@@ -134,7 +135,7 @@ var itemList = [
   new Items('Elixir', 'I', 'Medicine', 'It restores the PP of all the moves learned by the targeted Pokémon by 10 points each.'),
   new Items('Energy Powder', 'II', 'Medicine', 'Restores 60 HP but lowers Friendship.'),
   new Items('Energy Root', 'II', 'Medicine', 'Restores 120 HP but lowers Friendship.'),
-  new Items('Enigma Berry', 'III', 'Berries', '	If held by a Pokémon, it restores its HP if it is hit by any supereffective attack.'),
+  new Items('Enigma Berry', 'III', 'Berries', 'If held by a Pokémon, it restores its HP if it is hit by any supereffective attack.'),
   new Items('Escape Rope', 'I', 'General Items', 'A long, durable rope. Use it to escape instantly from a cave or a dungeon.'),
   new Items('Ether', 'I', 'Medicine', 'It restores the PP of a Pokémon’s selected move by a maximum of 10 points.'),
   new Items('Everstone', 'II', 'Hold Items', 'An item to be held by a Pokémon. The Pokémon holding this peculiar stone is prevented from evolving.'),
@@ -150,7 +151,7 @@ var itemList = [
   new Items('Fighting Memory', 'VII', 'Hold Items', 'Changes Silvally and its move Multi-Attack to Fighting type.'),
   new Items('Fightinium Z', 'VII', 'Hold Items', 'Allows the use of All-Out Pummeling, the Fighting type Z-Move.'),
   new Items('Figy Berry', 'III', 'Berries', 'Restores HP if it\'s low, but may cause confusion.'),
-  new Items('Fire Gem', 'V', 'Hold Items', '	Increases the power of a Fire-type move only once.'),
+  new Items('Fire Gem', 'V', 'Hold Items', 'Increases the power of a Fire-type move only once.'),
   new Items('Fire Memory', 'VII', 'Hold Items', 'Changes Silvally and its move Multi-Attack to Fire type.'),
   new Items('Fire Stone', 'I', 'General Items', 'A peculiar stone that makes certain species of Pokémon evolve. It is colored orange.'),
   new Items('Firium Z', 'VII', 'Hold Items', 'Allows the use of Inferno Overdrive, the Fire type Z-Move.'),
@@ -196,7 +197,7 @@ var itemList = [
   new Items('Grepa Berry', 'III', 'Berries', 'Increases Friendship but lowers Special Defense EVs.'),
   new Items('Grip Claw', 'IV', 'Hold Items', 'A Pokémon held item that extends the duration of multiturn attacks like Bind and Wrap.'),
   new Items('Griseous Orb', 'IV', 'Hold Items', 'Increases the power of Dragon- and Ghost-type moves when held by Giratina, and changes it to Origin Forme.'),
-  new Items('Ground Gem', 'V', 'Hold Items', '	Increases the power of a Ground-type move only once.'),
+  new Items('Ground Gem', 'V', 'Hold Items', 'Increases the power of a Ground-type move only once.'),
   new Items('Ground Memory', 'VII', 'Hold Items', 'Changes Silvally and its move Multi-Attack to Ground type.'),
   new Items('Groundium Z', 'VII', 'Hold Items', 'Allows the use of Tectonic Rage, the Ground type Z-Move.'),
   new Items('Growth Mulch', 'IV', 'General Items', 'A fertilizer to be spread on soft soil in regions where Berries are grown. A maniac will buy it for a high price.'),
@@ -326,9 +327,9 @@ var itemList = [
   new Items('Moon Ball', 'II', 'Pokeballs', 'A Poké Ball for catching Pokémon that evolve using the Moon Stone.'),
   new Items('Moon Stone', 'I', 'General Items', 'A peculiar stone that makes certain species of Pokémon evolve. It is as black as the night sky.'),
   new Items('Muscle Band', 'IV', 'Hold Items', 'Increases the power of Physical-category moves.'),
-  new Items('Muscle Wing', 'V', 'Medicine', '	Increases Attack EVs by 1.'),
+  new Items('Muscle Wing', 'V', 'Medicine', 'Increases Attack EVs by 1.'),
   new Items('Mystic Water', 'II', 'Hold Items', 'Increases the power of Water-type moves.'),
-  new Items('Nanab Berry', 'III', 'Berries', 'Feed this to a Pokémon to calm it down, making it less erratic.	'),
+  new Items('Nanab Berry', 'III', 'Berries', 'Feed this to a Pokémon to calm it down, making it less erratic.'),
   new Items('Nest Ball', 'III', 'Pokeballs', 'A somewhat different Poké Ball that works especially well on weaker Pokémon in the wild.'),
   new Items('Net Ball', 'III', 'Pokeballs', 'A somewhat different Poké Ball that works especially well on Water- and Bug-type Pokémon.'),
   new Items('Never-Melt Ice', 'II', 'Hold Items', 'Increases the power of Ice-type moves.'),
@@ -702,16 +703,18 @@ var itemList = [
   new Items('Yellow Shard', 'III', 'General Items', 'A small yellow shard. It appears to be from some sort of implement made long ago.'),
   new Items('Zap Plate', 'IV', 'Hold Items', 'Increases power of Electric-type moves. Changes Arceus\' type to Electric.'),
   new Items('Zinc', 'III', 'Medicine', 'Increases Special Defense EVs by 10.'),
-  new Items('Zoom Lens', 'IV', 'Hold Items', 'Raises a move\'s accuracy if the holder moves after its target.')
-]
+  new Items('Zoom Lens', 'IV', 'Hold Items', 'Raises a move\'s accuracy if the holder moves after its target.'),
+];
 
 
 function loadItems() {
-  $('#Center').text("Pokémon Item List");
+  $('#Center').text('Pokémon Item List');
   $('#myInput').val('');
-  $('#items-container').empty().append(`<div class="container mt-4"><div class="row"><div class="col-md-3"><h4 class="KalosTextStyle">Name</h4></div><div class="col-md-1"><h4 class="KalosTextStyle">Gen</h4></div><div class="col-md-3"><h4 style="font-style: italic; text-align: center;" class="pr-3">Category</h4></div><div class="col-md-5"><h4 class="KalosTextStyle pr-5">Description</h4></div></div></div>`);
+  $('#items-container').empty().append(`<div class="container mt-4"><div class="row"><div class="col-md-3"><h4 class="KalosTextStyle">
+  Name</h4></div><div class="col-md-1"><h4 class="KalosTextStyle">Gen</h4></div><div class="col-md-3"><h4 style="font-style: italic;
+  text-align: center;" class="pr-3">Category</h4></div><div class="col-md-5"><h4 class="KalosTextStyle pr-5">Description</h4></div></div></div>`);
 
-  for (var j = 0; j < itemList.length; j++) {
+  for (let j = 0; j < itemList.length; j++) {
     itemList[j].loadItemsToPage();
   }
 }

@@ -1,4 +1,5 @@
-var pokemonList = [
+/* eslint-disable no-unused-vars */
+const pokemonList = [
   new Pokemon(494, 'Victini', ['Psychic', 'Fire']),
   new Pokemon(495, 'Snivy', ['Grass']),
   new Pokemon(496, 'Servine', ['Grass']),
@@ -49,7 +50,7 @@ var pokemonList = [
   new Pokemon(110, 'Weezing', ['Poison']),
   new Pokemon(81, 'Magnemite', ['Electric', 'Steel']),
   new Pokemon(82, 'Magneton', ['Electric', 'Steel']),
-  new Pokemon(462,'Magnezone', ['Bug', 'Flying']),
+  new Pokemon(462, 'Magnezone', ['Bug', 'Flying']),
   new Pokemon(58, 'Growlithe', ['Fire']),
   new Pokemon(59, 'Arcanine', ['Fire']),
   new Pokemon(240, 'Magby', ['Fire']),
@@ -299,15 +300,15 @@ var pokemonList = [
   new Pokemon(646, 'Kyurem', ['Dragon', 'Ice']),
   new Pokemon(647, 'Keldeo', ['Water', 'Fighting']),
   new Pokemon(648, 'Meloetta', ['Normal', 'Psychic']),
-  new Pokemon(649, 'Genesect', ['Bug', 'Steel'])
-]
+  new Pokemon(649, 'Genesect', ['Bug', 'Steel']),
+];
 
 function loadUnova() {
-  $('#Center').text("The Unova Pokémon List by Pokédex Number");
+  $('#Center').text('The Unova Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
-  for (var display of pokemonList) {
+  for (const display of pokemonList) {
     display.loadToPage();
-    display.ShowTypes();
+    display.showTypes();
   }
 }

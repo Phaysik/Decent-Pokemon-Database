@@ -1,4 +1,5 @@
-var pokemonList = [];
+/* eslint-disable no-unused-vars */
+const pokemonList = [];
 function loadAlola() {
   pokemonList = [
     new Pokemon(722, 'Rowlet', ['Grass', 'Flying']),
@@ -389,7 +390,7 @@ function loadAlola() {
     new Pokemon(788, 'Tapu Fini', ['Water', 'Fairy']),
     new Pokemon(789, 'Cosmog', ['Psychic']),
     new Pokemon(790, 'Cosmoem', ['Psychic']),
-    new Pokemon(791, "Solgaleo", ['Psychic', 'Steel']),
+    new Pokemon(791, 'Solgaleo', ['Psychic', 'Steel']),
     new Pokemon(792, 'Lunala', ['Psychic', 'Ghost']),
     new Pokemon(793, 'Nihilego', ['Rock', 'Poison']),
     new Pokemon(805, 'Stakataka', ['Rock', 'Steel']),
@@ -403,16 +404,15 @@ function loadAlola() {
     new Pokemon(800, 'Necrozma', ['Psychic']),
     new Pokemon(801, 'Magearna', ['Steel', 'Fairy']),
     new Pokemon(802, 'Marshadow', ['Fighting', 'Ghost']),
-    new Pokemon(807, 'Zeraora', ['Electric'])
-  ]
+    new Pokemon(807, 'Zeraora', ['Electric']),
+  ];
 
-  $('#Center').text("The Alolan Pokémon List by Pokédex Number");
+  $('#Center').text('The Alolan Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
 
-  for (var j = 0; j < pokemonList.length; j++) {
+  for (let j = 0; j < pokemonList.length; j++) {
     pokemonList[j].loadToPage();
-    pokemonList[j].ShowTypes();
+    pokemonList[j].showTypes();
   }
-
 }

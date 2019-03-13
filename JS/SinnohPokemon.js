@@ -1,4 +1,5 @@
-var pokemonList = [
+/* eslint-disable no-unused-vars */
+const pokemonList = [
   new Pokemon(387, 'Turtwig', ['Grass']),
   new Pokemon(388, 'Grotle', ['Grass']),
   new Pokemon(389, 'Torterra', ['Grass', 'Ground']),
@@ -208,15 +209,15 @@ var pokemonList = [
   new Pokemon(362, 'Glalie', ['Ice']),
   new Pokemon(478, 'Froslass', ['Ice', 'Ghost']),
   new Pokemon(359, 'Absol', ['Dark']),
-  new Pokemon(487, 'Giratina', ['Ghost', 'Dragon'])
-]
+  new Pokemon(487, 'Giratina', ['Ghost', 'Dragon']),
+];
 
 function loadSinnoh() {
-  $('#Center').text("The Sinnoh Pokémon List by Pokédex Number");
+  $('#Center').text('The Sinnoh Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
-  for (var display of pokemonList) {
+  for (const display of pokemonList) {
     display.loadToPage();
-    display.ShowTypes();
+    display.showTypes();
   }
 }

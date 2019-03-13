@@ -1,4 +1,5 @@
-var typeColors = {
+/* eslint-disable no-unused-vars */
+const typeColors = {
   'Normal': 'background-color: #A3ACAF;',
   'Fire': 'background-color: #FD7D24;',
   'Water': 'background-color: #4592C4;',
@@ -16,10 +17,10 @@ var typeColors = {
   'Dragon': 'background: linear-gradient(to bottom, #53A4CF 50%, #F16E57 50%);',
   'Dark': 'background-color: #707070;',
   'Steel': 'background-color: #9EB7B8;',
-  'Fairy': 'background-color: #FDB9E9;'
-}
+  'Fairy': 'background-color: #FDB9E9;',
+};
 
-var tmConversion = {
+const tmConversion = {
   'TM01': 'Fighting',
   'TM02': 'Dragon',
   'TM03': 'Psychic',
@@ -119,10 +120,10 @@ var tmConversion = {
   'TM97': 'Dark',
   'TM98': 'Fighting',
   'TM99': 'Fairy',
-  'TM100': 'Normal'
-}
+  'TM100': 'Normal',
+};
 
-var textColors = {
+const textColors = {
   'Normal': '#FFFFFF',
   'Fire': '#FFFFFF',
   'Water': '#FFFFFF',
@@ -140,18 +141,18 @@ var textColors = {
   'Dragon': '#000',
   'Dark': '#FFF',
   'Steel': '#FFFFFF',
-  'Fairy': '#000'
-}
+  'Fairy': '#000',
+};
 
-var holder = "";
-var moveNames = "";
-var moveTypes = "";
+let holder = '';
+let moveNames = '';
+let moveTypes = '';
 
 class Pokemon {
   constructor(nid, name, types) {
-    this.nid = nid
-    this.name = name
-    this.types = types
+    this.nid = nid;
+    this.name = name;
+    this.types = types;
   }
 
   loadToPage() {
@@ -163,10 +164,10 @@ class Pokemon {
               <h5 style="font-weight: normal; text-align: center;">${this.name}</h5>
             </div>
             </li>
-            `)
+            `);
   }
 
-  KalosLoadToPage(ids) {
+  kalosLoadToPage(ids) {
     $(`#${ids}`).append(`
       <li class="list-group-item" style="border: none;">
             <div style="width:140px!important" class="d-flex mx-3 flex-column">
@@ -175,14 +176,15 @@ class Pokemon {
               <h5 style="font-weight: normal; text-align: center;">${this.name}</h5>
             </div>
             </li>
-            `)
+            `);
   }
 
-  ShowTypes() {
-    for (let t of this.types) {
+  showTypes() {
+    for (const t of this.types) {
       $(`#${this.nid}`).append(`
-          <button class="flex-grow-1 mx-1" style="border: 1px solid black; color: ${textColors[t]}; font-weight: bold; border-radius: 25px; text-align: center; ${typeColors[t]}" onclick="displayTypesToScreen('${t}')">${t}</button>
-        `)
+          <button class="flex-grow-1 mx-1" style="border: 1px solid black; color: ${textColors[t]}; 
+          font-weight: bold; border-radius: 25px; text-align: center; ${typeColors[t]}" onclick="displayTypesToScreen('${t}')">${t}</button>
+        `);
     }
   }
 }
@@ -198,8 +200,8 @@ class Items {
 
 
   loadItemsToPage() {
-    if(!(this.name in tmConversion)) {
-      tmConversion[this.name] = this.name
+    if (!(this.name in tmConversion)) {
+      tmConversion[this.name] = this.name;
       this.isTrue = true;
     }
     $('#items-container').append(`
@@ -220,7 +222,10 @@ class Items {
               </div>
             </div>
           </div>`);
-          if(this.isTrue == true) { delete tmConversion[this.name]; }
+
+    if (this.isTrue == true) {
+      delete tmConversion[this.name];
+    }
   }
 }
 
@@ -232,25 +237,24 @@ class Moves {
   }
 
   loadMovesToPage(id) {
-    holder = "";
+    holder = '';
     moveNames = `<h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">`;
     moveTypes = `<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">`;
     if (this.name.length == 2) {
-      for (var i = 0; i < this.name.length; i++) {
+      for (let i = 0; i < this.name.length; i++) {
         holder += `<img height="45" width="45" src="Images/Items/${this.type[i]}.png" alt="${this.name[i]} Image"/>`;
         moveNames += `${this.name[i]}, `;
         moveTypes += `${this.type[i]}, `;
       }
       moveNames = moveNames.substring(0, moveNames.length - 2);
       moveTypes = moveTypes.substring(0, moveTypes.length - 2);
-    }
-    else {
+    } else {
       holder = `<img height="45" width="45" src="Images/Items/${this.type}.png" alt="${this.name} Image"/>`;
       moveNames += `${this.name}`;
       moveTypes += `${this.type}`;
     }
-    moveNames += `</h4>`
-    moveTypes += `</h4>`
+    moveNames += `</h4>`;
+    moveTypes += `</h4>`;
 
 
     $('#' + id).append(`
@@ -271,78 +275,91 @@ class Moves {
   }
 }
 
+let uniqueMoves = [];
+let uniqueAttributes = [];
+
 function displayMovesToScreen(type) {
-  var title = $('#Center').text();
+  uniqueMoves = [];
+  uniqueAttributes = [];
+  let title = $('#Center').text();
   title = title.split(' ');
 
   $('#myInput').val('');
-  $('#Center').empty().text(`All ${type + " type " + title[1].toLowerCase() + "s"} in Database`);
+  $('#Center').empty().text(`All ${type} moves in Database`);
   $('#moves-container').empty();
 
-  for (var i = 0; i < moveList.length; i++) {
+  for (let i = 0; i < moveList.length; i++) {
     if (moveList[i].type.includes(type)) {
-      holder = "";
-      moveNames = `<h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">`;
-      moveTypes = `<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">`;
       if (moveList[i].name.length == 2) {
-        for (var i = 0; i < moveList[i].name.length; i++) {
-          holder += `<img height="45" width="45" src="Images/Items/${moveList[i].type[i]}.png" alt="${moveList[i].name[i]} Image"/>`;
-          moveNames += `${moveList[i].name[i]}, `;
-          moveTypes += `${moveList[i].type[i]}, `;
+        for (let j = 0; j < moveList[i].name.length; j++) {
+          if (moveList[i].type[j] === type) {
+            if (uniqueMoves.includes(moveList[i].name[j])) {
+              continue;
+            } else {
+              uniqueMoves.push(moveList[i].name[j]);
+              uniqueAttributes.push([[`<img height="45" width="45" src="Images/Items/${moveList[i].type[j]}.png" alt="${moveList[i].name[j]} Image"/>`],
+                [`<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${moveList[i].type[j]}</h4>`],
+                [`<h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">${moveList[i].name[j]}</h4>`],
+                [`<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${moveList[i].imgName}</h4>`]]);
+            }
+          }
         }
-        moveNames = moveNames.substring(0, moveNames.length - 2);
-        moveTypes = moveTypes.substring(0, moveTypes.length - 2);
+      } else {
+        if (uniqueMoves.includes(moveList[i].name)) {
+          continue;
+        } else {
+          uniqueMoves.push(moveList[i].name);
+          uniqueAttributes.push([[`<img height="45" width="45" src="Images/Items/${moveList[i].type}.png" alt="${moveList[i].name} Image"/>`],
+            [`<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${moveList[i].type}</h4>`],
+            [`<h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">${moveList[i].name}</h4>`],
+            [`<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${moveList[i].imgName}</h4>`]]);
+        }
       }
-      else {
-        holder = `<img height="45" width="45" src="Images/Items/${moveList[i].type}.png" alt="${moveList[i].name} Image"/>`;
-        moveNames += `${moveList[i].name}`;
-        moveTypes += `${moveList[i].type}`;
-      }
-      moveNames += `</h4>`
-      moveTypes += `</h4>`
-
-      $('#moves-container').append(`
-        <div class="container">
-            <div class="row searchVal">
-              <div class="d-flex flex-row col-md-5 mb-3" style="position: realtive; left: 12%;">
-                ${holder}
-                ${moveNames}
-              </div>
-              <div class="d-flex flex-row col-md-3 mb-2" style="position: relative; left: 7%;">
-                <h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${moveList[i].imgName}</h4>
-              </div>
-              <div class="d-flex flex-row col-md-3 mb-2" style="position: relative; left: 6%;">
-                ${moveTypes}
-              </div>
-            </div>
-          </div>
-            `)
-
     }
   }
 
-  if ($("body").height() > $(window).height()) {
+  for (let i = 0; i < uniqueAttributes.length; i++) {
+    $('#moves-container').append(`
+        <div class="container">
+            <div class="row searchVal">
+              <div class="d-flex flex-row col-md-5 mb-3" style="position: realtive; left: 12%;">
+                ${uniqueAttributes[i][0]}
+                ${uniqueAttributes[i][2]}
+              </div>
+              <div class="d-flex flex-row col-md-3 mb-2" style="position: relative; left: 7%;">
+                ${uniqueAttributes[i][3]}</h4>
+              </div>
+              <div class="d-flex flex-row col-md-3 mb-2" style="position: relative; left: 6%;">
+                ${uniqueAttributes[i][1]}
+              </div>
+            </div>
+          </div>
+            `);
+  }
+
+  if ($('body').height() > $(window).height()) {
     if ($(window).scrollTop() !== 0) {
-      $("html, body").animate({
-        scrollTop: 0
+      $('html, body').animate({
+        scrollTop: 0,
       }, 'slow');
     }
   }
 }
 
 function displayTypesToScreen(type) {
-  var title = $('#Center').text();
+  let title = $('#Center').text();
   title = title.split(' ');
 
   $('#myInput').val('');
-  $('#Center').empty().text(`All ${title[1] + " " + type} Pokémon in Database`);
+  $('#Center').empty().text(`All ${title[1] + ' ' + type} Pokémon in Database`);
   $('#pokemon-container').empty();
 
-  for (var i = 0; i < pokemonList.length; i++) {
+  for (let i = 0; i < pokemonList.length; i++) {
     if (pokemonList[i].types.includes(type)) {
-      holder = "";
-      for (let t of pokemonList[i].types) {
-        holder += `<button class="flex-grow-1 mx-1" style="border: 1px solid black; color: ${textColors[t]}; font-weight: bold; border-radius: 25px; text-align: center; ${typeColors[t]}" onclick="displayTypesToScreen('${t}')">${t}</button>`;
+      holder = '';
+      for (const t of pokemonList[i].types) {
+        holder += `<button class="flex-grow-1 mx-1" style="border: 1px solid black; color: ${textColors[t]}; 
+        font-weight: bold; border-radius: 25px; text-align: center; ${typeColors[t]}" onclick="displayTypesToScreen('${t}')">${t}</button>`;
       }
       $('#pokemon-container').append(`
         <li class="list-group-item" style="border: none;">
@@ -352,15 +369,14 @@ function displayTypesToScreen(type) {
                 <h5 style="font-weight: normal; text-align: center;">${pokemonList[i].name}</h5>
               </div>
               </li>
-            `)
-
+            `);
     }
   }
 
-  if ($("body").height() > $(window).height()) {
+  if ($('body').height() > $(window).height()) {
     if ($(window).scrollTop() !== 0) {
-      $("html, body").animate({
-        scrollTop: 0
+      $('html, body').animate({
+        scrollTop: 0,
       }, 'slow');
     }
   }
