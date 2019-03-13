@@ -271,6 +271,65 @@ class Moves {
   }
 }
 
+function displayMovesToScreen(type) {
+  var title = $('#Center').text();
+  title = title.split(' ');
+
+  $('#myInput').val('');
+  $('#Center').empty().text(`All ${type + " type " + title[1].toLowerCase() + "s"} in Database`);
+  $('#moves-container').empty();
+
+  for (var i = 0; i < moveList.length; i++) {
+    if (moveList[i].type.includes(type)) {
+      holder = "";
+      moveNames = `<h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">`;
+      moveTypes = `<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">`;
+      if (moveList[i].name.length == 2) {
+        for (var i = 0; i < moveList[i].name.length; i++) {
+          holder += `<img height="45" width="45" src="Images/Items/${moveList[i].type[i]}.png" alt="${moveList[i].name[i]} Image"/>`;
+          moveNames += `${moveList[i].name[i]}, `;
+          moveTypes += `${moveList[i].type[i]}, `;
+        }
+        moveNames = moveNames.substring(0, moveNames.length - 2);
+        moveTypes = moveTypes.substring(0, moveTypes.length - 2);
+      }
+      else {
+        holder = `<img height="45" width="45" src="Images/Items/${moveList[i].type}.png" alt="${moveList[i].name} Image"/>`;
+        moveNames += `${moveList[i].name}`;
+        moveTypes += `${moveList[i].type}`;
+      }
+      moveNames += `</h4>`
+      moveTypes += `</h4>`
+
+      $('#moves-container').append(`
+        <div class="container">
+            <div class="row searchVal">
+              <div class="d-flex flex-row col-md-5 mb-3" style="position: realtive; left: 12%;">
+                ${holder}
+                ${moveNames}
+              </div>
+              <div class="d-flex flex-row col-md-3 mb-2" style="position: relative; left: 7%;">
+                <h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${moveList[i].imgName}</h4>
+              </div>
+              <div class="d-flex flex-row col-md-3 mb-2" style="position: relative; left: 6%;">
+                ${moveTypes}
+              </div>
+            </div>
+          </div>
+            `)
+
+    }
+  }
+
+  if ($("body").height() > $(window).height()) {
+    if ($(window).scrollTop() !== 0) {
+      $("html, body").animate({
+        scrollTop: 0
+      }, 'slow');
+    }
+  }
+}
+
 function displayTypesToScreen(type) {
   var title = $('#Center').text();
   title = title.split(' ');
