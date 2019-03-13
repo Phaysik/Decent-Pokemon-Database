@@ -143,6 +143,10 @@ var textColors = {
   'Fairy': '#000'
 }
 
+var holder = "";
+var moveNames = "";
+var moveTypes = "";
+
 class Pokemon {
   constructor(nid, name, types) {
     this.nid = nid
@@ -228,18 +232,39 @@ class Moves {
   }
 
   loadMovesToPage(id) {
+    holder = "";
+    moveNames = `<h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">`;
+    moveTypes = `<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">`;
+    if (this.name.length == 2) {
+      for (var i = 0; i < this.name.length; i++) {
+        holder += `<img height="45" width="45" src="Images/Items/${this.type[i]}.png" alt="${this.name[i]} Image"/>`;
+        moveNames += `${this.name[i]}, `;
+        moveTypes += `${this.type[i]}, `;
+      }
+      moveNames = moveNames.substring(0, moveNames.length - 2);
+      moveTypes = moveTypes.substring(0, moveTypes.length - 2);
+    }
+    else {
+      holder = `<img height="45" width="45" src="Images/Items/${this.type}.png" alt="${this.name} Image"/>`;
+      moveNames += `${this.name}`;
+      moveTypes += `${this.type}`;
+    }
+    moveNames += `</h4>`
+    moveTypes += `</h4>`
+
+
     $('#' + id).append(`
           <div class="container">
             <div class="row searchVal">
               <div class="d-flex flex-row col-md-5 mb-3" style="position: realtive; left: 12%;">
-                <img height="45" width="45" src="Images/Items/${this.type}.png" alt="${this.name} Image"/>
-                <h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">${this.name}</h4>
+                ${holder}
+                ${moveNames}
               </div>
               <div class="d-flex flex-row col-md-3 mb-2" style="position: relative; left: 7%;">
                 <h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${this.imgName}</h4>
               </div>
               <div class="d-flex flex-row col-md-3 mb-2" style="position: relative; left: 6%;">
-                <h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${this.type}</h4>
+                ${moveTypes}
               </div>
             </div>
           </div>`);
