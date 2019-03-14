@@ -2,9 +2,9 @@
 <html>
 
 <head>
-  <title>Moves</title>
+  <title id="titleName"></title>
   <meta charset="UTF-8">
-  <meta name="description" content="Pokémon Moves">
+  <meta name="description" content="Pokémon Info">
   <meta name="author" content="Matthew Moore">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -24,7 +24,7 @@
 
 </head>
 
-<body onload="loadPokemon()">
+<body onload="indexLoad()">
   <header>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
       <div class="container">
@@ -57,6 +57,12 @@
                 <a class="dropdown-item" href="Items.html">Items</a>
                 <a class="dropdown-item" href="Moves.html">Moves</a>
               </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mr-auto">
+              <input class="form-control" id="myInput" type="text" list="datalist" onkeyup="titleCase()" placeholder="Search for Pokémon...">
+              <datalist id="datalist"></datalist>
             </li>
           </ul>
         </div>

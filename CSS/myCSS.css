@@ -14,3 +14,7 @@ h4.KalosTextStyle{
   font-style: italic;
   text-align: center;
 }
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
