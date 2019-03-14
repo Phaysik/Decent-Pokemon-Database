@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-const pokemonList = [];
 function loadMelemele() {
   pokemonList = [
     new Pokemon(722, 'Rowlet', ['Grass', 'Flying']),

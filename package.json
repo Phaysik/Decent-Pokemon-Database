@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Phaysik/Decent-Pokemon-Database#readme",
   "devDependencies": {
     "eslint": "^5.15.1",
-    "eslint-config-google": "^0.12.0"
+    "eslint-config-google": "^0.12.0",
+    "htmlhint": "^0.11.0"
   }
 }

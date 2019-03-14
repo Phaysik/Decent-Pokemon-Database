@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-const pokemonList = [];
+let pokemonList = [];
 
 function KantoLoad() {
   pokemonList = [

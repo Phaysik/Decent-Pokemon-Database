@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
-const pokemonList = [];
+let pokemonList = [];
+
 function loadAlola() {
   pokemonList = [
     new Pokemon(722, 'Rowlet', ['Grass', 'Flying']),
