@@ -772,7 +772,7 @@ const pokemonList = [
   new Pokemon(769, 'Sandygast', ['Ghost', 'Ground']),
   new Pokemon(770, 'Palossand', ['Ghost', 'Ground']),
   new Pokemon(771, 'Pyukumuku', ['Water']),
-  new Pokemon(772, 'Type꞉ Null', ['Normal']),
+  new Pokemon(772, 'Type: Null', ['Normal']),
   new Pokemon(773, 'Silvally', ['Normal']),
   new Pokemon(774, 'Minior', ['Rock', 'Flying']),
   new Pokemon(775, 'Komala', ['Normal']),

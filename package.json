@@ -1,24 +1,23 @@
 {
   "name": "pokemon-website",
   "version": "1.0.0",
-  "description": "![Top Language](https://img.shields.io/github/languages/top/Phaysik/Decent-Pokemon-Database.svg?style=flat)\r ![Code Size](https://img.shields.io/github/languages/code-size/Phaysik/Decent-Pokemon-Database.svg?style=flat)\r [![Last Commit](https://img.shields.io/github/last-commit/doccodes/wcp-pm.svg?style=flat)](https://github.com/Phaysik/Decent-Pokemon-Database/commit/master)\r Just want something easier on the eyes than the big Pokemon sites",
+  "description": "An in-development Pokemon website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Phaysik/Decent-Pokemon-Database.git"
+    "url": "git+https://github.com/Phaysik/Pokemon-Things.git"
   },
   "author": "Matthew Moore",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Phaysik/Decent-Pokemon-Database/issues"
+    "url": "https://github.com/Phaysik/Pokemon-Things/issues"
   },
-  "homepage": "https://github.com/Phaysik/Decent-Pokemon-Database#readme",
+  "homepage": "https://github.com/Phaysik/Pokemon-Things#readme",
   "devDependencies": {
     "eslint": "^5.15.1",
-    "eslint-config-google": "^0.12.0",
-    "htmlhint": "^0.11.0"
+    "eslint-config-google": "^0.12.0"
   }
 }

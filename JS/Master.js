@@ -155,7 +155,9 @@ class Pokemon {
     this.types = types;
   }
 
+
   loadToPage() {
+    this.name = (this.name.includes(':')) ? this.name.replace(/:/, '꞉') : this.name;
     $('#pokemon-container').append(`
       <li class="list-group-item" style="border: none;">
             <div style="width:140px!important" class="d-flex mx-3 flex-column">
