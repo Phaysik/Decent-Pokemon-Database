@@ -3,6 +3,7 @@ const pokemon = [];
 const desc = [];
 const types = [];
 const ids = [];
+let copy;
 let value = 0;
 let val = '';
 
@@ -16,16 +17,18 @@ for (let i = 0; i < pokemonList.length; i++) {
 
 function visibility(show) {
   if (show !== undefined && show !== 3) {
-    $('.appendList').empty();
+    $('#datalist').empty();
   } else {
     if (value === 0) {
       loadDataList();
       value++;
-    } else if (document.getElementsByClassName('appendList')[0].children.length === 0 && show !== undefined) {
-      $('.appendList').append(datalist);
+    } else if (datalist.childNodes.length === 0 && show !== undefined) {
+      datalist.append(copy.cloneNode(true));
     } else if (show === undefined) {
-      $('.appendList').empty();
-      value--;
+      $('#datalist').empty();
+      value++;
+    } else if (value === 2) {
+      datalist.append(copy.cloneNode(true));
     }
   }
 }
@@ -48,6 +51,8 @@ function loadDataList() {
     option.value = pokemon[i];
     datalist.appendChild(option);
   }
+  copy = datalist.cloneNode(true);
+  alert(copy.childNodes[0]);
 }
 function indexLoad() {
   $(document).attr('title', 'Bulbasaur');
