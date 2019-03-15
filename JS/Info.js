@@ -16,19 +16,15 @@ for (let i = 0; i < pokemonList.length; i++) {
 
 function visibility(show) {
   if (show !== undefined && show !== 3) {
-    if (datalist.childNodes.length === 0) {
-      loadDataList();
-    } else if (show === 0) {
-      $('#datalist').empty();
-    }
+    $('.appendList').empty();
   } else {
     if (value === 0) {
       loadDataList();
       value++;
-    } else if (datalist.childNodes.length === 0 && show !== undefined) {
-      loadDataList();
+    } else if (document.getElementsByClassName('appendList')[0].children.length === 0 && show !== undefined) {
+      $('.appendList').append(datalist);
     } else if (show === undefined) {
-      $('#datalist').empty();
+      $('.appendList').empty();
       value--;
     }
   }
@@ -38,11 +34,10 @@ function Search() {
   visibility(3);
   val = document.getElementById('myInput').value;
   const opts = document.getElementById('datalist').childNodes;
-  for (let i = 0; i < opts.length; i++) {
-    if (opts[i].value === toTitleCase(val)) {
-      visibility(0);
-      break;
-    }
+  if ($('#datalist option').filter(function() {
+    return this.value.toUpperCase() === val.toUpperCase();
+  }).length) {
+    visibility(0);
   }
 }
 
