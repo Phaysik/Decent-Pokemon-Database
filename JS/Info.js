@@ -17,18 +17,16 @@ for (let i = 0; i < pokemonList.length; i++) {
 
 function visibility(show) {
   if (show !== undefined && show !== 3) {
-    $('#datalist').empty();
+    $('.appendList').empty();
   } else {
     if (value === 0) {
       loadDataList();
       value++;
-    } else if (datalist.childNodes.length === 0 && show !== undefined) {
-      datalist.append(copy.cloneNode(true));
+    } else if (document.getElementsByClassName('appendList')[0].children.length === 0 && show !== undefined) {
+      $('.appendList').append(datalist);
     } else if (show === undefined) {
-      $('#datalist').empty();
-      value++;
-    } else if (value === 2) {
-      datalist.append(copy.cloneNode(true));
+      $('.appendList').empty();
+      value--;
     }
   }
 }
@@ -37,7 +35,7 @@ function Search() {
   visibility(3);
   val = document.getElementById('myInput').value;
   const opts = document.getElementById('datalist').childNodes;
-  if ($('#datalist option').filter(function() {
+  if ($('#datalist option').filter(function () {
     return this.value.toUpperCase() === val.toUpperCase();
   }).length) {
     visibility(0);
