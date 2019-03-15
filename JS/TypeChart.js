@@ -140,7 +140,7 @@ const typeList = [
   new Types('Fairy', 'Fairy Symbol Image', '#FF00FF'),
 ];
 
-const arrayIndex = 0;
+let arrayIndex = 0;
 
 for (const p of typeList) {
   p.loadToPage(arrayIndex);

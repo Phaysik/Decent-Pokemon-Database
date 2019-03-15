@@ -3,7 +3,8 @@ const pokemon = [];
 const desc = [];
 const types = [];
 const ids = [];
-let val = 0;
+let value = 0;
+let val = '';
 
 const datalist = document.getElementById('datalist');
 
@@ -14,32 +15,28 @@ for (let i = 0; i < pokemonList.length; i++) {
 }
 
 function visibility(show) {
-  if (show !== undefined) {
-    if (datalist.childNodes.length === 0 || show === 1) {
-      $('#datalist').empty();
+  if (show !== undefined && show !== 3) {
+    if (datalist.childNodes.length === 0) {
       loadDataList();
     } else if (show === 0) {
       $('#datalist').empty();
     }
   } else {
-    if (val === 0) {
-      $('#datalist').empty();
+    if (value === 0) {
       loadDataList();
-      val++;
-    } else if (show === 0) {
+      value++;
+    } else if (datalist.childNodes.length === 0 && show !== undefined) {
+      loadDataList();
+    } else if (show === undefined) {
       $('#datalist').empty();
+      value--;
     }
   }
 }
 
-function titleCase() {
+function Search() {
+  visibility(3);
   val = document.getElementById('myInput').value;
-  if (/^[a-z: ]+$/i.test(val) == false) {
-    visibility(1);
-    return;
-  } else if (datalist.childNodes.length === 0) {
-    visibility(1);
-  }
   const opts = document.getElementById('datalist').childNodes;
   for (let i = 0; i < opts.length; i++) {
     if (opts[i].value === toTitleCase(val)) {
@@ -62,5 +59,5 @@ function indexLoad() {
 }
 
 function loadPokemon(name) {
-  $(document).attr('title', type);
+  $(document).attr('title', name);
 }
