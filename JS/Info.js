@@ -25,7 +25,6 @@ function visibility(show) {
       $('.appendList').append(datalist);
     } else if (show === undefined) {
       $('.appendList').empty();
-      value--;
     }
   }
 }
