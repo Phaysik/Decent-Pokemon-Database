@@ -3,7 +3,6 @@ const pokemon = [];
 const desc = [];
 const types = [];
 const ids = [];
-let copy;
 let value = 0;
 let val = '';
 
@@ -35,7 +34,7 @@ function Search() {
   visibility(3);
   val = document.getElementById('myInput').value;
   const opts = document.getElementById('datalist').childNodes;
-  if ($('#datalist option').filter(function () {
+  if ($('#datalist option').filter(function() {
     return this.value.toUpperCase() === val.toUpperCase();
   }).length) {
     visibility(0);
@@ -49,8 +48,6 @@ function loadDataList() {
     option.value = pokemon[i];
     datalist.appendChild(option);
   }
-  copy = datalist.cloneNode(true);
-  alert(copy.childNodes[0]);
 }
 function indexLoad() {
   $(document).attr('title', 'Bulbasaur');
