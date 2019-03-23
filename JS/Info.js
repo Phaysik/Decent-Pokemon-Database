@@ -21,6 +21,7 @@ window.onload = function() {
     $(document).attr('title', urlPath[1]);
     loadPokemon(urlPath[1]);
   } else { // If the page was not by the user clicking on a Pokemon image from another page
+    window.location.replace('index.html?Bulbasaur'); // Replace URL to make later state pushing possible
     loadPokemon('Bulbasaur');
   }
 };
@@ -41,10 +42,15 @@ function Search() {
   visibility(3);
   val = document.getElementById('myInput').value;
   const opts = document.getElementById('datalist').childNodes;
-  if ($('#datalist option').filter(function() {
-    return this.value.toUpperCase() === val.toUpperCase();
-  }).length) {
-    visibility(0);
+  for (let i = 0; i < opts.length; i++) {
+    if (opts[i].value === toTitleCase(val)) {
+      visibility(0);
+      if (window.location.href.indexOf(`index.html?${toTitleCase(val)}`) <= -1) { // Prevent multiple states of the same value being pushed
+        window.history.pushState({index: 'index'}, toTitleCase(val), `index.html?${toTitleCase(val)}`);
+      }
+      loadPokemon(toTitleCase(val));
+      break;
+    }
   }
 }
 
