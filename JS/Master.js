@@ -366,7 +366,7 @@ function displayTypesToScreen(type) {
       $('#pokemon-container').append(`
         <li class="list-group-item" style="border: none;">
               <div style="width:140px!important" class="d-flex mx-3 flex-column">
-                <a href="index.html?${this.name}" class="my-2 align-self-center"><img height="100" width="100" src="Images/Pokemon/${pokemonList[i].name}.png" 
+                <a href="index.html?${pokemonList[i].name}" class="my-2 align-self-center"><img height="100" width="100" src="Images/Pokemon/${pokemonList[i].name}.png" 
                 alt="${pokemonList[i].name} Image"/></a>
                 <div id="${pokemonList[i].nid}" class="d-flex">${holder}</div>
                 <h5 style="font-weight: normal; text-align: center;">${pokemonList[i].name}</h5>
