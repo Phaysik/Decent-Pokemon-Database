@@ -20,7 +20,6 @@ window.onload = function() {
   if (urlPath[1]) { // if a ( ? ) was found in the split, use the second part after the ?
     $(document).attr('title', urlPath[1]);
     loadPokemon(urlPath[1]);
-    sessionStorage.setItem('title', urlPath[1]); // If a Pokemon was loaded from another page, then it will save it's name to the local Storage
   } else { // If the page was not by the user clicking on a Pokemon image from another page
     loadPokemon('Bulbasaur');
   }
