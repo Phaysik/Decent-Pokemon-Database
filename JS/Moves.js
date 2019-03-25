@@ -549,18 +549,18 @@ function loadMoves() {
   $('#Center').text('Pokémon Move List');
   $('#myInput').val('',);
   $('#moves-container').empty().append(`<div id="ids1" style="width: 100%;"><h4 class="KalosTextStyle">
-  Gen 1 Moves</h4><span class="container d-flex justify-content-around flex-wrap" id="Gen1"></span></div><div id="ids2" style="width: 100%;">
-  <h4 class="KalosTextStyle">Gen 2 Moves</h4><span class="container d-flex justify-content-around flex-wrap" id="Gen2"></span></div>
-  <div id="ids3" style="width: 100%;"><h4 class="KalosTextStyle">Gen 3 Moves</h4><span class="container d-flex justify-content-around flex-wrap" id="Gen3">
-  </span></div><div id="ids4" style="width: 100%;"><h4 class="KalosTextStyle">Gen 4 Moves</h4><span class="container d-flex justify-content-around flex-wrap" id="Gen4">
-  </span></div><div id="ids5" style="width: 100%;"><h4 class="KalosTextStyle">Gen 5 Moves</h4><span class="container d-flex justify-content-around flex-wrap" id="Gen5">
-  </span></div><div id="ids6" style="width: 100%;"><h4 class="KalosTextStyle">Gen 6 Moves</h4><span class="container d-flex justify-content-around flex-wrap" id="Gen6">
-  </span></div><div id="ids7" style="width: 100%;"><h4 class="KalosTextStyle">Gen 7 Moves</h4><span class="container d-flex justify-content-around flex-wrap" id="Gen7">
+  Gen 1 Moves</h4><span id="Gen1"></span></div><div id="ids2" style="width: 100%;">
+  <h4 class="KalosTextStyle">Gen 2 Moves</h4><span id="Gen2"></span></div>
+  <div id="ids3" style="width: 100%;"><h4 class="KalosTextStyle">Gen 3 Moves</h4><span id="Gen3">
+  </span></div><div id="ids4" style="width: 100%;"><h4 class="KalosTextStyle">Gen 4 Moves</h4><span id="Gen4">
+  </span></div><div id="ids5" style="width: 100%;"><h4 class="KalosTextStyle">Gen 5 Moves</h4><span id="Gen5">
+  </span></div><div id="ids6" style="width: 100%;"><h4 class="KalosTextStyle">Gen 6 Moves</h4><span id="Gen6">
+  </span></div><div id="ids7" style="width: 100%;"><h4 class="KalosTextStyle">Gen 7 Moves</h4><span id="Gen7">
   </span></div>`);
 
   for (let j = 0; j < ids.length; j++) {
-    $('#' + ids[j]).append(`<div class="container mt-4"><div class="row"><div class="col-md-5"><h4 class="KalosTextStyle">Name</h4></div><div class="col-md-3">
-    <h4 style="font-style: italic; text-align: center;" class="pr-3">TM</h4></div><div class="col-md-3"><h4 style="font-style: italic; text-align: center;" class="pr-3">
+    $('#' + ids[j]).append(`<div class="container mt-4"><div class="row"><div class="col-5"><h4 class="KalosTextStyle">Name</h4></div><div class="col-3">
+    <h4 style="font-style: italic; text-align: center;" class="pr-3">TM</h4></div><div class="col-3"><h4 style="font-style: italic; text-align: center;" class="pr-3">
     Type</h4></div></div>`);
     for (let i = counter; i < moves[j] + counter; i++) {
       moveList[i].loadMovesToPage(ids[j]);
