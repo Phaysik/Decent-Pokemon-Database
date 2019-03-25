@@ -45,10 +45,12 @@ function Search() {
   for (let i = 0; i < opts.length; i++) {
     if (opts[i].value === toTitleCase(val)) {
       visibility(0);
-      if (window.location.href.indexOf(`index.html?${toTitleCase(val)}`) <= -1) { // Prevent multiple states of the same value being pushed
-        window.history.pushState({index: 'index'}, toTitleCase(val), `index.html?${toTitleCase(val)}`);
+      if (window.event.keyCode == '13') {
+        if (window.location.href.indexOf(`index.html?${toTitleCase(val)}`) <= -1) { // Prevent multiple states of the same value being pushed
+          window.history.pushState({ index: 'index' }, toTitleCase(val), `index.html?${toTitleCase(val)}`);
+        }
+        loadPokemon(toTitleCase(val));
       }
-      loadPokemon(toTitleCase(val));
       break;
     }
   }
