@@ -50,6 +50,7 @@ function Search() {
           window.history.pushState({ index: 'index' }, toTitleCase(val), `index.html?${toTitleCase(val)}`);
         }
         loadPokemon(toTitleCase(val));
+        $('#myInput').val('');
       }
       break;
     }
