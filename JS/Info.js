@@ -18,23 +18,24 @@ for (let i = 0; i < pokemonList.length; i++) {
 
 window.onload = function() {
   if (urlPath[1]) { // if a ( ? ) was found in the split, use the second part after the ?
-    $(document).attr('title', urlPath[1]);
-    loadPokemon(urlPath[1]);
+    if (pokemon.indexOf(toTitleCase(urlPath[1].split('=')[1].replace('%20', ' '))) === -1) { // Redirect the user to a page not found if the query is not in the Pokemon list
+      window.location = 'set redirect location to page not found when made';
+    } else {
+      const name = toTitleCase(urlPath[1].split('=')[1]);
+      $(document).attr('title', name);
+      loadPokemon(toTitleCase(name.replace('%20', ' ')));
+    }
   } else { // If the page was not by the user clicking on a Pokemon image from another page
-    window.location.replace('index.html?Bulbasaur'); // Replace URL to make later state pushing possible
+    window.location.href = 'index.html?Search=Bulbasaur'; // Replace URL to make later state pushing possible
     loadPokemon('Bulbasaur');
   }
 };
 
 function visibility(show) {
-  if (show !== undefined && show !== 3) {
+  if (show === undefined || show === 0 || $('#myInput').val() === '') {
     $('.appendList').empty();
-  } else {
-    if (document.getElementsByClassName('appendList')[0].children.length === 0 && show !== undefined) {
-      $('.appendList').append(datalist);
-    } else if (show === undefined) {
-      $('.appendList').empty();
-    }
+  } else if (document.getElementsByClassName('appendList')[0].children.length === 0 && show !== undefined) {
+    $('.appendList').append(datalist);
   }
 }
 
@@ -46,10 +47,11 @@ function Search() {
     if (opts[i].value === toTitleCase(val)) {
       visibility(0);
       if (window.event.keyCode == '13') {
-        if (window.location.href.indexOf(`index.html?${toTitleCase(val)}`) <= -1) { // Prevent multiple states of the same value being pushed
-          window.history.pushState({ index: 'index' }, toTitleCase(val), `index.html?${toTitleCase(val)}`);
+        if (window.location.href.indexOf(`index.html?Search=${toTitleCase(val)}`) <= -1) { // Prevent multiple states of the same value being pushed
+          window.history.pushState({index: 'index'}, toTitleCase(val), `index.html?Search=${toTitleCase(val)}`);
+          loadPokemon(toTitleCase(val));
+          $('#myInput').val('');
         }
-        loadPokemon(toTitleCase(val));
       }
       break;
     }
@@ -67,5 +69,7 @@ function loadDataList() {
 
 function loadPokemon(name) {
   loadDataList();
+  $('.appendList').empty();
+  console.log(name);
   $(document).attr('title', name);
 }
