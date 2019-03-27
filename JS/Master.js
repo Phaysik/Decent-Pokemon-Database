@@ -211,7 +211,7 @@ class Items {
             <div class="row searchVal">
               <div class="d-flex flex-row col-3 mb-3">
                 <img height="50" width="50" src="Images/Items/${tmConversion[this.name]}.png" alt="${this.name} Image"/>
-                <h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">${this.name}</h4>
+                <h4 class="ml-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">${this.name}</h4>
               </div>
               <div class="flex-row col-1 mb-3">
                 <h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${this.id}</h4>
