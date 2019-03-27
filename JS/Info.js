@@ -5,9 +5,6 @@ const types = [];
 const ids = [];
 let val = '';
 const urlPath = window.location.href.split('?');
-const obj = {}; // an object to store properties and values in
-let eq;
-
 const datalist = document.getElementById('datalist');
 
 for (let i = 0; i < pokemonList.length; i++) {
@@ -70,6 +67,5 @@ function loadDataList() {
 function loadPokemon(name) {
   loadDataList();
   $('.appendList').empty();
-  console.log(name);
   $(document).attr('title', name);
 }
