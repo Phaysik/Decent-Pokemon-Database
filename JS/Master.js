@@ -161,7 +161,7 @@ class Pokemon {
     $('#pokemon-container').append(`
       <li class="list-group-item" style="border: none;">
             <div style="width:140px!important" class="d-flex mx-3 flex-column">
-              <a href="index.html?${this.name}" class="my-2 align-self-center"><img height="100" width="100"  src="Images/Pokemon/${this.name}.png" alt="${this.name} Image"/></a>
+              <a href="index.html?Search=${this.name}" class="my-2 align-self-center"><img height="100" width="100"  src="Images/Pokemon/${this.name}.png" alt="${this.name} Image"/></a>
               <div id="${this.nid}" class="d-flex"></div>
               <h5 style="font-weight: normal; text-align: center;">${this.name}</h5>
             </div>
@@ -173,7 +173,7 @@ class Pokemon {
     $(`#${ids}`).append(`
       <li class="list-group-item" style="border: none;">
             <div style="width:140px!important" class="d-flex mx-3 flex-column">
-              <a href="index.html?${this.name}" class="my-2 align-self-center"><img height="100" width="100"  src="Images/Pokemon/${this.name}.png" alt="${this.name} Image"/></a>
+              <a href="index.html?Search=${this.name}" class="my-2 align-self-center"><img height="100" width="100"  src="Images/Pokemon/${this.name}.png" alt="${this.name} Image"/></a>
               <div id="${this.nid}" class="d-flex"></div>
               <h5 style="font-weight: normal; text-align: center;">${this.name}</h5>
             </div>
@@ -214,10 +214,10 @@ class Items {
                 <h4 class="ml-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">${this.name}</h4>
               </div>
               <div class="flex-row col-1 mb-3">
-                <h4 class="ml-3 pt-3" style="font-weight: normal; font-size: 14pt">${this.id}</h4>
+                <h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${this.id}</h4>
               </div>
               <div class="flex-row col-3 mb-3 mx-auto">
-                <h4 class="ml-3 pt-3 pl-5" style="width: 100%; font-weight: normal; font-size: 14pt;">${this.category}</h4>
+                <h4 class="mx-3 pt-3 pl-5" style="width: 100%; font-weight: normal; font-size: 14pt;">${this.category}</h4>
               </div>
               <div class="flex-row col-5 mb-3">
                 <h4 class="pt-3" style="font-weight: normal; font-size: 14pt;">${this.description}</h4>
@@ -366,7 +366,7 @@ function displayTypesToScreen(type) {
       $('#pokemon-container').append(`
         <li class="list-group-item" style="border: none;">
               <div style="width:140px!important" class="d-flex mx-3 flex-column">
-                <a href="index.html?${pokemonList[i].name}" class="my-2 align-self-center"><img height="100" width="100" src="Images/Pokemon/${pokemonList[i].name}.png" 
+                <a href="index.html?Search=${pokemonList[i].name}" class="my-2 align-self-center"><img height="100" width="100" src="Images/Pokemon/${pokemonList[i].name}.png" 
                 alt="${pokemonList[i].name} Image"/></a>
                 <div id="${pokemonList[i].nid}" class="d-flex">${holder}</div>
                 <h5 style="font-weight: normal; text-align: center;">${pokemonList[i].name}</h5>

@@ -710,9 +710,9 @@ const itemList = [
 function loadItems() {
   $('#Center').text('Pokémon Item List');
   $('#myInput').val('');
-  $('#items-container').empty().append(`<div class="container mt-4"><div class="row"><div class="flex-row col-3"><h4 class="KalosTextStyle">
-  Name</h4></div><div class="flex-row col-1"><h4 class="KalosTextStyle">Gen</h4></div><div class="flex-row col-3"><h4 style="font-style: italic;
-  text-align: center;" class="pr-3">Category</h4></div><div class="flex-row col-5"><h4 class="KalosTextStyle pr-5">Description</h4></div></div></div>`);
+  $('#items-container').empty().append(`<div class="container mt-4"><div class="row"><div class="col-3"><h4 class="KalosTextStyle">
+  Name</h4></div><div class="col-1"><h4 class="KalosTextStyle">Gen</h4></div><div class="col-3"><h4 style="font-style: italic;
+  text-align: center;" class="pr-3">Category</h4></div><div class="col-5"><h4 class="KalosTextStyle pr-5">Description</h4></div></div></div>`);
 
   for (let j = 0; j < itemList.length; j++) {
     itemList[j].loadItemsToPage();
