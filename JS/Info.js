@@ -3,9 +3,16 @@ const pokemon = [];
 const desc = [];
 const types = [];
 const ids = [];
+const descriptions = [];
 let val = '';
 const urlPath = window.location.href.split('?');
 const datalist = document.getElementById('datalist');
+
+$.getJSON('../JSON/descriptions.json', function(data) {
+  $.each(data, function(key, val) {
+    descriptions.push(val);
+  });
+});
 
 for (let i = 0; i < pokemonList.length; i++) {
   pokemon.push(pokemonList[i].name);
