@@ -22,6 +22,9 @@ module.exports = {
         }],
         "max-len": ["error", {
             "code": 200
+        }],
+        "new-cap": ["error", {
+            "capIsNew": false
         }]
     }
 };

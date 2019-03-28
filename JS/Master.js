@@ -147,6 +147,7 @@ const textColors = {
 let holder = '';
 let moveNames = '';
 let moveTypes = '';
+let display = false;
 
 class Pokemon {
   constructor(nid, name, types) {
@@ -354,9 +355,26 @@ function displayTypesToScreen(type) {
 
   $('#myInput').val('');
   $('#Center').empty().text(`All ${title[1] + ' ' + type} Pokémon in Database`);
-  $('#pokemon-container').empty();
 
-  for (let i = 0; i < pokemonList.length; i++) {
+  if ($('#Center').text().includes('Kanto')) {
+    displayTypesToScreenExtend(type, 2);
+  } else {
+    displayTypesToScreenExtend(type, 0);
+  }
+
+  if ($('body').height() > $(window).height()) {
+    if ($(window).scrollTop() !== 0) {
+      $('html, body').animate({
+        scrollTop: 0,
+      }, 'slow');
+    }
+  }
+}
+
+function displayTypesToScreenExtend(type, num) {
+  display = true;
+  $('#pokemon-container').empty();
+  for (let i = 0; i < pokemonList.length - num; i++) {
     if (pokemonList[i].types.includes(type)) {
       holder = '';
       for (const t of pokemonList[i].types) {
@@ -375,12 +393,46 @@ function displayTypesToScreen(type) {
             `);
     }
   }
+}
 
-  if ($('body').height() > $(window).height()) {
-    if ($(window).scrollTop() !== 0) {
-      $('html, body').animate({
-        scrollTop: 0,
-      }, 'slow');
+window.onscroll = function() {
+  if ($('#Center').text().includes('Kanto')) {
+    scroll(2);
+  } else {
+    scroll(0);
+  }
+};
+
+function scroll(value) {
+  if (display === false) {
+    if ($('#myInput').val() == '') {
+      if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+        for (index; index < pokemonList.length - value; index++) {
+          const width = (document.getElementById('pokemon-container').offsetWidth / $('.list-group-item').outerWidth()) * 2 - 1;
+          if (index < pokemonList.length - width) {
+            for (let i = 0; i < width; i++) {
+              pokemonList[index].loadToPage();
+              pokemonList[index].showTypes();
+              index++;
+            }
+          } else {
+            for (index; index < pokemonList.length - value; index++) {
+              pokemonList[index].loadToPage();
+              pokemonList[index].showTypes();
+            }
+          }
+
+          break;
+        }
+      }
     }
+  }
+}
+function loadSeen() {
+  $('#pokemon-container').empty();
+  display = false;
+  for (let i = 0; i < index; i++) {
+    pokemonList[i].loadToPage();
+    pokemonList[i].showTypes();
   }
 }

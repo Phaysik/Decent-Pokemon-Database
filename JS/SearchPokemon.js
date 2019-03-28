@@ -24,40 +24,33 @@ function KalosSearch() {
   });
 }
 
-function AlolaSearch() {
+function KJHSUASearch() {
   $(document).ready(function() {
-    $('#myInput').on('keyup', function() {
-      let value = $(this).val().toLowerCase();
+    let value = $('#myInput').val().toLowerCase();
+    $('#pokemon-container').empty();
 
-      value = (value.includes(':')) ? value.replace(/:/, '꞉') : value;
+    value = (value.includes(':')) ? value.replace(/:/, '꞉') : value;
 
-      $('#pokemon-container li').filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-      });
-    });
+    if (value !== '') {
+      if ($('#Center').text().includes('Kanto')) {
+        KJHSUASearchExtend(value, 2);
+      } else {
+        KJHSUASearchExtend(value, 0);
+      }
+    } else {
+      loadSeen();
+    }
   });
 }
 
-function KJHSUSearch() {
-  $(document).ready(function() {
-    const value = $('#myInput').val().toLowerCase();
-    $('#pokemon-container').empty();
-
-    if (value !== '') {
-      for (let g = 0; g < list.length; g++) {
-        if (list[g].name.toLowerCase().indexOf(value) >= 0 || (list[g].types.length === 1 && list[g].types[0].toLowerCase().indexOf(value) >= 0) ||
-        (list[g].types.length === 2 && (list[g].types[0].toLowerCase().indexOf(value) >= 0 || list[g].types[1].toLowerCase().indexOf(value) >= 0))) {
-          list[g].loadToPage();
-          list[g].showTypes();
-        }
-      }
-    } else {
-      for (let i = 0; i < index; i++) {
-        list[i].loadToPage();
-        list[i].showTypes();
-      }
+function KJHSUASearchExtend(value, num) {
+  for (let g = 0; g < pokemonList.length - num; g++) {
+    if (pokemonList[g].name.toLowerCase().indexOf(value) >= 0 || (pokemonList[g].types.length === 1 && pokemonList[g].types[0].toLowerCase().indexOf(value) >= 0) ||
+      (pokemonList[g].types.length === 2 && (pokemonList[g].types[0].toLowerCase().indexOf(value) >= 0 || pokemonList[g].types[1].toLowerCase().indexOf(value) >= 0))) {
+      pokemonList[g].loadToPage();
+      pokemonList[g].showTypes();
     }
-  });
+  }
 }
 
 function ItemSearch() {

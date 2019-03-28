@@ -9,9 +9,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script src="JS/JQuery.js"></script>
-  <script src="JS/Master.js" defer></script>
+  <script src="JS/Master.js"></script>
+  <script src="JS/KantoPokemon.js"></script>
   <script src="JS/SearchPokemon.js"></script>
-  <script src="JS/KantoPokemon.js" defer></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
@@ -23,7 +23,7 @@
 
 </head>
 
-<body onload="KantoLoad()">
+<body>
   <header>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
       <div class="container">
@@ -61,7 +61,7 @@
           </ul>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mr-auto">
-              <input class="form-control" id="myInput" type="text" onkeyup="KJHSUSearch()" placeholder="Search for Pokémon...">
+              <input class="form-control" id="myInput" type="text" onkeyup="KJHSUASearch()" placeholder="Search for Pokémon...">
             </li>
 
             <li class="nav-item dropdown mr-auto">
@@ -69,7 +69,7 @@
                 DS vs Switch
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item pointer" onclick="KantoLoad()">Normal Kanto Pokédex</a>
+                <a class="dropdown-item pointer" onclick="loadKanto()">Normal Kanto Pokédex</a>
                 <a class="dropdown-item pointer" onclick="loadLetsGo()">Pokémon Let's Go Pokédex</a>
               </div>
             </li>
@@ -79,7 +79,7 @@
                 Sort by Pokémon Type
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item pointer" onclick="KantoLoad()">All Types</a>
+                <a class="dropdown-item pointer" onclick="loadSeen()">All Types</a>
                 <a class="dropdown-item pointer" onclick="displayTypesToScreen('Normal')">Normal</a>
                 <a class="dropdown-item pointer" onclick="displayTypesToScreen('Fire')">Fire</a>
                 <a class="dropdown-item pointer" onclick="displayTypesToScreen('Water')">Water</a>
