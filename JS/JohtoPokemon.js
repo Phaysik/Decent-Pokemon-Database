@@ -36,7 +36,7 @@ window.onscroll = function() {
             index++;
           }
         } else {
-          for (let i = 0; i < (document.getElementById('pokemon-container').offsetWidth / $('.list-group-item').outerWidth()) * 2 - 1; i++) {
+          for (let i = 0; i < (document.getElementById('pokemon-container').offsetWidth / $('.list-group-item').outerWidth()) - 1; i++) {
             list[index].loadToPage();
             list[index].showTypes();
             index++;
