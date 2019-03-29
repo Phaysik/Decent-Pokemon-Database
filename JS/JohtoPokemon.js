@@ -6,7 +6,7 @@ window.onload = function() {
   $('#Center').text('The Johto Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
-  $.getJSON('../JSON/johto.json', function (data) {
+  $.getJSON('../JSON/johto.json', function(data) {
     for (let i = 0; i < data['pokemon'].length; i++) {
       pokemonList.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
     }

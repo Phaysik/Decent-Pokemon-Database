@@ -12,7 +12,7 @@ function loadKanto() {
   $('#Center').text('The Kanto Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
-  $.getJSON('../JSON/kanto.json', function (data) {
+  $.getJSON('../JSON/kanto.json', function(data) {
     for (let i = 0; i < data['pokemon'].length; i++) {
       pokemonList.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
     }
@@ -33,7 +33,7 @@ function loadLetsGo() {
   $('#Center').text('The Expansion Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
-  $.getJSON('../JSON/kanto.json', function (data) {
+  $.getJSON('../JSON/kanto.json', function(data) {
     for (let i = 0; i < data['pokemon'].length; i++) {
       pokemonList.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
     }

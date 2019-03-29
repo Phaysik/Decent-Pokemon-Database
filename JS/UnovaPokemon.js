@@ -3,11 +3,11 @@ let index = 0;
 const pokemonList = [];
 
 
-window.onload = function () {
+window.onload = function() {
   $('#Center').text('The Unova Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
-  $.getJSON('../JSON/unova.json', function (data) {
+  $.getJSON('../JSON/unova.json', function(data) {
     for (let i = 0; i < data['pokemon'].length; i++) {
       pokemonList.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
     }
@@ -20,5 +20,4 @@ window.onload = function () {
       }
     }
   });
-  
 };
