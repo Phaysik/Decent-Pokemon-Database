@@ -397,28 +397,75 @@ function displayTypesToScreenExtend(type, num) {
 
 window.onscroll = function() {
   if ($('#Center').text().includes('Kanto')) {
-    scroll(2);
+    scroll(2, null);
+  } else if ($('#Center').text().includes('Kalos')) {
+    if ($('#ids2').length === 0 && $('#ids3').length === 0 && index !== regionCount) {
+      scroll(pokemonList.length - regionCount, `${ids[0]}`);
+    } else if ($('#ids2').length === 0 || index < 153 + count[0]) {
+      if (appended[0] === false) {
+        $('#pokemon-container').append(`
+        <div id="ids2">
+            <h4 class="KalosTextStyle">The Coastal Kalos Pokédex</h4>
+            <span class="container d-flex justify-content-around flex-wrap" id="Coastal"></span>
+        </div>
+      `);
+        appended[0] = true;
+        regionCount += count[0];
+      }
+      scroll(pokemonList.length - regionCount, `${ids[1]}`);
+    } else {
+      if (appended[1] === false) {
+        $('#pokemon-container').append(`
+        <div id="ids3">
+          <h4 class="KalosTextStyle">The Mountain Kalos Pokédex</h4>
+          <span class="container d-flex justify-content-around flex-wrap" id="Mountain"></span>
+        </div>
+      `);
+        appended[1] = true;
+        regionCount += count[1];
+      }
+      scroll(0, `${ids[2]}`);
+    }
   } else {
-    scroll(0);
+    scroll(0, null);
   }
 };
 
-function scroll(value) {
+function scroll(value, idLoad) {
   if (display === false) {
     if ($('#myInput').val() == '') {
       if ($(window).scrollTop() == $(document).height() - $(window).height()) {
         for (index; index < pokemonList.length - value; index++) {
           const width = (document.getElementById('pokemon-container').offsetWidth / $('.list-group-item').outerWidth()) * 2 - 1;
           if (index < pokemonList.length - width) {
-            for (let i = 0; i < width; i++) {
-              pokemonList[index].loadToPage();
-              pokemonList[index].showTypes();
-              index++;
+            if (idLoad === null) {
+              for (let i = 0; i < width; i++) {
+                pokemonList[index].loadToPage();
+                pokemonList[index].showTypes();
+                index++;
+              }
+            } else {
+              for (let i = 0; i < width; i++) {
+                if (index < pokemonList.length - value) {
+                  pokemonList[index].kalosLoadToPage(idLoad);
+                  pokemonList[index].showTypes();
+                  index++;
+                } else {
+                  break;
+                }
+              }
             }
           } else {
-            for (index; index < pokemonList.length - value; index++) {
-              pokemonList[index].loadToPage();
-              pokemonList[index].showTypes();
+            if (idLoad === null) {
+              for (index; index < pokemonList.length - value; index++) {
+                pokemonList[index].loadToPage();
+                pokemonList[index].showTypes();
+              }
+            } else {
+              for (index; index < pokemonList.length - value; index++) {
+                pokemonList[index].kalosLoadToPage(idLoad);
+                pokemonList[index].showTypes();
+              }
             }
           }
 
