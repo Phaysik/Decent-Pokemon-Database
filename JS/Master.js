@@ -422,13 +422,13 @@ function scroll(value) {
 }
 function loadSeen() {
   $('#pokemon-container').empty();
-  let title = $('#Center').text().split(' ')
+  const title = $('#Center').text().split(' ');
   display = false;
 
   if (title[1] === 'Kalos' && title[2] !== 'Pokémon') {
-    $('#Center').text(`All ${title[1]} ${title[2]} Pokémon in Database`)
+    $('#Center').text(`All ${title[1]} ${title[2]} Pokémon in Database`);
   } else {
-    $('#Center').text(`All ${title[1]} Pokémon in Database`)
+    $('#Center').text(`All ${title[1]} Pokémon in Database`);
   }
   for (let i = 0; i < index; i++) {
     pokemonList[i].loadToPage();
