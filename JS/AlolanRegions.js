@@ -5,7 +5,7 @@ function loadMelemele() {
   $('#Center').text('The Melemele Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
-  $.getJSON('../JSON/melemele.json', function (data) {
+  $.getJSON('../JSON/melemele.json', function(data) {
     for (let i = 0; i < data['pokemon'].length; i++) {
       pokemonList.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
     }
@@ -27,7 +27,7 @@ function loadAkala() {
   $('#myInput').val('');
   $('#pokemon-container').empty();
 
-  $.getJSON('../JSON/akala.json', function (data) {
+  $.getJSON('../JSON/akala.json', function(data) {
     for (let i = 0; i < data['pokemon'].length; i++) {
       pokemonList.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
     }
@@ -49,7 +49,7 @@ function loadUlaula() {
   $('#myInput').val('');
   $('#pokemon-container').empty();
 
-  $.getJSON('../JSON/ulaula.json', function (data) {
+  $.getJSON('../JSON/ulaula.json', function(data) {
     for (let i = 0; i < data['pokemon'].length; i++) {
       pokemonList.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
     }
@@ -71,7 +71,7 @@ function loadPoni() {
   $('#myInput').val('');
   $('#pokemon-container').empty();
 
-  $.getJSON('../JSON/poni.json', function (data) {
+  $.getJSON('../JSON/poni.json', function(data) {
     for (let i = 0; i < data['pokemon'].length; i++) {
       pokemonList.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
     }

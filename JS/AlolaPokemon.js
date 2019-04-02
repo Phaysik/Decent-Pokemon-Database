@@ -12,7 +12,7 @@ function loadAlola() {
   $('#Center').text('The Alolan Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
-  $.getJSON('../JSON/alola.json', function (data) {
+  $.getJSON('../JSON/alola.json', function(data) {
     for (let i = 0; i < data['pokemon'].length; i++) {
       pokemonList.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
     }

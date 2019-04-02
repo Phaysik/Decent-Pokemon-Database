@@ -1,5 +1,6 @@
 {
-    "pokemon": [{
+    "pokemon": [
+        {
             "id": 731,
             "name": "Pikipek",
             "types": [

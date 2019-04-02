@@ -1,5 +1,6 @@
 {
-    "pokemon": [{
+    "pokemon": [
+        {
             "id": 722,
             "name": "Rowlet",
             "types": [

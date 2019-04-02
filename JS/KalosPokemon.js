@@ -12,7 +12,7 @@ function loadKalos() {
   $('#Center').text('The Kalos Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
-  $.getJSON('../JSON/kalos.json', function (data) {
+  $.getJSON('../JSON/kalos.json', function(data) {
     for (let i = 0; i < data['pokemon'].length; i++) {
       pokemonList.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
     }
