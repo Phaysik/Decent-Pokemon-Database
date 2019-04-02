@@ -3,27 +3,6 @@ const toTitleCase = (phrase) => {
   return phrase.toLowerCase().split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 };
 
-function KalosSearch() {
-  $(document).ready(function() {
-    $('#myInput').on('keyup', function() {
-      const value = $(this).val();
-
-            $(`#ids1:contains(${toTitleCase(value)})`).length > 0 ? $('#ids1').css('display', 'block') : $(`#ids1:contains(${value})`).length >
-                0 ? $('#ids1').css('display', 'block') : $('#ids1').css('display', 'none');
-
-            $(`#ids2:contains(${toTitleCase(value)})`).length > 0 ? $('#ids2').css('display', 'block') : $(`#ids2:contains(${value})`).length >
-                0 ? $('#ids2').css('display', 'block') : $('#ids2').css('display', 'none');
-
-            $(`#ids3:contains(${toTitleCase(value)})`).length > 0 ? $('#ids3').css('display', 'block') : $(`#ids3:contains(${value})`).length >
-                0 ? $('#ids3').css('display', 'block') : $('#ids3').css('display', 'none');
-
-            $('#pokemon-container li').filter(function() {
-              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-            });
-    });
-  });
-}
-
 function KJHSUASearch() {
   $(document).ready(function() {
     let value = $('#myInput').val().toLowerCase();

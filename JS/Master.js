@@ -170,18 +170,6 @@ class Pokemon {
             `);
   }
 
-  kalosLoadToPage(ids) {
-    $(`#${ids}`).append(`
-      <li class="list-group-item" style="border: none;">
-            <div style="width:140px!important" class="d-flex mx-3 flex-column">
-              <a href="index.html?Search=${this.name}" class="my-2 align-self-center"><img height="100" width="100"  src="Images/Pokemon/${this.name}.png" alt="${this.name} Image"/></a>
-              <div id="${this.nid}" class="d-flex"></div>
-              <h5 style="font-weight: normal; text-align: center;">${this.name}</h5>
-            </div>
-            </li>
-            `);
-  }
-
   showTypes() {
     for (const t of this.types) {
       $(`#${this.nid}`).append(`
@@ -354,7 +342,11 @@ function displayTypesToScreen(type) {
   title = title.split(' ');
 
   $('#myInput').val('');
-  $('#Center').empty().text(`All ${title[1] + ' ' + type} Pokémon in Database`);
+  if (title[1] === 'Kalos' && title[2] !== 'Pokémon') {
+    $('#Center').empty().text(`All ${title[1] + ' ' + title[2] + ' ' + type} Pokémon in Database`);
+  } else {
+    $('#Center').empty().text(`All ${title[1] + ' ' + type} Pokémon in Database`);
+  }
 
   if ($('#Center').text().includes('Kanto')) {
     displayTypesToScreenExtend(type, 2);
@@ -430,7 +422,14 @@ function scroll(value) {
 }
 function loadSeen() {
   $('#pokemon-container').empty();
+  let title = $('#Center').text().split(' ')
   display = false;
+
+  if (title[1] === 'Kalos' && title[2] !== 'Pokémon') {
+    $('#Center').text(`All ${title[1]} ${title[2]} Pokémon in Database`)
+  } else {
+    $('#Center').text(`All ${title[1]} Pokémon in Database`)
+  }
   for (let i = 0; i < index; i++) {
     pokemonList[i].loadToPage();
     pokemonList[i].showTypes();

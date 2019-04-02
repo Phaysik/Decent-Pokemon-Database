@@ -10,8 +10,9 @@
 
   <script src="JS/JQuery.js"></script>
   <script src="JS/Master.js"></script>
+  <script src="JS/KalosPokemon.js"></script>
+  <script src="JS/KalosRegions.js"></script>
   <script src="JS/SearchPokemon.js"></script>
-  <script src="JS/KalosPokemon.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
@@ -22,7 +23,7 @@
 
 </head>
 
-<body onload="loadKalos()">
+<body>
   <header>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
       <div class="container">
@@ -60,17 +61,19 @@
           </ul>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mr-auto">
-              <input class="form-control" id="myInput" type="text" onkeyup="KalosSearch()" placeholder="Search for Pokémon...">
+              <input class="form-control" id="myInput" type="text" onkeyup="KJHSUASearch()"
+                placeholder="Search for Pokémon...">
             </li>
 
             <li class="nav-item dropdown mr-auto">
               <a class="nav-link dropdown-toggle mr-auto" href="#" id="regionDrop" data-toggle="dropdown">
-                Jump to Region
+                Specify Region
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item pointer" href="#ids1" onclick="loadKalos(); setTimeout(() => {window.scrollBy(0, -55)}, 10)">Central</a>
-                <a class="dropdown-item pointer" href="#ids2" onclick="loadKalos(); setTimeout(() => {window.scrollBy(0, -55)}, 10)">Coastal</a>
-                <a class="dropdown-item pointer" href="#ids3" onclick="loadKalos(); setTimeout(() => {window.scrollBy(0, -55)}, 10)">Mountain</a>
+                <a class="dropdown-item pointer" onclick="loadKalos()">Kalos National Pokédex</a>
+                <a class="dropdown-item pointer" onclick="loadCentral()">Central</a>
+                <a class="dropdown-item pointer" onclick="loadCoastal()">Coastal</a>
+                <a class="dropdown-item pointer" onclick="loadMountain()">Mountain</a>
               </div>
             </li>
 
@@ -79,7 +82,7 @@
                 Sort by Pokémon Type
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item pointer" onclick="loadKalos()">All Types</a>
+                <a class="dropdown-item pointer" onclick="loadSeen()">All Types</a>
                 <a class="dropdown-item pointer" onclick="displayTypesToScreen('Normal')">Normal</a>
                 <a class="dropdown-item pointer" onclick="displayTypesToScreen('Fire')">Fire</a>
                 <a class="dropdown-item pointer" onclick="displayTypesToScreen('Water')">Water</a>
