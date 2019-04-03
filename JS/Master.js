@@ -180,7 +180,7 @@ class Pokemon {
   }
 }
 
-class Items {
+class Item {
   constructor(name, id, category, description) {
     this.name = name;
     this.id = id;
@@ -366,20 +366,20 @@ function displayTypesToScreen(type) {
 function displayTypesToScreenExtend(type, num) {
   display = true;
   $('#pokemon-container').empty();
-  for (let i = 0; i < pokemonList.length - num; i++) {
-    if (pokemonList[i].types.includes(type)) {
+  for (let i = 0; i < List.length - num; i++) {
+    if (List[i].types.includes(type)) {
       holder = '';
-      for (const t of pokemonList[i].types) {
+      for (const t of List[i].types) {
         holder += `<button class="flex-grow-1 mx-1" style="border: 1px solid black; color: ${textColors[t]}; 
         font-weight: bold; border-radius: 25px; text-align: center; ${typeColors[t]}" onclick="displayTypesToScreen('${t}')">${t}</button>`;
       }
       $('#pokemon-container').append(`
         <li class="list-group-item" style="border: none;">
               <div style="width:140px!important" class="d-flex mx-3 flex-column">
-                <a href="index.html?Search=${pokemonList[i].name}" class="my-2 align-self-center"><img height="100" width="100" src="Images/Pokemon/${pokemonList[i].name}.png" 
-                alt="${pokemonList[i].name} Image"/></a>
-                <div id="${pokemonList[i].nid}" class="d-flex">${holder}</div>
-                <h5 style="font-weight: normal; text-align: center;">${pokemonList[i].name}</h5>
+                <a href="index.html?Search=${List[i].name}" class="my-2 align-self-center"><img height="100" width="100" src="Images/Pokemon/${List[i].name}.png" 
+                alt="${List[i].name} Image"/></a>
+                <div id="${List[i].nid}" class="d-flex">${holder}</div>
+                <h5 style="font-weight: normal; text-align: center;">${List[i].name}</h5>
               </div>
               </li>
             `);
@@ -390,36 +390,61 @@ function displayTypesToScreenExtend(type, num) {
 window.onscroll = function() {
   if ($('#Center').text().includes('Kanto')) {
     scroll(2);
+  } else if ($('#Center').text().includes('Pokémon Item List')) {
+    itemScroll();
   } else {
     scroll(0);
   }
 };
 
-function scroll(value) {
+function itemScroll() {
   if (display === false) {
     if ($('#myInput').val() == '') {
       if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-        for (index; index < pokemonList.length - value; index++) {
-          const width = (document.getElementById('pokemon-container').offsetWidth / $('.list-group-item').outerWidth()) * 2 - 1;
-          if (index < pokemonList.length - width) {
-            for (let i = 0; i < width; i++) {
-              pokemonList[index].loadToPage();
-              pokemonList[index].showTypes();
+        for (index; index < List.length; index++) {
+          const viewHeight = Math.ceil($(window).height() / 90);
+          if (index < List.length) {
+            for (let i = 0; i < viewHeight; i++) {
+              List[index].loadItemsToPage();
               index++;
             }
           } else {
-            for (index; index < pokemonList.length - value; index++) {
-              pokemonList[index].loadToPage();
-              pokemonList[index].showTypes();
+            for (index; index < List.length; index++) {
+              List[index].loadItemsToPage();
             }
           }
-
           break;
         }
       }
     }
   }
 }
+
+function scroll(value) {
+  if (display === false) {
+    if ($('#myInput').val() == '') {
+      if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+        for (index; index < List.length - value; index++) {
+          const width = (document.getElementById('pokemon-container').offsetWidth / $('.list-group-item').outerWidth()) * 2 - 1;
+          if (index < List.length - width) {
+            for (let i = 0; i < width; i++) {
+              List[index].loadToPage();
+              List[index].showTypes();
+              index++;
+            }
+          } else {
+            for (index; index < List.length - value; index++) {
+              List[index].loadToPage();
+              List[index].showTypes();
+            }
+          }
+          break;
+        }
+      }
+    }
+  }
+}
+
 function loadSeen() {
   $('#pokemon-container').empty();
   const title = $('#Center').text().split(' ');
@@ -427,11 +452,19 @@ function loadSeen() {
 
   if (title[1] === 'Kalos' && title[2] !== 'Pokémon') {
     $('#Center').text(`All ${title[1]} ${title[2]} Pokémon in Database`);
+    for (let i = 0; i < index; i++) {
+      List[i].loadToPage();
+      List[i].showTypes();
+    }
+  } else if (title[1] === 'Item') {
+    for (let i = 0; i < index; i++) {
+      List[i].loadItemsToPage();
+    }
   } else {
     $('#Center').text(`All ${title[1]} Pokémon in Database`);
-  }
-  for (let i = 0; i < index; i++) {
-    pokemonList[i].loadToPage();
-    pokemonList[i].showTypes();
+    for (let i = 0; i < index; i++) {
+      List[i].loadToPage();
+      List[i].showTypes();
+    }
   }
 }

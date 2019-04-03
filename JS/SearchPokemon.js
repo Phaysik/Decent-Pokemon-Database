@@ -23,11 +23,11 @@ function KJHSUASearch() {
 }
 
 function KJHSUASearchExtend(value, num) {
-  for (let g = 0; g < pokemonList.length - num; g++) {
-    if (pokemonList[g].name.toLowerCase().indexOf(value) >= 0 || (pokemonList[g].types.length === 1 && pokemonList[g].types[0].toLowerCase().indexOf(value) >= 0) ||
-      (pokemonList[g].types.length === 2 && (pokemonList[g].types[0].toLowerCase().indexOf(value) >= 0 || pokemonList[g].types[1].toLowerCase().indexOf(value) >= 0))) {
-      pokemonList[g].loadToPage();
-      pokemonList[g].showTypes();
+  for (let g = 0; g < List.length - num; g++) {
+    if (List[g].name.toLowerCase().indexOf(value) >= 0 || (List[g].types.length === 1 && List[g].types[0].toLowerCase().indexOf(value) >= 0) ||
+      (List[g].types.length === 2 && (List[g].types[0].toLowerCase().indexOf(value) >= 0 || List[g].types[1].toLowerCase().indexOf(value) >= 0))) {
+      List[g].loadToPage();
+      List[g].showTypes();
     }
   }
 }
@@ -36,10 +36,18 @@ function ItemSearch() {
   $(document).ready(function() {
     $('#myInput').on('keyup', function() {
       const value = $(this).val().toLowerCase();
+      $('#items-container').empty();
 
-      $('.searchVal').filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-      });
+      if (value !== '') {
+        for (let g = 0; g < List.length; g++) {
+          if (List[g].name.toLowerCase().indexOf(value) >= 0 || List[g].id.toLowerCase().indexOf(value) >= 0 || List[g].category.toLowerCase().indexOf(value) >= 0
+            || List[g].description.toLowerCase().indexOf(value) >= 0) {
+            List[g].loadItemsToPage();
+          }
+        }
+      } else {
+        loadSeen();
+      }
     });
   });
 }

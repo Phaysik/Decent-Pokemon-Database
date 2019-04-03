@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 let index = 0;
-const pokemonList = [];
+const List = [];
 
 window.onload = function() {
   loadKanto();
@@ -14,12 +14,12 @@ function loadKanto() {
   $('#pokemon-container').empty();
   $.getJSON('../JSON/kanto.json', function(data) {
     for (let i = 0; i < data['pokemon'].length; i++) {
-      pokemonList.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
+      List.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
     }
-    for (index; index < pokemonList.length; index++) {
+    for (index; index < List.length; index++) {
       if ($(window).scrollTop() === $(document).height() - $(window).height()) {
-        pokemonList[index].loadToPage();
-        pokemonList[index].showTypes();
+        List[index].loadToPage();
+        List[index].showTypes();
       } else {
         break;
       }
@@ -35,12 +35,12 @@ function loadLetsGo() {
   $('#pokemon-container').empty();
   $.getJSON('../JSON/kanto.json', function(data) {
     for (let i = 0; i < data['pokemon'].length; i++) {
-      pokemonList.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
+      List.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
     }
-    for (index; index < pokemonList.length; index++) {
+    for (index; index < List.length; index++) {
       if ($(window).scrollTop() === $(document).height() - $(window).height()) {
-        pokemonList[index].loadToPage();
-        pokemonList[index].showTypes();
+        List[index].loadToPage();
+        List[index].showTypes();
       } else {
         break;
       }
