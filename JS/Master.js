@@ -229,8 +229,8 @@ class Moves {
 
   loadMovesToPage(id) {
     holder = '';
-    moveNames = `<h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">`;
-    moveTypes = `<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">`;
+    moveNames = `<h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 1.2em">`;
+    moveTypes = `<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">`;
     if (this.name.length == 2) {
       for (let i = 0; i < this.name.length; i++) {
         holder += `<img height="45" width="45" src="Images/Items/${this.type[i]}.png" alt="${this.name[i]} Image"/>`;
@@ -248,80 +248,64 @@ class Moves {
     moveTypes += `</h4>`;
 
 
-    $('#' + id).append(`
-          <div class="container">
+    $(id).append(`
             <div class="row searchVal">
-              <div class="d-flex flex-row col-5 mb-3" style="position: realtive; left: 12%;">
+              <div class="d-flex flex-row col-5 mb-3">
                 ${holder}
                 ${moveNames}
               </div>
-              <div class="d-flex flex-row col-3 mb-2" style="position: relative; left: 7%;">
+              <div class="d-flex flex-row col-3 mb-3">
                 <h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${this.imgName}</h4>
               </div>
-              <div class="d-flex flex-row col-3 mb-2" style="position: relative; left: 6%;">
+              <div class="d-flex flex-row col-3 mb-3">
                 ${moveTypes}
               </div>
-            </div>
-          </div>`);
+            </div>`);
   }
 }
 
-let uniqueMoves = [];
-let uniqueAttributes = [];
-
 function displayMovesToScreen(type) {
-  uniqueMoves = [];
-  uniqueAttributes = [];
+  const attributes = [];
   let title = $('#Center').text();
   title = title.split(' ');
 
   $('#myInput').val('');
-  $('#Center').empty().text(`All ${type} moves in Database`);
+  $('#Center').empty().text(`All ${type} Moves in Generation ${generation}`);
   $('#moves-container').empty();
 
-  for (let i = 0; i < moveList.length; i++) {
-    if (moveList[i].type.includes(type)) {
-      if (moveList[i].name.length == 2) {
-        for (let j = 0; j < moveList[i].name.length; j++) {
-          if (moveList[i].type[j] === type) {
-            if (uniqueMoves.includes(moveList[i].name[j])) {
-              continue;
-            } else {
-              uniqueMoves.push(moveList[i].name[j]);
-              uniqueAttributes.push([[`<img height="45" width="45" src="Images/Items/${moveList[i].type[j]}.png" alt="${moveList[i].name[j]} Image"/>`],
-                [`<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${moveList[i].type[j]}</h4>`],
-                [`<h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">${moveList[i].name[j]}</h4>`],
-                [`<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${moveList[i].imgName}</h4>`]]);
-            }
+  for (let i = searchIndex; i < moves[generation - 1]; i++) {
+    if (List[i].type.includes(type)) {
+      if (List[i].name.length == 2) {
+        for (let j = 0; j < List[i].name.length; j++) {
+          if (List[i].type[j] === type) {
+            attributes.push([[`<img height="45" width="45" src="Images/Items/${List[i].type[j]}.png" alt="${List[i].name[j]} Image"/>`],
+              [`<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">${List[i].type[j]}</h4>`],
+              [`<h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 1.2em">${List[i].name[j]}</h4>`],
+              [`<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">${List[i].imgName}</h4>`]]);
           }
         }
       } else {
-        if (uniqueMoves.includes(moveList[i].name)) {
-          continue;
-        } else {
-          uniqueMoves.push(moveList[i].name);
-          uniqueAttributes.push([[`<img height="45" width="45" src="Images/Items/${moveList[i].type}.png" alt="${moveList[i].name} Image"/>`],
-            [`<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${moveList[i].type}</h4>`],
-            [`<h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">${moveList[i].name}</h4>`],
-            [`<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${moveList[i].imgName}</h4>`]]);
-        }
+        attributes.push([[`<img height="45" width="45" src="Images/Items/${List[i].type}.png" alt="${List[i].name} Image"/>`],
+          [`<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">${List[i].type}</h4>`],
+          [`<h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 1.2em">${List[i].name}</h4>`],
+          [`<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">${List[i].imgName}</h4>`]]);
       }
     }
   }
 
-  for (let i = 0; i < uniqueAttributes.length; i++) {
+  for (let i = 0; i < attributes.length; i++) {
     $('#moves-container').append(`
-        <div class="container">
+          <div class="container">
             <div class="row searchVal">
-              <div class="d-flex flex-row col-md-5 mb-3" style="position: realtive; left: 12%;">
-                ${uniqueAttributes[i][0]}
-                ${uniqueAttributes[i][2]}
+              <div class="d-flex flex-row col-5 mb-3">
+                ${attributes[i][0]}
+                ${attributes[i][2]}
               </div>
-              <div class="d-flex flex-row col-md-3 mb-2" style="position: relative; left: 7%;">
-                ${uniqueAttributes[i][3]}</h4>
+              <div class="d-flex flex-row col-3 mb-3">
+                ${attributes[i][3]}</h4>
               </div>
-              <div class="d-flex flex-row col-md-3 mb-2" style="position: relative; left: 6%;">
-                ${uniqueAttributes[i][1]}
+              <div class="d-flex flex-row col-3 mb-3">
+                ${attributes[i][1]}
               </div>
             </div>
           </div>
@@ -392,10 +376,53 @@ window.onscroll = function() {
     scroll(2);
   } else if ($('#Center').text().includes('Pokémon Item List')) {
     itemScroll();
+  } else if ($('#Center').text().includes('Pokémon Move List')) {
+    if ($('.KalosTextStyle').text().includes('1')) {
+      moveScroll('#Gen1', 0);
+    } else if ($('.KalosTextStyle').text().includes('2')) {
+      moveScroll('#Gen2', 1);
+    } else if ($('.KalosTextStyle').text().includes('3')) {
+      moveScroll('#Gen3', 2);
+    } else if ($('.KalosTextStyle').text().includes('4')) {
+      moveScroll('#Gen4', 3);
+    } else if ($('.KalosTextStyle').text().includes('5')) {
+      moveScroll('#Gen5', 4);
+    } else if ($('.KalosTextStyle').text().includes('6')) {
+      moveScroll('#Gen6', 5);
+    } else {
+      moveScroll('#Gen7', 6);
+    }
   } else {
     scroll(0);
   }
 };
+
+function moveScroll(id, ceil) {
+  if (display === false) {
+    if ($('#myInput').val() == '') {
+      if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+        for (index; index < moves[ceil]; index++) {
+          const viewHeight = Math.ceil($(window).height() / 90);
+          if (index < List.length) {
+            for (let i = 0; i < viewHeight; i++) {
+              if (index < moves[ceil]) {
+                List[index].loadMovesToPage(id);
+                index++;
+              } else {
+                break;
+              }
+            }
+          } else {
+            for (index; index < moves[0]; index++) {
+              List[index].loadMovesToPage(id);
+            }
+          }
+          break;
+        }
+      }
+    }
+  }
+}
 
 function itemScroll() {
   if (display === false) {
@@ -445,6 +472,7 @@ function scroll(value) {
   }
 }
 
+// Loads all previously seen elements before searching or other means of manipulation
 function loadSeen() {
   $('#pokemon-container').empty();
   const title = $('#Center').text().split(' ');
@@ -459,6 +487,22 @@ function loadSeen() {
   } else if (title[1] === 'Item') {
     for (let i = 0; i < index; i++) {
       List[i].loadItemsToPage();
+    }
+  } else if (title.includes('Moves')) {
+    $('#Center').text('Pokémon Moves List');
+    $('#moves-container').empty().append(`
+    <div style="width: 100%;">
+      <h4 class="KalosTextStyle">Gen ${generation} Moves</h4>
+      <div id="Gen${generation}" class="container"></div>
+    </div>
+  `);
+
+    $(`#Gen${generation}`).append(`<div class="mt-4"><div class="row"><div class="col-5"><h4 class="font-italic pl-5">Name</h4></div><div class="col-3">
+  <h4 class="font-italic pl-4" class="pr-3">TM</h4></div><div class="col-3"><h4 class="font-italic pl-4" class="pr-3">
+  Type</h4></div></div>`);
+
+    for (let i = searchIndex; i < index; i++) {
+      List[i].loadMovesToPage(`#Gen${generation}`);
     }
   } else {
     $('#Center').text(`All ${title[1]} Pokémon in Database`);

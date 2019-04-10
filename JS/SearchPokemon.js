@@ -3,7 +3,7 @@ const toTitleCase = (phrase) => {
   return phrase.toLowerCase().split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 };
 
-function KJHSUASearch() {
+function PokemonSearch() {
   $(document).ready(function() {
     let value = $('#myInput').val().toLowerCase();
     $('#pokemon-container').empty();
@@ -12,9 +12,9 @@ function KJHSUASearch() {
 
     if (value !== '') {
       if ($('#Center').text().includes('Kanto')) {
-        KJHSUASearchExtend(value, 2);
+        PokemonSearchExtend(value, 2);
       } else {
-        KJHSUASearchExtend(value, 0);
+        PokemonSearchExtend(value, 0);
       }
     } else {
       loadSeen();
@@ -22,7 +22,7 @@ function KJHSUASearch() {
   });
 }
 
-function KJHSUASearchExtend(value, num) {
+function PokemonSearchExtend(value, num) {
   for (let g = 0; g < List.length - num; g++) {
     if (List[g].name.toLowerCase().indexOf(value) >= 0 || (List[g].types.length === 1 && List[g].types[0].toLowerCase().indexOf(value) >= 0) ||
       (List[g].types.length === 2 && (List[g].types[0].toLowerCase().indexOf(value) >= 0 || List[g].types[1].toLowerCase().indexOf(value) >= 0))) {
@@ -34,53 +34,39 @@ function KJHSUASearchExtend(value, num) {
 
 function ItemSearch() {
   $(document).ready(function() {
-    $('#myInput').on('keyup', function() {
-      const value = $(this).val().toLowerCase();
-      $('#items-container').empty();
+    const value = $('#myInput').val().toLowerCase();
+    $('#items-container').empty();
 
-      if (value !== '') {
-        for (let g = 0; g < List.length; g++) {
-          if (List[g].name.toLowerCase().indexOf(value) >= 0 || List[g].id.toLowerCase().indexOf(value) >= 0 || List[g].category.toLowerCase().indexOf(value) >= 0
+    if (value !== '') {
+      for (let g = 0; g < List.length; g++) {
+        if (List[g].name.toLowerCase().indexOf(value) >= 0 || List[g].id.toLowerCase().indexOf(value) >= 0 || List[g].category.toLowerCase().indexOf(value) >= 0
             || List[g].description.toLowerCase().indexOf(value) >= 0) {
-            List[g].loadItemsToPage();
-          }
+          List[g].loadItemsToPage();
         }
-      } else {
-        loadSeen();
       }
-    });
+    } else {
+      loadSeen();
+    }
   });
 }
 
 function MoveSearch() {
   $(document).ready(function() {
-    $('#myInput').on('keyup', function() {
-      const value = $(this).val();
+    const value = $('#myInput').val().toLowerCase();
+    $('#moves-container').empty().append(`
+      <div class="container mt-4"><div class="row"><div class="col-5"><h4 class="MovesText">Name</h4></div><div class="col-3">
+  <h4 class="MovesText" class="pr-3">TM</h4></div><div class="col-3"><h4 class="MovesText" class="pr-3">
+  Type</h4></div></div><div style="width=100%" id="moves"></div></div>
+  `);
 
-            $(`#ids1:contains(${value.toUpperCase()})`).length > 0 ? $('#ids1').css('display', 'block') : $(`#ids1:contains(${value})`).length >
-                0 ? $('#ids1').css('display', 'block') : $('#ids1').css('display', 'none');
-
-            $(`#ids2:contains(${value.toUpperCase()})`).length > 0 ? $('#ids2').css('display', 'block') : $(`#ids2:contains(${value})`).length >
-                0 ? $('#ids2').css('display', 'block') : $('#ids2').css('display', 'none');
-
-            $(`#ids3:contains(${value.toUpperCase()})`).length > 0 ? $('#ids3').css('display', 'block') : $(`#ids3:contains(${value})`).length >
-                0 ? $('#ids3').css('display', 'block') : $('#ids3').css('display', 'none');
-
-            $(`#ids4:contains(${value.toUpperCase()})`).length > 0 ? $('#ids4').css('display', 'block') : $(`#ids4:contains(${value})`).length >
-                0 ? $('#ids4').css('display', 'block') : $('#ids4').css('display', 'none');
-
-            $(`#ids5:contains(${value.toUpperCase()})`).length > 0 ? $('#ids5').css('display', 'block') : $(`#ids5:contains(${value})`).length >
-                0 ? $('#ids5').css('display', 'block') : $('#ids5').css('display', 'none');
-
-            $(`#ids6:contains(${value.toUpperCase()})`).length > 0 ? $('#ids6').css('display', 'block') : $(`#ids6:contains(${value})`).length >
-                0 ? $('#ids6').css('display', 'block') : $('#ids6').css('display', 'none');
-
-            $(`#ids7:contains(${value.toUpperCase()})`).length > 0 ? $('#ids7').css('display', 'block') : $(`#ids7:contains(${value})`).length >
-                0 ? $('#ids7').css('display', 'block') : $('#ids7').css('display', 'none');
-
-            $('.searchVal').filter(function() {
-              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-            });
-    });
+    if (value !== '') {
+      for (let g = searchIndex; g < moves[generation - 1]; g++) {
+        if (List[g].imgName.toLowerCase().indexOf(value) >= 0 || List[g].name.toLowerCase().indexOf(value) >= 0 || List[g].type.toLowerCase().indexOf(value) >= 0) {
+          List[g].loadMovesToPage('#moves');
+        }
+      }
+    } else {
+      loadSeen();
+    }
   });
 }

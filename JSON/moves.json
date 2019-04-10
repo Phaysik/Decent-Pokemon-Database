@@ -1,0 +1,3055 @@
+{
+    "moves": [
+            {
+                "imgName": "TM01",
+                "name": "Mega Punch",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM02",
+                "name": "Razor Wind",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM03",
+                "name": "Swords Dance",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM04",
+                "name": "Whirlwind",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM05",
+                "name": "Mega Kick",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM06",
+                "name": "Toxic",
+                "type": "Poison"
+            },
+            {
+                "imgName": "TM07",
+                "name": "Horn Drill",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM08",
+                "name": "Body Slam",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM09",
+                "name": "Take Down",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM10",
+                "name": "Double-Edge",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM11",
+                "name": "BubbleBeam",
+                "type": "Water"
+            },
+            {
+                "imgName": "TM12",
+                "name": "Water Gun",
+                "type": "Water"
+            },
+            {
+                "imgName": "TM13",
+                "name": "Ice Beam",
+                "type": "Ice"
+            },
+            {
+                "imgName": "TM14",
+                "name": "Blizzard",
+                "type": "Ice"
+            },
+            {
+                "imgName": "TM15",
+                "name": "Hyper Beam",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM16",
+                "name": "Pay Day",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM17",
+                "name": "Submission",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM18",
+                "name": "Counter",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM19",
+                "name": "Seismic Toss",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM20",
+                "name": "Rage",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM21",
+                "name": "Mega Drain",
+                "type": "Grass"
+            },
+            {
+                "imgName": "TM22",
+                "name": "Solar Beam",
+                "type": "Grass"
+            },
+            {
+                "imgName": "TM23",
+                "name": "Dragon Rage",
+                "type": "Dragon"
+            },
+            {
+                "imgName": "TM24",
+                "name": "Thunderbolt",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM25",
+                "name": "Thunder",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM26",
+                "name": "Earthquake",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM27",
+                "name": "Fissure",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM28",
+                "name": "Dig",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM29",
+                "name": "Psychic",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM30",
+                "name": "Teleport",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM31",
+                "name": "Mimic",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM32",
+                "name": "Double Team",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM33",
+                "name": "Reflect",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM34",
+                "name": "Bide",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM35",
+                "name": "Metronome",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM36",
+                "name": "Selfdestruct",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM37",
+                "name": "Egg Bomb",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM38",
+                "name": "Fire Blast",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM39",
+                "name": "Swift",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM40",
+                "name": "Skull Bash",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM41",
+                "name": "Softboiled",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM42",
+                "name": "Dream Eater",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM43",
+                "name": "Sky Attack",
+                "type": "Flying"
+            },
+            {
+                "imgName": "TM44",
+                "name": "Rest",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM45",
+                "name": "Thunder Wave",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM46",
+                "name": "Psywave",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM47",
+                "name": "Explosion",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM48",
+                "name": "Rock Slide",
+                "type": "Rock"
+            },
+            {
+                "imgName": "TM49",
+                "name": "Tri Attack",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM50",
+                "name": "Substitute",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM01",
+                "name": "DynamicPunch",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM02",
+                "name": "Headbutt",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM03",
+                "name": "Curse",
+                "type": "Ghost"
+            },
+            {
+                "imgName": "TM04",
+                "name": "Rollout",
+                "type": "Rock"
+            },
+            {
+                "imgName": "TM05",
+                "name": "Roar",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM06",
+                "name": "Toxic",
+                "type": "Poison"
+            },
+            {
+                "imgName": "TM07",
+                "name": "Zap Cannon",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM08",
+                "name": "Rock Smash",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM09",
+                "name": "Psych Up",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM10",
+                "name": "Hidden Power",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM11",
+                "name": "Sunny Day",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM12",
+                "name": "Sweet Scent",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM13",
+                "name": "Snore",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM14",
+                "name": "Blizzard",
+                "type": "Ice"
+            },
+            {
+                "imgName": "TM15",
+                "name": "Hyper Beam",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM16",
+                "name": "Icy Wind",
+                "type": "Ice"
+            },
+            {
+                "imgName": "TM17",
+                "name": "Protect",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM18",
+                "name": "Rain Dance",
+                "type": "Water"
+            },
+            {
+                "imgName": "TM19",
+                "name": "Giga Drain",
+                "type": "Grass"
+            },
+            {
+                "imgName": "TM20",
+                "name": "Endure",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM21",
+                "name": "Frustration",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM22",
+                "name": "Solar Beam",
+                "type": "Grass"
+            },
+            {
+                "imgName": "TM23",
+                "name": "Iron Tail",
+                "type": "Steel"
+            },
+            {
+                "imgName": "TM24",
+                "name": "DragonBreath",
+                "type": "Dragon"
+            },
+            {
+                "imgName": "TM25",
+                "name": "Thunder",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM26",
+                "name": "Earthquake",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM27",
+                "name": "Return",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM28",
+                "name": "Dig",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM29",
+                "name": "Psychic",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM30",
+                "name": "Shadow Ball",
+                "type": "Ghost"
+            },
+            {
+                "imgName": "TM31",
+                "name": "Mud-Slap",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM32",
+                "name": "Double Team",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM33",
+                "name": "Ice Punch",
+                "type": "Ice"
+            },
+            {
+                "imgName": "TM34",
+                "name": "Swagger",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM35",
+                "name": "Sleep Talk",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM36",
+                "name": "Sludge Bomb",
+                "type": "Poison"
+            },
+            {
+                "imgName": "TM37",
+                "name": "Sandstorm",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM38",
+                "name": "Fire Blast",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM39",
+                "name": "Swift",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM40",
+                "name": "Defense Curl",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM41",
+                "name": "ThunderPunch",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM42",
+                "name": "Dream Eater",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM43",
+                "name": "Detect",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM44",
+                "name": "Rest",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM45",
+                "name": "Attract",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM46",
+                "name": "Thief",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM47",
+                "name": "Steel Wing",
+                "type": "Steel"
+            },
+            {
+                "imgName": "TM48",
+                "name": "Fire Punch",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM49",
+                "name": "Fury Cutter",
+                "type": "Bug"
+            },
+            {
+                "imgName": "TM50",
+                "name": "Nightmare",
+                "type": "Ghost"
+            },
+            {
+                "imgName": "TM01",
+                "name": "Focus Punch",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM02",
+                "name": "Dragon Claw",
+                "type": "Dragon"
+            },
+            {
+                "imgName": "TM03",
+                "name": "Water Pulse",
+                "type": "Water"
+            },
+            {
+                "imgName": "TM04",
+                "name": "Calm Mind",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM05",
+                "name": "Roar",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM06",
+                "name": "Toxic",
+                "type": "Poison"
+            },
+            {
+                "imgName": "TM07",
+                "name": "Hail",
+                "type": "Ice"
+            },
+            {
+                "imgName": "TM08",
+                "name": "Bulk Up",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM09",
+                "name": "Bullet Seed",
+                "type": "Grass"
+            },
+            {
+                "imgName": "TM10",
+                "name": "Hidden Power",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM11",
+                "name": "Sunny Day",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM12",
+                "name": "Taunt",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM13",
+                "name": "Ice Beam",
+                "type": "Ice"
+            },
+            {
+                "imgName": "TM14",
+                "name": "Blizzard",
+                "type": "Ice"
+            },
+            {
+                "imgName": "TM15",
+                "name": "Hyper Beam",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM16",
+                "name": "Light Screen",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM17",
+                "name": "Protect",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM18",
+                "name": "Rain Dance",
+                "type": "Water"
+            },
+            {
+                "imgName": "TM19",
+                "name": "Giga Drain",
+                "type": "Grass"
+            },
+            {
+                "imgName": "TM20",
+                "name": "Safeguard",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM21",
+                "name": "Frustration",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM22",
+                "name": "Solar Beam",
+                "type": "Grass"
+            },
+            {
+                "imgName": "TM23",
+                "name": "Iron Tail",
+                "type": "Steel"
+            },
+            {
+                "imgName": "TM24",
+                "name": "Thunderbolt",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM25",
+                "name": "Thunder",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM26",
+                "name": "Earthquake",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM27",
+                "name": "Return",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM28",
+                "name": "Dig",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM29",
+                "name": "Psychic",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM30",
+                "name": "Shadow Ball",
+                "type": "Ghost"
+            },
+            {
+                "imgName": "TM31",
+                "name": "Brick Break",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM32",
+                "name": "Double Team",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM33",
+                "name": "Reflect",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM34",
+                "name": "Shock Wave",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM35",
+                "name": "Flamethrower",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM36",
+                "name": "Sludge Bomb",
+                "type": "Poison"
+            },
+            {
+                "imgName": "TM37",
+                "name": "Sandstorm",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM38",
+                "name": "Fire Blast",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM39",
+                "name": "Rock Tomb",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM40",
+                "name": "Aerial Ace",
+                "type": "Flying"
+            },
+            {
+                "imgName": "TM41",
+                "name": "Torment",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM42",
+                "name": "Facade",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM43",
+                "name": "Secret Power",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM44",
+                "name": "Rest",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM45",
+                "name": "Attract",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM46",
+                "name": "Theif",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM47",
+                "name": "Steel Wing",
+                "type": "Steel"
+            },
+            {
+                "imgName": "TM48",
+                "name": "Skill Swap",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM49",
+                "name": "Snatch",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM50",
+                "name": "Overheat",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM01",
+                "name": "Focus Punch",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM02",
+                "name": "Dragon Claw",
+                "type": "Dragon"
+            },
+            {
+                "imgName": "TM03",
+                "name": "Water Pulse",
+                "type": "Water"
+            },
+            {
+                "imgName": "TM04",
+                "name": "Calm Mind",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM05",
+                "name": "Roar",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM06",
+                "name": "Toxic",
+                "type": "Poison"
+            },
+            {
+                "imgName": "TM07",
+                "name": "Hail",
+                "type": "Ice"
+            },
+            {
+                "imgName": "TM08",
+                "name": "Bulk Up",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM09",
+                "name": "Bullet Seed",
+                "type": "Grass"
+            },
+            {
+                "imgName": "TM10",
+                "name": "Hidden Power",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM11",
+                "name": "Sunny Day",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM12",
+                "name": "Taunt",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM13",
+                "name": "Ice Beam",
+                "type": "Ice"
+            },
+            {
+                "imgName": "TM14",
+                "name": "Blizzard",
+                "type": "Ice"
+            },
+            {
+                "imgName": "TM15",
+                "name": "Hyper Beam",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM16",
+                "name": "Light Screen",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM17",
+                "name": "Protect",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM18",
+                "name": "Rain Dance",
+                "type": "Water"
+            },
+            {
+                "imgName": "TM19",
+                "name": "Giga Drain",
+                "type": "Grass"
+            },
+            {
+                "imgName": "TM20",
+                "name": "Safeguard",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM21",
+                "name": "Frustration",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM22",
+                "name": "Solar Beam",
+                "type": "Grass"
+            },
+            {
+                "imgName": "TM23",
+                "name": "Iron Tail",
+                "type": "Steel"
+            },
+            {
+                "imgName": "TM24",
+                "name": "Thunderbolt",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM25",
+                "name": "Thunder",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM26",
+                "name": "Earthquake",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM27",
+                "name": "Return",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM28",
+                "name": "Dig",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM29",
+                "name": "Psychic",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM30",
+                "name": "Shadow Ball",
+                "type": "Ghost"
+            },
+            {
+                "imgName": "TM31",
+                "name": "Brick Break",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM32",
+                "name": "Double Team",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM33",
+                "name": "Reflect",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM34",
+                "name": "Shock Wave",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM35",
+                "name": "Flamethrower",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM36",
+                "name": "Sludge Bomb",
+                "type": "Poison"
+            },
+            {
+                "imgName": "TM37",
+                "name": "Sandstorm",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM38",
+                "name": "Fire Blast",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM39",
+                "name": "Rock Tomb",
+                "type": "Rock"
+            },
+            {
+                "imgName": "TM40",
+                "name": "Aerial Ace",
+                "type": "Flying"
+            },
+            {
+                "imgName": "TM41",
+                "name": "Torment",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM42",
+                "name": "Facade",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM43",
+                "name": "Secret Power",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM44",
+                "name": "Rest",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM45",
+                "name": "Attract",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM46",
+                "name": "Thief",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM47",
+                "name": "Steel Wing",
+                "type": "Steel"
+            },
+            {
+                "imgName": "TM48",
+                "name": "Skill Swap",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM49",
+                "name": "Snatch",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM50",
+                "name": "Overheat",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM51",
+                "name": "Roost",
+                "type": "Flying"
+            },
+            {
+                "imgName": "TM52",
+                "name": "Focus Blast",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM53",
+                "name": "Energy Ball",
+                "type": "Grass"
+            },
+            {
+                "imgName": "TM54",
+                "name": "False Swipe",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM55",
+                "name": "Brine",
+                "type": "Water"
+            },
+            {
+                "imgName": "TM56",
+                "name": "Fling",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM57",
+                "name": "Charge Beam",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM58",
+                "name": "Endure",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM59",
+                "name": "Dragon Pulse",
+                "type": "Dragon"
+            },
+            {
+                "imgName": "TM60",
+                "name": "Drain Punch",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM61",
+                "name": "Will-O-Wisp",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM62",
+                "name": "Silver Wind",
+                "type": "Bug"
+            },
+            {
+                "imgName": "TM63",
+                "name": "Embargo",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM64",
+                "name": "Explosion",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM65",
+                "name": "Shadow Claw",
+                "type": "Ghost"
+            },
+            {
+                "imgName": "TM66",
+                "name": "Payback",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM67",
+                "name": "Recycle",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM68",
+                "name": "Giga Impact",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM69",
+                "name": "Rock Polish",
+                "type": "Rock"
+            },
+            {
+                "imgName": "TM70",
+                "name": "Flash",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM71",
+                "name": "Stone Edge",
+                "type": "Rock"
+            },
+            {
+                "imgName": "TM72",
+                "name": "Avalanche",
+                "type": "Ice"
+            },
+            {
+                "imgName": "TM73",
+                "name": "Thunder Wave",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM74",
+                "name": "Gyro Ball",
+                "type": "Steel"
+            },
+            {
+                "imgName": "TM75",
+                "name": "Swords Dance",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM76",
+                "name": "Stealth Rock",
+                "type": "Rock"
+            },
+            {
+                "imgName": "TM77",
+                "name": "Psych Up",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM78",
+                "name": "Captivate",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM79",
+                "name": "Dark Pulse",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM80",
+                "name": "Rock Slide",
+                "type": "Rock"
+            },
+            {
+                "imgName": "TM81",
+                "name": "X-Scissor",
+                "type": "Bug"
+            },
+            {
+                "imgName": "TM82",
+                "name": "Sleep Talk",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM83",
+                "name": "Natural Gift",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM84",
+                "name": "Poison Jab",
+                "type": "Poison"
+            },
+            {
+                "imgName": "TM85",
+                "name": "Dream Eater",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM86",
+                "name": "Grass Knot",
+                "type": "Grass"
+            },
+            {
+                "imgName": "TM87",
+                "name": "Swagger",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM88",
+                "name": "Pluck",
+                "type": "Flying"
+            },
+            {
+                "imgName": "TM89",
+                "name": "U-Turn",
+                "type": "Bug"
+            },
+            {
+                "imgName": "TM90",
+                "name": "Substitute",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM91",
+                "name": "Flash Cannon",
+                "type": "Steel"
+            },
+            {
+                "imgName": "TM92",
+                "name": "Trick Room",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM01",
+                "name": "Hone Claws",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM02",
+                "name": "Dragon Claw",
+                "type": "Dragon"
+            },
+            {
+                "imgName": "TM03",
+                "name": "Psyshock",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM04",
+                "name": "Calm Mind",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM05",
+                "name": "Roar",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM06",
+                "name": "Toxic",
+                "type": "Poison"
+            },
+            {
+                "imgName": "TM07",
+                "name": "Hail",
+                "type": "Ice"
+            },
+            {
+                "imgName": "TM08",
+                "name": "Bulk Up",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM09",
+                "name": "Venoshock",
+                "type": "Poison"
+            },
+            {
+                "imgName": "TM10",
+                "name": "Hidden Power",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM11",
+                "name": "Sunny Day",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM12",
+                "name": "Taunt",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM13",
+                "name": "Ice Beam",
+                "type": "Ice"
+            },
+            {
+                "imgName": "TM14",
+                "name": "Blizzard",
+                "type": "Ice"
+            },
+            {
+                "imgName": "TM15",
+                "name": "Hyper Beam",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM16",
+                "name": "Light Screen",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM17",
+                "name": "Protect",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM18",
+                "name": "Rain Dance",
+                "type": "Water"
+            },
+            {
+                "imgName": "TM19",
+                "name": "Telekinesis",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM20",
+                "name": "Safeguard",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM21",
+                "name": "Frustration",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM22",
+                "name": "Solar Beam",
+                "type": "Grass"
+            },
+            {
+                "imgName": "TM23",
+                "name": "Smack Down",
+                "type": "Rock"
+            },
+            {
+                "imgName": "TM24",
+                "name": "Thunderbolt",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM25",
+                "name": "Thunder",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM26",
+                "name": "Earthquake",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM27",
+                "name": "Return",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM28",
+                "name": "Dig",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM29",
+                "name": "Psychic",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM30",
+                "name": "Shadow Ball",
+                "type": "Ghost"
+            },
+            {
+                "imgName": "TM31",
+                "name": "Brick Break",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM32",
+                "name": "Double Team",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM33",
+                "name": "Reflect",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM34",
+                "name": "Sludge Wave",
+                "type": "Poison"
+            },
+            {
+                "imgName": "TM35",
+                "name": "Flamethrower",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM36",
+                "name": "Sludge Bomb",
+                "type": "Poison"
+            },
+            {
+                "imgName": "TM37",
+                "name": "Sandstorm",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM38",
+                "name": "Fire Blast",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM39",
+                "name": "Rock Tomb",
+                "type": "Rock"
+            },
+            {
+                "imgName": "TM40",
+                "name": "Aerial Ace",
+                "type": "Flying"
+            },
+            {
+                "imgName": "TM41",
+                "name": "Torment",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM42",
+                "name": "Facade",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM43",
+                "name": "Flame Charge",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM44",
+                "name": "Rest",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM45",
+                "name": "Attract",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM46",
+                "name": "Thief",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM47",
+                "name": "Low Sweep",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM48",
+                "name": "Round",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM49",
+                "name": "Echoed Voice",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM50",
+                "name": "Overheat",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM51",
+                "name": "Ally Switch",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM52",
+                "name": "Focus Blast",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM53",
+                "name": "Energy Ball",
+                "type": "Grass"
+            },
+            {
+                "imgName": "TM54",
+                "name": "False Swipe",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM55",
+                "name": "Scald",
+                "type": "Water"
+            },
+            {
+                "imgName": "TM56",
+                "name": "Fling",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM57",
+                "name": "Charge Beam",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM58",
+                "name": "Sky Drop",
+                "type": "Flying"
+            },
+            {
+                "imgName": "TM59",
+                "name": "Incinerate",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM60",
+                "name": "Quash",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM61",
+                "name": "Will-O-Wisp",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM62",
+                "name": "Acrobatics",
+                "type": "Flying"
+            },
+            {
+                "imgName": "TM63",
+                "name": "Embargo",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM64",
+                "name": "Explosion",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM65",
+                "name": "Shadow Claw",
+                "type": "Ghost"
+            },
+            {
+                "imgName": "TM66",
+                "name": "Payback",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM67",
+                "name": "Retaliate",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM68",
+                "name": "Giga Impact",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM69",
+                "name": "Rock Polish",
+                "type": "Rock"
+            },
+            {
+                "imgName": "TM70",
+                "name": "Flash",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM71",
+                "name": "Stone Edge",
+                "type": "Rock"
+            },
+            {
+                "imgName": "TM72",
+                "name": "Volt Switch",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM73",
+                "name": "Thunder Wave",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM74",
+                "name": "Gyro Ball",
+                "type": "Steel"
+            },
+            {
+                "imgName": "TM75",
+                "name": "Swords Dance",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM76",
+                "name": "Struggle Bug",
+                "type": "Bug"
+            },
+            {
+                "imgName": "TM77",
+                "name": "Psych Up",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM78",
+                "name": "Bulldoze",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM79",
+                "name": "Frost Breath",
+                "type": "Ice"
+            },
+            {
+                "imgName": "TM80",
+                "name": "Rock Slide",
+                "type": "Rock"
+            },
+            {
+                "imgName": "TM81",
+                "name": "X-Scissor",
+                "type": "Bug"
+            },
+            {
+                "imgName": "TM82",
+                "name": "Dragon Tail",
+                "type": "Dragon"
+            },
+            {
+                "imgName": "TM83",
+                "name": "Work Up",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM84",
+                "name": "Poison Jab",
+                "type": "Poison"
+            },
+            {
+                "imgName": "TM85",
+                "name": "Dream Eater",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM86",
+                "name": "Grass Knot",
+                "type": "Grass"
+            },
+            {
+                "imgName": "TM87",
+                "name": "Swagger",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM88",
+                "name": "Pluck",
+                "type": "Flying"
+            },
+            {
+                "imgName": "TM89",
+                "name": "U-Turn",
+                "type": "Bug"
+            },
+            {
+                "imgName": "TM90",
+                "name": "Substitute",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM91",
+                "name": "Flash Cannon",
+                "type": "Steel"
+            },
+            {
+                "imgName": "TM92",
+                "name": "Trick Room",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM93",
+                "name": "Wild Charge",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM94",
+                "name": "Rock Smash",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM95",
+                "name": "Snarl",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM01",
+                "name": "Hone Claws",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM02",
+                "name": "Dragon Claw",
+                "type": "Dragon"
+            },
+            {
+                "imgName": "TM03",
+                "name": "Psyshock",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM04",
+                "name": "Calm Mind",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM05",
+                "name": "Roar",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM06",
+                "name": "Toxic",
+                "type": "Poison"
+            },
+            {
+                "imgName": "TM07",
+                "name": "Hail",
+                "type": "Ice"
+            },
+            {
+                "imgName": "TM08",
+                "name": "Bulk Up",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM09",
+                "name": "Venoshock",
+                "type": "Poison"
+            },
+            {
+                "imgName": "TM10",
+                "name": "Hidden Power",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM11",
+                "name": "Sunny Day",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM12",
+                "name": "Taunt",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM13",
+                "name": "Ice Beam",
+                "type": "Ice"
+            },
+            {
+                "imgName": "TM14",
+                "name": "Blizzard",
+                "type": "Ice"
+            },
+            {
+                "imgName": "TM15",
+                "name": "Hyper Beam",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM16",
+                "name": "Light Screen",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM17",
+                "name": "Protect",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM18",
+                "name": "Rain Dance",
+                "type": "Water"
+            },
+            {
+                "imgName": "TM19",
+                "name": "Roost",
+                "type": "Flying"
+            },
+            {
+                "imgName": "TM20",
+                "name": "Safeguard",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM21",
+                "name": "Frustration",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM22",
+                "name": "Solar Beam",
+                "type": "Grass"
+            },
+            {
+                "imgName": "TM23",
+                "name": "Smack Down",
+                "type": "Rock"
+            },
+            {
+                "imgName": "TM24",
+                "name": "Thunderbolt",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM25",
+                "name": "Thunder",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM26",
+                "name": "Earthquake",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM27",
+                "name": "Return",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM28",
+                "name": "Dig",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM29",
+                "name": "Psychic",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM30",
+                "name": "Shadow Ball",
+                "type": "Ghost"
+            },
+            {
+                "imgName": "TM31",
+                "name": "Brick Break",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM32",
+                "name": "Double Team",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM33",
+                "name": "Reflect",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM34",
+                "name": "Sludge Wave",
+                "type": "Poison"
+            },
+            {
+                "imgName": "TM35",
+                "name": "Flamethrower",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM36",
+                "name": "Sludge Bomb",
+                "type": "Poison"
+            },
+            {
+                "imgName": "TM37",
+                "name": "Sandstorm",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM38",
+                "name": "Fire Blast",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM39",
+                "name": "Rock Tomb",
+                "type": "Rock"
+            },
+            {
+                "imgName": "TM40",
+                "name": "Aerial Ace",
+                "type": "Flying"
+            },
+            {
+                "imgName": "TM41",
+                "name": "Torment",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM42",
+                "name": "Facade",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM43",
+                "name": "Flame Charge",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM44",
+                "name": "Rest",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM45",
+                "name": "Attract",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM46",
+                "name": "Thief",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM47",
+                "name": "Low Sweep",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM48",
+                "name": "Round",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM49",
+                "name": "Echoed Voice",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM50",
+                "name": "Overheat",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM51",
+                "name": "Steel Wing",
+                "type": "Steel"
+            },
+            {
+                "imgName": "TM52",
+                "name": "Focus Blast",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM53",
+                "name": "Energy Ball",
+                "type": "Grass"
+            },
+            {
+                "imgName": "TM54",
+                "name": "False Swipe",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM55",
+                "name": "Scald",
+                "type": "Water"
+            },
+            {
+                "imgName": "TM56",
+                "name": "Fling",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM57",
+                "name": "Charge Beam",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM58",
+                "name": "Sky Drop",
+                "type": "Flying"
+            },
+            {
+                "imgName": "TM59",
+                "name": "Incinerate",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM60",
+                "name": "Quash",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM61",
+                "name": "Will-O-Wisp",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM62",
+                "name": "Acrobatics",
+                "type": "Flying"
+            },
+            {
+                "imgName": "TM63",
+                "name": "Embargo",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM64",
+                "name": "Explosion",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM65",
+                "name": "Shadow Claw",
+                "type": "Ghost"
+            },
+            {
+                "imgName": "TM66",
+                "name": "Payback",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM67",
+                "name": "Retaliate",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM68",
+                "name": "Giga Impact",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM69",
+                "name": "Rock Polish",
+                "type": "Rock"
+            },
+            {
+                "imgName": "TM70",
+                "name": "Flash",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM71",
+                "name": "Stone Edge",
+                "type": "Rock"
+            },
+            {
+                "imgName": "TM72",
+                "name": "Volt Switch",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM73",
+                "name": "Thunder Wave",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM74",
+                "name": "Gyro Ball",
+                "type": "Steel"
+            },
+            {
+                "imgName": "TM75",
+                "name": "Swords Dance",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM76",
+                "name": "Struggle Bug",
+                "type": "Bug"
+            },
+            {
+                "imgName": "TM77",
+                "name": "Psych Up",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM78",
+                "name": "Bulldoze",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM79",
+                "name": "Frost Breath",
+                "type": "Ice"
+            },
+            {
+                "imgName": "TM80",
+                "name": "Rock Slide",
+                "type": "Rock"
+            },
+            {
+                "imgName": "TM81",
+                "name": "X-Scissor",
+                "type": "Bug"
+            },
+            {
+                "imgName": "TM82",
+                "name": "Dragon Tail",
+                "type": "Dragon"
+            },
+            {
+                "imgName": "TM83",
+                "name": "Infestation",
+                "type": "Bug"
+            },
+            {
+                "imgName": "TM84",
+                "name": "Poison Jab",
+                "type": "Poison"
+            },
+            {
+                "imgName": "TM85",
+                "name": "Dream Eater",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM86",
+                "name": "Grass Knot",
+                "type": "Grass"
+            },
+            {
+                "imgName": "TM87",
+                "name": "Swagger",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM88",
+                "name": "Sleep Talk",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM89",
+                "name": "U-Turn",
+                "type": "Bug"
+            },
+            {
+                "imgName": "TM90",
+                "name": "Substitute",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM91",
+                "name": "Flash Cannon",
+                "type": "Steel"
+            },
+            {
+                "imgName": "TM92",
+                "name": "Trick Room",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM93",
+                "name": "Wild Charge",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM94",
+                "name": [
+                    "Rock Smash",
+                    "Secret Power"
+                    ],
+                "type": [
+                    "Fighting",
+                    "Normal"
+                ]
+            },
+            {
+                "imgName": "TM95",
+                "name": "Snarl",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM96",
+                "name": "Nature Power",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM97",
+                "name": "Dark Pulse",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM98",
+                "name": "Power-Up Punch",
+                "type": "Fighting"
+            },
+            {
+                "imgName": "TM99",
+                "name": "Dazzling Gleam",
+                "type": "Fairy"
+            },
+            {
+                "imgName": "TM100",
+                "name": "Confide",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM01",
+                "name": [
+                    "Work Up",
+                    "Headbutt"
+                    ],
+                "type": [
+                    "Normal",
+                    "Normal"
+                ]
+            },
+            {
+                "imgName": "TM02",
+                "name": [
+                    "Dragon Claw",
+                    "Taunt"
+                    ],
+                "type": [
+                    "Dragon",
+                    "Dark"
+                ]
+            },
+            {
+                "imgName": "TM03",
+                "name": [
+                    "Psyshock",
+                    "Helping Hand"
+                    ],
+                "type": [
+                    "Psychic",
+                    "Normal"
+                ]
+            },
+            {
+                "imgName": "TM04",
+                "name": [
+                    "Calm Mind",
+                    "Teleport"
+                    ],
+                "type": [
+                    "Psychic",
+                    "Psychic"
+                ]
+            },
+            {
+                "imgName": "TM05",
+                "name": [
+                    "Roar",
+                    "Rest"
+                    ],
+                "type": [
+                    "Normal",
+                    "Psychic"
+                ]
+            },
+            {
+                "imgName": "TM06",
+                "name": [
+                    "Toxic",
+                    "Light Screen"
+                    ],
+                "type": [
+                    "Poison",
+                    "Psychic"
+                ]
+            },
+            {
+                "imgName": "TM07",
+                "name": [
+                    "Hail",
+                    "Protect"
+                    ],
+                "type": [
+                    "Ice",
+                    "Normal"
+                ]
+            },
+            {
+                "imgName": "TM08",
+                "name": [
+                    "Bulk Up",
+                    "Substitute"
+                    ],
+                "type": [
+                    "Fighting",
+                    "Normal"
+                ]
+            },
+            {
+                "imgName": "TM09",
+                "name": [
+                    "Venoshock",
+                    "Reflect"
+                    ],
+                "type": [
+                    "Poison",
+                    "Psychic"
+                ]
+            },
+            {
+                "imgName": "TM10",
+                "name": [
+                    "Hidden Power",
+                    "Dig"
+                    ],
+                "type": [
+                    "Normal",
+                    "Ground"
+                ]
+            },
+            {
+                "imgName": "TM11",
+                "name": [
+                    "Sunny Day",
+                    "Will-O-Wisp"
+                    ],
+                "type": [
+                    "Fire",
+                    "Fire"
+                ]
+            },
+            {
+                "imgName": "TM12",
+                "name": [
+                    "Taunt",
+                    "Facade"
+                    ],
+                "type": [
+                    "Dark",
+                    "Normal"
+                ]
+            },
+            {
+                "imgName": "TM13",
+                "name": [
+                    "Ice Beam",
+                    "Brick Break"
+                    ],
+                "type": [
+                    "Ice",
+                    "Fighting"
+                ]
+            },
+            {
+                "imgName": "TM14",
+                "name": [
+                    "Blizzard",
+                    "Fly"
+                    ],
+                "type": [
+                    "Ice",
+                    "Flying"
+                ]
+            },
+            {
+                "imgName": "TM15",
+                "name": [
+                    "Hyper Beam",
+                    "Seismic Toss"
+                    ],
+                "type": [
+                    "Normal",
+                    "Fighting"
+                ]
+            },
+            {
+                "imgName": "TM16",
+                "name": [
+                    "Light Screen",
+                    "Thunder Wave"
+                    ],
+                "type": [
+                    "Psychic",
+                    "Electric"
+                ]
+            },
+            {
+                "imgName": "TM17",
+                "name": [
+                    "Protect",
+                    "Dragon Tail"
+                    ],
+                "type": [
+                    "Normal",
+                    "Dragon"
+                ]
+            },
+            {
+                "imgName": "TM18",
+                "name": [
+                    "Rain Dance",
+                    "U-Turn"
+                    ],
+                "type": [
+                    "Water",
+                    "Bug"
+                ]
+            },
+            {
+                "imgName": "TM19",
+                "name": [
+                    "Roost",
+                    "Iron Tail"
+                    ],
+                "type": [
+                    "Flying",
+                    "Steel"
+                ]
+            },
+            {
+                "imgName": "TM20",
+                "name": [
+                    "Safeguard",
+                    "Dark Pulse"
+                    ],
+                "type": [
+                    "Normal",
+                    "Dark"
+                ]
+            },
+            {
+                "imgName": "TM21",
+                "name": [
+                    "Frustration",
+                    "Foul Play"
+                    ],
+                "type": [
+                    "Normal",
+                    "Dark"
+                ]
+            },
+            {
+                "imgName": "TM22",
+                "name": [
+                    "Solar Beam",
+                    "Rock Slide"
+                    ],
+                "type": [
+                    "Grass",
+                    "Rock"
+                ]
+            },
+            {
+                "imgName": "TM23",
+                "name": [
+                    "Smack Down",
+                    "Thunder Punch"
+                    ],
+                "type": [
+                    "Rock",
+                    "Electric"
+                ]
+            },
+            {
+                "imgName": "TM24",
+                "name": [
+                    "Thunderbolt",
+                    "X-Scissor"
+                    ],
+                "type": [
+                    "Electric",
+                    "Bug"
+                ]
+            },
+            {
+                "imgName": "TM25",
+                "name": [
+                    "Thunder",
+                    "Waterfall"
+                    ],
+                "type": [
+                    "Electric",
+                    "Water"
+                ]
+            },
+            {
+                "imgName": "TM26",
+                "name": [
+                    "Earthquake",
+                    "Poison Jab"
+                    ],
+                "type": [
+                    "Ground",
+                    "Poison"
+                ]
+            },
+            {
+                "imgName": "TM27",
+                "name": [
+                    "Return",
+                    "Toxic"
+                    ],
+                "type": [
+                    "Normal",
+                    "Poison"
+                ]
+            },
+            {
+                "imgName": "TM28",
+                "name": [
+                    "Leech Life",
+                    "Tri Attack"
+                    ],
+                "type": [
+                    "Bug",
+                    "Normal"
+                ]
+            },
+            {
+                "imgName": "TM29",
+                "name": [
+                    "Psychic",
+                    "Scald"
+                    ],
+                "type": [
+                    "Psychic",
+                    "Water"
+                ]
+            },
+            {
+                "imgName": "TM30",
+                "name": [
+                    "Shadow Ball",
+                    "Bulk Up"
+                    ],
+                "type": [
+                    "Ghost",
+                    "Fighting"
+                ]
+            },
+            {
+                "imgName": "TM31",
+                "name": [
+                    "Brick Break",
+                    "Fire Punch"
+                    ],
+                "type": [
+                    "Fighting",
+                    "Fire"
+                ]
+            },
+            {
+                "imgName": "TM32",
+                "name": [
+                    "Double Team",
+                    "Dazzling Gleam"
+                    ],
+                "type": [
+                    "Normal",
+                    "Fairy"
+                ]
+            },
+            {
+                "imgName": "TM33",
+                "name": [
+                    "Reflect",
+                    "Calm Mind"
+                    ],
+                "type": [
+                    "Psychic",
+                    "Psychic"
+                ]
+            },
+            {
+                "imgName": "TM34",
+                "name": [
+                    "Sludge Wave",
+                    "Dragon Pulse"
+                    ],
+                "type": [
+                    "Poison",
+                    "Dragon"
+                ]
+            },
+            {
+                "imgName": "TM35",
+                "name": [
+                    "Flamethrower",
+                    "Ice Punch"
+                    ],
+                "type": [
+                    "Fire",
+                    "Ice"
+                ]
+            },
+            {
+                "imgName": "TM36",
+                "name": [
+                    "Sludge Bomb",
+                    "Thunderbolt"
+                    ],
+                "type": [
+                    "Poison",
+                    "Electric"
+                ]
+            },
+            {
+                "imgName": "TM37",
+                "name": [
+                    "Sandstorm",
+                    "Flamethrower"
+                    ],
+                "type": [
+                    "Ground",
+                    "Fire"
+                ]
+            },
+            {
+                "imgName": "TM38",
+                "name": [
+                    "Fire Blast",
+                    "Thunder"
+                    ],
+                "type": [
+                    "Fire",
+                    "Electric"
+                ]
+            },
+            {
+                "imgName": "TM39",
+                "name": [
+                    "Rock Tomb",
+                    "Outrage"
+                    ],
+                "type": [
+                    "Rock",
+                    "Dragon"
+                ]
+            },
+            {
+                "imgName": "TM40",
+                "name": [
+                    "Aerial Ace",
+                    "Psychic"
+                    ],
+                "type": [
+                    "Flying",
+                    "Psychic"
+                ]
+            },
+            {
+                "imgName": "TM41",
+                "name": [
+                    "Torment",
+                    "Earthquake"
+                    ],
+                "type": [
+                    "Dark",
+                    "Ground"
+                ]
+            },
+            {
+                "imgName": "TM42",
+                "name": [
+                    "Facade",
+                    "Self-Destruct"
+                    ],
+                "type": [
+                    "Normal",
+                    "Normal"
+                ]
+            },
+            {
+                "imgName": "TM43",
+                "name": [
+                    "Flame Charge",
+                    "Shadow Ball"
+                    ],
+                "type": [
+                    "Fire",
+                    "Ghost"
+                ]
+            },
+            {
+                "imgName": "TM44",
+                "name": [
+                    "Rest",
+                    "Play Rough"
+                    ],
+                "type": [
+                    "Psychic",
+                    "Fairy"
+                ]
+            },
+            {
+                "imgName": "TM45",
+                "name": [
+                    "Attract",
+                    "Solar Beam"
+                    ],
+                "type": [
+                    "Normal",
+                    "Grass"
+                ]
+            },
+            {
+                "imgName": "TM46",
+                "name": [
+                    "Thief",
+                    "Fire Blast"
+                    ],
+                "type": [
+                    "Dark",
+                    "Fire"
+                ]
+            },
+            {
+                "imgName": "TM47",
+                "name": [
+                    "Low Sweep",
+                    "Surf"
+                    ],
+                "type": [
+                    "Fighting",
+                    "Water"
+                ]
+            },
+            {
+                "imgName": "TM48",
+                "name": [
+                    "Round",
+                    "Hyper Beam"
+                    ],
+                "type": [
+                    "Normal",
+                    "Normal"
+                ]
+            },
+            {
+                "imgName": "TM49",
+                "name": [
+                    "Echoed Voice",
+                    "Superpower"
+                    ],
+                "type": [
+                    "Normal",
+                    "Fighting"
+                ]
+            },
+            {
+                "imgName": "TM50",
+                "name": [
+                    "Overheat",
+                    "Roost"
+                    ],
+                "type": [
+                    "Fire",
+                    "Flying"
+                ]
+            },
+            {
+                "imgName": "TM51",
+                "name": [
+                    "Steel Wing",
+                    "Blizzard"
+                    ],
+                "type": [
+                    "Steel",
+                    "Ice"
+                ]
+            },
+            {
+                "imgName": "TM52",
+                "name": [
+                    "Focus Blast",
+                    "Sludge Bomb"
+                    ],
+                "type": [
+                    "Fighting",
+                    "Poison"
+                ]
+            },
+            {
+                "imgName": "TM53",
+                "name": [
+                    "Energy Ball",
+                    "Mega Drain"
+                    ],
+                "type": [
+                    "Grass",
+                    "Grass"
+                ]
+            },
+            {
+                "imgName": "TM54",
+                "name": [
+                    "False Swipe",
+                    "Flash Cannon"
+                    ],
+                "type": [
+                    "Normal",
+                    "Steel"
+                ]
+            },
+            {
+                "imgName": "TM55",
+                "name": [
+                    "Scald",
+                    "Ice Beam"
+                    ],
+                "type": [
+                    "Water",
+                    "Ice"
+                ]
+            },
+            {
+                "imgName": "TM56",
+                "name": [
+                    "Fling",
+                    "Stealth Rock"
+                    ],
+                "type": [
+                    "Dark",
+                    "Rock"
+                ]
+            },
+            {
+                "imgName": "TM57",
+                "name": [
+                    "Charge Beam",
+                    "Payday"
+                    ],
+                "type": [
+                    "Electric",
+                    "Normal"
+                ]
+            },
+            {
+                "imgName": "TM58",
+                "name": [
+                    "Sky Drop",
+                    "Drill Run"
+                    ],
+                "type": [
+                    "Flying",
+                    "Ground"
+                ]
+            },
+            {
+                "imgName": "TM59",
+                "name": [
+                    "Brutal Swing",
+                    "Dream Eater"
+                    ],
+                "type": [
+                    "Dark",
+                    "Psychic"
+                ]
+            },
+            {
+                "imgName": "TM60",
+                "name": [
+                    "Quash",
+                    "Megahorn"
+                    ],
+                "type": [
+                    "Dark",
+                    "Bug"
+                ]
+            },
+            {
+                "imgName": "TM61",
+                "name": "Will-O-Wisp",
+                "type": "Fire"
+            },
+            {
+                "imgName": "TM62",
+                "name": "Acrobatics",
+                "type": "Flying"
+            },
+            {
+                "imgName": "TM63",
+                "name": "Embargo",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM64",
+                "name": "Explosion",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM65",
+                "name": "Shadow Claw",
+                "type": "Ghost"
+            },
+            {
+                "imgName": "TM66",
+                "name": "Payback",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM67",
+                "name": "Smart Strike",
+                "type": "Steel"
+            },
+            {
+                "imgName": "TM68",
+                "name": "Giga Impact",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM69",
+                "name": "Rock Polish",
+                "type": "Rock"
+            },
+            {
+                "imgName": "TM70",
+                "name": "Aurora Veil",
+                "type": "Ice"
+            },
+            {
+                "imgName": "TM71",
+                "name": "Stone Edge",
+                "type": "Rock"
+            },
+            {
+                "imgName": "TM72",
+                "name": "Volt Switch",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM73",
+                "name": "Thunder Wave",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM74",
+                "name": "Gyro Ball",
+                "type": "Steel"
+            },
+            {
+                "imgName": "TM75",
+                "name": "Swords Dance",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM76",
+                "name": "Fly",
+                "type": "Flying"
+            },
+            {
+                "imgName": "TM77",
+                "name": "Psych Up",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM78",
+                "name": "Bulldoze",
+                "type": "Ground"
+            },
+            {
+                "imgName": "TM79",
+                "name": "Frost Breath",
+                "type": "Ice"
+            },
+            {
+                "imgName": "TM80",
+                "name": "Rock Slide",
+                "type": "Rock"
+            },
+            {
+                "imgName": "TM81",
+                "name": "X-Scissor",
+                "type": "Bug"
+            },
+            {
+                "imgName": "TM82",
+                "name": "Dragon Tail",
+                "type": "Dragon"
+            },
+            {
+                "imgName": "TM83",
+                "name": "Infestation",
+                "type": "Bug"
+            },
+            {
+                "imgName": "TM84",
+                "name": "Poison Jab",
+                "type": "Poison"
+            },
+            {
+                "imgName": "TM85",
+                "name": "Dream Eater",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM86",
+                "name": "Grass Knot",
+                "type": "Grass"
+            },
+            {
+                "imgName": "TM87",
+                "name": "Swagger",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM88",
+                "name": "Sleep Talk",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM89",
+                "name": "U-Turn",
+                "type": "Bug"
+            },
+            {
+                "imgName": "TM90",
+                "name": "Substitute",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM91",
+                "name": "Flash Cannon",
+                "type": "Steel"
+            },
+            {
+                "imgName": "TM92",
+                "name": "Trick Room",
+                "type": "Psychic"
+            },
+            {
+                "imgName": "TM93",
+                "name": "Wild Charge",
+                "type": "Electric"
+            },
+            {
+                "imgName": "TM94",
+                "name": "Surf",
+                "type": "Water"
+            },
+            {
+                "imgName": "TM95",
+                "name": "Snarl",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM96",
+                "name": "Nature Power",
+                "type": "Normal"
+            },
+            {
+                "imgName": "TM97",
+                "name": "Dark Pulse",
+                "type": "Dark"
+            },
+            {
+                "imgName": "TM98",
+                "name": "Waterfall",
+                "type": "Water"
+            },
+            {
+                "imgName": "TM99",
+                "name": "Dazzling Gleam",
+                "type": "Fairy"
+            },
+            {
+                "imgName": "TM100",
+                "name": "Confide",
+                "type": "Normal"
+            }
+    ]
+}
