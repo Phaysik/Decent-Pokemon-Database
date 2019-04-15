@@ -1,0 +1,3383 @@
+{
+    "family":[
+        {
+            "first": "Bulbasaur",
+            "middle": "Ivysaur",
+            "last": "Venusaur"
+        },
+        {
+            "first": "Bulbasaur",
+            "middle": "Ivysaur",
+            "last": "Venusaur"
+        },
+        {
+            "first": "Bulbasaur",
+            "middle": "Ivysaur",
+            "last": "Venusaur"
+        },
+        {
+            "first": "Charmander",
+            "middle": "Charmeleon",
+            "last": "Charizard"
+        },
+        {
+            "first": "Charmander",
+            "middle": "Charmeleon",
+            "last": "Charizard"
+        },
+        {
+            "first": "Charmander",
+            "middle": "Charmeleon",
+            "last": "Charizard"
+        },
+        {
+            "first": "Squirtle",
+            "middle": "Wartortle",
+            "last": "Blastoise"
+        },
+        {
+            "first": "Squirtle",
+            "middle": "Wartortle",
+            "last": "Blastoise"
+        },
+        {
+            "first": "Squirtle",
+            "middle": "Wartortle",
+            "last": "Blastoise"
+        },
+        {
+            "first": "Caterpie",
+            "middle": "Metapod",
+            "last": "Butterfree"
+        },
+        {
+            "first": "Caterpie",
+            "middle": "Metapod",
+            "last": "Butterfree"
+        },
+        {
+            "first": "Caterpie",
+            "middle": "Metapod",
+            "last": "Butterfree"
+        },
+        {
+            "first": "Weedle",
+            "middle": "Kakuna",
+            "last": "Beedrill"
+        },
+        {
+            "first": "Weedle",
+            "middle": "Kakuna",
+            "last": "Beedrill"
+        },
+        {
+            "first": "Weedle",
+            "middle": "Kakuna",
+            "last": "Beedrill"
+        },
+        {
+            "first": "Pidgey",
+            "middle": "Pidgeotto",
+            "last": "Pidgeot"
+        },
+        {
+            "first": "Pidgey",
+            "middle": "Pidgeotto",
+            "last": "Pidgeot"
+        },
+        {
+            "first": "Pidgey",
+            "middle": "Pidgeotto",
+            "last": "Pidgeot"
+        },
+        {
+            "first": "Rattata",
+            "last": "Raticate"
+        },
+        {
+            "first": "Rattata",
+            "last": "Raticate"
+        },
+        {
+            "first": "Spearow",
+            "last": "Fearow"
+        },
+        {
+            "first": "Spearow",
+            "last": "Fearow"
+        },
+        {
+            "first": "Ekans",
+            "last": "Arbok"
+        },
+        {
+            "first": "Ekans",
+            "last": "Arbok"
+        },
+        {
+            "first": "Pichu",
+            "middle": "Pikachu",
+            "last": "Raichu"
+        },
+        {
+            "first": "Pichu",
+            "middle": "Pikachu",
+            "last": "Raichu"
+        },
+        {
+            "first": "Sandshrew",
+            "last": "Sandslash"
+        },
+        {
+            "first": "Sandshrew",
+            "last": "Sandslash"
+        },
+        {
+            "first": "Nidoran♀",
+            "middle": "Nidorina",
+            "last": "Nidoqueen"
+        },
+        {
+            "first": "Nidoran♀",
+            "middle": "Nidorina",
+            "last": "Nidoqueen"
+        },
+        {
+            "first": "Nidoran♀",
+            "middle": "Nidorina",
+            "last": "Nidoqueen"
+        },
+        {
+            "first": "Nidoran♂",
+            "middle": "Nidorino",
+            "last": "Nidoking"
+        },
+        {
+            "first": "Nidoran♂",
+            "middle": "Nidorino",
+            "last": "Nidoking"
+        },
+        {
+            "first": "Nidoran♂",
+            "middle": "Nidorino",
+            "last": "Nidoking"
+        },
+        {
+            "first": "Cleffa",
+            "middle": "Clefairy",
+            "last": "Clefable"
+        },
+        {
+            "first": "Cleffa",
+            "middle": "Clefairy",
+            "last": "Clefable"
+        },
+        {
+            "first": "Vulpix",
+            "last": "Ninetales"
+        },
+        {
+            "first": "Vulpix",
+            "last": "Ninetales"
+        },
+        {
+            "first": "Igglybuff",
+            "middle": "Jigglypuff",
+            "last": "Wigglytuff"
+        },
+        {
+            "first": "Igglybuff",
+            "middle": "Jigglypuff",
+            "last": "Wigglytuff"
+        },
+        {
+            "first": "Zubat",
+            "middle": "Golbat",
+            "last": "Crobat"
+        },
+        {
+            "first": "Zubat",
+            "middle": "Golbat",
+            "last": "Crobat"
+        },
+        {
+            "first": "Oddish",
+            "middle": "Gloom",
+            "last": ["Vileplume", "Bellossom"]
+        },
+        {
+            "first": "Oddish",
+            "middle": "Gloom",
+            "last": ["Vileplume", "Bellossom"]
+        },
+        {
+            "first": "Oddish",
+            "middle": "Gloom",
+            "last": ["Vileplume", "Bellossom"]
+        },
+        {
+            "first": "Paras",
+            "last": "Parasect"
+        },
+        {
+            "first": "Paras",
+            "last": "Parasect"
+        },
+        {
+            "first": "Venonat",
+            "last": "Venomoth"
+        },
+        {
+            "first": "Venonat",
+            "last": "Venomoth"
+        },
+        {
+            "first": "Diglett",
+            "last": "Dugtrio"
+        },
+        {
+            "first": "Diglett",
+            "last": "Dugtrio"
+        },
+        {
+            "first": "Meowth",
+            "last": "Persian"
+        },
+        {
+            "first": "Meowth",
+            "last": "Persian"
+        },
+        {
+            "first": "Psyduck",
+            "last": "Golduck"
+        },
+        {
+            "first": "Psyduck",
+            "last": "Golduck"
+        },
+        {
+            "first": "Mankey",
+            "last": "Primeape"
+        },
+        {
+            "first": "Mankey",
+            "last": "Primeape"
+        },
+        {
+            "first": "Growlithe",
+            "last": "Arcanine"
+        },
+        {
+            "first": "Growlithe",
+            "last": "Arcanine"
+        },
+        {
+            "first": "Poliwag",
+            "middle": "Poliwhirl",
+            "last": ["Poliwrath", "Politoed"]
+        },
+        {
+            "first": "Poliwag",
+            "middle": "Poliwhirl",
+            "last": ["Poliwrath", "Politoed"]
+        },
+        {
+            "first": "Poliwag",
+            "middle": "Poliwhirl",
+            "last": ["Poliwrath", "Politoed"]
+        },
+        {
+            "first": "Abra",
+            "middle": "Kadabra",
+            "last": "Alakazam"
+        },
+        {
+            "first": "Abra",
+            "middle": "Kadabra",
+            "last": "Alakazam"
+        },
+        {
+            "first": "Abra",
+            "middle": "Kadabra",
+            "last": "Alakazam"
+        },
+        {
+            "first": "Machop",
+            "middle": "Machoke",
+            "last": "Machamp"
+        },
+        {
+            "first": "Machop",
+            "middle": "Machoke",
+            "last": "Machamp"
+        },
+        {
+            "first": "Machop",
+            "middle": "Machoke",
+            "last": "Machamp"
+        },
+        {
+            "first": "Bellsprout",
+            "middle": "Weepinbell",
+            "last": "Victreebel"
+        },
+        {
+            "first": "Bellsprout",
+            "middle": "Weepinbell",
+            "last": "Victreebel"
+        },
+        {
+            "first": "Bellsprout",
+            "middle": "Weepinbell",
+            "last": "Victreebel"
+        },
+        {
+            "first": "Tentacool",
+            "last": "Tentacruel"
+        },
+        {
+            "first": "Tentacool",
+            "last": "Tentacruel"
+        },
+        {
+            "first": "Geodude",
+            "middle": "Graveler",
+            "last": "Golem"
+        },
+        {
+            "first": "Geodude",
+            "middle": "Graveler",
+            "last": "Golem"
+        },
+        {
+            "first": "Geodude",
+            "middle": "Graveler",
+            "last": "Golem"
+        },
+        {
+            "first": "Ponyta",
+            "last": "Rapidash"
+        },
+        {
+            "first": "Ponyta",
+            "last": "Rapidash"
+        },
+        {
+            "first": "Slowpoke",
+            "last": ["Slowbro", "Slowking"]
+        },
+        {
+            "first": "Slowpoke",
+            "last": ["Slowbro", "Slowking"]
+        },
+        {
+            "first": "Magnemite",
+            "middle": "Magneton",
+            "last": "Magnezone"
+        },
+        {
+            "first": "Magnemite",
+            "middle": "Magneton",
+            "last": "Magnezone"
+        },
+        {
+            "first": "Farfetch'd"
+        },
+        {
+            "first": "Doduo",
+            "last": "Dodrio"
+        },
+        {
+            "first": "Doduo",
+            "last": "Dodrio"
+        },
+        {
+            "first": "Seel",
+            "last": "Dewgong"
+        },
+        {
+            "first": "Seel",
+            "last": "Dewgong"
+        },
+        {
+            "first": "Grimer",
+            "last": "Muk"
+        },
+        {
+            "first": "Grimer",
+            "last": "Muk"
+        },
+        {
+            "first": "Shellder",
+            "last": "Cloyster"
+        },
+        {
+            "first": "Shellder",
+            "last": "Cloyster"
+        },
+        {
+            "first": "Gastly",
+            "middle": "Haunter",
+            "last": "Gengar"
+        },
+        {
+            "first": "Gastly",
+            "middle": "Haunter",
+            "last": "Gengar"
+        },
+        {
+            "first": "Gastly",
+            "middle": "Haunter",
+            "last": "Gengar"
+        },
+        {
+            "first": "Onix",
+            "last": "Steelix"
+        },
+        {
+            "first": "Drowzee",
+            "last": "Hypno"
+        },
+        {
+            "first": "Drowzee",
+            "last": "Hypno"
+        },
+        {
+            "first": "Krabby",
+            "last": "Kingler"
+        },
+        {
+            "first": "Krabby",
+            "last": "Kingler"
+        },
+        {
+            "first": "Voltorb",
+            "last": "Electrode"
+        },
+        {
+            "first": "Voltorb",
+            "last": "Electrode"
+        },
+        {
+            "first": "Exeggcute",
+            "last": "Exeggutor"
+        },
+        {
+            "first": "Exeggcute",
+            "last": "Exeggutor"
+        },
+        {
+            "first": "Cubone",
+            "last": "Marowak"
+        },
+        {
+            "first": "Cubone",
+            "last": "Marowak"
+        },
+        {
+            "first": "Tyrogue",
+            "last": ["Hitmonlee", "Hitmonchan", "Hitmontop"]
+        },
+        {
+            "first": "Tyrogue",
+            "last": ["Hitmonlee", "Hitmonchan", "Hitmontop"]
+        },
+        {
+            "first": "Lickitung",
+            "last": "Lickilicky"
+        },
+        {
+            "first": "Koffing",
+            "last": "Weezing"
+        },
+        {
+            "first": "Koffing",
+            "last": "Weezing"
+        },
+        {
+            "first": "Rhyhorn",
+            "middle": "Rhydon",
+            "last": "Rhyperior"
+        },
+        {
+            "first": "Rhyhorn",
+            "middle": "Rhydon",
+            "last": "Rhyperior"
+        },
+        {
+            "first": "Happiny",
+            "middle": "Chansey",
+            "last": "Blissey"
+        },
+        {
+            "first": "Tangela",
+            "last": "Tangrowth"
+        },
+        {
+            "first": "Kangaskhan"
+        },
+        {
+            "first": "Horsea",
+            "middle": "Seadra",
+            "last": "Kingdra"
+        },
+        {
+            "first": "Horsea",
+            "middle": "Seadra",
+            "last": "Kingdra"
+        },
+        {
+            "first": "Goldeen",
+            "last": "Seaking"
+        },
+        {
+            "first": "Goldeen",
+            "last": "Seaking"
+        },
+        {
+            "first": "Staryu",
+            "last": "Starmie"
+        },
+        {
+            "first": "Staryu",
+            "last": "Starmie"
+        },
+        {
+            "first": "Mime Jr.",
+            "last": "Mr. Mime"
+        },
+        {
+            "first": "Scyther",
+            "last": "Scizor"
+        },
+        {
+            "first": "Smoochum",
+            "last": "Jynx"
+        },
+        {
+            "first": "Elekid",
+            "middle": "Electabuzz",
+            "last": "Electivire"
+        },
+        {
+            "first": "Magby",
+            "middle": "Magmar",
+            "last": "Magmortar"
+        },
+        {
+            "first": "Pinsir"
+        },
+        {
+            "first": "Tauros"
+        },
+        {
+            "first": "Magikarp",
+            "last": "Gyarados"
+        },
+        {
+            "first": "Magikarp",
+            "last": "Gyarados"
+        },
+        {
+            "first": "Lapras"
+        },
+        {
+            "first": "Ditto"
+        },
+        {
+            "first": "Eevee",
+            "last": ["Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon", "Leafeon", "Glaceon", "Sylveon"]
+        },
+        {
+            "first": "Eevee",
+            "last": ["Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon", "Leafeon", "Glaceon", "Sylveon"]
+        },
+        {
+            "first": "Eevee",
+            "last": ["Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon", "Leafeon", "Glaceon", "Sylveon"]
+        },
+        {
+            "first": "Eevee",
+            "last": ["Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon", "Leafeon", "Glaceon", "Sylveon"]
+        },
+        {
+            "first": "Porygon",
+            "middle": "Porygon2",
+            "last": "Porygon-Z"
+        },
+        {
+            "first": "Omanyte",
+            "last": "Omastar"
+        },
+        {
+            "first": "Omanyte",
+            "last": "Omastar"
+        },
+        {
+            "first": "Kabuto",
+            "last": "Kabutops"
+        },
+        {
+            "first": "Kabuto",
+            "last": "Kabutops"
+        },
+        {
+            "first": "Aerodactyl"
+        },
+        {
+            "first": "Munchlax",
+            "last": "Snorlax"
+        },
+        {
+            "first": "Articuno"
+        },
+        {
+            "first": "Zapdos"
+        },
+        {
+            "first": "Moltres"
+        },
+        {
+            "first": "Dratini",
+            "middle": "Dragonair",
+            "last": "Dragonite"
+        },
+        {
+            "first": "Dratini",
+            "middle": "Dragonair",
+            "last": "Dragonite"
+        },
+        {
+            "first": "Dratini",
+            "middle": "Dragonair",
+            "last": "Dragonite"
+        },
+        {
+            "first": "Mewtwo"
+        },
+        {
+            "first": "Mew"
+        },
+        {
+            "first": "Chikorita",
+            "middle": "Bayleef",
+            "last": "Meganium"
+        },
+        {
+            "first": "Chikorita",
+            "middle": "Bayleef",
+            "last": "Meganium"
+        },
+        {
+            "first": "Chikorita",
+            "middle": "Bayleef",
+            "last": "Meganium"
+        },
+        {
+            "first": "Cyndaquil",
+            "middle": "Quilava",
+            "last": "Typhlosion"
+        },
+        {
+            "first": "Cyndaquil",
+            "middle": "Quilava",
+            "last": "Typhlosion"
+        },
+        {
+            "first": "Cyndaquil",
+            "middle": "Quilava",
+            "last": "Typhlosion"
+        },
+        {
+            "first": "Totodile",
+            "middle": "Croconaw",
+            "last": "Feraligatr"
+        },
+        {
+            "first": "Totodile",
+            "middle": "Croconaw",
+            "last": "Feraligatr"
+        },
+        {
+            "first": "Totodile",
+            "middle": "Croconaw",
+            "last": "Feraligatr"
+        },
+        {
+            "first": "Sentret",
+            "last": "Furret"
+        },
+        {
+            "first": "Sentret",
+            "last": "Furret"
+        },
+        {
+            "first": "Hoothoot",
+            "last": "Noctowl"
+        },
+        {
+            "first": "Hoothoot",
+            "last": "Noctowl"
+        },
+        {
+            "first": "Ledyba",
+            "last": "Ledian"
+        },
+        {
+            "first": "Ledyba",
+            "last": "Ledian"
+        },
+        {
+            "first": "Spinarak",
+            "last": "Ariados"
+        },
+        {
+            "first": "Spinarak",
+            "last": "Ariados"
+        },
+        {
+            "first": "Zubat",
+            "middle": "Golbat",
+            "last": "Crobat"
+        },
+        {
+            "first": "Chinchou",
+            "last": "Lanturn"
+        },
+        {
+            "first": "Chinchou",
+            "last": "Lanturn"
+        },
+        {
+            "first": "Pichu",
+            "middle": "Pikachu",
+            "last": "Raichu"
+        },
+        {
+            "first": "Cleffa",
+            "middle": "Clefairy",
+            "last": "Clefable"
+        },
+        {
+            "first": "Igglybuff",
+            "middle": "Jigglypuff",
+            "last": "Wigglytuff"
+        },
+        {
+            "first": "Togepi",
+            "middle": "Togetic",
+            "last": "Togekiss"
+        },
+        {
+            "first": "Togepi",
+            "middle": "Togetic",
+            "last": "Togekiss"
+        },
+        {
+            "first": "Natu",
+            "last": "Xatu"
+        },
+        {
+            "first": "Natu",
+            "last": "Xatu"
+        },
+        {
+            "first": "Mareep",
+            "middle": "Flaaffy",
+            "last": "Ampharos"
+        },
+        {
+            "first": "Mareep",
+            "middle": "Flaaffy",
+            "last": "Ampharos"
+        },
+        {
+            "first": "Mareep",
+            "middle": "Flaaffy",
+            "last": "Ampharos"
+        },
+        {
+            "first": "Oddish",
+            "middle": "Gloom",
+            "last": ["Vileplume", "Bellossom"]
+        },
+        {
+            "first": "Azurill",
+            "middle": "Marill",
+            "last": "Azumarill"
+        },
+        {
+            "first": "Azurill",
+            "middle": "Marill",
+            "last": "Azumarill"
+        },
+        {
+            "first": "Bonsly",
+            "last": "Sudowoodo"
+        },
+        {
+            "first": "Poliwag",
+            "middle": "Poliwhirl",
+            "last": ["Poliwrath", "Politoed"]
+        },
+        {
+            "first": "Hoppip",
+            "middle": "Skiploom",
+            "last": "Jumpluff"
+        },
+        {
+            "first": "Hoppip",
+            "middle": "Skiploom",
+            "last": "Jumpluff"
+        },
+        {
+            "first": "Hoppip",
+            "middle": "Skiploom",
+            "last": "Jumpluff"
+        },
+        {
+            "first": "Aipom",
+            "last": "Ambipom"
+        },
+        {
+            "first": "Sunkern",
+            "last": "Sunflora"
+        },
+        {
+            "first": "Sunkern",
+            "last": "Sunflora"
+        },
+        {
+            "first": "Yanma",
+            "last": "Yanmega"
+        },
+        {
+            "first": "Wooper",
+            "last": "Quagsire"
+        },
+        {
+            "first": "Wooper",
+            "last": "Quagsire"
+        },
+        {
+            "first": "Eevee",
+            "last": ["Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon", "Leafeon", "Glaceon", "Sylveon"]
+        },
+        {
+            "first": "Eevee",
+            "last": ["Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon", "Leafeon", "Glaceon", "Sylveon"]
+        },
+        {
+            "first": "Murkrow",
+            "last": "Honchkrow"
+        },
+        {
+            "first": "Slowpoke",
+            "last": ["Slowbro", "Slowking"]
+        },
+        {
+            "first": "Misdreavus",
+            "last": "Mismagius"
+        },
+        {
+            "first": "Unown"
+        },
+        {
+            "first": "Wynaut",
+            "last": "Wobbuffet"
+        },
+        {
+            "first": "Girafarig"
+        },
+        {
+            "first": "Pineco",
+            "last": "Forretress"
+        },
+        {
+            "first": "Pineco",
+            "last": "Forretress"
+        },
+        {
+            "first": "Dunsparce"
+        },
+        {
+            "first": "Gligar",
+            "last": "Gliscor"
+        },
+        {
+            "first": "Onix",
+            "last": "Steelix"
+        },
+        {
+            "first": "Snubbull",
+            "last": "Granbull"
+        },
+        {
+            "first": "Snubbull",
+            "last": "Granbull"
+        },
+        {
+            "first": "Qwilfish"
+        },
+        {
+            "first": "Scyther",
+            "last": "Scizor"
+        },
+        {
+            "first": "Shuckle"
+        },
+        {
+            "first": "Heracross"
+        },
+        {
+            "first": "Sneasel",
+            "last": "Weavile"
+        },
+        {
+            "first": "Teddiursa",
+            "last": "Ursaring"
+        },
+        {
+            "first": "Yanma",
+            "last": "Yanmega"
+        },
+        {
+            "first": "Teddiursa",
+            "last": "Ursaring"
+        },
+        {
+            "first": "Slugma",
+            "last": "Magcargo"
+        },
+        {
+            "first": "Slugma",
+            "last": "Magcargo"
+        },
+        {
+            "first": "Swinub",
+            "middle": "Piloswine",
+            "last": "Mamoswine"
+        },
+        {
+            "first": "Swinub",
+            "middle": "Piloswine",
+            "last": "Mamoswine"
+        },
+        {
+            "first": "Corsola"
+        },
+        {
+            "first": "Remoraid",
+            "last": "Octillery"
+        },
+        {
+            "first": "Remoraid",
+            "last": "Octillery"
+        },
+        {
+            "first": "Delibird"
+        },
+        {
+            "first": "Mantyke",
+            "last": "Mantine"
+        },
+        {
+            "first": "Skarmory"
+        },
+        {
+            "first": "Houndour",
+            "last": "Houndoom"
+        },
+        {
+            "first": "Houndour",
+            "last": "Houndoom"
+        },
+        {
+            "first": "Horsea",
+            "middle": "Seadra",
+            "last": "Kingdra"
+        },
+        {
+            "first": "Phanpy",
+            "last": "Donphan"
+        },
+        {
+            "first": "Phanpy",
+            "last": "Donphan"
+        },
+        {
+            "first": "Porygon",
+            "middle": "Porygon2",
+            "last": "Porygon-Z"
+        },
+        {
+            "first": "Stantler"
+        },
+        {
+            "first": "Smeargle"
+        },
+        {
+            "first": "Tyrogue",
+            "last": ["Hitmonlee", "Hitmonchan", "Hitmontop"]
+        },
+        {
+            "first": "Tyrogue",
+            "last": ["Hitmonlee", "Hitmonchan", "Hitmontop"]
+        },
+        {
+            "first": "Smoochum",
+            "last": "Jynx"
+        },
+        {
+            "first": "Elekid",
+            "middle": "Electabuzz",
+            "last": "Electivire"
+        },
+        {
+            "first": "Magby",
+            "middle": "Magmar",
+            "last": "Magmortar"
+        },
+        {
+            "first": "Miltank"
+        },
+        {
+            "first": "Happiny",
+            "middle": "Chansey",
+            "last": "Blissey"
+        },
+        {
+            "first": "Raikou"
+        },
+        {
+            "first": "Entei"
+        },
+        {
+            "first": "Suicune"
+        },
+        {
+            "first": "Larvitar",
+            "middle": "Pupitar",
+            "last": "Tyranitar"
+        },
+        {
+            "first": "Larvitar",
+            "middle": "Pupitar",
+            "last": "Tyranitar"
+        },
+        {
+            "first": "Larvitar",
+            "middle": "Pupitar",
+            "last": "Tyranitar"
+        },
+        {
+            "first": "Lugia"
+        },
+        {
+            "first": "Ho-Oh"
+        },
+        {
+            "first": "Celebi"
+        },
+        {
+            "first": "Treecko",
+            "middle": "Grovyle",
+            "last": "Sceptile"
+        },
+        {
+            "first": "Treecko",
+            "middle": "Grovyle",
+            "last": "Sceptile"
+        },
+        {
+            "first": "Treecko",
+            "middle": "Grovyle",
+            "last": "Sceptile"
+        },
+        {
+            "first": "Torchic",
+            "middle": "Combusken",
+            "last": "Blaziken"
+        },
+        {
+            "first": "Torchic",
+            "middle": "Combusken",
+            "last": "Blaziken"
+        },
+        {
+            "first": "Torchic",
+            "middle": "Combusken",
+            "last": "Blaziken"
+        },
+        {
+            "first": "Mudkip",
+            "middle": "Marshtomp",
+            "last": "Swampert"
+        },
+        {
+            "first": "Mudkip",
+            "middle": "Marshtomp",
+            "last": "Swampert"
+        },
+        {
+            "first": "Mudkip",
+            "middle": "Marshtomp",
+            "last": "Swampert"
+        },
+        {
+            "first": "Poochyena",
+            "last": "Mightyena"
+        },
+        {
+            "first": "Poochyena",
+            "last": "Mightyena"
+        },
+        {
+            "first": "Zigzagoon",
+            "last": "Linoone"
+        },
+        {
+            "first": "Zigzagoon",
+            "last": "Linoone"
+        },
+        {
+            "first": "Wurmple",
+            "middle": ["Silcoon", "Cascoon"],
+            "last": ["Beautifly", "Dustox"]
+        },
+        {
+            "first": "Wurmple",
+            "middle": ["Silcoon", "Cascoon"],
+            "last": ["Beautifly", "Dustox"]
+        },
+        {
+            "first": "Wurmple",
+            "middle": ["Silcoon", "Cascoon"],
+            "last": ["Beautifly", "Dustox"]
+        },
+        {
+            "first": "Wurmple",
+            "middle": ["Silcoon", "Cascoon"],
+            "last": ["Beautifly", "Dustox"]
+        },
+        {
+            "first": "Wurmple",
+            "middle": ["Silcoon", "Cascoon"],
+            "last": ["Beautifly", "Dustox"]
+        },
+        {
+            "first": "Lotad",
+            "middle": "Lombre",
+            "last": "Ludicolo"
+        },
+        {
+            "first": "Lotad",
+            "middle": "Lombre",
+            "last": "Ludicolo"
+        },
+        {
+            "first": "Lotad",
+            "middle": "Lombre",
+            "last": "Ludicolo"
+        },
+        {
+            "first": "Seedot",
+            "middle": "Nuzleaf",
+            "last": "Shiftry"
+        },
+        {
+            "first": "Seedot",
+            "middle": "Nuzleaf",
+            "last": "Shiftry"
+        },
+        {
+            "first": "Seedot",
+            "middle": "Nuzleaf",
+            "last": "Shiftry"
+        },
+        {
+            "first": "Taillow",
+            "last": "Swellow"
+        },
+        {
+            "first": "Taillow",
+            "last": "Swellow"
+        },
+        {
+            "first": "Wingull",
+            "last": "Pelipper"
+        },
+        {
+            "first": "Wingull",
+            "last": "Pelipper"
+        },
+        {
+            "first": "Ralts",
+            "middle": "Kirlia",
+            "last": ["Gardevoir", "Gallade"]
+        },
+        {
+            "first": "Ralts",
+            "middle": "Kirlia",
+            "last": ["Gardevoir", "Gallade"]
+        },
+        {
+            "first": "Ralts",
+            "middle": "Kirlia",
+            "last": ["Gardevoir", "Gallade"]
+        },
+        {
+            "first": "Surskit",
+            "last": "Masquerain"
+        },
+        {
+            "first": "Surskit",
+            "last": "Masquerain"
+        },
+        {
+            "first": "Shroomish",
+            "last": "Breloom"
+        },
+        {
+            "first": "Shroomish",
+            "last": "Breloom"
+        },
+        {
+            "first": "Slakoth",
+            "middle": "Vigoroth",
+            "last": "Slaking"
+        },
+        {
+            "first": "Slakoth",
+            "middle": "Vigoroth",
+            "last": "Slaking"
+        },
+        {
+            "first": "Slakoth",
+            "middle": "Vigoroth",
+            "last": "Slaking"
+        },
+        {
+            "first": "Nincada",
+            "last": ["Ninjask", "Shedinja"]
+        },
+        {
+            "first": "Nincada",
+            "last": ["Ninjask", "Shedinja"]
+        },
+        {
+            "first": "Nincada",
+            "last": ["Ninjask", "Shedinja"]
+        },
+        {
+            "first": "Whismur",
+            "middle": "Loudred",
+            "last": "Exploud"
+        },
+        {
+            "first": "Whismur",
+            "middle": "Loudred",
+            "last": "Exploud"
+        },
+        {
+            "first": "Whismur",
+            "middle": "Loudred",
+            "last": "Exploud"
+        },
+        {
+            "first": "Makuhita",
+            "last": "Hariyama"
+        },
+        {
+            "first": "Makuhita",
+            "last": "Hariyama"
+        },
+        {
+            "first": "Azurill",
+            "middle": "Marill",
+            "last": "Azumarill"
+        },
+        {
+            "first": "Nosepass",
+            "last": "Probopass"
+        },
+        {
+            "first": "Skitty",
+            "last": "Delcatty"
+        },
+        {
+            "first": "Skitty",
+            "last": "Delcatty"
+        },
+        {
+            "first": "Sableye"
+        },
+        {
+            "first": "Mawile"
+        },
+        {
+            "first": "Aron",
+            "middle": "Lairon",
+            "last": "Aggron"
+        },
+        {
+            "first": "Aron",
+            "middle": "Lairon",
+            "last": "Aggron"
+        },
+        {
+            "first": "Aron",
+            "middle": "Lairon",
+            "last": "Aggron"
+        },
+        {
+            "first": "Meditite",
+            "last": "Medicham"
+        },
+        {
+            "first": "Meditite",
+            "last": "Medicham"
+        },
+        {
+            "first": "Electrike",
+            "last": "Manectric"
+        },
+        {
+            "first": "Electrike",
+            "last": "Manectric"
+        },
+        {
+            "first": "Plusle"
+        },
+        {
+            "first": "Minun"
+        },
+        {
+            "first": "Volbeat"
+        },
+        {
+            "first": "Illumise"
+        },
+        {
+            "first": "Budew",
+            "middle": "Roselia",
+            "last": "Roserade"
+        },
+        {
+            "first": "Gulpin",
+            "last": "Swalot"
+        },
+        {
+            "first": "Gulpin",
+            "last": "Swalot"
+        },
+        {
+            "first": "Carvanha",
+            "last": "Sharpedo"
+        },
+        {
+            "first": "Carvanha",
+            "last": "Sharpedo"
+        },
+        {
+            "first": "Wailmer",
+            "last": "Wailord"
+        },
+        {
+            "first": "Wailmer",
+            "last": "Wailord"
+        },
+        {
+            "first": "Numel",
+            "last": "Camerupt"
+        },
+        {
+            "first": "Numel",
+            "last": "Camerupt"
+        },
+        {
+            "first": "Torkoal"
+        },
+        {
+            "first": "Spoink",
+            "last": "Grumpig"
+        },
+        {
+            "first": "Spoink",
+            "last": "Grumpig"
+        },
+        {
+            "first": "Spinda"
+        },
+        {
+            "first": "Trapinch",
+            "middle": "Vibrava",
+            "last": "Flygon"
+        },
+        {
+            "first": "Trapinch",
+            "middle": "Vibrava",
+            "last": "Flygon"
+        },
+        {
+            "first": "Trapinch",
+            "middle": "Vibrava",
+            "last": "Flygon"
+        },
+        {
+            "first": "Cacnea",
+            "last": "Cacturne"
+        },
+        {
+            "first": "Cacnea",
+            "last": "Cacturne"
+        },
+        {
+            "first": "Swablu",
+            "last": "Altaria"
+        },
+        {
+            "first": "Swablu",
+            "last": "Altaria"
+        },
+        {
+            "first": "Zangoose"
+        },
+        {
+            "first": "Seviper"
+        },
+        {
+            "first": "Lunatone"
+        },
+        {
+            "first": "Solrock"
+        },
+        {
+            "first": "Barboach",
+            "last": "Whiscash"
+        },
+        {
+            "first": "Barboach",
+            "last": "Whiscash"
+        },
+        {
+            "first": "Corphish",
+            "last": "Crawdaunt"
+        },
+        {
+            "first": "Corphish",
+            "last": "Crawdaunt"
+        },
+        {
+            "first": "Baltoy",
+            "last": "Claydol"
+        },
+        {
+            "first": "Baltoy",
+            "last": "Claydol"
+        },
+        {
+            "first": "Lileep",
+            "last": "Cradily"
+        },
+        {
+            "first": "Lileep",
+            "last": "Cradily"
+        },
+        {
+            "first": "Anorith",
+            "last": "Armaldo"
+        },
+        {
+            "first": "Anorith",
+            "last": "Armaldo"
+        },
+        {
+            "first": "Feebas",
+            "last": "Milotic"
+        },
+        {
+            "first": "Feebas",
+            "last": "Milotic"
+        },
+        {
+            "first": "Castform"
+        },
+        {
+            "first": "Kecleon"
+        },
+        {
+            "first": "Shuppet",
+            "last": "Banette"
+        },
+        {
+            "first": "Shuppet",
+            "last": "Banette"
+        },
+        {
+            "first": "Duskull",
+            "middle": "Dusclops",
+            "last": "Dusknoir"
+        },
+        {
+            "first": "Duskull",
+            "middle": "Dusclops",
+            "last": "Dusknoir"
+        },
+        {
+            "first": "Tropius"
+        },
+        {
+            "first": "Chingling",
+            "last": "Chimecho"
+        },
+        {
+            "first": "Absol"
+        },
+        {
+            "first": "Wynaut",
+            "last": "Wobbuffet"
+        },
+        {
+            "first": "Snorunt",
+            "last": ["Glalie", "Froslass"]
+        },
+        {
+            "first": "Snorunt",
+            "last": ["Glalie", "Froslass"]
+        },
+        {
+            "first": "Spheal",
+            "middle": "Sealeo",
+            "last": "Walrein"
+        },
+        {
+            "first": "Spheal",
+            "middle": "Sealeo",
+            "last": "Walrein"
+        },
+        {
+            "first": "Spheal",
+            "middle": "Sealeo",
+            "last": "Walrein"
+        },
+        {
+            "first": "Clamperl",
+            "last": ["Huntail", "Gorebyss"]
+        },
+        {
+            "first": "Clamperl",
+            "last": ["Huntail", "Gorebyss"]
+        },
+        {
+            "first": "Clamperl",
+            "last": ["Huntail", "Gorebyss"]
+        },
+        {
+            "first": "Relicanth"
+        },
+        {
+            "first": "Luvdisc"
+        },
+        {
+            "first": "Bagon",
+            "middle": "Shelgon",
+            "last": "Salamence"
+        },
+        {
+            "first": "Bagon",
+            "middle": "Shelgon",
+            "last": "Salamence"
+        },
+        {
+            "first": "Bagon",
+            "middle": "Shelgon",
+            "last": "Salamence"
+        },
+        {
+            "first": "Beldum",
+            "middle": "Metang",
+            "last": "Metagross"
+        },
+        {
+            "first": "Beldum",
+            "middle": "Metang",
+            "last": "Metagross"
+        },
+        {
+            "first": "Beldum",
+            "middle": "Metang",
+            "last": "Metagross"
+        },
+        {
+            "first": "Regirock"
+        },
+        {
+            "first": "Regice"
+        },
+        {
+            "first": "Registeel"
+        },
+        {
+            "first": "Latias"
+        },
+        {
+            "first": "Latios"
+        },
+        {
+            "first": "Kyogre"
+        },
+        {
+            "first": "Groudon"
+        },
+        {
+            "first": "Rayquaza"
+        },
+        {
+            "first": "Jirachi"
+        },
+        {
+            "first": "Deoxys"
+        },
+        {
+            "first": "Turtwig",
+            "middle": "Grotle",
+            "last": "Torterra"
+        },
+        {
+            "first": "Turtwig",
+            "middle": "Grotle",
+            "last": "Torterra"
+        },
+        {
+            "first": "Turtwig",
+            "middle": "Grotle",
+            "last": "Torterra"
+        },
+        {
+            "first": "Chimchar",
+            "middle": "Monferno",
+            "last": "Infernape"
+        },
+        {
+            "first": "Chimchar",
+            "middle": "Monferno",
+            "last": "Infernape"
+        },
+        {
+            "first": "Chimchar",
+            "middle": "Monferno",
+            "last": "Infernape"
+        },
+        {
+            "first": "Piplup",
+            "middle": "Prinplup",
+            "last": "Empoleon"
+        },
+        {
+            "first": "Piplup",
+            "middle": "Prinplup",
+            "last": "Empoleon"
+        },
+        {
+            "first": "Piplup",
+            "middle": "Prinplup",
+            "last": "Empoleon"
+        },
+        {
+            "first": "Starly",
+            "middle": "Staravia",
+            "last": "Staraptor"
+        },
+        {
+            "first": "Starly",
+            "middle": "Staravia",
+            "last": "Staraptor"
+        },
+        {
+            "first": "Starly",
+            "middle": "Staravia",
+            "last": "Staraptor"
+        },
+        {
+            "first": "Bidoof",
+            "last": "Bibarel"
+        },
+        {
+            "first": "Bidoof",
+            "last": "Bibarel"
+        },
+        {
+            "first": "Kricketot",
+            "last": "Kricketune"
+        },
+        {
+            "first": "Kricketot",
+            "last": "Kricketune"
+        },
+        {
+            "first": "Shinx",
+            "middle": "Luxio",
+            "last": "Luxray"
+        },
+        {
+            "first": "Shinx",
+            "middle": "Luxio",
+            "last": "Luxray"
+        },
+        {
+            "first": "Shinx",
+            "middle": "Luxio",
+            "last": "Luxray"
+        },
+        {
+            "first": "Budew",
+            "middle": "Roselia",
+            "last": "Roserade"
+        },
+        {
+            "first": "Budew",
+            "middle": "Roselia",
+            "last": "Roserade"
+        },
+        {
+            "first": "Cranidos",
+            "last": "Rampardos"
+        },
+        {
+            "first": "Cranidos",
+            "last": "Rampardos"
+        },
+        {
+            "first": "Shieldon",
+            "last": "Bastiodon"
+        },
+        {
+            "first": "Shieldon",
+            "last": "Bastiodon"
+        },
+        {
+            "first": "Burmy",
+            "last": ["Wormadam", "Sandy Cloak", "Trash Cloak", "Mothim"]
+        },
+        {
+            "first": "Burmy",
+            "last": ["Wormadam", "Sandy Cloak", "Trash Cloak", "Mothim"]
+        },
+        {
+            "first": "Burmy",
+            "last": ["Wormadam", "Sandy Cloak", "Trash Cloak", "Mothim"]
+        },
+        {
+            "first": "Combee",
+            "last": "Vespiquen"
+        },
+        {
+            "first": "Combee",
+            "last": "Vespiquen"
+        },
+        {
+            "first": "Pachirisu"
+        },
+        {
+            "first": "Buizel",
+            "last": "Floatzel"
+        },
+        {
+            "first": "Buizel",
+            "last": "Floatzel"
+        },
+        {
+            "first": "Cherubi",
+            "last": "Cherrim"
+        },
+        {
+            "first": "Cherubi",
+            "last": "Cherrim"
+        },
+        {
+            "first": "Shellos",
+            "last": "Gastrodon"
+        },
+        {
+            "first": "Shellos",
+            "last": "Gastrodon"
+        },
+        {
+            "first": "Aipom",
+            "last": "Ambipom"
+        },
+        {
+            "first": "Drifloon",
+            "last": "Drifblim"
+        },
+        {
+            "first": "Drifloon",
+            "last": "Drifblim"
+        },
+        {
+            "first": "Buneary",
+            "last": "Lopunny"
+        },
+        {
+            "first": "Buneary",
+            "last": "Lopunny"
+        },
+        {
+            "first": "Misdreavus",
+            "last": "Mismagius"
+        },
+        {
+            "first": "Murkrow",
+            "last": "Honchkrow"
+        },
+        {
+            "first": "Glameow",
+            "last": "Purugly"
+        },
+        {
+            "first": "Glameow",
+            "last": "Purugly"
+        },
+        {
+            "first": "Chingling",
+            "last": "Chimecho"
+        },
+        {
+            "first": "Stunky",
+            "last": "Skuntank"
+        },
+        {
+            "first": "Stunky",
+            "last": "Skuntank"
+        },
+        {
+            "first": "Bronzor",
+            "last": "Bronzong"
+        },
+        {
+            "first": "Bronzor",
+            "last": "Bronzong"
+        },
+        {
+            "first": "Bonsly",
+            "last": "Sudowoodo"
+        },
+        {
+            "first": "Mime Jr.",
+            "last": "Mr. Mime"
+        },
+        {
+            "first": "Happiny",
+            "middle": "Chansey",
+            "last": "Blissey"
+        },
+        {
+            "first": "Chatot"
+        },
+        {
+            "first": "Spiritomb"
+        },
+        {
+            "first": "Gible",
+            "middle": "Gabite",
+            "last": "Garchomp"
+        },
+        {
+            "first": "Gible",
+            "middle": "Gabite",
+            "last": "Garchomp"
+        },
+        {
+            "first": "Gible",
+            "middle": "Gabite",
+            "last": "Garchomp"
+        },
+        {
+            "first": "Munchlax",
+            "last": "Snorlax"
+        },
+        {
+            "first": "Riolu",
+            "last": "Lucario"
+        },
+        {
+            "first": "Riolu",
+            "last": "Lucario"
+        },
+        {
+            "first": "Hippopotas",
+            "last": "Hippowdon"
+        },
+        {
+            "first": "Hippopotas",
+            "last": "Hippowdon"
+        },
+        {
+            "first": "Skorupi",
+            "last": "Drapion"
+        },
+        {
+            "first": "Skorupi",
+            "last": "Drapion"
+        },
+        {
+            "first": "Croagunk",
+            "last": "Toxicroak"
+        },
+        {
+            "first": "Croagunk",
+            "last": "Toxicroak"
+        },
+        {
+            "first": "Carnivine"
+        },
+        {
+            "first": "Finneon",
+            "last": "Lumineon"
+        },
+        {
+            "first": "Finneon",
+            "last": "Lumineon"
+        },
+        {
+            "first": "Mantyke",
+            "last": "Mantine"
+        },
+        {
+            "first": "Snover",
+            "last": "Abomasnow"
+        },
+        {
+            "first": "Snover",
+            "last": "Abomasnow"
+        },
+        {
+            "first": "Sneasel",
+            "last": "Weavile"
+        },
+        {
+            "first": "Magnemite",
+            "middle": "Magneton",
+            "last": "Magnezone"
+        },
+        {
+            "first": "Lickitung",
+            "last": "Lickilicky"
+        },
+        {
+            "first": "Rhyhorn",
+            "middle": "Rhydon",
+            "last": "Rhyperior"
+        },
+        {
+            "first": "Tangela",
+            "last": "Tangrowth"
+        },
+        {
+            "first": "Elekid",
+            "middle": "Electabuzz",
+            "last": "Electivire"
+        },
+        {
+            "first": "Magby",
+            "middle": "Magmar",
+            "last": "Magmortar"
+        },
+        {
+            "first": "Togepi",
+            "middle": "Togetic",
+            "last": "Togekiss"
+        },
+        {
+            "first": "Yanma",
+            "last": "Yanmega"
+        },
+        {
+            "first": "Eevee",
+            "last": ["Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon", "Leafeon", "Glaceon", "Sylveon"]
+        },
+        {
+            "first": "Eevee",
+            "last": ["Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon", "Leafeon", "Glaceon", "Sylveon"]
+        },
+        {
+            "first": "Gligar",
+            "last": "Gliscor"
+        },
+        {
+            "first": "Swinub",
+            "middle": "Piloswine",
+            "last": "Mamoswine"
+        },
+        {
+            "first": "Porygon",
+            "middle": "Porygon2",
+            "last": "Porygon-Z"
+        },
+        {
+            "first": "Ralts",
+            "middle": "Kirlia",
+            "last": ["Gardevoir", "Gallade"]
+        },
+        {
+            "first": "Nosepass",
+            "last": "Probopass"
+        },
+        {
+            "first": "Duskull",
+            "middle": "Dusclops",
+            "last": "Dusknoir"
+        },
+        {
+            "first": "Snorunt",
+            "last": ["Glalie", "Froslass"]
+        },
+        {
+            "first": "Rotom"
+        },
+        {
+            "first": "Uxie"
+        },
+        {
+            "first": "Mesprit"
+        },
+        {
+            "first": "Azelf"
+        },
+        {
+            "first": "Dialga"
+        },
+        {
+            "first": "Palkia"
+        },
+        {
+            "first": "Heatran"
+        },
+        {
+            "first": "Regigigas"
+        },
+        {
+            "first": "Giratina"
+        },
+        {
+            "first": "Cresselia"
+        },
+        {
+            "first": "Phione"
+        },
+        {
+            "first": "Manaphy"
+        },
+        {
+            "first": "Darkrai"
+        },
+        {
+            "first": "Shaymin"
+        },
+        {
+            "first": "Arceus"
+        },
+        {
+            "first": "Victini"
+        },
+        {
+            "first": "Snivy",
+            "middle": "Servine",
+            "last": "Serperior"
+        },
+        {
+            "first": "Snivy",
+            "middle": "Servine",
+            "last": "Serperior"
+        },
+        {
+            "first": "Snivy",
+            "middle": "Servine",
+            "last": "Serperior"
+        },
+        {
+            "first": "Tepig",
+            "middle": "Pignite",
+            "last": "Emboar"
+        },
+        {
+            "first": "Tepig",
+            "middle": "Pignite",
+            "last": "Emboar"
+        },
+        {
+            "first": "Tepig",
+            "middle": "Pignite",
+            "last": "Emboar"
+        },
+        {
+            "first": "Oshawott",
+            "middle": "Dewott",
+            "last": "Samurott"
+        },
+        {
+            "first": "Oshawott",
+            "middle": "Dewott",
+            "last": "Samurott"
+        },
+        {
+            "first": "Oshawott",
+            "middle": "Dewott",
+            "last": "Samurott"
+        },
+        {
+            "first": "Patrat",
+            "last": "Watchog"
+        },
+        {
+            "first": "Patrat",
+            "last": "Watchog"
+        },
+        {
+            "first": "Lillipup",
+            "middle": "Herdier",
+            "last": "Stoutland"
+        },
+        {
+            "first": "Lillipup",
+            "middle": "Herdier",
+            "last": "Stoutland"
+        },
+        {
+            "first": "Lillipup",
+            "middle": "Herdier",
+            "last": "Stoutland"
+        },
+        {
+            "first": "Purrloin",
+            "last": "Liepard"
+        },
+        {
+            "first": "Purrloin",
+            "last": "Liepard"
+        },
+        {
+            "first": "Pansage",
+            "last": "Simisage"
+        },
+        {
+            "first": "Pansage",
+            "last": "Simisage"
+        },
+        {
+            "first": "Pansear",
+            "last": "Simisear"
+        },
+        {
+            "first": "Pansear",
+            "last": "Simisear"
+        },
+        {
+            "first": "Panpour",
+            "last": "Simipour"
+        },
+        {
+            "first": "Panpour",
+            "last": "Simipour"
+        },
+        {
+            "first": "Munna",
+            "last": "Musharna"
+        },
+        {
+            "first": "Munna",
+            "last": "Musharna"
+        },
+        {
+            "first": "Pidove",
+            "middle": "Tranquill",
+            "last": "Unfezant"
+        },
+        {
+            "first": "Pidove",
+            "middle": "Tranquill",
+            "last": "Unfezant"
+        },
+        {
+            "first": "Pidove",
+            "middle": "Tranquill",
+            "last": "Unfezant"
+        },
+        {
+            "first": "Blitzle",
+            "last": "Zebstrika"
+        },
+        {
+            "first": "Blitzle",
+            "last": "Zebstrika"
+        },
+        {
+            "first": "Roggenrola",
+            "middle": "Boldore",
+            "last": "Gigalith"
+        },
+        {
+            "first": "Roggenrola",
+            "middle": "Boldore",
+            "last": "Gigalith"
+        },
+        {
+            "first": "Roggenrola",
+            "middle": "Boldore",
+            "last": "Gigalith"
+        },
+        {
+            "first": "Woobat",
+            "last": "Swoobat"
+        },
+        {
+            "first": "Woobat",
+            "last": "Swoobat"
+        },
+        {
+            "first": "Drilbur",
+            "last": "Excadrill"
+        },
+        {
+            "first": "Drilbur",
+            "last": "Excadrill"
+        },
+        {
+            "first": "Audino"
+        },
+        {
+            "first": "Timburr",
+            "middle": "Gurdurr",
+            "last": "Conkeldurr"
+        },
+        {
+            "first": "Timburr",
+            "middle": "Gurdurr",
+            "last": "Conkeldurr"
+        },
+        {
+            "first": "Timburr",
+            "middle": "Gurdurr",
+            "last": "Conkeldurr"
+        },
+        {
+            "first": "Tympole",
+            "middle": "Palpitoad",
+            "last": "Seismitoad"
+        },
+        {
+            "first": "Tympole",
+            "middle": "Palpitoad",
+            "last": "Seismitoad"
+        },
+        {
+            "first": "Tympole",
+            "middle": "Palpitoad",
+            "last": "Seismitoad"
+        },
+        {
+            "first": "Throh"
+        },
+        {
+            "first": "Sawk"
+        },
+        {
+            "first": "Sewaddle",
+            "middle": "Swadloon",
+            "last": "Leavanny"
+        },
+        {
+            "first": "Sewaddle",
+            "middle": "Swadloon",
+            "last": "Leavanny"
+        },
+        {
+            "first": "Sewaddle",
+            "middle": "Swadloon",
+            "last": "Leavanny"
+        },
+        {
+            "first": "Venipede",
+            "middle": "Whirlipede",
+            "last": "Scolipede"
+        },
+        {
+            "first": "Venipede",
+            "middle": "Whirlipede",
+            "last": "Scolipede"
+        },
+        {
+            "first": "Venipede",
+            "middle": "Whirlipede",
+            "last": "Scolipede"
+        },
+        {
+            "first": "Cottonee",
+            "last": "Whimsicott"
+        },
+        {
+            "first": "Cottonee",
+            "last": "Whimsicott"
+        },
+        {
+            "first": "Petilil",
+            "last": "Lilligant"
+        },
+        {
+            "first": "Petilil",
+            "last": "Lilligant"
+        },
+        {
+            "first": "Basculin"
+        },
+        {
+            "first": "Sandile",
+            "middle": "Krokorok",
+            "last": "Krookodile"
+        },
+        {
+            "first": "Sandile",
+            "middle": "Krokorok",
+            "last": "Krookodile"
+        },
+        {
+            "first": "Sandile",
+            "middle": "Krokorok",
+            "last": "Krookodile"
+        },
+        {
+            "first": "Darumaka",
+            "last": "Darmanitan"
+        },
+        {
+            "first": "Darumaka",
+            "last": "Darmanitan"
+        },
+        {
+            "first": "Maractus"
+        },
+        {
+            "first": "Dwebble",
+            "last": "Crustle"
+        },
+        {
+            "first": "Dwebble",
+            "last": "Crustle"
+        },
+        {
+            "first": "Scraggy",
+            "last": "Scrafty"
+        },
+        {
+            "first": "Scraggy",
+            "last": "Scrafty"
+        },
+        {
+            "first": "Sigilyph"
+        },
+        {
+            "first": "Yamask",
+            "last": "Cofagrigus"
+        },
+        {
+            "first": "Yamask",
+            "last": "Cofagrigus"
+        },
+        {
+            "first": "Tirtouga",
+            "last": "Carracosta"
+        },
+        {
+            "first": "Tirtouga",
+            "last": "Carracosta"
+        },
+        {
+            "first": "Archen",
+            "last": "Archeops"
+        },
+        {
+            "first": "Archen",
+            "last": "Archeops"
+        },
+        {
+            "first": "Trubbish",
+            "last": "Garbodor"
+        },
+        {
+            "first": "Trubbish",
+            "last": "Garbodor"
+        },
+        {
+            "first": "Zorua",
+            "last": "Zoroark"
+        },
+        {
+            "first": "Zorua",
+            "last": "Zoroark"
+        },
+        {
+            "first": "Minccino",
+            "last": "Cinccino"
+        },
+        {
+            "first": "Minccino",
+            "last": "Cinccino"
+        },
+        {
+            "first": "Gothita",
+            "middle": "Gothorita",
+            "last": "Gothitelle"
+        },
+        {
+            "first": "Gothita",
+            "middle": "Gothorita",
+            "last": "Gothitelle"
+        },
+        {
+            "first": "Gothita",
+            "middle": "Gothorita",
+            "last": "Gothitelle"
+        },
+        {
+            "first": "Solosis",
+            "middle": "Duosion",
+            "last": "Reuniclus"
+        },
+        {
+            "first": "Solosis",
+            "middle": "Duosion",
+            "last": "Reuniclus"
+        },
+        {
+            "first": "Solosis",
+            "middle": "Duosion",
+            "last": "Reuniclus"
+        },
+        {
+            "first": "Ducklett",
+            "last": "Swanna"
+        },
+        {
+            "first": "Ducklett",
+            "last": "Swanna"
+        },
+        {
+            "first": "Vanillite",
+            "middle": "Vanillish",
+            "last": "Vanilluxe"
+        },
+        {
+            "first": "Vanillite",
+            "middle": "Vanillish",
+            "last": "Vanilluxe"
+        },
+        {
+            "first": "Vanillite",
+            "middle": "Vanillish",
+            "last": "Vanilluxe"
+        },
+        {
+            "first": "Deerling",
+            "last": "Sawsbuck"
+        },
+        {
+            "first": "Deerling",
+            "last": "Sawsbuck"
+        },
+        {
+            "first": "Emolga"
+        },
+        {
+            "first": "Karrablast",
+            "last": "Escavalier"
+        },
+        {
+            "first": "Karrablast",
+            "last": "Escavalier"
+        },
+        {
+            "first": "Foongus",
+            "last": "Amoonguss"
+        },
+        {
+            "first": "Foongus",
+            "last": "Amoonguss"
+        },
+        {
+            "first": "Frillish",
+            "last": "Jellicent"
+        },
+        {
+            "first": "Frillish",
+            "last": "Jellicent"
+        },
+        {
+            "first": "Alomomola"
+        },
+        {
+            "first": "Joltik",
+            "last": "Galvantula"
+        },
+        {
+            "first": "Joltik",
+            "last": "Galvantula"
+        },
+        {
+            "first": "Ferroseed",
+            "last": "Ferrothorn"
+        },
+        {
+            "first": "Ferroseed",
+            "last": "Ferrothorn"
+        },
+        {
+            "first": "Klink",
+            "middle": "Klang",
+            "last": "Klinklang"
+        },
+        {
+            "first": "Klink",
+            "middle": "Klang",
+            "last": "Klinklang"
+        },
+        {
+            "first": "Klink",
+            "middle": "Klang",
+            "last": "Klinklang"
+        },
+        {
+            "first": "Tynamo",
+            "middle": "Eelektrik",
+            "last": "Eelektross"
+        },
+        {
+            "first": "Tynamo",
+            "middle": "Eelektrik",
+            "last": "Eelektross"
+        },
+        {
+            "first": "Tynamo",
+            "middle": "Eelektrik",
+            "last": "Eelektross"
+        },
+        {
+            "first": "Elgyem",
+            "last": "Beheeyem"
+        },
+        {
+            "first": "Elgyem",
+            "last": "Beheeyem"
+        },
+        {
+            "first": "Litwick",
+            "middle": "Lampent",
+            "last": "Chandelure"
+        },
+        {
+            "first": "Litwick",
+            "middle": "Lampent",
+            "last": "Chandelure"
+        },
+        {
+            "first": "Litwick",
+            "middle": "Lampent",
+            "last": "Chandelure"
+        },
+        {
+            "first": "Axew",
+            "middle": "Fraxure",
+            "last": "Haxorus"
+        },
+        {
+            "first": "Axew",
+            "middle": "Fraxure",
+            "last": "Haxorus"
+        },
+        {
+            "first": "Axew",
+            "middle": "Fraxure",
+            "last": "Haxorus"
+        },
+        {
+            "first": "Cubchoo",
+            "last": "Beartic"
+        },
+        {
+            "first": "Cubchoo",
+            "last": "Beartic"
+        },
+        {
+            "first": "Cryogonal"
+        },
+        {
+            "first": "Shelmet",
+            "last": "Accelgor"
+        },
+        {
+            "first": "Shelmet",
+            "last": "Accelgor"
+        },
+        {
+            "first": "Stunfisk"
+        },
+        {
+            "first": "Mienfoo",
+            "last": "Mienshao"
+        },
+        {
+            "first": "Mienfoo",
+            "last": "Mienshao"
+        },
+        {
+            "first": "Druddigon"
+        },
+        {
+            "first": "Golett",
+            "last": "Golurk"
+        },
+        {
+            "first": "Golett",
+            "last": "Golurk"
+        },
+        {
+            "first": "Pawniard",
+            "last": "Bisharp"
+        },
+        {
+            "first": "Pawniard",
+            "last": "Bisharp"
+        },
+        {
+            "first": "Bouffalant"
+        },
+        {
+            "first": "Rufflet",
+            "last": "Braviary"
+        },
+        {
+            "first": "Rufflet",
+            "last": "Braviary"
+        },
+        {
+            "first": "Vullaby",
+            "last": "Mandibuzz"
+        },
+        {
+            "first": "Vullaby",
+            "last": "Mandibuzz"
+        },
+        {
+            "first": "Heatmor"
+        },
+        {
+            "first": "Durant"
+        },
+        {
+            "first": "Deino",
+            "middle": "Zweilous",
+            "last": "Hydreigon"
+        },
+        {
+            "first": "Deino",
+            "middle": "Zweilous",
+            "last": "Hydreigon"
+        },
+        {
+            "first": "Deino",
+            "middle": "Zweilous",
+            "last": "Hydreigon"
+        },
+        {
+            "first": "Larvesta",
+            "last": "Volcarona"
+        },
+        {
+            "first": "Larvesta",
+            "last": "Volcarona"
+        },
+        {
+            "first": "Cobalion"
+        },
+        {
+            "first": "Terrakion"
+        },
+        {
+            "first": "Virizion"
+        },
+        {
+            "first": "Tornadus"
+        },
+        {
+            "first": "Thundurus"
+        },
+        {
+            "first": "Reshiram"
+        },
+        {
+            "first": "Zekrom"
+        },
+        {
+            "first": "Landorus"
+        },
+        {
+            "first": "Kyurem"
+        },
+        {
+            "first": "Keldeo"
+        },
+        {
+            "first": "Meloetta"
+        },
+        {
+            "first": "Genesect"
+        },
+        {
+            "first": "Chespin",
+            "middle": "Quilladin",
+            "last": "Chesnaught"
+        },
+        {
+            "first": "Chespin",
+            "middle": "Quilladin",
+            "last": "Chesnaught"
+        },
+        {
+            "first": "Chespin",
+            "middle": "Quilladin",
+            "last": "Chesnaught"
+        },
+        {
+            "first": "Fennekin",
+            "middle": "Braixen",
+            "last": "Delphox"
+        },
+        {
+            "first": "Fennekin",
+            "middle": "Braixen",
+            "last": "Delphox"
+        },
+        {
+            "first": "Fennekin",
+            "middle": "Braixen",
+            "last": "Delphox"
+        },
+        {
+            "first": "Froakie",
+            "middle": "Frogadier",
+            "last": "Greninja"
+        },
+        {
+            "first": "Froakie",
+            "middle": "Frogadier",
+            "last": "Greninja"
+        },
+        {
+            "first": "Froakie",
+            "middle": "Frogadier",
+            "last": "Greninja"
+        },
+        {
+            "first": "Bunnelby",
+            "last": "Diggersby"
+        },
+        {
+            "first": "Bunnelby",
+            "last": "Diggersby"
+        },
+        {
+            "first": "Fletchling",
+            "middle": "Fletchinder",
+            "last": "Talonflame"
+        },
+        {
+            "first": "Fletchling",
+            "middle": "Fletchinder",
+            "last": "Talonflame"
+        },
+        {
+            "first": "Fletchling",
+            "middle": "Fletchinder",
+            "last": "Talonflame"
+        },
+        {
+            "first": "Scatterbug",
+            "middle": "Spewpa",
+            "last": "Vivillon"
+        },
+        {
+            "first": "Scatterbug",
+            "middle": "Spewpa",
+            "last": "Vivillon"
+        },
+        {
+            "first": "Scatterbug",
+            "middle": "Spewpa",
+            "last": "Vivillon"
+        },
+        {
+            "first": "Litleo",
+            "last": "Pyroar"
+        },
+        {
+            "first": "Litleo",
+            "last": "Pyroar"
+        },
+        {
+            "first": "Flabébé",
+            "middle": "Floette",
+            "last": "Florges"
+        },
+        {
+            "first": "Flabébé",
+            "middle": "Floette",
+            "last": "Florges"
+        },
+        {
+            "first": "Flabébé",
+            "middle": "Floette",
+            "last": "Florges"
+        },
+        {
+            "first": "Skiddo",
+            "last": "Gogoat"
+        },
+        {
+            "first": "Skiddo",
+            "last": "Gogoat"
+        },
+        {
+            "first": "Pancham",
+            "last": "Pangoro"
+        },
+        {
+            "first": "Pancham",
+            "last": "Pangoro"
+        },
+        {
+            "first": "Furfrou"
+        },
+        {
+            "first": "Espurr",
+            "last": "Meowstic"
+        },
+        {
+            "first": "Espurr",
+            "last": "Meowstic"
+        },
+        {
+            "first": "Honedge",
+            "middle": "Doublade",
+            "last": "Aegislash"
+        },
+        {
+            "first": "Honedge",
+            "middle": "Doublade",
+            "last": "Aegislash"
+        },
+        {
+            "first": "Honedge",
+            "middle": "Doublade",
+            "last": "Aegislash"
+        },
+        {
+            "first": "Spritzee",
+            "last": "Aromatisse"
+        },
+        {
+            "first": "Spritzee",
+            "last": "Aromatisse"
+        },
+        {
+            "first": "Swirlix",
+            "last": "Slurpuff"
+        },
+        {
+            "first": "Swirlix",
+            "last": "Slurpuff"
+        },
+        {
+            "first": "Inkay",
+            "last": "Malamar"
+        },
+        {
+            "first": "Inkay",
+            "last": "Malamar"
+        },
+        {
+            "first": "Binacle",
+            "last": "Barbaracle"
+        },
+        {
+            "first": "Binacle",
+            "last": "Barbaracle"
+        },
+        {
+            "first": "Skrelp",
+            "last": "Dragalge"
+        },
+        {
+            "first": "Skrelp",
+            "last": "Dragalge"
+        },
+        {
+            "first": "Clauncher",
+            "last": "Clawitzer"
+        },
+        {
+            "first": "Clauncher",
+            "last": "Clawitzer"
+        },
+        {
+            "first": "Helioptile",
+            "last": "Heliolisk"
+        },
+        {
+            "first": "Helioptile",
+            "last": "Heliolisk"
+        },
+        {
+            "first": "Tyrunt",
+            "last": "Tyrantrum"
+        },
+        {
+            "first": "Tyrunt",
+            "last": "Tyrantrum"
+        },
+        {
+            "first": "Amaura",
+            "last": "Aurorus"
+        },
+        {
+            "first": "Amaura",
+            "last": "Aurorus"
+        },
+        {
+            "first": "Eevee",
+            "last": ["Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon", "Leafeon", "Glaceon", "Sylveon"]
+        },
+        {
+            "first": "Hawlucha"
+        },
+        {
+            "first": "Dedenne"
+        },
+        {
+            "first": "Carbink"
+        },
+        {
+            "first": "Goomy",
+            "middle": "Sliggoo",
+            "last": "Goodra"
+        },
+        {
+            "first": "Goomy",
+            "middle": "Sliggoo",
+            "last": "Goodra"
+        },
+        {
+            "first": "Goomy",
+            "middle": "Sliggoo",
+            "last": "Goodra"
+        },
+        {
+            "first": "Klefki"
+        },
+        {
+            "first": "Phantump",
+            "last": "Trevenant"
+        },
+        {
+            "first": "Phantump",
+            "last": "Trevenant"
+        },
+        {
+            "first": "Pumpkaboo",
+            "last": "Gourgeist"
+        },
+        {
+            "first": "Pumpkaboo",
+            "last": "Gourgeist"
+        },
+        {
+            "first": "Bergmite",
+            "last": "Avalugg"
+        },
+        {
+            "first": "Bergmite",
+            "last": "Avalugg"
+        },
+        {
+            "first": "Noibat",
+            "last": "Noivern"
+        },
+        {
+            "first": "Noibat",
+            "last": "Noivern"
+        },
+        {
+            "first": "Xerneas"
+        },
+        {
+            "first": "Yveltal"
+        },
+        {
+            "first": "Zygarde"
+        },
+        {
+            "first": "Diancie"
+        },
+        {
+            "first": "Hoopa"
+        },
+        {
+            "first": "Volcanion"
+        },
+        {
+            "first": "Rowlet",
+            "middle": "Dartrix",
+            "last": "Decidueye"
+        },
+        {
+            "first": "Rowlet",
+            "middle": "Dartrix",
+            "last": "Decidueye"
+        },
+        {
+            "first": "Rowlet",
+            "middle": "Dartrix",
+            "last": "Decidueye"
+        },
+        {
+            "first": "Litten",
+            "middle": "Torracat",
+            "last": "Incineroar"
+        },
+        {
+            "first": "Litten",
+            "middle": "Torracat",
+            "last": "Incineroar"
+        },
+        {
+            "first": "Litten",
+            "middle": "Torracat",
+            "last": "Incineroar"
+        },
+        {
+            "first": "Popplio",
+            "middle": "Brionne",
+            "last": "Primarina"
+        },
+        {
+            "first": "Popplio",
+            "middle": "Brionne",
+            "last": "Primarina"
+        },
+        {
+            "first": "Popplio",
+            "middle": "Brionne",
+            "last": "Primarina"
+        },
+        {
+            "first": "Pikipek",
+            "middle": "Trumbeak",
+            "last": "Toucannon"
+        },
+        {
+            "first": "Pikipek",
+            "middle": "Trumbeak",
+            "last": "Toucannon"
+        },
+        {
+            "first": "Pikipek",
+            "middle": "Trumbeak",
+            "last": "Toucannon"
+        },
+        {
+            "first": "Yungoos",
+            "last": "Gumshoos"
+        },
+        {
+            "first": "Yungoos",
+            "last": "Gumshoos"
+        },
+        {
+            "first": "Grubbin",
+            "middle": "Charjabug",
+            "last": "Vikavolt"
+        },
+        {
+            "first": "Grubbin",
+            "middle": "Charjabug",
+            "last": "Vikavolt"
+        },
+        {
+            "first": "Grubbin",
+            "middle": "Charjabug",
+            "last": "Vikavolt"
+        },
+        {
+            "first": "Crabrawler",
+            "last": "Crabominable"
+        },
+        {
+            "first": "Crabrawler",
+            "last": "Crabominable"
+        },
+        {
+            "first": "Oricorio"
+        },
+        {
+            "first": "Cutiefly",
+            "last": "Ribombee"
+        },
+        {
+            "first": "Cutiefly",
+            "last": "Ribombee"
+        },
+        {
+            "first": "Rockruff",
+            "last": "Lycanroc"
+        },
+        {
+            "first": "Rockruff",
+            "last": "Lycanroc"
+        },
+        {
+            "first": "Wishiwashi"
+        },
+        {
+            "first": "Mareanie",
+            "last": "Toxapex"
+        },
+        {
+            "first": "Mareanie",
+            "last": "Toxapex"
+        },
+        {
+            "first": "Mudbray",
+            "last": "Mudsdale"
+        },
+        {
+            "first": "Mudbray",
+            "last": "Mudsdale"
+        },
+        {
+            "first": "Dewpider",
+            "last": "Araquanid"
+        },
+        {
+            "first": "Dewpider",
+            "last": "Araquanid"
+        },
+        {
+            "first": "Fomantis",
+            "last": "Lurantis"
+        },
+        {
+            "first": "Fomantis",
+            "last": "Lurantis"
+        },
+        {
+            "first": "Morelull",
+            "last": "Shiinotic"
+        },
+        {
+            "first": "Morelull",
+            "last": "Shiinotic"
+        },
+        {
+            "first": "Salandit",
+            "last": "Salazzle"
+        },
+        {
+            "first": "Salandit",
+            "last": "Salazzle"
+        },
+        {
+            "first": "Stufful",
+            "last": "Bewear"
+        },
+        {
+            "first": "Stufful",
+            "last": "Bewear"
+        },
+        {
+            "first": "Bounsweet",
+            "middle": "Steenee",
+            "last": "Tsareena"
+        },
+        {
+            "first": "Bounsweet",
+            "middle": "Steenee",
+            "last": "Tsareena"
+        },
+        {
+            "first": "Bounsweet",
+            "middle": "Steenee",
+            "last": "Tsareena"
+        },
+        {
+            "first": "Comfey"
+        },
+        {
+            "first": "Oranguru"
+        },
+        {
+            "first": "Passimian"
+        },
+        {
+            "first": "Wimpod",
+            "last": "Golisopod"
+        },
+        {
+            "first": "Wimpod",
+            "last": "Golisopod"
+        },
+        {
+            "first": "Sandygast",
+            "last": "Palossand"
+        },
+        {
+            "first": "Sandygast",
+            "last": "Palossand"
+        },
+        {
+            "first": "Pyukumuku"
+        },
+        {
+            "first": "Type: Null",
+            "last": "Silvally"
+        },
+        {
+            "first": "Type: Null",
+            "last": "Silvally"
+        },
+        {
+            "first": "Minior"
+        },
+        {
+            "first": "Komala"
+        },
+        {
+            "first": "Turtonator"
+        },
+        {
+            "first": "Togedemaru"
+        },
+        {
+            "first": "Mimikyu"
+        },
+        {
+            "first": "Bruxish"
+        },
+        {
+            "first": "Drampa"
+        },
+        {
+            "first": "Dhelmise"
+        },
+        {
+            "first": "Jangmo-o",
+            "middle": "Hakamo-o",
+            "last": "Kommo-o"
+        },
+        {
+            "first": "Jangmo-o",
+            "middle": "Hakamo-o",
+            "last": "Kommo-o"
+        },
+        {
+            "first": "Jangmo-o",
+            "middle": "Hakamo-o",
+            "last": "Kommo-o"
+        },
+        {
+            "first": "Tapu Koko"
+        },
+        {
+            "first": "Tapu Lele"
+        },
+        {
+            "first": "Tapu Bulu"
+        },
+        {
+            "first": "Tapu Fini"
+        },
+        {
+            "first": "Cosmog",
+            "middle": "Cosmoem",
+            "last": ["Solgaleo", "Lunala"]
+        },
+        {
+            "first": "Cosmog",
+            "middle": "Cosmoem",
+            "last": ["Solgaleo", "Lunala"]
+        },
+        {
+            "first": "Cosmog",
+            "middle": "Cosmoem",
+            "last": ["Solgaleo", "Lunala"]
+        },
+        {
+            "first": "Cosmog",
+            "middle": "Cosmoem",
+            "last": ["Solgaleo", "Lunala"]
+        },
+        {
+            "first": "Nihilego"
+        },
+        {
+            "first": "Buzzwole"
+        },
+        {
+            "first": "Pheromosa"
+        },
+        {
+            "first": "Xurkitree"
+        },
+        {
+            "first": "Celesteela"
+        },
+        {
+            "first": "Kartana"
+        },
+        {
+            "first": "Guzzlord"
+        },
+        {
+            "first": "Necrozma"
+        },
+        {
+            "first": "Magearna"
+        },
+        {
+            "first": "Marshadow"
+        },
+        {
+            "first": "Poipole",
+            "last": "Naganadel"
+        },
+        {
+            "first": "Poipole",
+            "last": "Naganadel"
+        },
+        {
+            "first": "Stakataka"
+        },
+        {
+            "first": "Blacephalon"
+        },
+        {
+            "first": "Zeraora"
+        },
+        {
+            "first": "Meltan",
+            "last": "Melmetal"
+        },
+        {
+            "first": "Meltan",
+            "last": "Melmetal"
+        }
+    ]
+}

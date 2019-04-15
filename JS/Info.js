@@ -4,7 +4,9 @@ const pokemonList = [];
 const desc = [];
 const types = [];
 const ids = [];
+const stats = [];
 const descriptions = [];
+const family = [];
 let val = '';
 const urlPath = window.location.href.split('?');
 let datalist;
@@ -43,9 +45,27 @@ window.onload = function() {
   });
 
   $.getJSON('../JSON/descriptions.json', function(data) {
-    $.each(data, function(key, val) {
-      descriptions.push(val);
-    });
+    for (let i = 0; i < data['descriptions'].length; i++) {
+      descriptions.push(data['descriptions'][i]);
+    }
+  });
+
+  $.getJSON('../JSON/stats.json', function(data) {
+    for (let i = 0; i < data['stats'].length; i++) {
+      stats.push([data['stats'][i].HP, data['stats'][i].Attack, data['stats'][i].Defense, data['stats'][i].Speed, data['stats'][i].Sp_Atk, data['stats'][i].Sp_Def, data['stats'][i].Total]);
+    }
+  });
+
+  $.getJSON('../JSON/evolutions.json', function(data) {
+    for (let i = 0; i < data['family'].length; i++) {
+      if (data['family'][i].first && data['family'][i].middle && data['family'][i].last) {
+        family.push([data['family'][i].first, data['family'][i].middle, data['family'][i].last]);
+      } else if (data['family'][i].first && data['family'][i].last) {
+        family.push([data['family'][i].first, data['family'][i].last]);
+      } else {
+        family.push([data['family'][i].first]);
+      }
+    }
   });
 };
 
