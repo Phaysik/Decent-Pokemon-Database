@@ -32,37 +32,33 @@ window.onload = function() {
     }
     $('.appendList').empty();
 
-    determineLoad();
-  });
-};
-
-window.onpopstate = function() {
-  determineLoad();
-};
-
-function determineLoad() {
-  if (urlPath[1]) { // if a ( ? ) was found in the split, use the second part after the ?
-    if (!pokemon.includes(toTitleCase(urlPath[1].split('=')[1].replace('%20', ' ')))) { // Redirect the user to a page not found if the query is not in the Pokemon list
-      window.location = 'set redirect location to page not found when made';
-    } else {
-      let name = toTitleCase(urlPath[1].split('=')[1]);
-      $(document).attr('title', name);
-      name = name = (name.includes('꞉')) ? name.replace(/꞉/, ':') : name;
-      listIndex = pokemon.indexOf(toTitleCase(name.replace('%20', ' ')));
-      loadPokemon(toTitleCase(name.replace('%20', ' ')));
+    if (urlPath[1]) { // if a ( ? ) was found in the split, use the second part after the ?
+      if (!pokemon.includes(toTitleCase(urlPath[1].split('=')[1].replace('%20', ' ')))) { // Redirect the user to a page not found if the query is not in the Pokemon list
+        window.location = 'set redirect location to page not found when made';
+      } else {
+        let name = toTitleCase(urlPath[1].split('=')[1]);
+        $(document).attr('title', name);
+        name = name = (name.includes('꞉')) ? name.replace(/꞉/, ':') : name;
+        listIndex = pokemon.indexOf(toTitleCase(name.replace('%20', ' ')));
+        loadPokemon(toTitleCase(name.replace('%20', ' ')));
+        JSONStat();
+        JSONEvol(types, pokemon);
+        JSONDesc();
+      }
+    } else { // If the page was not by the user clicking on a Pokemon image from another page
+      history.replaceState({index: 'index'}, '', 'Index.html?Search=Bulbasaur'); // Replace URL to make later state pushing possible
+      listIndex = 0;
+      loadPokemon('Bulbasaur');
       JSONStat();
       JSONEvol(types, pokemon);
       JSONDesc();
     }
-  } else { // If the page was not by the user clicking on a Pokemon image from another page
-    history.replaceState({index: 'index'}, '', 'Index.html?Search=Bulbasaur'); // Replace URL to make later state pushing possible
-    listIndex = 0;
-    loadPokemon('Bulbasaur');
-    JSONStat();
-    JSONEvol(types, pokemon);
-    JSONDesc();
-  }
-}
+  });
+};
+
+window.onpopstate = function() { // If the user navigates back / forward in the history
+  document.location.reload();
+};
 
 function JSONDesc() {
   $.getJSON('../JSON/descriptions.json', function(data) {
