@@ -135,14 +135,13 @@ function loadPokemon(name) {
   name = name = (name.includes(':')) ? name.replace(/:/, '꞉') : name;
   $('#pokemon-info').empty().append(`
     <div class="row">
-      <div class="col-5 my-auto pb-5">
-        <img src="../Images/Pokemon/${name}.png" alt="${name} image" height="300" style="max-width: 100%; display: block; margin: 0 auto;" />
-        <div data-id="${name.replace(/ /, '').replace(/:/, '').replace(/\./, '')}" class="d-flex"></div>
+      <div class="col-5 my-auto">
+        <img src="../Images/Pokemon/${name}.png" alt="${name} image" height="300" width="300" style="height: 50%; width: 50%; display: block; margin: 0 auto;" />
+        <div data-id="${name.replace(/ /, '').replace(/:/, '').replace(/\./, '')}" class="d-flex flex-wrap"></div>
+        <div class="description mt-5"></div>
       </div>
       <div class="col-6">
-        <div>
-          <canvas id="myChart" width="400" height="400"></canvas>
-        </div>
+        <canvas id="myChart"></canvas>
       </div>
     </div>
 
@@ -190,6 +189,9 @@ function loadStats(stats) {
       }],
     },
     options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      aspectRatio: 1,
       scales: {
         yAxes: [{
           ticks: {
@@ -220,7 +222,7 @@ function loadEvolutions(evolutions, types, poke) {
       `);
       for (const t of types[typeIndex]) {
         $(`[data-id=${poke[typeIndex].replace(/ /, '').replace(/:/, '').replace(/\./, '')}]`).append(`
-          <button class="flex-grow-1 mx-1" style="border: 1px solid black; color: ${textColors[t]}; 
+          <button class="flex-grow-1 mr-1 mb-1" style="border: 1px solid black; color: ${textColors[t]}; 
           font-weight: bold; border-radius: 25px; text-align: center; ${typeColors[t]}">${t}</button>
         `);
       }
