@@ -6,10 +6,28 @@ window.onload = function() {
   $('#Center').text('The National Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
-  $.getJSON('../JSON/national.json', function(data) {
-    for (let i = 0; i < data['pokemon'].length; i++) {
-      List.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
+  $.ajax('pkdata.php').then(data => {
+    try {
+      data = JSON.parse(data);
+      for (let i = 0; i < data.length; i++) {
+        const splitVal = data[i][2].split(' ');
+        const types = [splitVal[0], splitVal[1]]
+        if (splitVal.length === 1) {
+          List.push(new Pokemon(data[i][0], data[i][1], splitVal));
+        } else {
+          List.push(new Pokemon(data[i][0], data[i][1], types));
+        }
+      }
+    } catch (err) {
+      throw err;
     }
+  }).catch((xhr, status, error) => {
+    return $.getJSON('../JSON/national.json', function (data) {
+      for (let i = 0; i < data['pokemon'].length; i++) {
+        List.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
+      }
+    });
+  }).always(() => {
     for (index; index < List.length; index++) {
       if ($(window).scrollTop() === $(document).height() - $(window).height()) {
         List[index].loadToPage();
@@ -18,5 +36,7 @@ window.onload = function() {
         break;
       }
     }
-  });
+  })
 };
+
+

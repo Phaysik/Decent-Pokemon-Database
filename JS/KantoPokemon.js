@@ -47,3 +47,10 @@ function loadLetsGo() {
     }
   });
 }
+
+
+
+$(document).ajaxStop(function () {
+  // place code to be executed on completion of last outstanding ajax call here
+  console.log(List.length);
+});
