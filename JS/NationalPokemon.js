@@ -6,15 +6,15 @@ window.onload = function() {
   $('#Center').text('The National Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
-  $.ajax('pkdata.php').then(data => {
+  $.ajax('pkdata.php?content=national').then((data) => {
     try {
       data = JSON.parse(data);
       for (let i = 0; i < data.length; i++) {
-        const splitVal = data[i][2].split(' ');
-        const types = [splitVal[0], splitVal[1]]
+        const splitVal = data[i][2].replace(/\n/gi, '').split(' ');
         if (splitVal.length === 1) {
           List.push(new Pokemon(data[i][0], data[i][1], splitVal));
         } else {
+          const types = [splitVal[0], splitVal[1]];
           List.push(new Pokemon(data[i][0], data[i][1], types));
         }
       }
@@ -22,7 +22,7 @@ window.onload = function() {
       throw err;
     }
   }).catch((xhr, status, error) => {
-    return $.getJSON('../JSON/national.json', function (data) {
+    return $.getJSON('../JSON/national.json', function(data) {
       for (let i = 0; i < data['pokemon'].length; i++) {
         List.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
       }
@@ -36,7 +36,7 @@ window.onload = function() {
         break;
       }
     }
-  })
+  });
 };
 
 
