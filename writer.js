@@ -1,7 +1,7 @@
 const fs = require('fs');
-const fileContents = fs.readFileSync('JSON/national.json', 'utf8');
-let datalet = '';
-let i = 0;
+const fileContents = fs.readFileSync('JSON/alola.json', 'utf8');
+var datalet = '';
+var i = 0;
 
 try {
   const data = JSON.parse(fileContents);

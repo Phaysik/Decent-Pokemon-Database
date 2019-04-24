@@ -1,15 +1,14 @@
 <?php
 
+$content = $_REQUEST["content"];
+echo $content;
+switch ($content) {
+    case "national":
+        getFile();
+        break;
+}
 
-// $content = $_REQUEST["content"];
-
-// switch ($content) {
-//     case "national":
-//         getFile();
-//         break;
-// }
-
-getFile();
+// getGenerations();
 function getFile() {
     $file = fopen("Output.txt","r");
     $id = array();
@@ -27,7 +26,7 @@ function getFile() {
 
     $con = mysqli_connect('localhost','pkdata','LqMth9j8E9GuHYAL','pkdata', '8889');
     for ($i = 0; $i < count($name); $i++) {
-            $sql = "INSERT INTO generation7 (id, name, types, gen) VALUES ($id[$i], '$name[$i]', '$types[$i]', 7)";
+            $sql = "INSERT INTO akala (id, name, types) VALUES ($id[$i], '$name[$i]', '$types[$i]')";
             if ($con->query($sql) === TRUE) {
                 continue;
             } else {
@@ -41,6 +40,7 @@ function getFile() {
 function getGenerations() {
     $file = fopen("Output.txt","r");
     $name = array();
+    $regions = array();
 
     while(! feof($file))
     {
@@ -48,27 +48,28 @@ function getGenerations() {
     }
 
     $con = mysqli_connect('localhost','pkdata','LqMth9j8E9GuHYAL','pkdata', '8889');
-    $gens = array("generation1", "generation2", "generation3", "generation4", "generation5", "generation6", "generation7");
+    $gens = array("melemele", "akala", "ulaula", "poni");
     for ($i = 0; $i < count($name); $i++) {
-        $generations = array();
+        $regions = array();
         $newName = substr($name[$i], 0, strlen($name[$i]) - 1);
         for ($j = 0; $j < count($gens); $j++) {
-            $sql = "SELECT * FROM $gens[$j] JOIN pokemon WHERE '$newName' = $gens[$j].name AND pokemon.id = $gens[$j].id";
+            $sql = "SELECT * FROM $gens[$j] JOIN generation7 WHERE '$newName' = $gens[$j].name AND generation7.id = $gens[$j].id";
             $result = $con->query($sql);
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
-                    array_push($generations, strval($row["gen"]));
+                    array_push($regions, ucwords($gens[$j]));
                 }
             } 
         }
 
-        $spaceGens = implode(" ", $generations);    // Split on space
-        $sql = "UPDATE pokemon SET generations = '$spaceGens' WHERE name = '$newName'"; // Update column to have appropriate generations
+        $spaceGens = implode(" ", $regions);    // Split on space
+
+        $sql = "UPDATE generation7 SET region = '$spaceGens' WHERE name = '$newName'"; // Update column to have appropriate generations
         if ($con->query($sql) === TRUE) {
-                continue;
-            } else {
-                echo "Error: " . $sql . "<br>" . $con->error;
-            }
+            continue;
+        } else {
+            echo "Error: " . $sql . "<br>" . $con->error;
+        }
     }
 }
 
