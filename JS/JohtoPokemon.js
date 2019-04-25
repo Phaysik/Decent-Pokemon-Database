@@ -6,7 +6,7 @@ window.onload = function() {
   $('#Center').text('The Johto Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
-  $.ajax('pkdata.php?content=johto').then((data) => {
+  $.ajax('pkdata.php?' + 'content=johto').then((data) => {
     try {
       data = JSON.parse(data);
       for (let i = 0; i < data.length; i++) {

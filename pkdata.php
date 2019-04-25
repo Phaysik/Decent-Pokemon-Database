@@ -1,10 +1,55 @@
 <?php
 
 $content = $_REQUEST["content"];
-echo $content;
+
 switch ($content) {
     case "national":
-        getFile();
+        pokedex("SELECT * FROM pokemon ");
+        break;
+    case "kanto":
+        pokedex("SELECT * FROM pokemon JOIN generation1 WHERE generation1.game = 1 AND pokemon.id = generation1.id");
+        break;
+    case "LG":
+        pokedex("SELECT * FROM pokemon JOIN generation1 WHERE pokemon.id = generation1.id");
+        break;
+    case "johto":
+        pokedex("SELECT * FROM pokemon JOIN generation2 WHERE pokemon.id = generation2.id");
+        break;
+    case "hoenn":
+        pokedex("SELECT * FROM pokemon JOIN generation3 WHERE pokemon.id = generation3.id");
+        break;
+    case "sinnoh":
+        pokedex("SELECT * FROM pokemon JOIN generation4 WHERE pokemon.id = generation4.id");
+        break;
+    case "unova":
+        pokedex("SELECT * FROM pokemon JOIN generation5 WHERE pokemon.id = generation5.id");
+        break;
+    case "kalos":
+        pokedex("SELECT * FROM pokemon JOIN generation6 WHERE pokemon.id = generation6.id");
+        break;
+    case "central":
+        pokedex("SELECT * FROM generation6 WHERE region = 'Central'");
+        break;
+    case "coastal":
+        pokedex("SELECT * FROM generation6 WHERE region = 'Coastal'");
+        break;
+    case "mountain":
+        pokedex("SELECT * FROM generation6 WHERE region = 'Mountain'");
+        break;
+    case "alola":
+        pokedex("SELECT * FROM pokemon JOIN generation7 WHERE pokemon.id = generation7.id");
+        break;
+    case "melemele":
+        pokedex("SELECT * FROM generation7 WHERE region LIKE '%Melemele%'");
+        break;
+    case "akala":
+        pokedex("SELECT * FROM generation7 WHERE region LIKE '%Akala%'");
+        break;
+    case "ulaula":
+        pokedex("SELECT * FROM generation7 WHERE region LIKE '%Ulaula%'");
+        break;
+    case "poni":
+        pokedex("SELECT * FROM generation7 WHERE region LIKE '%Poni%'");
         break;
 }
 
@@ -15,7 +60,7 @@ function getFile() {
     $name = array();
     $types = array();
 
-    while(! feof($file))
+    while(!feof($file))
     {
         // array_push($name, fgets($file));
         $line = explode (",", fgets($file));
@@ -73,12 +118,15 @@ function getGenerations() {
     }
 }
 
-function national() {
+function pokedex($query) {
+    $con = mysqli_connect('localhost','pkdata','LqMth9j8E9GuHYAL','pkdata', '8889');
+    $array = array();
+
     if (!$con) {
         die('Could not connect: ' . mysqli_error($con));
     } else {
-       
-        $sql = "SELECT * FROM pokemon";
+             
+        $sql = $query;
         
         $result = $con->query($sql);
 

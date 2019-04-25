@@ -22,12 +22,11 @@ window.onload = function() {
       throw err;
     }
   }).catch((xhr, status, error) => {
-    console.log('fail');
-    // return $.getJSON('../JSON/national.json', function(data) {
-    //   for (let i = 0; i < data['pokemon'].length; i++) {
-    //     List.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
-    //   }
-    // });
+    return $.getJSON('../JSON/national.json', function(data) {
+      for (let i = 0; i < data['pokemon'].length; i++) {
+        List.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
+      }
+    });
   }).always(() => {
     for (index; index < List.length; index++) {
       if ($(window).scrollTop() === $(document).height() - $(window).height()) {
