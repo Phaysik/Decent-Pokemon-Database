@@ -11,25 +11,17 @@ function PokemonSearch() {
     value = (value.includes(':')) ? value.replace(/:/, '꞉') : value;
 
     if (value !== '') {
-      if ($('#Center').text().includes('Kanto')) {
-        PokemonSearchExtend(value, 2);
-      } else {
-        PokemonSearchExtend(value, 0);
+      for (let g = 0; g < List.length; g++) {
+        if (List[g].name.toLowerCase().includes(value) || (List[g].types.length === 1 && List[g].types[0].toLowerCase().indexOf(value) >= 0) ||
+          (List[g].types.length === 2 && (List[g].types[0].toLowerCase().indexOf(value) >= 0 || List[g].types[1].toLowerCase().indexOf(value) >= 0))) {
+          List[g].loadToPage();
+          List[g].showTypes();
+        }
       }
     } else {
       loadSeen();
     }
   });
-}
-
-function PokemonSearchExtend(value, num) {
-  for (let g = 0; g < List.length - num; g++) {
-    if (List[g].name.toLowerCase().indexOf(value) >= 0 || (List[g].types.length === 1 && List[g].types[0].toLowerCase().indexOf(value) >= 0) ||
-      (List[g].types.length === 2 && (List[g].types[0].toLowerCase().indexOf(value) >= 0 || List[g].types[1].toLowerCase().indexOf(value) >= 0))) {
-      List[g].loadToPage();
-      List[g].showTypes();
-    }
-  }
 }
 
 function ItemSearch() {

@@ -25,24 +25,12 @@ function loadGen(indexSet, genSet) {
   $(`#Gen${generation}`).append(`<div class="mt-4"><div class="row"><div class="col-5"><h4 class="font-italic pl-5">Name</h4></div><div class="col-3">
   <h4 class="font-italic pl-4" class="pr-3">TM</h4></div><div class="col-3"><h4 class="font-italic pl-4" class="pr-3">
   Type</h4></div></div>`);
-  if (generation === 1) {
-    $.getJSON('../JSON/moves.json', function(data) {
-      for (let i = 0; i < data['moves'].length; i++) {
-        List.push(new Moves(data['moves'][i].imgName, data['moves'][i].name, data['moves'][i].type));
-      }
+  $.getJSON('../JSON/moves.json', function(data) {
+    for (let i = 0; i < data['moves'].length; i++) {
+      List.push(new Moves(data['moves'][i].imgName, data['moves'][i].name, data['moves'][i].type));
+    }
 
-      for (index; index < moves[generation - 1]; index++) {
-        if ($(window).scrollTop() === $(document).height() - $(window).height()) {
-          List[index].loadMovesToPage(`#Gen${generation}`);
-        } else {
-          List[index].loadMovesToPage(`#Gen${generation}`);
-          index++;
-          break;
-        }
-      }
-    });
-  } else {
-    for (index; index < List.length; index++) {
+    for (index; index < moves[generation - 1]; index++) {
       if ($(window).scrollTop() === $(document).height() - $(window).height()) {
         List[index].loadMovesToPage(`#Gen${generation}`);
       } else {
@@ -51,5 +39,5 @@ function loadGen(indexSet, genSet) {
         break;
       }
     }
-  }
+  });
 }

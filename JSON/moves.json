@@ -252,7 +252,7 @@
             },
             {
                 "imgName": "TM01",
-                "name": "DynamicPunch",
+                "name": "Dynamic Punch",
                 "type": "Fighting"
             },
             {
@@ -452,7 +452,7 @@
             },
             {
                 "imgName": "TM41",
-                "name": "ThunderPunch",
+                "name": "Thunder Punch",
                 "type": "Electric"
             },
             {

@@ -38,7 +38,7 @@ window.onload = function() {
       } else {
         let name = toTitleCase(urlPath[1].split('=')[1]);
         $(document).attr('title', name);
-        name = name = (name.includes('꞉')) ? name.replace(/꞉/, ':') : name;
+        name = (name.includes('꞉')) ? name.replace(/꞉/, ':') : name;
         listIndex = pokemon.indexOf(toTitleCase(name.replace('%20', ' ')));
         loadPokemon(toTitleCase(name.replace('%20', ' ')));
         JSONStat();

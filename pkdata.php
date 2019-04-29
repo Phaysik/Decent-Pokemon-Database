@@ -50,34 +50,37 @@ switch ($content) {
         break;
     case "poni":
         pokedex("SELECT * FROM generation7 WHERE region LIKE '%Poni%'");
-        break;
+        break;     
+    case "items":
+        items("SELECT * FROM items");
+        break;   
 }
 
-// getGenerations();
+// getFile();
 function getFile() {
     $file = fopen("Output.txt","r");
-    $id = array();
     $name = array();
-    $types = array();
 
     while(!feof($file))
     {
-        // array_push($name, fgets($file));
-        $line = explode (",", fgets($file));
-        array_push($id, $line[0]);
-        array_push($name, $line[1]);
-        array_push($types, $line[2]);
+        array_push($name, fgets($file));
+        // $line = explode ("|", fgets($file));
+        // array_push($name, $line[0]);
+        // array_push($gen, $line[1]);
+        // array_push($category, $line[2]);
+        // array_push($description, $line[3]);
     }
 
     $con = mysqli_connect('localhost','pkdata','LqMth9j8E9GuHYAL','pkdata', '8889');
     for ($i = 0; $i < count($name); $i++) {
-            $sql = "INSERT INTO akala (id, name, types) VALUES ($id[$i], '$name[$i]', '$types[$i]')";
-            if ($con->query($sql) === TRUE) {
-                continue;
-            } else {
-                echo "Error: " . $sql . "<br>" . $con->error;
-            }
-        } 
+        $newDesc = trim(preg_replace('/\s+/', ' ', $description[$i]));
+        $sql = "INSERT INTO movegen1 (name) VALUES ('$name[$i]')";
+        if ($con->query($sql) === TRUE) {
+            continue;
+        } else {
+            echo "Error: " . $sql . "<br>" . $con->error;
+        }
+    } 
 
     fclose($file);
 }
@@ -97,8 +100,9 @@ function getGenerations() {
     for ($i = 0; $i < count($name); $i++) {
         $regions = array();
         $newName = substr($name[$i], 0, strlen($name[$i]) - 1);
+
         for ($j = 0; $j < count($gens); $j++) {
-            $sql = "SELECT * FROM $gens[$j] JOIN generation7 WHERE '$newName' = $gens[$j].name AND generation7.id = $gens[$j].id";
+            $sql = "SELECT * FROM $gens[$j] JOIN generation6 WHERE '$newName' = $gens[$j].name AND generation6.id = $gens[$j].id";
             $result = $con->query($sql);
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
@@ -109,7 +113,7 @@ function getGenerations() {
 
         $spaceGens = implode(" ", $regions);    // Split on space
 
-        $sql = "UPDATE generation7 SET region = '$spaceGens' WHERE name = '$newName'"; // Update column to have appropriate generations
+        $sql = "UPDATE generation6 SET region = '$spaceGens' WHERE name = '$newName'"; // Update column to have appropriate generations
         if ($con->query($sql) === TRUE) {
             continue;
         } else {
@@ -142,7 +146,27 @@ function pokedex($query) {
     }
 }
 
-// $pokemon = "Bulbasaur";
-// $array = array();
- // $sql = "SELECT * FROM pokemon WHERE pokemon.name = '$pokemon'";
-?>
+function items($query) {
+    $con = mysqli_connect('localhost','pkdata','LqMth9j8E9GuHYAL','pkdata', '8889');
+    $array = array();
+
+    if (!$con) {
+        die('Could not connect: ' . mysqli_error($con));
+    } else {
+             
+        $sql = $query;
+        
+        $result = $con->query($sql);
+
+        if ($result->num_rows > 0) {
+        // output data of each row
+            while($row = $result->fetch_assoc()) {
+                array_push($array, [$row["name"], $row["gen"], $row["category"], $row["description"]]);
+            }
+            echo json_encode($array);
+        } else {
+            throw new Exception("No");
+        }
+    }
+}
+?> 

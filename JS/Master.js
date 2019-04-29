@@ -124,23 +124,23 @@ const tmConversion = {
 };
 
 const textColors = {
-  'Normal': '#FFFFFF',
-  'Fire': '#FFFFFF',
-  'Water': '#FFFFFF',
+  'Normal': '#FFF',
+  'Fire': '#FFF',
+  'Water': '#FFF',
   'Electric': '#000',
   'Grass': '#000',
   'Ice': '#000',
   'Fighting': '#FFF',
   'Poison': '#FFF',
-  'Ground': '#FFFFFF',
+  'Ground': '#FFF',
   'Flying': '#000',
   'Psychic': '#FFF',
   'Bug': '#FFF',
-  'Rock': '#FFFFFF',
+  'Rock': '#FFF',
   'Ghost': '#FFF',
   'Dragon': '#000',
   'Dark': '#FFF',
-  'Steel': '#FFFFFF',
+  'Steel': '#FFF',
   'Fairy': '#000',
 };
 
@@ -376,7 +376,7 @@ window.onscroll = function() {
     scroll(2);
   } else if ($('#Center').text().includes('Pokémon Item List')) {
     itemScroll();
-  } else if ($('#Center').text().includes('Pokémon Move List')) {
+  } else if ($('#Center').text().includes('Pokémon Moves List')) {
     if ($('.KalosTextStyle').text().includes('1')) {
       moveScroll('#Gen1', 0);
     } else if ($('.KalosTextStyle').text().includes('2')) {

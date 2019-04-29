@@ -1,403 +1,100 @@
-Rowlet
-Dartrix
-Decidueye
-Litten
-Torracat
-Incineroar
-Popplio
-Brionne
-Primarina
-Pikipek
-Trumbeak
-Toucannon
-Yungoos
-Gumshoos
-Rattata
-Raticate
-Caterpie
-Metapod
-Butterfree
-Ledyba
-Ledian
-Spinarak
-Ariados
-Buneary
-Lopunny
-Inkay
-Malamar
-Zorua
-Zoroark
-Furfrou
-Pichu
-Pikachu
-Raichu
-Grubbin
-Charjabug
-Vikavolt
-Bonsly
-Sudowoodo
-Happiny
-Chansey
-Blissey
-Munchlax
-Snorlax
-Slowpoke
-Slowbro
-Slowking
-Wingull
-Pelipper
-Abra
-Kadabra
-Alakazam
-Meowth
-Persian
-Magnemite
-Magneton
-Magnezone
-Grimer
-Muk
-Mime Jr.
-Mr. Mime
-Ekans
-Arbok
-Dunsparce
-Growlithe
-Arcanine
-Drowzee
-Hypno
-Makuhita
-Hariyama
-Smeargle
-Crabrawler
-Crabominable
-Gastly
-Haunter
-Gengar
-Drifloon
-Drifblim
-Murkrow
-Honchkrow
-Zubat
-Golbat
-Crobat
-Noibat
-Noivern
-Diglett
-Dugtrio
-Spearow
-Fearow
-Rufflet
-Braviary
-Vullaby
-Mandibuzz
-Mankey
-Primeape
-Delibird
-Hawlucha
-Oricorio
-Cutiefly
-Ribombee
-Flabébé
-Floette
-Florges
-Petilil
-Lilligant
-Cottonee
-Whimsicott
-Psyduck
-Golduck
-Smoochum
-Jynx
-Magikarp
-Gyarados
-Barboach
-Whiscash
-Seel
-Dewgong
-Machop
-Machoke
-Machamp
-Roggenrola
-Boldore
-Gigalith
-Carbink
-Sableye
-Mawile
-Rockruff
-Lycanroc
-Spinda
-Tentacool
-Tentacruel
-Finneon
-Lumineon
-Wishiwashi
-Luvdisc
-Corsola
-Mareanie
-Toxapex
-Shellder
-Cloyster
-Clamperl
-Huntail
-Gorebyss
-Remoraid
-Octillery
-Mantyke
-Mantine
-Bagon
-Shelgon
-Salamence
-Lillipup
-Herdier
-Stoutland
-Eevee
-Vaporeon
-Jolteon
-Flareon
-Espeon
-Umbreon
-Leafeon
-Glaceon
-Sylveon
-Mareep
-Flaaffy
-Ampharos
-Mudbray
-Mudsdale
-Igglybuff
-Jigglypuff
-Wigglytuff
-Tauros
-Miltank
-Surskit
-Masquerain
-Dewpider
-Araquanid
-Fomantis
-Lurantis
-Morelull
-Shiinotic
-Paras
-Parasect
-Poliwag
-Poliwhirl
-Poliwrath
-Politoed
-Goldeen
-Seaking
-Basculin
-Feebas
-Milotic
-Alomomola
-Fletchling
-Fletchinder
-Talonflame
-Salandit
-Salazzle
-Cubone
-Marowak
-Kangaskhan
-Magby
-Magmar
-Magmortar
-Larvesta
-Volcarona
-Stufful
-Bewear
-Bounsweet
-Steenee
-Tsareena
-Comfey
-Pinsir
-Hoothoot
-Noctowl
-Kecleon
-Oranguru
-Passimian
-Goomy
-Sliggoo
-Goodra
-Castform
-Wimpod
-Golisopod
-Staryu
-Starmie
-Sandygast
-Palossand
-Omanyte
-Omastar
-Kabuto
-Kabutops
-Lileep
-Cradily
-Anorith
-Armaldo
-Cranidos
-Rampardos
-Shieldon
-Bastiodon
-Archen
-Archeops
-Tirtouga
-Carracosta
-Tyrunt
-Tyrantrum
-Amaura
-Aurorus
-Larvitar
-Pupitar
-Tyranitar
-Phantump
-Trevenant
-Natu
-Xatu
-Nosepass
-Probopass
-Pyukumuku
-Chinchou
-Lanturn
-Type꞉ Null
-Silvally
-Poipole
-Naganadel
-Zygarde
-Trubbish
-Garbodor
-Minccino
-Cinccino
-Pineco
-Forretress
-Skarmory
-Ditto
-Cleffa
-Clefairy
-Clefable
-Elgyem
-Beheeyem
-Minior
-Beldum
-Metang
-Metagross
-Porygon
-Porygon2
-Porygon-Z
-Pancham
-Pangoro
-Komala
-Torkoal
-Turtonator
-Houndour
-Houndoom
-Dedenne
-Togedemaru
-Electrike
-Manectric
-Elekid
-Electabuzz
-Electivire
-Geodude
-Graveler
-Golem
-Sandile
-Krokorok
-Krookodile
-Trapinch
-Vibrava
-Flygon
-Gible
-Gabite
-Garchomp
-Baltoy
-Claydol
-Golett
-Golurk
-Klefki
-Mimikyu
-Shuppet
-Banette
-Frillish
-Jellicent
-Bruxish
-Drampa
-Absol
-Snorunt
-Glalie
-Froslass
-Sneasel
-Weavile
-Sandshrew
-Sandslash
-Vulpix
-Ninetales
-Vanillite
-Vanillish
-Vanilluxe
-Scraggy
-Scrafty
-Pawniard
-Bisharp
-Snubbull
-Granbull
-Shellos
-Gastrodon
-Relicanth
-Dhelmise
-Carvanha
-Sharpedo
-Skrelp
-Dragalge
-Clauncher
-Clawitzer
-Wailmer
-Wailord
-Lapras
-Tropius
-Exeggcute
-Exeggutor
-Corphish
-Crawdaunt
-Mienfoo
-Mienshao
-Jangmo-o
-Hakamo-o
-Kommo-o
-Emolga
-Scyther
-Scizor
-Heracross
-Aipom
-Ambipom
-Litleo
-Pyroar
-Misdreavus
-Mismagius
-Druddigon
-Lickitung
-Lickilicky
-Riolu
-Lucario
-Dratini
-Dragonair
-Dragonite
-Aerodactyl
-Tapu Koko
-Tapu Lele
-Tapu Bulu
-Tapu Fini
-Cosmog
-Cosmoem
-Solgaleo
-Lunala
-Nihilego
-Stakataka
-Blacephalon
-Buzzwole
-Pheromosa
-Xurkitree
-Celesteela
-Kartana
-Guzzlord
-Necrozma
-Magearna
-Marshadow
-Zeraora
+Work Up,Headbutt
+Dragon Claw,Taunt
+Psyshock,Helping Hand
+Calm Mind,Teleport
+Roar,Rest
+Toxic,Light Screen
+Hail,Protect
+Bulk Up,Substitute
+Venoshock,Reflect
+Hidden Power,Dig
+Sunny Day,Will-O-Wisp
+Taunt,Facade
+Ice Beam,Brick Break
+Blizzard,Fly
+Hyper Beam,Seismic Toss
+Light Screen,Thunder Wave
+Protect,Dragon Tail
+Rain Dance,U-Turn
+Roost,Iron Tail
+Safeguard,Dark Pulse
+Frustration,Foul Play
+Solar Beam,Rock Slide
+Smack Down,Thunder Punch
+Thunderbolt,X-Scissor
+Thunder,Waterfall
+Earthquake,Poison Jab
+Return,Toxic
+Leech Life,Tri Attack
+Psychic,Scald
+Shadow Ball,Bulk Up
+Brick Break,Fire Punch
+Double Team,Dazzling Gleam
+Reflect,Calm Mind
+Sludge Wave,Dragon Pulse
+Flamethrower,Ice Punch
+Sludge Bomb,Thunderbolt
+Sandstorm,Flamethrower
+Fire Blast,Thunder
+Rock Tomb,Outrage
+Aerial Ace,Psychic
+Torment,Earthquake
+Facade,Self-Destruct
+Flame Charge,Shadow Ball
+Rest,Play Rough
+Attract,Solar Beam
+Thief,Fire Blast
+Low Sweep,Surf
+Round,Hyper Beam
+Echoed Voice,Superpower
+Overheat,Roost
+Steel Wing,Blizzard
+Focus Blast,Sludge Bomb
+Energy Ball,Mega Drain
+False Swipe,Flash Cannon
+Scald,Ice Beam
+Fling,Stealth Rock
+Charge Beam,Payday
+Sky Drop,Drill Run
+Brutal Swing,Dream Eater
+Quash,Megahorn
+Will-O-Wisp
+Acrobatics
+Embargo
+Explosion
+Shadow Claw
+Payback
+Smart Strike
+Giga Impact
+Rock Polish
+Aurora Veil
+Stone Edge
+Volt Switch
+Thunder Wave
+Gyro Ball
+Swords Dance
+Fly
+Psych Up
+Bulldoze
+Frost Breath
+Rock Slide
+X-Scissor
+Dragon Tail
+Infestation
+Poison Jab
+Dream Eater
+Grass Knot
+Swagger
+Sleep Talk
+U-Turn
+Substitute
+Flash Cannon
+Trick Room
+Wild Charge
+Surf
+Snarl
+Nature Power
+Dark Pulse
+Waterfall
+Dazzling Gleam
+Confide
