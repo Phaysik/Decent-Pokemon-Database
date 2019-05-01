@@ -53,28 +53,49 @@ switch ($content) {
         break;     
     case "items":
         items("SELECT * FROM items");
-        break;   
+        break;
+    case "1":
+        moves("SELECT * FROM moves WHERE gens LIKE '%gen1%' ORDER BY name ASC");
+        break;
+    case "2":
+        moves("SELECT * FROM moves WHERE gens LIKE '%gen2%' ORDER BY name ASC");
+        break;
+    case "3":
+        moves("SELECT * FROM moves WHERE gens LIKE '%gen3%' ORDER BY name ASC");
+        break;
+    case "4":
+        moves("SELECT * FROM moves WHERE gens LIKE '%gen4%' ORDER BY name ASC");
+        break;
+    case "5":
+        moves("SELECT * FROM moves WHERE gens LIKE '%gen5%' ORDER BY name ASC");
+        break;
+    case "6":
+        moves("SELECT * FROM moves WHERE gens LIKE '%gen6%' ORDER BY name ASC");
+        break;
+    case "7":
+        moves("SELECT * FROM moves WHERE gen = 7");
+        break;
 }
 
 // getFile();
 function getFile() {
     $file = fopen("Output.txt","r");
+    $tmName = array();
     $name = array();
+    $type = array();
 
     while(!feof($file))
     {
-        array_push($name, fgets($file));
-        // $line = explode ("|", fgets($file));
-        // array_push($name, $line[0]);
-        // array_push($gen, $line[1]);
-        // array_push($category, $line[2]);
-        // array_push($description, $line[3]);
+        // array_push($name, fgets($file));
+        $line = explode ("|", fgets($file));
+        array_push($tmName, $line[0]);
+        array_push($name, $line[1]);
+        array_push($type, $line[2]);
     }
 
     $con = mysqli_connect('localhost','pkdata','LqMth9j8E9GuHYAL','pkdata', '8889');
     for ($i = 0; $i < count($name); $i++) {
-        $newDesc = trim(preg_replace('/\s+/', ' ', $description[$i]));
-        $sql = "INSERT INTO movegen1 (name) VALUES ('$name[$i]')";
+        $sql = "INSERT INTO moves (tmName, name, type, gen) VALUES ('$tmName[$i]', '$name[$i]', '$type[$i]', 7)";
         if ($con->query($sql) === TRUE) {
             continue;
         } else {
@@ -86,34 +107,42 @@ function getFile() {
 }
 
 function getGenerations() {
-    $file = fopen("Output.txt","r");
-    $name = array();
+    $con = mysqli_connect('localhost','pkdata','LqMth9j8E9GuHYAL','pkdata', '8889');
+    $names = array();
+    $newNames = array();
     $regions = array();
-
-    while(! feof($file))
-    {
-        array_push($name, fgets($file));
+    $sql = "SELECT * FROM moves";
+    $result = $con->query($sql);
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            array_push($names, $row["tmName"]);
+        }
     }
 
-    $con = mysqli_connect('localhost','pkdata','LqMth9j8E9GuHYAL','pkdata', '8889');
-    $gens = array("melemele", "akala", "ulaula", "poni");
-    for ($i = 0; $i < count($name); $i++) {
+    $gens = array("movegen1", "movegen2", "movegen3", "movegen4", "movegen5", "movegen6", "movegen7");
+    for ($i = 0; $i < count($names); $i++) {
         $regions = array();
-        $newName = substr($name[$i], 0, strlen($name[$i]) - 1);
-
+        $newName = "$names[$i]\n";
         for ($j = 0; $j < count($gens); $j++) {
-            $sql = "SELECT * FROM $gens[$j] JOIN generation6 WHERE '$newName' = $gens[$j].name AND generation6.id = $gens[$j].id";
+            $newNames = array();
+            $sql = "SELECT * FROM $gens[$j]";
             $result = $con->query($sql);
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
-                    array_push($regions, ucwords($gens[$j]));
+                    array_push($newNames, $row["name"]);
                 }
-            } 
+            }
+
+            for ($l = 0; $l < count($newNames); $l++) {
+                if ($newName == $newNames[$l] || $names[$i] == $newNames[$l]) {
+                    array_push($regions, substr($gens[$j], 4, strlen($gens[$j])));
+                }
+            }
         }
 
         $spaceGens = implode(" ", $regions);    // Split on space
 
-        $sql = "UPDATE generation6 SET region = '$spaceGens' WHERE name = '$newName'"; // Update column to have appropriate generations
+        $sql = "UPDATE moves SET gens = '$spaceGens' WHERE tmName = '$names[$i]'"; // Update column to have appropriate generations
         if ($con->query($sql) === TRUE) {
             continue;
         } else {
@@ -162,6 +191,30 @@ function items($query) {
         // output data of each row
             while($row = $result->fetch_assoc()) {
                 array_push($array, [$row["name"], $row["gen"], $row["category"], $row["description"]]);
+            }
+            echo json_encode($array);
+        } else {
+            throw new Exception("No");
+        }
+    }
+}
+
+function moves($query) {
+    $con = mysqli_connect('localhost','pkdata','LqMth9j8E9GuHYAL','pkdata', '8889');
+    $array = array();
+
+    if (!$con) {
+        die('Could not connect: ' . mysqli_error($con));
+    } else {
+             
+        $sql = $query;
+        
+        $result = $con->query($sql);
+
+        if ($result->num_rows > 0) {
+        // output data of each row
+            while($row = $result->fetch_assoc()) {
+                array_push($array, [$row["tmName"], $row["name"], $row["type"]]);
             }
             echo json_encode($array);
         } else {

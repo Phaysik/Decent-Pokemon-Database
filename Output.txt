@@ -1,100 +1,100 @@
-Work Up,Headbutt
-Dragon Claw,Taunt
-Psyshock,Helping Hand
-Calm Mind,Teleport
-Roar,Rest
-Toxic,Light Screen
-Hail,Protect
-Bulk Up,Substitute
-Venoshock,Reflect
-Hidden Power,Dig
-Sunny Day,Will-O-Wisp
-Taunt,Facade
-Ice Beam,Brick Break
-Blizzard,Fly
-Hyper Beam,Seismic Toss
-Light Screen,Thunder Wave
-Protect,Dragon Tail
-Rain Dance,U-Turn
-Roost,Iron Tail
-Safeguard,Dark Pulse
-Frustration,Foul Play
-Solar Beam,Rock Slide
-Smack Down,Thunder Punch
-Thunderbolt,X-Scissor
-Thunder,Waterfall
-Earthquake,Poison Jab
-Return,Toxic
-Leech Life,Tri Attack
-Psychic,Scald
-Shadow Ball,Bulk Up
-Brick Break,Fire Punch
-Double Team,Dazzling Gleam
-Reflect,Calm Mind
-Sludge Wave,Dragon Pulse
-Flamethrower,Ice Punch
-Sludge Bomb,Thunderbolt
-Sandstorm,Flamethrower
-Fire Blast,Thunder
-Rock Tomb,Outrage
-Aerial Ace,Psychic
-Torment,Earthquake
-Facade,Self-Destruct
-Flame Charge,Shadow Ball
-Rest,Play Rough
-Attract,Solar Beam
-Thief,Fire Blast
-Low Sweep,Surf
-Round,Hyper Beam
-Echoed Voice,Superpower
-Overheat,Roost
-Steel Wing,Blizzard
-Focus Blast,Sludge Bomb
-Energy Ball,Mega Drain
-False Swipe,Flash Cannon
-Scald,Ice Beam
-Fling,Stealth Rock
-Charge Beam,Payday
-Sky Drop,Drill Run
-Brutal Swing,Dream Eater
-Quash,Megahorn
-Will-O-Wisp
-Acrobatics
-Embargo
-Explosion
-Shadow Claw
-Payback
-Smart Strike
-Giga Impact
-Rock Polish
-Aurora Veil
-Stone Edge
-Volt Switch
-Thunder Wave
-Gyro Ball
-Swords Dance
-Fly
-Psych Up
-Bulldoze
-Frost Breath
-Rock Slide
-X-Scissor
-Dragon Tail
-Infestation
-Poison Jab
-Dream Eater
-Grass Knot
-Swagger
-Sleep Talk
-U-Turn
-Substitute
-Flash Cannon
-Trick Room
-Wild Charge
-Surf
-Snarl
-Nature Power
-Dark Pulse
-Waterfall
-Dazzling Gleam
-Confide
+TM01|Work Up,Headbutt|Normal,Normal
+TM02|Dragon Claw,Taunt|Dragon,Dark
+TM03|Psyshock,Helping Hand|Psychic,Normal
+TM04|Calm Mind,Teleport|Psychic,Psychic
+TM05|Roar,Rest|Normal,Psychic
+TM06|Toxic,Light Screen|Poison,Psychic
+TM07|Hail,Protect|Ice,Normal
+TM08|Bulk Up,Substitute|Fighting,Normal
+TM09|Venoshock,Reflect|Poison,Psychic
+TM10|Hidden Power,Dig|Normal,Ground
+TM11|Sunny Day,Will-O-Wisp|Fire,Fire
+TM12|Taunt,Facade|Dark,Normal
+TM13|Ice Beam,Brick Break|Ice,Fighting
+TM14|Blizzard,Fly|Ice,Flying
+TM15|Hyper Beam,Seismic Toss|Normal,Fighting
+TM16|Light Screen,Thunder Wave|Psychic,Electric
+TM17|Protect,Dragon Tail|Normal,Dragon
+TM18|Rain Dance,U-Turn|Water,Bug
+TM19|Roost,Iron Tail|Flying,Steel
+TM20|Safeguard,Dark Pulse|Normal,Dark
+TM21|Frustration,Foul Play|Normal,Dark
+TM22|Solar Beam,Rock Slide|Grass,Rock
+TM23|Smack Down,Thunder Punch|Rock,Electric
+TM24|Thunderbolt,X-Scissor|Electric,Bug
+TM25|Thunder,Waterfall|Electric,Water
+TM26|Earthquake,Poison Jab|Ground,Poison
+TM27|Return,Toxic|Normal,Poison
+TM28|Leech Life,Tri Attack|Bug,Normal
+TM29|Psychic,Scald|Psychic,Water
+TM30|Shadow Ball,Bulk Up|Ghost,Fighting
+TM31|Brick Break,Fire Punch|Fighting,Fire
+TM32|Double Team,Dazzling Gleam|Normal,Fairy
+TM33|Reflect,Calm Mind|Psychic,Psychic
+TM34|Sludge Wave,Dragon Pulse|Poison,Dragon
+TM35|Flamethrower,Ice Punch|Fire,Ice
+TM36|Sludge Bomb,Thunderbolt|Poison,Electric
+TM37|Sandstorm,Flamethrower|Ground,Fire
+TM38|Fire Blast,Thunder|Fire,Electric
+TM39|Rock Tomb,Outrage|Rock,Dragon
+TM40|Aerial Ace,Psychic|Flying,Psychic
+TM41|Torment,Earthquake|Dark,Ground
+TM42|Facade,Self-Destruct|Normal,Normal
+TM43|Flame Charge,Shadow Ball|Fire,Ghost
+TM44|Rest,Play Rough|Psychic,Fairy
+TM45|Attract,Solar Beam|Normal,Grass
+TM46|Thief,Fire Blast|Dark,Fire
+TM47|Low Sweep,Surf|Fighting,Water
+TM48|Round,Hyper Beam|Normal,Normal
+TM49|Echoed Voice,Superpower|Normal,Fighting
+TM50|Overheat,Roost|Fire,Flying
+TM51|Steel Wing,Blizzard|Steel,Ice
+TM52|Focus Blast,Sludge Bomb|Fighting,Poison
+TM53|Energy Ball,Mega Drain|Grass,Grass
+TM54|False Swipe,Flash Cannon|Normal,Steel
+TM55|Scald,Ice Beam|Water,Ice
+TM56|Fling,Stealth Rock|Dark,Rock
+TM57|Charge Beam,Payday|Electric,Normal
+TM58|Sky Drop,Drill Run|Flying,Ground
+TM59|Brutal Swing,Dream Eater|Dark,Psychic
+TM60|Quash,Megahorn|Dark,Bug
+TM61|Will-O-Wisp|Fire
+TM62|Acrobatics|Flying
+TM63|Embargo|Dark
+TM64|Explosion|Normal
+TM65|Shadow Claw|Ghost
+TM66|Payback|Dark
+TM67|Smart Strike|Steel
+TM68|Giga Impact|Normal
+TM69|Rock Polish|Rock
+TM70|Aurora Veil|Ice
+TM71|Stone Edge|Rock
+TM72|Volt Switch|Electric
+TM73|Thunder Wave|Electric
+TM74|Gyro Ball|Steel
+TM75|Swords Dance|Normal
+TM76|Fly|Flying
+TM77|Psych Up|Normal
+TM78|Bulldoze|Ground
+TM79|Frost Breath|Ice
+TM80|Rock Slide|Rock
+TM81|X-Scissor|Bug
+TM82|Dragon Tail|Dragon
+TM83|Infestation|Bug
+TM84|Poison Jab|Poison
+TM85|Dream Eater|Psychic
+TM86|Grass Knot|Grass
+TM87|Swagger|Normal
+TM88|Sleep Talk|Normal
+TM89|U-Turn|Bug
+TM90|Substitute|Normal
+TM91|Flash Cannon|Steel
+TM92|Trick Room|Psychic
+TM93|Wild Charge|Electric
+TM94|Surf|Water
+TM95|Snarl|Dark
+TM96|Nature Power|Normal
+TM97|Dark Pulse|Dark
+TM98|Waterfall|Water
+TM99|Dazzling Gleam|Fairy
+TM100|Confide|Normal

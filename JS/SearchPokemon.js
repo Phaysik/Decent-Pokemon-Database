@@ -52,8 +52,13 @@ function MoveSearch() {
   `);
 
     if (value !== '') {
-      for (let g = searchIndex; g < moves[generation - 1]; g++) {
-        if (List[g].imgName.toLowerCase().indexOf(value) >= 0 || List[g].name.toLowerCase().indexOf(value) >= 0 || List[g].type.toLowerCase().indexOf(value) >= 0) {
+      for (let g = 0; g < moves[generation - 1]; g++) {
+        if (typeof List[g].name === 'object') {
+          if (List[g].imgName.toLowerCase().indexOf(value) >= 0 || List[g].name[0].toLowerCase().indexOf(value) >= 0 ||
+          List[g].name[1].toLowerCase().indexOf(value) >= 0 || List[g].type[0].toLowerCase().indexOf(value) >= 0 || List[g].type[1].toLowerCase().indexOf(value) >= 0) {
+            List[g].loadMovesToPage('#moves');
+          }
+        } else if (List[g].imgName.toLowerCase().indexOf(value) >= 0 || List[g].name.toLowerCase().indexOf(value) >= 0 || List[g].type.toLowerCase().indexOf(value) >= 0) {
           List[g].loadMovesToPage('#moves');
         }
       }
