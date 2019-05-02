@@ -1,6 +1,11 @@
 /* eslint-disable no-unused-vars */
 /**
- * Takes a string and changes the first character of each word to be uppercase
+ * @file Loads the Alolan Pokemon based on the determined region
+ * @author Matthew Moore
+ * @version 1.0.0
+ * @since 1.0.0
+ */
+/**
  * Will load all the Pokemon from the Melemele reigon to the page
  */
 const loadMelemele = () => {
@@ -21,7 +26,6 @@ const loadMelemele = () => {
 };
 
 /**
- * Takes a string and changes the first character of each word to be uppercase
  * Will load all the Pokemon from the Akala reigon to the page
  */
 const loadAkala = () => {
@@ -42,7 +46,6 @@ const loadAkala = () => {
 };
 
 /**
- * Takes a string and changes the first character of each word to be uppercase
  * Will load all the Pokemon from the Ulaula reigon to the page
  */
 const loadUlaula = () => {
@@ -63,7 +66,6 @@ const loadUlaula = () => {
 };
 
 /**
- * Takes a string and changes the first character of each word to be uppercase
  * Will load all the Pokemon from the Poni reigon to the page
  */
 const loadPoni = () => {
@@ -88,8 +90,8 @@ const loadPoni = () => {
  */
 const AJAX = (region) => {
   /**
-  * @function jQueryAjax
-  * @param   {string} data A JSON encoded list of Pokemon
+  * @function AlolanRegionAjax
+  * @param   {string} data A JSON encoded list of Alolan pokemon based on region
   */
   $.ajax('pkdata.php?' + region).then((data) => {
     try {
@@ -98,14 +100,11 @@ const AJAX = (region) => {
       */
       data = JSON.parse(data);
       for (let i = 0; i < data.length; i++) {
-        /**
-        *  @constant {!Array}
-        */
-        const splitVal = data[i][2].replace(/\n/gi, '').split(' ');
+        splitVal = data[i][2].replace(/\n/gi, '').split(' ');
         if (splitVal.length === 1) {
           List.push(new Pokemon(data[i][0], data[i][1], splitVal));
         } else {
-          const types = [splitVal[0], splitVal[1]];
+          types = [splitVal[0], splitVal[1]];
           List.push(new Pokemon(data[i][0], data[i][1], types));
         }
       }
@@ -114,7 +113,11 @@ const AJAX = (region) => {
     }
   }).catch((xhr, status, error) => {
     /**
-    * @return {Array} An array of all the pokemon of that specified region
+    * @function AlolanRegionsJSON
+    *
+    * @param {Array} data A list of objects with the Pokemon's name, type, and id
+    *
+    * @return {Array} An array of all the Pokemon of that specified region
     */
     return $.getJSON(`../JSON/${region.split('=')[1]}.json`, function(data) {
       for (let i = 0; i < data['pokemon'].length; i++) {

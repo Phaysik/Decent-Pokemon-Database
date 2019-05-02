@@ -1,9 +1,14 @@
-# Pokemon-Things
+# Pokémon-Things
 ![Top Language](https://img.shields.io/github/languages/top/Phaysik/Decent-Pokemon-Database.svg?style=flat)
 ![Code Size](https://img.shields.io/github/languages/code-size/Phaysik/Decent-Pokemon-Database.svg?style=flat)
 [![Last Commit](https://img.shields.io/github/last-commit/Phaysik/Decent-Pokemon-Database.svg?style=flat)](https://github.com/Phaysik/Decent-Pokemon-Database/commit/master)
 
 This started as a project that I started as a means to learn jQuery and Bootstrap but quickly turned into a passion project that has consumed a lot of my time. Honestly without this project, I never would have experimented with Node, JSON, Databases (implementation not currently on a branch) and external JS libraries.
+
+### Version History (Last 10 releases)
+
+- Version 1.0.0: Pokédex, Moves, and Items all load from database
+
 
 ## Important
 

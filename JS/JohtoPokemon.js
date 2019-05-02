@@ -1,7 +1,31 @@
 /* eslint-disable no-unused-vars */
-let index = 0;
-const List = [];
+/**
+ * @file Loads the entire Johto Pokedex
+ * @author Matthew Moore
+ * @version 1.0.0
+ * @since 1.0.0
+ */
 
+/**
+ * @type {!number}
+ */
+let index = 0;
+/**
+ * @type {!Array}
+ */
+const List = [];
+/**
+ * @type {!Array}
+ */
+let splitVal = [];
+/**
+ * @type {!Array}
+ */
+let types = [];
+
+/**
+ * @function JohtoOnLoad
+ */
 window.onload = function() {
   $('#Center').text('The Johto Pokémon List by Pokédex Number');
   $('#myInput').val('');
@@ -10,11 +34,11 @@ window.onload = function() {
     try {
       data = JSON.parse(data);
       for (let i = 0; i < data.length; i++) {
-        const splitVal = data[i][2].replace(/\n/gi, '').split(' ');
+        splitVal = data[i][2].replace(/\n/gi, '').split(' ');
         if (splitVal.length === 1) {
           List.push(new Pokemon(data[i][0], data[i][1], splitVal));
         } else {
-          const types = [splitVal[0], splitVal[1]];
+          types = [splitVal[0], splitVal[1]];
           List.push(new Pokemon(data[i][0], data[i][1], types));
         }
       }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: AlolanRegions.js</title>
+    <title>JSDoc: Source: AlolaPokemon.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: AlolanRegions.js</h1>
+    <h1 class="page-title">Source: AlolaPokemon.js</h1>
 
     
 
@@ -28,104 +28,57 @@
         <article>
             <pre class="prettyprint source linenums"><code>/* eslint-disable no-unused-vars */
 /**
- * @file Loads the Alolan Pokemon based on the determined region
+ * @file Loads the entire Alolan Pokedex
  * @author Matthew Moore
  * @version 1.0.0
  * @since 1.0.0
  */
+
 /**
- * Will load all the Pokemon from the Melemele reigon to the page
+ * @type {!number}
  */
-const loadMelemele = () => {
-  /**
-  *  @type {!number}
-  *  @default [0]
-  */
-  index = 0;
-  /**
-  *  @type {!Array}
-  *  @default [[]]
-  */
-  List = [];
-  $('#Center').text('The Melemele Pokémon List by Pokédex Number');
-  $('#myInput').val('');
-  $('#pokemon-container').empty();
-  AJAX('content=melemele');
+let index = 0;
+/**
+ * @type {!Array}
+ */
+let List = [];
+/**
+ * @type {!Array}
+ */
+let splitVal = [];
+/**
+ * @type {!Array}
+ */
+let types = [];
+
+/**
+ * @function AlolaOnLoad
+ */
+window.onload = () => {
+  loadAlola();
 };
 
 /**
- * Will load all the Pokemon from the Akala reigon to the page
+ * Will load all the Pokemon from the Alolan pokedex
  */
-const loadAkala = () => {
-  /**
-  *  @type {!number}
-  *  @default [0]
-  */
+const loadAlola = () => {
   index = 0;
-  /**
-  *  @type {!Array}
-  *  @default [[]]
-  */
   List = [];
-  $('#Center').text('The Akala Pokémon List by Pokédex Number');
+  $('#Center').text('The Alolan Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
-  AJAX('content=akala');
-};
-
-/**
- * Will load all the Pokemon from the Ulaula reigon to the page
- */
-const loadUlaula = () => {
   /**
-  *  @type {!number}
-  *  @default [0]
-  */
-  index = 0;
-  /**
-  *  @type {!Array}
-  *  @default [[]]
-  */
-  List = [];
-  $('#Center').text('The Ulaula Pokémon List by Pokédex Number');
-  $('#myInput').val('');
-  $('#pokemon-container').empty();
-  AJAX('content=ulaula');
-};
-
-/**
- * Will load all the Pokemon from the Poni reigon to the page
- */
-const loadPoni = () => {
-  /**
-  *  @type {!number}
-  *  @default [0]
-  */
-  index = 0;
-  /**
-  *  @type {!Array}
-  *  @default [[]]
-  */
-  List = [];
-  $('#Center').text('The Poni Pokémon List by Pokédex Number');
-  $('#myInput').val('');
-  $('#pokemon-container').empty();
-  AJAX('content=poni');
-};
-
-/**
- * @param   {string} region A string that contains a query to be used when calling a database
- */
-const AJAX = (region) => {
-  /**
-  * @function AlolanRegionAjax
-  * @param   {string} data A JSON encoded list of Alolan pokemon based on region
-  */
-  $.ajax('pkdata.php?' + region).then((data) => {
+    * @function AlolanJSON
+    *
+    * @param {Array} data A list of objects with the Pokemon's name, type, and id
+    *
+    * @return {Array} An array of all the Pokemon of that specified region
+    */
+  $.ajax('pkdata.php?content=alola').then((data) => {
     try {
       /**
-      *  @type {!Array}
-      */
+       *  @type {!Array}
+       */
       data = JSON.parse(data);
       for (let i = 0; i &lt; data.length; i++) {
         splitVal = data[i][2].replace(/\n/gi, '').split(' ');
@@ -141,13 +94,9 @@ const AJAX = (region) => {
     }
   }).catch((xhr, status, error) => {
     /**
-    * @function AlolanRegionsJSON
-    *
-    * @param {Array} data A list of objects with the Pokemon's name, type, and id
-    *
-    * @return {Array} An array of all the Pokemon of that specified region
-    */
-    return $.getJSON(`../JSON/${region.split('=')[1]}.json`, function(data) {
+     * @return {Array} An array of all the Alolan Pokemon
+     */
+    return $.getJSON('../JSON/alola.json', function(data) {
       for (let i = 0; i &lt; data['pokemon'].length; i++) {
         List.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
       }

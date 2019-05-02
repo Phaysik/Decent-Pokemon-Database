@@ -1,5 +1,11 @@
 /* eslint-disable no-unused-vars */
 /**
+ * @file Contains all the function to search through pokemon, items, and moves
+ * @author Matthew Moore
+ * @version 1.0.0
+ * @since 1.0.0
+ */
+/**
  * Takes a string and changes the first character of each word to be uppercase
  * @example
  * var a = 'hello world';

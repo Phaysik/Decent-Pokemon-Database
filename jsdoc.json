@@ -2,7 +2,7 @@
     "plugins": [],
     "recurseDepth": 10,
     "source": {
-        "include": ["../../JS/SearchPokemon.js", "../../JS/AlolanRegions.js"],
+        "include": ["../../JS/SearchPokemon.js", "../../JS/AlolanRegions.js", "../../JS/AlolaPokemon.js", "../../JS/Items.js", "../../JS/HoennPokemon.js", "../../JS/JohtoPokemon.js"],
         "includePattern": ".+\\.js(doc|x)?$",
         "excludePattern": "(^|\\/|\\\\)_"
     },
