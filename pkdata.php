@@ -55,22 +55,22 @@ switch ($content) {
         items("SELECT * FROM items");
         break;
     case "1":
-        moves("SELECT * FROM moves WHERE gens LIKE '%gen1%' ORDER BY name ASC");
+        moves("SELECT * FROM moves WHERE gen = 1");
         break;
     case "2":
-        moves("SELECT * FROM moves WHERE gens LIKE '%gen2%' ORDER BY name ASC");
+        moves("SELECT * FROM moves WHERE gen = 2");
         break;
     case "3":
-        moves("SELECT * FROM moves WHERE gens LIKE '%gen3%' ORDER BY name ASC");
+        moves("SELECT * FROM moves WHERE gen = 3");
         break;
     case "4":
-        moves("SELECT * FROM moves WHERE gens LIKE '%gen4%' ORDER BY name ASC");
+        moves("SELECT * FROM moves WHERE gen = 4");
         break;
     case "5":
-        moves("SELECT * FROM moves WHERE gens LIKE '%gen5%' ORDER BY name ASC");
+        moves("SELECT * FROM moves WHERE gen = 5");
         break;
     case "6":
-        moves("SELECT * FROM moves WHERE gens LIKE '%gen6%' ORDER BY name ASC");
+        moves("SELECT * FROM moves WHERE gen = 6");
         break;
     case "7":
         moves("SELECT * FROM moves WHERE gen = 7");

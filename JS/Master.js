@@ -273,7 +273,7 @@ function displayMovesToScreen(type) {
   $('#Center').empty().text(`All ${type} Moves in Generation ${generation}`);
   $('#moves-container').empty();
 
-  for (let i = searchIndex; i < moves[generation - 1]; i++) {
+  for (let i = 0; i < moves[generation - 1]; i++) {
     if (List[i].type.includes(type)) {
       if (List[i].name.length == 2) {
         for (let j = 0; j < List[i].name.length; j++) {
@@ -501,7 +501,7 @@ function loadSeen() {
   <h4 class="font-italic pl-4" class="pr-3">TM</h4></div><div class="col-3"><h4 class="font-italic pl-4" class="pr-3">
   Type</h4></div></div>`);
 
-    for (let i = searchIndex; i < index; i++) {
+    for (let i = 0; i < index; i++) {
       List[i].loadMovesToPage(`#Gen${generation}`);
     }
   } else {
