@@ -53,7 +53,7 @@ window.onload = () => {
      */
       data = JSON.parse(data);
       for (let i = 0; i < data.length; i++) {
-        splitVal = data[i][2].replace(/\n/gi, '').split(' ');
+        splitVal = data[i][2].replace(/\n/gi, '').replace(/\r/gi, '').split(' ');
         if (splitVal.length === 1) {
           List.push(new Pokemon(data[i][0], data[i][1], splitVal));
         } else {
