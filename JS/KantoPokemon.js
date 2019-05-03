@@ -34,6 +34,7 @@ let types = [];
 /**
  * Call a database, or a JSON file if database fails, and get Pokemon information
  * @function KantoOnLoad
+ * @see loadKanto
  */
 window.onload = () => {
   loadKanto();

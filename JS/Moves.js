@@ -40,6 +40,7 @@ const moves = [50, 50, 50, 92, 95, 100, 100];
 /**
  * Call loadGen() with the default parameter of '1'
  * @function MovesLoad
+ * @see loadGen
  */
 window.onload = () => {
   loadGen(1);

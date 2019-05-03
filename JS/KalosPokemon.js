@@ -34,6 +34,7 @@ let types = [];
 /**
  * Call the loadKalos() function
  * @function KalosOnLoad
+ * @see loadKalos
  */
 window.onload = () => {
   loadKalos();

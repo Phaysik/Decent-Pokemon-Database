@@ -34,6 +34,7 @@ let types = [];
 /**
  * Call the loadAlola() function
  * @function AlolaOnLoad
+ * @see loadAlola
  */
 window.onload = () => {
   loadAlola();

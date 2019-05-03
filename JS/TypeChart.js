@@ -1,11 +1,35 @@
 /* eslint-disable no-unused-vars */
+/**
+ * @file Displays the Pokemon Type Chart and on click will show weaknesses, strengths, and nulls
+ * @author Matthew Moore
+ * @version 1.0.0
+ * @since 1.0.0
+ */
+
+/**
+ * @class
+ * @classdesc Appends all the normal, super, half, and zero effectiveness types to the screen
+ */
 class TypeList {
+  /**
+   * Constructor of TypeList that takes in arrays of normal, super, half, and zero effectiveness types
+   * @constructs TypeList
+   * @param {!Array} normalEffec An array of all the types that take normal damage
+   * @param {!Array} superEffec An array of all the types that are weak to the clicked type
+   * @param {!Array} halfEffec An array of all the types that are strong to the clicked type
+   * @param {!Array} zeroEffec An array of all the types that are immune to the clicked type
+   */
   constructor(normalEffec, superEffec, halfEffec, zeroEffec) {
     this.normalEffec = normalEffec;
     this.superEffec = superEffec;
     this.halfEffec = halfEffec;
     this.zeroEffec = zeroEffec;
   }
+
+  /**
+   * Appends all the different type effectivenesses to the screen
+   * @param {!string} type Specified type that user clicks
+   */
   typeList(type) {
     for (let i = 0; i < typeList.length; i++) {
       if (typeList[i].name.includes(type)) {
@@ -81,6 +105,12 @@ class TypeList {
   }
 }
 
+/**
+ * A list of all the TypeLists
+ * @constant
+ * @type {!Array}
+ * @see TypeList
+ */
 const typeEffectiveness = [
   new TypeList(['Normal', 'Fire', 'Water', 'Electric', 'Grass', 'Ice', 'Fighting', 'Poison', 'Ground', 'Flying', 'Psychic', 'Bug', 'Dragon', 'Dark', 'Fairy'], [], ['Rock', 'Steel'], ['Ghost']),
   new TypeList(['Normal', 'Electric', 'Fighting', 'Poison', 'Ground', 'Flying', 'Psychic', 'Ghost', 'Dark', 'Fairy'], ['Grass', 'Ice', 'Bug', 'Steel'], ['Fire', 'Water', 'Rock', 'Dragon'], []),
@@ -102,13 +132,29 @@ const typeEffectiveness = [
   new TypeList(['Normal', 'Water', 'Electric', 'Grass', 'Ice', 'Ground', 'Flying', 'Psychic', 'Bug', 'Rock', 'Ghost', 'Fairy'], ['Fighting', 'Dragon', 'Dark'], ['Fire', 'Poison', 'Steel'], []),
 ];
 
+/**
+ * @class
+ * @classdesc Appends all the types and their information to the screen
+ */
 class Types {
+  /**
+   * Constructor of Types that takes in arrays of normal, super, half, and zero effectiveness types
+   * @constructs Types
+   * @param {!string} name A string denoting the name of the type
+   * @param {!string} alt A string for use in the alt property of the img tag
+   * @param {!string} hexCode A string for the hex value of a certain color to be used as it's text color
+   */
   constructor(name, alt, hexCode) {
     this.name = name;
     this.alt = alt;
     this.hexCode = hexCode;
   }
 
+  /**
+   * Appends all the different type to the screen
+   * @param {!number} index Specified index of typesList to load
+   * @see typeList
+   */
   loadToPage(index) {
     $('#types').append(`
               <div style="width:140px!important" class="d-flex mx-3 flex-column">
@@ -119,6 +165,12 @@ class Types {
   }
 }
 
+/**
+ * A list of all the Types and their information
+ * @constant
+ * @type {!Array}
+ * @see Types
+ */
 const typeList = [
   new Types('Normal', 'Normal Symbol Image', '#808080'),
   new Types('Fire', 'Fire Symbol Image', '#FF0000'),
@@ -140,6 +192,11 @@ const typeList = [
   new Types('Fairy', 'Fairy Symbol Image', '#FF00FF'),
 ];
 
+/**
+ * A number representing where the index of the typeList is
+ * @type {!number}
+ * @see typeList
+ */
 let arrayIndex = 0;
 
 for (const p of typeList) {

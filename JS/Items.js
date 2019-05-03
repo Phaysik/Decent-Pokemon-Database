@@ -50,7 +50,7 @@ window.onload = () => {
   }).catch((xhr, status, error) => {
     /**
       * Gets the Items json file if the database query fails
-      * @function ITEMSJSON
+      * @function ItemsJSON
       *
       * @param {Array} data A list of objects with the Item's name, id, category, and description
       *

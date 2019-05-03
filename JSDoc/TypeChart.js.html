@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: TypeChart.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: TypeChart.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/* eslint-disable no-unused-vars */
+/**
+ * @file Displays the Pokemon Type Chart and on click will show weaknesses, strengths, and nulls
+ * @author Matthew Moore
+ * @version 1.0.0
+ * @since 1.0.0
+ */
+
+/**
+ * @class
+ * @classdesc Appends all the normal, super, half, and zero effectiveness types to the screen
+ */
+class TypeList {
+  /**
+   * Constructor of TypeList that takes in arrays of normal, super, half, and zero effectiveness types
+   * @constructs TypeList
+   * @param {!Array} normalEffec An array of all the types that take normal damage
+   * @param {!Array} superEffec An array of all the types that are weak to the clicked type
+   * @param {!Array} halfEffec An array of all the types that are strong to the clicked type
+   * @param {!Array} zeroEffec An array of all the types that are immune to the clicked type
+   */
+  constructor(normalEffec, superEffec, halfEffec, zeroEffec) {
+    this.normalEffec = normalEffec;
+    this.superEffec = superEffec;
+    this.halfEffec = halfEffec;
+    this.zeroEffec = zeroEffec;
+  }
+
+  /**
+   * Appends all the different type effectivenesses to the screen
+   * @param {!string} type Specified type that user clicks
+   */
+  typeList(type) {
+    for (let i = 0; i &lt; typeList.length; i++) {
+      if (typeList[i].name.includes(type)) {
+        $('#typeList').empty().append(`&lt;div style="width:450px!important" class="d-flex mx-3 flex-column"> 
+        &lt;img height="100" width="100" class="my-2 align-self-center" src="Images/TypeChart/${typeList[i].name}.png" alt="${typeList[i].name}" /> 
+        &lt;div id="Super" class="container d-flex justify-content-around flex-wrap">&lt;/div>&lt;div id="Normal" class="container d-flex justify-content-around flex-wrap">
+        &lt;/div>&lt;div id="Half" class="container d-flex justify-content-around flex-wrap">&lt;/div>&lt;div id="Zero" class="container d-flex justify-content-around flex-wrap">
+        &lt;/div>
+        `);
+        $('#Center').empty().text(`${typeList[i].name} Type Chart`);
+        break;
+      }
+    }
+
+    if (this.superEffec.length > 0) {
+      $('#Super').append(`
+        &lt;h3 id="Center">Super Effective against: &lt;/h3>
+        `);
+      for (let s = 0; s &lt; this.superEffec.length; s++) {
+        $('#Super').append(`
+                  &lt;div style="width:140px!important" class="d-flex mx-3 flex-column">
+                    &lt;img height="100" width="100" class="my-2 align-self-center"src="Images/TypeChart/${this.superEffec[s]}.png" alt="${this.superEffec[s]}" />
+                    &lt;h5 style="font-weight: normal; text-align: center;">${this.superEffec[s]}&lt;/h5>
+                  &lt;/div>
+                `);
+      }
+    }
+
+
+    if (this.normalEffec.length > 0) {
+      $('#Normal').append(`
+        &lt;h3 id="Center">Normal Effectiveness against: &lt;/h3>
+        `);
+      for (let n = 0; n &lt; this.normalEffec.length; n++) {
+        $('#Normal').append(`
+                  &lt;div style="width:140px!important" class="d-flex mx-3 flex-column">
+                    &lt;img height="100" width="100" class="my-2 align-self-center" src="Images/TypeChart/${this.normalEffec[n]}.png" alt="${this.normalEffec[n]}" />
+                    &lt;h5 style="font-weight: normal; text-align: center;">${this.normalEffec[n]}&lt;/h5>
+                  &lt;/div>
+                `);
+      }
+    }
+
+
+    if (this.halfEffec.length > 0) {
+      $('#Half').append(`
+        &lt;h3 id="Center">Half Effective against: &lt;/h3>
+        `);
+      for (let h = 0; h &lt; this.halfEffec.length; h++) {
+        $('#Half').append(`
+                  &lt;div style="width:140px!important" class="d-flex mx-3 flex-column">
+                    &lt;img height="100" width="100" class="my-2 align-self-center" src="Images/TypeChart/${this.halfEffec[h]}.png" alt="${this.halfEffec[h]}" />
+                    &lt;h5 style="font-weight: normal; text-align: center;">${this.halfEffec[h]}&lt;/h5>
+                  &lt;/div>
+                `);
+      }
+    }
+
+
+    if (this.zeroEffec.length > 0) {
+      $('#Zero').append(`
+        &lt;h3 id="Center">No Effectiveness against: &lt;/h3>
+        `);
+      for (let z = 0; z &lt; this.zeroEffec.length; z++) {
+        $('#Zero').append(`
+                  &lt;div style="width:140px!important" class="d-flex mx-3 flex-column">
+                    &lt;img height="100" width="100" class="my-2 align-self-center" src="Images/TypeChart/${this.zeroEffec[z]}.png" alt="${this.zeroEffec[z]}" />
+                    &lt;h5 style="font-weight: normal; text-align: center;">${this.zeroEffec[z]}&lt;/h5>
+                  &lt;/div>
+                `);
+      }
+    }
+  }
+}
+
+/**
+ * A list of all the TypeLists
+ * @constant
+ * @type {!Array}
+ * @see TypeList
+ */
+const typeEffectiveness = [
+  new TypeList(['Normal', 'Fire', 'Water', 'Electric', 'Grass', 'Ice', 'Fighting', 'Poison', 'Ground', 'Flying', 'Psychic', 'Bug', 'Dragon', 'Dark', 'Fairy'], [], ['Rock', 'Steel'], ['Ghost']),
+  new TypeList(['Normal', 'Electric', 'Fighting', 'Poison', 'Ground', 'Flying', 'Psychic', 'Ghost', 'Dark', 'Fairy'], ['Grass', 'Ice', 'Bug', 'Steel'], ['Fire', 'Water', 'Rock', 'Dragon'], []),
+  new TypeList(['Normal', 'Electric', 'Ice', 'Fighting', 'Poison', 'Flying', 'Psychic', 'Bug', 'Ghost', 'Dark', 'Fairy'], ['Fire', 'Ground', 'Rock'], ['Water', 'Grass', 'Dragon'], []),
+  new TypeList(['Normal', 'Fire', 'Ice', 'Fighting', 'Poison', 'Psychic', 'Bug', 'Rock', 'Ghost', 'Dark', 'Steel', 'Fairy'], ['Water', 'Flying'], ['Electric', 'Grass', 'Dragon'], ['Ground']),
+  new TypeList(['Normal', 'Electric', 'Ice', 'Fighting', 'Psychic', 'Ghost', 'Dark', 'Fairy'], ['Water', 'Ground', 'Rock'], ['Fire', 'Grass', 'Poison', 'Flying', 'Bug', 'Dragon', 'Steel'], []),
+  new TypeList(['Normal', 'Electric', 'Fighting', 'Poison', 'Psychic', 'Bug', 'Rock', 'Ghost', 'Dark', 'Fairy'], ['Grass', 'Ground', 'Flying', 'Dragon'], ['Fire', 'Water', 'Ice', 'Steel'], []),
+  new TypeList(['Fire', 'Water', 'Electric', 'Grass', 'Fighting', 'Ground', 'Dragon'], ['Normal', 'Ice', 'Rock', 'Dark', 'Steel'], ['Poison', 'Flying', 'Psychic', 'Bug', 'Fairy'], ['Ghost']),
+  new TypeList(['Normal', 'Fire', 'Water', 'Electric', 'Ice', 'Fighting', 'Flying', 'Psychic', 'Bug', 'Dragon', 'Dark'], ['Grass', 'Fairy'], ['Poison', 'Ground', 'Rock', 'Ghost'], ['Steel']),
+  new TypeList(['Normal', 'Water', 'Ice', 'Fighting', 'Ground', 'Psychic', 'Bug', 'Ghost', 'Dragon', 'Dark', 'Fairy'], ['Fire', 'Electric', 'Poison', 'Rock', 'Steel'], ['Grass', 'Bug'], ['Flying']),
+  new TypeList(['Normal', 'Fire', 'Water', 'Ice', 'Poison', 'Ground', 'Flying', 'Psychic', 'Ghost', 'Dragon', 'Dark', 'Fairy'], ['Grass', 'Fighting', 'Bug'], ['Electric', 'Rock', 'Steel'], []),
+  new TypeList(['Normal', 'Fire', 'Water', 'Electric', 'Grass', 'Ice', 'Ground', 'Flying', 'Bug', 'Rock', 'Ghost', 'Dragon', 'Fairy'], ['Fighting', 'Poison'], ['Psychic', 'Steel'], ['Dark']),
+  new TypeList(['Normal', 'Water', 'Electric', 'Ice', 'Ground', 'Bug', 'Rock', 'Dragon'], ['Grass', 'Psychic', 'Dark'], ['Fire', 'Fighting', 'Poison', 'Flying', 'Ghost', 'Steel', 'Fairy'], []),
+  new TypeList(['Normal', 'Water', 'Electric', 'Grass', 'Poison', 'Psychic', 'Rock', 'Ghost', 'Dragon', 'Dark', 'Fairy'], ['Fire', 'Ice', 'Flying', 'Bug'], ['Fighting', 'Ground', 'Steel'], []),
+  new TypeList(['Fire', 'Water', 'Electric', 'Grass', 'Ice', 'Fighting', 'Poison', 'Ground', 'Flying', 'Bug', 'Rock', 'Dragon', 'Steel', 'Fairy'], ['Psychic', 'Ghost'], ['Dark'], ['Normal']),
+  new TypeList(['Normal', 'Fire', 'Water', 'Electric', 'Grass', 'Ice', 'Fighting', 'Poison', 'Ground', 'Flying', 'Psychic', 'Bug', 'Rock', 'Ghost', 'Dark'], ['Dragon'], ['Steel'], ['Fairy']),
+  new TypeList(['Normal', 'Fire', 'Water', 'Electric', 'Grass', 'Ice', 'Poison', 'Ground', 'Flying', 'Bug', 'Rock', 'Dragon', 'Steel'], ['Psychic', 'Ghost'], ['Fighting', 'Dark', 'Fairy'], []),
+  new TypeList(['Normal', 'Grass', 'Fighting', 'Poison', 'Ground', 'Flying', 'Psychic', 'Bug', 'Ghost', 'Dragon', 'Dark'], ['Ice', 'Rock', 'Fairy'], ['Fire', 'Water', 'Electric', 'Steel'], []),
+  new TypeList(['Normal', 'Water', 'Electric', 'Grass', 'Ice', 'Ground', 'Flying', 'Psychic', 'Bug', 'Rock', 'Ghost', 'Fairy'], ['Fighting', 'Dragon', 'Dark'], ['Fire', 'Poison', 'Steel'], []),
+];
+
+/**
+ * @class
+ * @classdesc Appends all the types and their information to the screen
+ */
+class Types {
+  /**
+   * Constructor of Types that takes in arrays of normal, super, half, and zero effectiveness types
+   * @constructs Types
+   * @param {!string} name A string denoting the name of the type
+   * @param {!string} alt A string for use in the alt property of the img tag
+   * @param {!string} hexCode A string for the hex value of a certain color to be used as it's text color
+   */
+  constructor(name, alt, hexCode) {
+    this.name = name;
+    this.alt = alt;
+    this.hexCode = hexCode;
+  }
+
+  /**
+   * Appends all the different type to the screen
+   * @param {!number} index Specified index of typesList to load
+   * @see typeList
+   */
+  loadToPage(index) {
+    $('#types').append(`
+              &lt;div style="width:140px!important" class="d-flex mx-3 flex-column">
+                &lt;img height="100" width="100" class="my-2 align-self-center" onclick="typeEffectiveness[${index}].typeList('${this.name}')" src="Images/TypeChart/${this.name}.png" alt="${this.alt}"/>
+                &lt;h5 style="font-weight: normal; color: ${this.hexCode}; text-align: center;">${this.name}&lt;/h5>
+              &lt;/div>
+              `);
+  }
+}
+
+/**
+ * A list of all the Types and their information
+ * @constant
+ * @type {!Array}
+ * @see Types
+ */
+const typeList = [
+  new Types('Normal', 'Normal Symbol Image', '#808080'),
+  new Types('Fire', 'Fire Symbol Image', '#FF0000'),
+  new Types('Water', 'Water Symbol Image', '#0000FF'),
+  new Types('Electric', 'Electric Symbol Image', '#FFFF00'),
+  new Types('Grass', 'Grass Symbol Image', '#00FF00'),
+  new Types('Ice', 'Ice Symbol Image', '#00FFFF'),
+  new Types('Fighting', 'Fighting Symbol Image', '#800000'),
+  new Types('Poison', 'Poison Symbol Image', '#8b008b'),
+  new Types('Ground', 'Ground Symbol Image', '#964B00'),
+  new Types('Flying', 'Flying Symbol Image', '#76D7EA'),
+  new Types('Psychic', 'Psychic Symbol Image', '#660099'),
+  new Types('Bug', 'Bug Symbol Image', '#006400'),
+  new Types('Rock', 'Rock Symbol Image', '#696969'),
+  new Types('Ghost', 'Ghost Symbol Image', '#663399'),
+  new Types('Dragon', 'Dragon Symbol Image', '#fafad2'),
+  new Types('Dark', 'Dark Symbol Image', '#0000C8'),
+  new Types('Steel', 'Steel Symbol Image', '#2f4f4f'),
+  new Types('Fairy', 'Fairy Symbol Image', '#FF00FF'),
+];
+
+/**
+ * A number representing where the index of the typeList is
+ * @type {!number}
+ * @see typeList
+ */
+let arrayIndex = 0;
+
+for (const p of typeList) {
+  p.loadToPage(arrayIndex);
+  arrayIndex++;
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="TypeList.html">TypeList</a></li><li><a href="Types.html">Types</a></li></ul><h3>Global</h3><ul><li><a href="global.html#AJAX">AJAX</a></li><li><a href="global.html#AlolaAjax">AlolaAjax</a></li><li><a href="global.html#AlolanJSON">AlolanJSON</a></li><li><a href="global.html#AlolanRegionAjax">AlolanRegionAjax</a></li><li><a href="global.html#AlolanRegionsJSON">AlolanRegionsJSON</a></li><li><a href="global.html#AlolaOnLoad">AlolaOnLoad</a></li><li><a href="global.html#arrayIndex">arrayIndex</a></li><li><a href="global.html#generation">generation</a></li><li><a href="global.html#HoennAjax">HoennAjax</a></li><li><a href="global.html#HoennJSON">HoennJSON</a></li><li><a href="global.html#HoennOnLoad">HoennOnLoad</a></li><li><a href="global.html#index">index</a></li><li><a href="global.html#ItemsAjax">ItemsAjax</a></li><li><a href="global.html#ItemSearch">ItemSearch</a></li><li><a href="global.html#ItemsJSON">ItemsJSON</a></li><li><a href="global.html#ItemsOnLoad">ItemsOnLoad</a></li><li><a href="global.html#JohtoAjax">JohtoAjax</a></li><li><a href="global.html#JohtoJSON">JohtoJSON</a></li><li><a href="global.html#JohtoOnLoad">JohtoOnLoad</a></li><li><a href="global.html#KalosAjax">KalosAjax</a></li><li><a href="global.html#KalosJSON">KalosJSON</a></li><li><a href="global.html#KalosOnLoad">KalosOnLoad</a></li><li><a href="global.html#KalosRegionAjax">KalosRegionAjax</a></li><li><a href="global.html#KalosRegionsJSON">KalosRegionsJSON</a></li><li><a href="global.html#KantoJSON">KantoJSON</a></li><li><a href="global.html#KantoLoad">KantoLoad</a></li><li><a href="global.html#KantoOnLoad">KantoOnLoad</a></li><li><a href="global.html#List">List</a></li><li><a href="global.html#loadAkala">loadAkala</a></li><li><a href="global.html#loadAlola">loadAlola</a></li><li><a href="global.html#loadCentral">loadCentral</a></li><li><a href="global.html#loadCoastal">loadCoastal</a></li><li><a href="global.html#loadGen">loadGen</a></li><li><a href="global.html#loadKalos">loadKalos</a></li><li><a href="global.html#loadKanto">loadKanto</a></li><li><a href="global.html#loadLetsGo">loadLetsGo</a></li><li><a href="global.html#loadMelemele">loadMelemele</a></li><li><a href="global.html#loadMountain">loadMountain</a></li><li><a href="global.html#loadPoni">loadPoni</a></li><li><a href="global.html#loadUlaula">loadUlaula</a></li><li><a href="global.html#moves">moves</a></li><li><a href="global.html#MovesAjax">MovesAjax</a></li><li><a href="global.html#MoveSearch">MoveSearch</a></li><li><a href="global.html#MovesJSON">MovesJSON</a></li><li><a href="global.html#MovesLoad">MovesLoad</a></li><li><a href="global.html#names">names</a></li><li><a href="global.html#NationalAjax">NationalAjax</a></li><li><a href="global.html#NationalJSON">NationalJSON</a></li><li><a href="global.html#NationalOnLoad">NationalOnLoad</a></li><li><a href="global.html#PokemonSearch">PokemonSearch</a></li><li><a href="global.html#SinnohAjax">SinnohAjax</a></li><li><a href="global.html#SinnohJSON">SinnohJSON</a></li><li><a href="global.html#SinnohOnLoad">SinnohOnLoad</a></li><li><a href="global.html#splitVal">splitVal</a></li><li><a href="global.html#toTitleCase">toTitleCase</a></li><li><a href="global.html#typeEffectiveness">typeEffectiveness</a></li><li><a href="global.html#typeList">typeList</a></li><li><a href="global.html#types">types</a></li><li><a href="global.html#UnovaAjax">UnovaAjax</a></li><li><a href="global.html#UnovaJSON">UnovaJSON</a></li><li><a href="global.html#UnovaOnLoad">UnovaOnLoad</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu May 02 2019 20:52:25 GMT-0500 (Central Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
