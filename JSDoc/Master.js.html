@@ -1,4 +1,32 @@
-/* eslint-disable no-unused-vars */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: Master.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: Master.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/* eslint-disable no-unused-vars */
 /**
  * @file The Master file that holds all the important functions and classes
  * @author Matthew Moore
@@ -9,7 +37,7 @@
 /**
   * A dictionary to set the background color based on type
   * @constant
-  * @type {!Object.<string, string>}
+  * @type {!Object.&lt;string, string>}
   */
 const typeColors = {
   'Normal': 'background-color: #A3ACAF;',
@@ -35,7 +63,7 @@ const typeColors = {
 /**
   * A dictionary to convert TM's to use a specific image
   * @constant
-  * @type {!Object.<string, string>}
+  * @type {!Object.&lt;string, string>}
   */
 const tmConversion = {
   'TM01': 'Fighting',
@@ -143,7 +171,7 @@ const tmConversion = {
 /**
  * A dictionary that will set the text color based on type
  * @constant
- * @type {!Object.<string, string>}
+ * @type {!Object.&lt;string, string>}
  */
 const textColors = {
   'Normal': '#FFF',
@@ -248,13 +276,13 @@ class Pokemon {
   loadToPage() {
     this.name = (this.name.includes(':')) ? this.name.replace(/:/, '꞉') : this.name;
     $('#pokemon-container').append(`
-      <li class="list-group-item" style="border: none;">
-            <div style="width:140px!important" class="d-flex mx-3 flex-column">
-              <a href="index.html?Search=${this.name}" class="my-2 align-self-center"><img height="100" width="100"  src="Images/Pokemon/${this.name}.png" alt="${this.name} Image"/></a>
-              <div id="${this.nid}" class="d-flex"></div>
-              <h5 style="font-weight: normal; text-align: center;">${this.name}</h5>
-            </div>
-            </li>
+      &lt;li class="list-group-item" style="border: none;">
+            &lt;div style="width:140px!important" class="d-flex mx-3 flex-column">
+              &lt;a href="index.html?Search=${this.name}" class="my-2 align-self-center">&lt;img height="100" width="100"  src="Images/Pokemon/${this.name}.png" alt="${this.name} Image"/>&lt;/a>
+              &lt;div id="${this.nid}" class="d-flex">&lt;/div>
+              &lt;h5 style="font-weight: normal; text-align: center;">${this.name}&lt;/h5>
+            &lt;/div>
+            &lt;/li>
             `);
   }
 
@@ -264,8 +292,8 @@ class Pokemon {
   showTypes() {
     for (const t of this.types) {
       $(`#${this.nid}`).append(`
-          <button class="flex-grow-1 mx-1" style="border: 1px solid black; color: ${textColors[t]}; 
-          font-weight: bold; border-radius: 25px; text-align: center; ${typeColors[t]}" onclick="displayTypesToScreen('${t}')">${t}</button>
+          &lt;button class="flex-grow-1 mx-1" style="border: 1px solid black; color: ${textColors[t]}; 
+          font-weight: bold; border-radius: 25px; text-align: center; ${typeColors[t]}" onclick="displayTypesToScreen('${t}')">${t}&lt;/button>
         `);
     }
   }
@@ -302,23 +330,23 @@ class Item {
       this.isTrue = true;
     }
     $('#items-container').append(`
-          <div class="container">
-            <div class="row searchVal">
-              <div class="d-flex flex-row col-3 mb-3">
-                <img height="50" width="50" src="Images/Items/${tmConversion[this.name]}.png" alt="${this.name} Image"/>
-                <h4 class="ml-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">${this.name}</h4>
-              </div>
-              <div class="flex-row col-1 mb-3">
-                <h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${this.id}</h4>
-              </div>
-              <div class="flex-row col-3 mb-3 mx-auto">
-                <h4 class="mx-3 pt-3 pl-5" style="width: 100%; font-weight: normal; font-size: 14pt;">${this.category}</h4>
-              </div>
-              <div class="flex-row col-5 mb-3">
-                <h4 class="pt-3" style="font-weight: normal; font-size: 14pt;">${this.description}</h4>
-              </div>
-            </div>
-          </div>`);
+          &lt;div class="container">
+            &lt;div class="row searchVal">
+              &lt;div class="d-flex flex-row col-3 mb-3">
+                &lt;img height="50" width="50" src="Images/Items/${tmConversion[this.name]}.png" alt="${this.name} Image"/>
+                &lt;h4 class="ml-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">${this.name}&lt;/h4>
+              &lt;/div>
+              &lt;div class="flex-row col-1 mb-3">
+                &lt;h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${this.id}&lt;/h4>
+              &lt;/div>
+              &lt;div class="flex-row col-3 mb-3 mx-auto">
+                &lt;h4 class="mx-3 pt-3 pl-5" style="width: 100%; font-weight: normal; font-size: 14pt;">${this.category}&lt;/h4>
+              &lt;/div>
+              &lt;div class="flex-row col-5 mb-3">
+                &lt;h4 class="pt-3" style="font-weight: normal; font-size: 14pt;">${this.description}&lt;/h4>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>`);
 
     if (this.isTrue == true) {
       delete tmConversion[this.name];
@@ -351,38 +379,38 @@ class Moves {
    */
   loadMovesToPage(id) {
     holder = '';
-    moveNames = `<h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 1.2em">`;
-    moveTypes = `<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">`;
+    moveNames = `&lt;h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 1.2em">`;
+    moveTypes = `&lt;h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">`;
     if (this.name.length == 2) {
-      for (let i = 0; i < this.name.length; i++) {
-        holder += `<img height="45" width="45" src="Images/Items/${this.type[i]}.png" alt="${this.name[i]} Image"/>`;
+      for (let i = 0; i &lt; this.name.length; i++) {
+        holder += `&lt;img height="45" width="45" src="Images/Items/${this.type[i]}.png" alt="${this.name[i]} Image"/>`;
         moveNames += `${this.name[i]}, `;
         moveTypes += `${this.type[i]}, `;
       }
       moveNames = moveNames.substring(0, moveNames.length - 2);
       moveTypes = moveTypes.substring(0, moveTypes.length - 2);
     } else {
-      holder = `<img height="45" width="45" src="Images/Items/${this.type}.png" alt="${this.name} Image"/>`;
+      holder = `&lt;img height="45" width="45" src="Images/Items/${this.type}.png" alt="${this.name} Image"/>`;
       moveNames += `${this.name}`;
       moveTypes += `${this.type}`;
     }
-    moveNames += `</h4>`;
-    moveTypes += `</h4>`;
+    moveNames += `&lt;/h4>`;
+    moveTypes += `&lt;/h4>`;
 
 
     $(id).append(`
-            <div class="row searchVal">
-              <div class="d-flex flex-row col-5 mb-3">
+            &lt;div class="row searchVal">
+              &lt;div class="d-flex flex-row col-5 mb-3">
                 ${holder}
                 ${moveNames}
-              </div>
-              <div class="d-flex flex-row col-3 mb-3">
-                <h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${this.imgName}</h4>
-              </div>
-              <div class="d-flex flex-row col-3 mb-3">
+              &lt;/div>
+              &lt;div class="d-flex flex-row col-3 mb-3">
+                &lt;h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 14pt">${this.imgName}&lt;/h4>
+              &lt;/div>
+              &lt;div class="d-flex flex-row col-3 mb-3">
                 ${moveTypes}
-              </div>
-            </div>`);
+              &lt;/div>
+            &lt;/div>`);
   }
 }
 
@@ -397,42 +425,42 @@ const displayMovesToScreen = (type) => {
   $('#Center').empty().text(`All ${type} Moves in Generation ${generation}`);
   $('#moves-container').empty();
 
-  for (let i = 0; i < moves[generation - 1]; i++) {
+  for (let i = 0; i &lt; moves[generation - 1]; i++) {
     if (List[i].type.includes(type)) {
       if (List[i].name.length == 2) {
-        for (let j = 0; j < List[i].name.length; j++) {
+        for (let j = 0; j &lt; List[i].name.length; j++) {
           if (List[i].type[j] === type) {
-            attributes.push([[`<img height="45" width="45" src="Images/Items/${List[i].type[j]}.png" alt="${List[i].name[j]} Image"/>`],
-              [`<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">${List[i].type[j]}</h4>`],
-              [`<h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 1.2em">${List[i].name[j]}</h4>`],
-              [`<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">${List[i].imgName}</h4>`]]);
+            attributes.push([[`&lt;img height="45" width="45" src="Images/Items/${List[i].type[j]}.png" alt="${List[i].name[j]} Image"/>`],
+              [`&lt;h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">${List[i].type[j]}&lt;/h4>`],
+              [`&lt;h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 1.2em">${List[i].name[j]}&lt;/h4>`],
+              [`&lt;h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">${List[i].imgName}&lt;/h4>`]]);
           }
         }
       } else {
-        attributes.push([[`<img height="45" width="45" src="Images/Items/${List[i].type}.png" alt="${List[i].name} Image"/>`],
-          [`<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">${List[i].type}</h4>`],
-          [`<h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 1.2em">${List[i].name}</h4>`],
-          [`<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">${List[i].imgName}</h4>`]]);
+        attributes.push([[`&lt;img height="45" width="45" src="Images/Items/${List[i].type}.png" alt="${List[i].name} Image"/>`],
+          [`&lt;h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">${List[i].type}&lt;/h4>`],
+          [`&lt;h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 1.2em">${List[i].name}&lt;/h4>`],
+          [`&lt;h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">${List[i].imgName}&lt;/h4>`]]);
       }
     }
   }
 
-  for (let i = 0; i < attributes.length; i++) {
+  for (let i = 0; i &lt; attributes.length; i++) {
     $('#moves-container').append(`
-          <div class="container">
-            <div class="row searchVal">
-              <div class="d-flex flex-row col-5 mb-3">
+          &lt;div class="container">
+            &lt;div class="row searchVal">
+              &lt;div class="d-flex flex-row col-5 mb-3">
                 ${attributes[i][0]}
                 ${attributes[i][2]}
-              </div>
-              <div class="d-flex flex-row col-3 mb-3">
-                ${attributes[i][3]}</h4>
-              </div>
-              <div class="d-flex flex-row col-3 mb-3">
+              &lt;/div>
+              &lt;div class="d-flex flex-row col-3 mb-3">
+                ${attributes[i][3]}&lt;/h4>
+              &lt;/div>
+              &lt;div class="d-flex flex-row col-3 mb-3">
                 ${attributes[i][1]}
-              </div>
-            </div>
-          </div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
             `);
   }
 
@@ -453,7 +481,7 @@ const displayTypesToScreen = (type) => {
   title = $('#Center').text().split(' ');
 
   $('#myInput').val('');
-  if (title[1] === 'Kalos' && title[2] !== 'Pokémon') {
+  if (title[1] === 'Kalos' &amp;&amp; title[2] !== 'Pokémon') {
     $('#Center').empty().text(`All ${title[1] + ' ' + title[2] + ' ' + type} Pokémon in Database`);
   } else {
     $('#Center').empty().text(`All ${title[1] + ' ' + type} Pokémon in Database`);
@@ -483,22 +511,22 @@ const displayTypesToScreen = (type) => {
 const displayTypesToScreenExtend = (type, num) => {
   display = true;
   $('#pokemon-container').empty();
-  for (let i = 0; i < List.length - num; i++) {
+  for (let i = 0; i &lt; List.length - num; i++) {
     if (List[i].types.includes(type)) {
       holder = '';
       for (const t of List[i].types) {
-        holder += `<button class="flex-grow-1 mx-1" style="border: 1px solid black; color: ${textColors[t]}; 
-        font-weight: bold; border-radius: 25px; text-align: center; ${typeColors[t]}" onclick="displayTypesToScreen('${t}')">${t}</button>`;
+        holder += `&lt;button class="flex-grow-1 mx-1" style="border: 1px solid black; color: ${textColors[t]}; 
+        font-weight: bold; border-radius: 25px; text-align: center; ${typeColors[t]}" onclick="displayTypesToScreen('${t}')">${t}&lt;/button>`;
       }
       $('#pokemon-container').append(`
-        <li class="list-group-item" style="border: none;">
-              <div style="width:140px!important" class="d-flex mx-3 flex-column">
-                <a href="index.html?Search=${List[i].name}" class="my-2 align-self-center"><img height="100" width="100" src="Images/Pokemon/${List[i].name}.png" 
-                alt="${List[i].name} Image"/></a>
-                <div id="${List[i].nid}" class="d-flex">${holder}</div>
-                <h5 style="font-weight: normal; text-align: center;">${List[i].name}</h5>
-              </div>
-              </li>
+        &lt;li class="list-group-item" style="border: none;">
+              &lt;div style="width:140px!important" class="d-flex mx-3 flex-column">
+                &lt;a href="index.html?Search=${List[i].name}" class="my-2 align-self-center">&lt;img height="100" width="100" src="Images/Pokemon/${List[i].name}.png" 
+                alt="${List[i].name} Image"/>&lt;/a>
+                &lt;div id="${List[i].nid}" class="d-flex">${holder}&lt;/div>
+                &lt;h5 style="font-weight: normal; text-align: center;">${List[i].name}&lt;/h5>
+              &lt;/div>
+              &lt;/li>
             `);
     }
   }
@@ -548,11 +576,11 @@ const moveScroll = (id, ceil) => {
   if (display === false) {
     if ($('#myInput').val() == '') {
       if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-        for (index; index < moves[ceil]; index++) {
+        for (index; index &lt; moves[ceil]; index++) {
           viewHeight = Math.ceil($(window).height() / 90);
-          if (index < List.length) {
-            for (let i = 0; i < viewHeight; i++) {
-              if (index < moves[ceil]) {
+          if (index &lt; List.length) {
+            for (let i = 0; i &lt; viewHeight; i++) {
+              if (index &lt; moves[ceil]) {
                 List[index].loadMovesToPage(id);
                 index++;
               } else {
@@ -560,7 +588,7 @@ const moveScroll = (id, ceil) => {
               }
             }
           } else {
-            for (index; index < moves[0]; index++) {
+            for (index; index &lt; moves[0]; index++) {
               List[index].loadMovesToPage(id);
             }
           }
@@ -579,15 +607,15 @@ const itemScroll = () => {
   if (display === false) {
     if ($('#myInput').val() == '') {
       if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-        for (index; index < List.length; index++) {
+        for (index; index &lt; List.length; index++) {
           viewHeight = Math.ceil($(window).height() / 90);
-          if (index < List.length) {
-            for (let i = 0; i < viewHeight; i++) {
+          if (index &lt; List.length) {
+            for (let i = 0; i &lt; viewHeight; i++) {
               List[index].loadItemsToPage();
               index++;
             }
           } else {
-            for (index; index < List.length; index++) {
+            for (index; index &lt; List.length; index++) {
               List[index].loadItemsToPage();
             }
           }
@@ -607,16 +635,16 @@ const scroll = (value) => {
   if (display === false) {
     if ($('#myInput').val() == '') {
       if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-        for (index; index < List.length - value; index++) {
+        for (index; index &lt; List.length - value; index++) {
           width = (document.getElementById('pokemon-container').offsetWidth / $('.list-group-item').outerWidth()) * 2 - 1;
-          if (index < List.length - width) {
-            for (let i = 0; i < width; i++) {
+          if (index &lt; List.length - width) {
+            for (let i = 0; i &lt; width; i++) {
               List[index].loadToPage();
               List[index].showTypes();
               index++;
             }
           } else {
-            for (index; index < List.length - value; index++) {
+            for (index; index &lt; List.length - value; index++) {
               List[index].loadToPage();
               List[index].showTypes();
             }
@@ -636,37 +664,60 @@ const loadSeen = () => {
   title = $('#Center').text().split(' ');
   display = false;
 
-  if (title[1] === 'Kalos' && title[2] !== 'Pokémon') {
+  if (title[1] === 'Kalos' &amp;&amp; title[2] !== 'Pokémon') {
     $('#Center').text(`All ${title[1]} ${title[2]} Pokémon in Database`);
-    for (let i = 0; i < index; i++) {
+    for (let i = 0; i &lt; index; i++) {
       List[i].loadToPage();
       List[i].showTypes();
     }
   } else if (title[1] === 'Item') {
-    for (let i = 0; i < index; i++) {
+    for (let i = 0; i &lt; index; i++) {
       List[i].loadItemsToPage();
     }
   } else if (title.includes('Moves')) {
     $('#Center').text('Pokémon Moves List');
     $('#moves-container').empty().append(`
-    <div style="width: 100%;">
-      <h4 class="KalosTextStyle">Gen ${generation} Moves</h4>
-      <div id="Gen${generation}" class="container"></div>
-    </div>
+    &lt;div style="width: 100%;">
+      &lt;h4 class="KalosTextStyle">Gen ${generation} Moves&lt;/h4>
+      &lt;div id="Gen${generation}" class="container">&lt;/div>
+    &lt;/div>
   `);
 
-    $(`#Gen${generation}`).append(`<div class="mt-4"><div class="row"><div class="col-5"><h4 class="font-italic pl-5">Name</h4></div><div class="col-3">
-  <h4 class="font-italic pl-4" class="pr-3">TM</h4></div><div class="col-3"><h4 class="font-italic pl-4" class="pr-3">
-  Type</h4></div></div>`);
+    $(`#Gen${generation}`).append(`&lt;div class="mt-4">&lt;div class="row">&lt;div class="col-5">&lt;h4 class="font-italic pl-5">Name&lt;/h4>&lt;/div>&lt;div class="col-3">
+  &lt;h4 class="font-italic pl-4" class="pr-3">TM&lt;/h4>&lt;/div>&lt;div class="col-3">&lt;h4 class="font-italic pl-4" class="pr-3">
+  Type&lt;/h4>&lt;/div>&lt;/div>`);
 
-    for (let i = 0; i < index; i++) {
+    for (let i = 0; i &lt; index; i++) {
       List[i].loadMovesToPage(`#Gen${generation}`);
     }
   } else {
     $('#Center').text(`All ${title[1]} Pokémon in Database`);
-    for (let i = 0; i < index; i++) {
+    for (let i = 0; i &lt; index; i++) {
       List[i].loadToPage();
       List[i].showTypes();
     }
   }
 };
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Item.html">Item</a></li><li><a href="Moves.html">Moves</a></li><li><a href="Pokemon.html">Pokemon</a></li><li><a href="TypeList.html">TypeList</a></li><li><a href="Types.html">Types</a></li></ul><h3>Global</h3><ul><li><a href="global.html#AJAX">AJAX</a></li><li><a href="global.html#AlolaAjax">AlolaAjax</a></li><li><a href="global.html#AlolanJSON">AlolanJSON</a></li><li><a href="global.html#AlolanRegionAjax">AlolanRegionAjax</a></li><li><a href="global.html#AlolanRegionsJSON">AlolanRegionsJSON</a></li><li><a href="global.html#AlolaOnLoad">AlolaOnLoad</a></li><li><a href="global.html#arrayIndex">arrayIndex</a></li><li><a href="global.html#attributes">attributes</a></li><li><a href="global.html#display">display</a></li><li><a href="global.html#displayMovesToScreen">displayMovesToScreen</a></li><li><a href="global.html#displayTypesToScreen">displayTypesToScreen</a></li><li><a href="global.html#displayTypesToScreenExtend">displayTypesToScreenExtend</a></li><li><a href="global.html#generation">generation</a></li><li><a href="global.html#HoennAjax">HoennAjax</a></li><li><a href="global.html#HoennJSON">HoennJSON</a></li><li><a href="global.html#HoennOnLoad">HoennOnLoad</a></li><li><a href="global.html#holder">holder</a></li><li><a href="global.html#index">index</a></li><li><a href="global.html#ItemsAjax">ItemsAjax</a></li><li><a href="global.html#itemScroll">itemScroll</a></li><li><a href="global.html#ItemSearch">ItemSearch</a></li><li><a href="global.html#ItemsJSON">ItemsJSON</a></li><li><a href="global.html#ItemsOnLoad">ItemsOnLoad</a></li><li><a href="global.html#JohtoAjax">JohtoAjax</a></li><li><a href="global.html#JohtoJSON">JohtoJSON</a></li><li><a href="global.html#JohtoOnLoad">JohtoOnLoad</a></li><li><a href="global.html#KalosAjax">KalosAjax</a></li><li><a href="global.html#KalosJSON">KalosJSON</a></li><li><a href="global.html#KalosOnLoad">KalosOnLoad</a></li><li><a href="global.html#KalosRegionAjax">KalosRegionAjax</a></li><li><a href="global.html#KalosRegionsJSON">KalosRegionsJSON</a></li><li><a href="global.html#KantoJSON">KantoJSON</a></li><li><a href="global.html#KantoLoad">KantoLoad</a></li><li><a href="global.html#KantoOnLoad">KantoOnLoad</a></li><li><a href="global.html#List">List</a></li><li><a href="global.html#loadAkala">loadAkala</a></li><li><a href="global.html#loadAlola">loadAlola</a></li><li><a href="global.html#loadCentral">loadCentral</a></li><li><a href="global.html#loadCoastal">loadCoastal</a></li><li><a href="global.html#loadGen">loadGen</a></li><li><a href="global.html#loadKalos">loadKalos</a></li><li><a href="global.html#loadKanto">loadKanto</a></li><li><a href="global.html#loadLetsGo">loadLetsGo</a></li><li><a href="global.html#loadMelemele">loadMelemele</a></li><li><a href="global.html#loadMountain">loadMountain</a></li><li><a href="global.html#loadPoni">loadPoni</a></li><li><a href="global.html#loadSeen">loadSeen</a></li><li><a href="global.html#loadUlaula">loadUlaula</a></li><li><a href="global.html#moveNames">moveNames</a></li><li><a href="global.html#moves">moves</a></li><li><a href="global.html#MovesAjax">MovesAjax</a></li><li><a href="global.html#moveScroll">moveScroll</a></li><li><a href="global.html#MoveSearch">MoveSearch</a></li><li><a href="global.html#MovesJSON">MovesJSON</a></li><li><a href="global.html#MovesLoad">MovesLoad</a></li><li><a href="global.html#moveTypes">moveTypes</a></li><li><a href="global.html#names">names</a></li><li><a href="global.html#NationalAjax">NationalAjax</a></li><li><a href="global.html#NationalJSON">NationalJSON</a></li><li><a href="global.html#NationalOnLoad">NationalOnLoad</a></li><li><a href="global.html#OnScroll">OnScroll</a></li><li><a href="global.html#PokemonSearch">PokemonSearch</a></li><li><a href="global.html#scroll">scroll</a></li><li><a href="global.html#SinnohAjax">SinnohAjax</a></li><li><a href="global.html#SinnohJSON">SinnohJSON</a></li><li><a href="global.html#SinnohOnLoad">SinnohOnLoad</a></li><li><a href="global.html#splitVal">splitVal</a></li><li><a href="global.html#textColors">textColors</a></li><li><a href="global.html#title">title</a></li><li><a href="global.html#tmConversion">tmConversion</a></li><li><a href="global.html#toTitleCase">toTitleCase</a></li><li><a href="global.html#typeColors">typeColors</a></li><li><a href="global.html#typeEffectiveness">typeEffectiveness</a></li><li><a href="global.html#typeList">typeList</a></li><li><a href="global.html#types">types</a></li><li><a href="global.html#UnovaAjax">UnovaAjax</a></li><li><a href="global.html#UnovaJSON">UnovaJSON</a></li><li><a href="global.html#UnovaOnLoad">UnovaOnLoad</a></li><li><a href="global.html#viewHeight">viewHeight</a></li><li><a href="global.html#width">width</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri May 03 2019 09:52:08 GMT-0500 (Central Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

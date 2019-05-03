@@ -2,7 +2,7 @@
     "plugins": [],
     "recurseDepth": 10,
     "source": {
-        "include": ["../../JS/SearchPokemon.js", "../../JS/AlolanRegions.js", "../../JS/AlolaPokemon.js", "../../JS/Items.js", "../../JS/HoennPokemon.js", "../../JS/JohtoPokemon.js", "../../JS/KalosPokemon.js", "../../JS/KalosRegions.js", "../../JS/Moves.js", "../../JS/KantoPokemon.js", "../../JS/NationalPokemon.js", "../../JS/SinnohPokemon.js", "../../JS/UnovaPokemon.js", "../../JS/TypeChart.js"],
+        "include": ["../../JS/SearchPokemon.js", "../../JS/AlolanRegions.js", "../../JS/AlolaPokemon.js", "../../JS/Items.js", "../../JS/HoennPokemon.js", "../../JS/JohtoPokemon.js", "../../JS/KalosPokemon.js", "../../JS/KalosRegions.js", "../../JS/Moves.js", "../../JS/KantoPokemon.js", "../../JS/NationalPokemon.js", "../../JS/SinnohPokemon.js", "../../JS/UnovaPokemon.js", "../../JS/TypeChart.js", "../../JS/Master.js"],
         "includePattern": ".+\\.js(doc|x)?$",
         "excludePattern": "(^|\\/|\\\\)_"
     },

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: HoennPokemon.js</title>
+    <title>JSDoc: Class: Pokemon</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,109 +17,413 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: HoennPokemon.js</h1>
+    <h1 class="page-title">Class: Pokemon</h1>
 
     
 
 
 
+
+<section>
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>/* eslint-disable no-unused-vars */
-/**
- * @file Loads the entire Hoenn Pokedex
- * @author Matthew Moore
- * @version 1.0.0
- * @since 1.0.0
- */
+        <h2><span class="attribs"><span class="type-signature"></span></span>Pokemon<span class="signature">(nid<span class="signature-attributes">non-null</span>, name<span class="signature-attributes">non-null</span>, types<span class="signature-attributes">non-null</span>)</span><span class="type-signature"></span></h2>
+        
+            <div class="class-description">Appends the name, image, and type of the Pokemon to the screen</div>
+        
+    
+</header>
 
-/**
-  *  Index within the List to be used with other functions
-  *  @type {!number}
-  *  @default 0
-  */
-let index = 0;
-/**
-  *  Array to hold the Pokemon objects
-  *  @constant
-  *  @type {!Array}
-  *  @default []
-  */
-const List = [];
-/**
- * Array to hold types of Pokemon
- * @type {!Array}
- * @default []
- */
-let splitVal = [];
-/**
- * Array to hold types of Pokemon if splitVal has a length of two
- * @type {!Array}
- * @default []
- */
-let types = [];
+<article>
+    <div class="container-overview">
+    
+        
 
-/**
- * Call a database, or a JSON file if database fails, and get Pokemon information
- * @function HoennOnLoad
- */
-window.onload = () => {
-  $('#Center').text('The Hoenn Pokémon List by Pokédex Number');
-  $('#myInput').val('');
-  $('#pokemon-container').empty();
-  /**
-   * Call the database to get Hoenn Pokemon information
-   * @function HoennAjax
-   * @param   {string} data A JSON encoded list of Pokemon from the Hoenn pokedex
-   */
-  $.ajax('pkdata.php?content=hoenn').then((data) => {
-    try {
-      /**
-       * A JSON decoded array of Pokemon information
-       * @type {!Array}
-       */
-      data = JSON.parse(data);
-      for (let i = 0; i &lt; data.length; i++) {
-        splitVal = data[i][2].replace(/\n/gi, '').replace(/\r/gi, '').split(' ');
-        if (splitVal.length === 1) {
-          List.push(new Pokemon(data[i][0], data[i][1], splitVal));
-        } else {
-          types = [splitVal[0], splitVal[1]];
-          List.push(new Pokemon(data[i][0], data[i][1], types));
-        }
-      }
-    } catch (err) {
-      throw err;
-    }
-  }).catch((xhr, status, error) => {
-    /**
-      * Gets the Hoenn json file if the database query fails
-      * @function HoennJSON
-      *
-      * @param {Array} data A list of objects with the Pokemon's name, type, and id
-      *
-      * @return {Array} An array of all the Hoenn Pokemon
-      */
-    return $.getJSON('../JSON/hoenn.json', function(data) {
-      for (let i = 0; i &lt; data['pokemon'].length; i++) {
-        List.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
-      }
-    });
-  }).always(() => {
-    for (index; index &lt; List.length; index++) {
-      if ($(window).scrollTop() === $(document).height() - $(window).height()) {
-        List[index].loadToPage();
-        List[index].showTypes();
-      } else {
-        break;
-      }
-    }
-  });
-};
-</code></pre>
-        </article>
-    </section>
+    
+    <h2>Constructor</h2>
+    
+
+    
+    <h4 class="name" id="Pokemon"><span class="type-signature"></span>new Pokemon<span class="signature">(nid<span class="signature-attributes">non-null</span>, name<span class="signature-attributes">non-null</span>, types<span class="signature-attributes">non-null</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Constructor of Pokemon that takes in the id, name, and type(s) of the Pokemon
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>nid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A number that represents the id of the Pokemon</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A string that represents that name of the Pokemon</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>types</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An array or string that represents the type(s) of the Pokemon</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Master.js.html">Master.js</a>, <a href="Master.js.html#line231">line 231</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="loadToPage"><span class="type-signature"></span>loadToPage<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Will load the Pokemon information to the page
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Master.js.html">Master.js</a>, <a href="Master.js.html#line248">line 248</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="showTypes"><span class="type-signature"></span>showTypes<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Will show the Pokemon types below their image
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Master.js.html">Master.js</a>, <a href="Master.js.html#line264">line 264</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 
