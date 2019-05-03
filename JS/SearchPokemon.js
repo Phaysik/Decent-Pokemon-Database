@@ -26,6 +26,7 @@ const toTitleCase = (phrase) => {
 const PokemonSearch = () => {
   $(document).ready(function() {
   /**
+  * A string that the user inputs
   * @type {!string}
   */
     let value = $('#myInput').val().toLowerCase();
@@ -53,7 +54,9 @@ const PokemonSearch = () => {
 const ItemSearch = () => {
   $(document).ready(function() {
   /**
-  * @constant {!string}
+  * A string that the user inputs
+  * @constant
+  * @type {!string}
   */
     const value = $('#myInput').val().toLowerCase();
     $('#items-container').empty();
@@ -77,7 +80,9 @@ const ItemSearch = () => {
 const MoveSearch = () => {
   $(document).ready(function() {
   /**
-  * @constant {!string}
+  * A string that the user inputs
+  * @constant
+  * @type {!string}
   */
     const value = $('#myInput').val().toLowerCase();
     $('#moves-container').empty().append(`

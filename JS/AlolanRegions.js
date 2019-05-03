@@ -10,13 +10,13 @@
  */
 const loadMelemele = () => {
   /**
+  *  Index within the List to be used with other functions
   *  @type {!number}
-  *  @default [0]
   */
   index = 0;
   /**
+  *  Array to hold the Pokemon objects
   *  @type {!Array}
-  *  @default [[]]
   */
   List = [];
   $('#Center').text('The Melemele Pokémon List by Pokédex Number');
@@ -30,13 +30,13 @@ const loadMelemele = () => {
  */
 const loadAkala = () => {
   /**
+  *  Index within the List to be used with other functions
   *  @type {!number}
-  *  @default [0]
   */
   index = 0;
   /**
+  *  Array to hold the Pokemon objects
   *  @type {!Array}
-  *  @default [[]]
   */
   List = [];
   $('#Center').text('The Akala Pokémon List by Pokédex Number');
@@ -50,13 +50,13 @@ const loadAkala = () => {
  */
 const loadUlaula = () => {
   /**
+  *  Index within the List to be used with other functions
   *  @type {!number}
-  *  @default [0]
   */
   index = 0;
   /**
+  *  Array to hold the Pokemon objects
   *  @type {!Array}
-  *  @default [[]]
   */
   List = [];
   $('#Center').text('The Ulaula Pokémon List by Pokédex Number');
@@ -70,13 +70,13 @@ const loadUlaula = () => {
  */
 const loadPoni = () => {
   /**
+  *  Index within the List to be used with other functions
   *  @type {!number}
-  *  @default [0]
   */
   index = 0;
   /**
+  *  Array to hold the Pokemon objects
   *  @type {!Array}
-  *  @default [[]]
   */
   List = [];
   $('#Center').text('The Poni Pokémon List by Pokédex Number');
@@ -86,16 +86,19 @@ const loadPoni = () => {
 };
 
 /**
+ * Call a database, or a JSON file if database fails, and get Pokemon information
  * @param   {string} region A string that contains a query to be used when calling a database
  */
 const AJAX = (region) => {
   /**
+  * Call the database to get Alolan Region Pokemon information
   * @function AlolanRegionAjax
   * @param   {string} data A JSON encoded list of Alolan pokemon based on region
   */
   $.ajax('pkdata.php?' + region).then((data) => {
     try {
       /**
+      *  A JSON decoded array of Pokemon information
       *  @type {!Array}
       */
       data = JSON.parse(data);
@@ -113,6 +116,7 @@ const AJAX = (region) => {
     }
   }).catch((xhr, status, error) => {
     /**
+    * Gets the Alolan Region json file if the database query fails
     * @function AlolanRegionsJSON
     *
     * @param {Array} data A list of objects with the Pokemon's name, type, and id

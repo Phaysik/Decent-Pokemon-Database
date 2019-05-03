@@ -1,41 +1,119 @@
 /* eslint-disable no-unused-vars */
-let index = 0;
-let List = [];
+/**
+ * @file Loads the entire Kanto Pokedex
+ * @author Matthew Moore
+ * @version 1.0.0
+ * @since 1.0.0
+ */
 
-window.onload = function() {
+/**
+  *  Index within the List to be used with other functions
+  *  @type {!number}
+  *  @default 0
+  */
+let index = 0;
+/**
+  *  Array to hold the Pokemon objects
+  *  @type {!Array}
+  *  @default []
+  */
+let List = [];
+/**
+ * Array to hold types of Pokemon
+ * @type {!Array}
+ * @default []
+ */
+let splitVal = [];
+/**
+ * Array to hold types of Pokemon if splitVal has a length of two
+ * @type {!Array}
+ * @default []
+ */
+let types = [];
+
+/**
+ * Call a database, or a JSON file if database fails, and get Pokemon information
+ * @function KantoOnLoad
+ */
+window.onload = () => {
   loadKanto();
 };
 
-function loadKanto() {
+/**
+ * Will load all the Pokemon from the Kanto reigon to the page
+ */
+const loadKanto = () => {
+  /**
+  *  Index within the List to be used with other functions
+  *  @type {!number}
+  */
   index = 0;
-  display = false;
+  /**
+  *  Array to hold the Pokemon objects
+  *  @type {!Array}
+  */
   List = [];
+  /**
+  *  Boolean value to determine if Pokemon need to be shown
+  *  @type {!boolean}
+  *  @default false
+  */
+  display = false;
   $('#Center').text('The Kanto Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
   AJAX('content=kanto');
-}
+};
 
-function loadLetsGo() {
+/**
+ * Will load all the Pokemon from the Kanto reigon, including those in Let's Go, to the page
+ */
+const loadLetsGo = () => {
+  /**
+  *  Index within the List to be used with other functions
+  *  @type {!number}
+  */
   index = 0;
-  display = false;
+  /**
+  *  Array to hold the Pokemon objects
+  *  @type {!Array}
+  */
   List = [];
+  /**
+  *  Boolean value to determine if Pokemon need to be shown
+  *  @type {!boolean}
+  *  @default false
+  */
+  display = false;
   $('#Center').text('The Expansion Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
   AJAX('content=LG');
-}
+};
 
+/**
+ * Call a database, or a JSON file if database fails, and get Pokemon information
+ * @param   {string} game A string that contains a query to be used when calling a database
+ */
 function AJAX(game) {
+  /**
+   * Call the database to get Kanto Pokemon information
+   * @function KantoLoad
+   * @param   {string} data A JSON encoded list of Pokemon from the Kanto pokedex
+   */
   $.ajax('pkdata.php?' + game).then((data) => {
     try {
+    /**
+    *  A JSON decoded array of Pokemon information
+    *  @type {!Array}
+    */
       data = JSON.parse(data);
       for (let i = 0; i < data.length; i++) {
-        const splitVal = data[i][2].replace(/\n/gi, '').split(' ');
+        splitVal = data[i][2].replace(/\n/gi, '').split(' ');
         if (splitVal.length === 1) {
           List.push(new Pokemon(data[i][0], data[i][1], splitVal));
         } else {
-          const types = [splitVal[0], splitVal[1]];
+          types = [splitVal[0], splitVal[1]];
           List.push(new Pokemon(data[i][0], data[i][1], types));
         }
       }
@@ -43,6 +121,14 @@ function AJAX(game) {
       throw err;
     }
   }).catch((xhr, status, error) => {
+  /**
+  * Gets the Kanto json file if the database query fails
+  * @function KantoJSON
+  *
+  * @param {Array} data A list of objects with the Pokemon's name, type, and id
+  *
+  * @return {Array} An array of all the Kanto Pokemon
+  */
     return $.getJSON('../JSON/kanto.json', function(data) {
       for (let i = 0; i < data['pokemon'].length; i++) {
         List.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));

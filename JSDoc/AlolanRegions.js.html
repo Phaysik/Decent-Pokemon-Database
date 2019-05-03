@@ -38,13 +38,13 @@
  */
 const loadMelemele = () => {
   /**
+  *  Index within the List to be used with other functions
   *  @type {!number}
-  *  @default [0]
   */
   index = 0;
   /**
+  *  Array to hold the Pokemon objects
   *  @type {!Array}
-  *  @default [[]]
   */
   List = [];
   $('#Center').text('The Melemele Pokémon List by Pokédex Number');
@@ -58,13 +58,13 @@ const loadMelemele = () => {
  */
 const loadAkala = () => {
   /**
+  *  Index within the List to be used with other functions
   *  @type {!number}
-  *  @default [0]
   */
   index = 0;
   /**
+  *  Array to hold the Pokemon objects
   *  @type {!Array}
-  *  @default [[]]
   */
   List = [];
   $('#Center').text('The Akala Pokémon List by Pokédex Number');
@@ -78,13 +78,13 @@ const loadAkala = () => {
  */
 const loadUlaula = () => {
   /**
+  *  Index within the List to be used with other functions
   *  @type {!number}
-  *  @default [0]
   */
   index = 0;
   /**
+  *  Array to hold the Pokemon objects
   *  @type {!Array}
-  *  @default [[]]
   */
   List = [];
   $('#Center').text('The Ulaula Pokémon List by Pokédex Number');
@@ -98,13 +98,13 @@ const loadUlaula = () => {
  */
 const loadPoni = () => {
   /**
+  *  Index within the List to be used with other functions
   *  @type {!number}
-  *  @default [0]
   */
   index = 0;
   /**
+  *  Array to hold the Pokemon objects
   *  @type {!Array}
-  *  @default [[]]
   */
   List = [];
   $('#Center').text('The Poni Pokémon List by Pokédex Number');
@@ -114,16 +114,19 @@ const loadPoni = () => {
 };
 
 /**
+ * Call a database, or a JSON file if database fails, and get Pokemon information
  * @param   {string} region A string that contains a query to be used when calling a database
  */
 const AJAX = (region) => {
   /**
+  * Call the database to get Alolan Region Pokemon information
   * @function AlolanRegionAjax
   * @param   {string} data A JSON encoded list of Alolan pokemon based on region
   */
   $.ajax('pkdata.php?' + region).then((data) => {
     try {
       /**
+      *  A JSON decoded array of Pokemon information
       *  @type {!Array}
       */
       data = JSON.parse(data);
@@ -141,6 +144,7 @@ const AJAX = (region) => {
     }
   }).catch((xhr, status, error) => {
     /**
+    * Gets the Alolan Region json file if the database query fails
     * @function AlolanRegionsJSON
     *
     * @param {Array} data A list of objects with the Pokemon's name, type, and id
@@ -173,13 +177,13 @@ const AJAX = (region) => {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AJAX">AJAX</a></li><li><a href="global.html#AlolanJSON">AlolanJSON</a></li><li><a href="global.html#AlolanRegionAjax">AlolanRegionAjax</a></li><li><a href="global.html#AlolanRegionsJSON">AlolanRegionsJSON</a></li><li><a href="global.html#AlolaOnLoad">AlolaOnLoad</a></li><li><a href="global.html#HoennAjax">HoennAjax</a></li><li><a href="global.html#HoennJSON">HoennJSON</a></li><li><a href="global.html#HoennOnLoad">HoennOnLoad</a></li><li><a href="global.html#index">index</a></li><li><a href="global.html#ItemsAjax">ItemsAjax</a></li><li><a href="global.html#ItemSearch">ItemSearch</a></li><li><a href="global.html#ITEMSJSON">ITEMSJSON</a></li><li><a href="global.html#ItemsOnLoad">ItemsOnLoad</a></li><li><a href="global.html#JohtoOnLoad">JohtoOnLoad</a></li><li><a href="global.html#List">List</a></li><li><a href="global.html#loadAkala">loadAkala</a></li><li><a href="global.html#loadAlola">loadAlola</a></li><li><a href="global.html#loadMelemele">loadMelemele</a></li><li><a href="global.html#loadPoni">loadPoni</a></li><li><a href="global.html#loadUlaula">loadUlaula</a></li><li><a href="global.html#MoveSearch">MoveSearch</a></li><li><a href="global.html#PokemonSearch">PokemonSearch</a></li><li><a href="global.html#splitVal">splitVal</a></li><li><a href="global.html#toTitleCase">toTitleCase</a></li><li><a href="global.html#types">types</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AJAX">AJAX</a></li><li><a href="global.html#AlolaAjax">AlolaAjax</a></li><li><a href="global.html#AlolanJSON">AlolanJSON</a></li><li><a href="global.html#AlolanRegionAjax">AlolanRegionAjax</a></li><li><a href="global.html#AlolanRegionsJSON">AlolanRegionsJSON</a></li><li><a href="global.html#AlolaOnLoad">AlolaOnLoad</a></li><li><a href="global.html#generation">generation</a></li><li><a href="global.html#HoennAjax">HoennAjax</a></li><li><a href="global.html#HoennJSON">HoennJSON</a></li><li><a href="global.html#HoennOnLoad">HoennOnLoad</a></li><li><a href="global.html#index">index</a></li><li><a href="global.html#ItemsAjax">ItemsAjax</a></li><li><a href="global.html#ItemSearch">ItemSearch</a></li><li><a href="global.html#ITEMSJSON">ITEMSJSON</a></li><li><a href="global.html#ItemsOnLoad">ItemsOnLoad</a></li><li><a href="global.html#JohtoAjax">JohtoAjax</a></li><li><a href="global.html#JohtoJSON">JohtoJSON</a></li><li><a href="global.html#JohtoOnLoad">JohtoOnLoad</a></li><li><a href="global.html#KalosAjax">KalosAjax</a></li><li><a href="global.html#KalosJSON">KalosJSON</a></li><li><a href="global.html#KalosOnLoad">KalosOnLoad</a></li><li><a href="global.html#KalosRegionAjax">KalosRegionAjax</a></li><li><a href="global.html#KalosRegionsJSON">KalosRegionsJSON</a></li><li><a href="global.html#KantoJSON">KantoJSON</a></li><li><a href="global.html#KantoLoad">KantoLoad</a></li><li><a href="global.html#KantoOnLoad">KantoOnLoad</a></li><li><a href="global.html#List">List</a></li><li><a href="global.html#loadAkala">loadAkala</a></li><li><a href="global.html#loadAlola">loadAlola</a></li><li><a href="global.html#loadCentral">loadCentral</a></li><li><a href="global.html#loadCoastal">loadCoastal</a></li><li><a href="global.html#loadGen">loadGen</a></li><li><a href="global.html#loadKalos">loadKalos</a></li><li><a href="global.html#loadKanto">loadKanto</a></li><li><a href="global.html#loadLetsGo">loadLetsGo</a></li><li><a href="global.html#loadMelemele">loadMelemele</a></li><li><a href="global.html#loadMountain">loadMountain</a></li><li><a href="global.html#loadPoni">loadPoni</a></li><li><a href="global.html#loadUlaula">loadUlaula</a></li><li><a href="global.html#moves">moves</a></li><li><a href="global.html#MovesAjax">MovesAjax</a></li><li><a href="global.html#MoveSearch">MoveSearch</a></li><li><a href="global.html#MovesJSON">MovesJSON</a></li><li><a href="global.html#MovesLoad">MovesLoad</a></li><li><a href="global.html#names">names</a></li><li><a href="global.html#NationalAjax">NationalAjax</a></li><li><a href="global.html#NationalJSON">NationalJSON</a></li><li><a href="global.html#NationalOnLoad">NationalOnLoad</a></li><li><a href="global.html#PokemonSearch">PokemonSearch</a></li><li><a href="global.html#SinnohAjax">SinnohAjax</a></li><li><a href="global.html#SinnohJSON">SinnohJSON</a></li><li><a href="global.html#SinnohOnLoad">SinnohOnLoad</a></li><li><a href="global.html#splitVal">splitVal</a></li><li><a href="global.html#toTitleCase">toTitleCase</a></li><li><a href="global.html#types">types</a></li><li><a href="global.html#UnovaAjax">UnovaAjax</a></li><li><a href="global.html#UnovaJSON">UnovaJSON</a></li><li><a href="global.html#UnovaOnLoad">UnovaOnLoad</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu May 02 2019 16:25:29 GMT-0500 (Central Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu May 02 2019 19:05:15 GMT-0500 (Central Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

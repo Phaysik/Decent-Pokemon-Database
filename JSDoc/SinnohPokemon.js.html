@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: Items.js</title>
+    <title>JSDoc: Source: SinnohPokemon.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: Items.js</h1>
+    <h1 class="page-title">Source: SinnohPokemon.js</h1>
 
     
 
@@ -26,8 +26,9 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
- * @file Loads all the Items
+            <pre class="prettyprint source linenums"><code>/* eslint-disable no-unused-vars */
+/**
+ * @file Loads the entire Sinnoh Pokedex
  * @author Matthew Moore
  * @version 1.0.0
  * @since 1.0.0
@@ -40,59 +41,76 @@
   */
 let index = 0;
 /**
-  *  Array to hold the Item objects
+  *  Array to hold the Pokemon objects
   *  @constant
   *  @type {!Array}
   *  @default []
   */
 const List = [];
+/**
+ * Array to hold types of Pokemon
+ * @type {!Array}
+ * @default []
+ */
+let splitVal = [];
+/**
+ * Array to hold types of Pokemon if splitVal has a length of two
+ * @type {!Array}
+ * @default []
+ */
+let types = [];
 
 /**
- * Call a database, or a JSON file if database fails, and get Item information
- * @function ItemsOnLoad
+ * Call a database, or a JSON file if database fails, and get Pokemon information
+ * @function SinnohOnLoad
  */
-window.onload = () => {
-  $('#Center').text('Pokémon Item List');
+window.onload = function() {
+  $('#Center').text('The Sinnoh Pokémon List by Pokédex Number');
   $('#myInput').val('');
-  $('#items-container').empty().append(`&lt;div class="container mt-4">&lt;div class="row">&lt;div class="col-3">&lt;h4 class="KalosTextStyle">
-  Name&lt;/h4>&lt;/div>&lt;div class="col-1">&lt;h4 class="KalosTextStyle">Gen&lt;/h4>&lt;/div>&lt;div class="col-3">&lt;h4 class="KalosTextStyle pr-3">Category&lt;/h4>
-  &lt;/div>&lt;div class="col-5">&lt;h4 class="KalosTextStyle pr-5">Description&lt;/h4>&lt;/div>&lt;/div>&lt;/div>`);
+  $('#pokemon-container').empty();
   /**
-   * Call the database to get Items information
-   * @function ItemsAjax
-   * @param   {string} data A JSON encoded list of Items
-   */
-  $.ajax('pkdata.php?content=items').then((data) => {
+  * Call the database to get Sinnoh Pokemon information
+  * @function SinnohAjax
+  * @param   {string} data A JSON encoded list of Sinnoh pokemon
+  */
+  $.ajax('pkdata.php?content=sinnoh').then((data) => {
     try {
-      /**
-       * A JSON decoded array of Items information
-       * @type {!Array}
-       */
+    /**
+     *  A JSON decoded array of Pokemon infromation
+     *  @type {!Array}
+     */
       data = JSON.parse(data);
       for (let i = 0; i &lt; data.length; i++) {
-        List.push(new Item(data[i][0], data[i][1], data[i][2], data[i][3]));
+        splitVal = data[i][2].replace(/\n/gi, '').split(' ');
+        if (splitVal.length === 1) {
+          List.push(new Pokemon(data[i][0], data[i][1], splitVal));
+        } else {
+          types = [splitVal[0], splitVal[1]];
+          List.push(new Pokemon(data[i][0], data[i][1], types));
+        }
       }
     } catch (err) {
       throw err;
     }
   }).catch((xhr, status, error) => {
-    /**
-      * Gets the Items json file if the database query fails
-      * @function ITEMSJSON
-      *
-      * @param {Array} data A list of objects with the Item's name, id, category, and description
-      *
-      * @return {Array} An array of all the Items
-      */
-    return $.getJSON('../JSON/items.json', function(data) {
-      for (let i = 0; i &lt; data['item'].length; i++) {
-        List.push(new Item(data['item'][i].name, data['item'][i].id, data['item'][i].category, data['item'][i].description));
+  /**
+  * Gets the Sinnoh json file if the database query fails
+  * @function SinnohJSON
+  *
+  * @param {Array} data A list of objects with the Pokemon's name, type, and id
+  *
+  * @return {Array} An array of all the Sinnoh Pokemon
+  */
+    return $.getJSON('../JSON/sinnoh.json', function(data) {
+      for (let i = 0; i &lt; data['pokemon'].length; i++) {
+        List.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
       }
     });
   }).always(() => {
     for (index; index &lt; List.length; index++) {
       if ($(window).scrollTop() === $(document).height() - $(window).height()) {
-        List[index].loadItemsToPage();
+        List[index].loadToPage();
+        List[index].showTypes();
       } else {
         break;
       }

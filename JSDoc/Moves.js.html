@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: Items.js</title>
+    <title>JSDoc: Source: Moves.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: Items.js</h1>
+    <h1 class="page-title">Source: Moves.js</h1>
 
     
 
@@ -26,8 +26,9 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
- * @file Loads all the Items
+            <pre class="prettyprint source linenums"><code>/* eslint-disable no-unused-vars */
+/**
+ * @file Loads the Moves based on Generation
  * @author Matthew Moore
  * @version 1.0.0
  * @since 1.0.0
@@ -40,60 +41,115 @@
   */
 let index = 0;
 /**
-  *  Array to hold the Item objects
-  *  @constant
+ * Number to determine what generation of moves to get
+ * @type {!number}
+ * @default 0
+ */
+let generation = 0;
+/**
+  *  Array to hold the Moves objects
   *  @type {!Array}
   *  @default []
   */
-const List = [];
+let List = [];
+/**
+ * Array to hold names if the tm has a different name from different generations
+ * @type {!Array}
+ * @default []
+ */
+let names = [];
+/**
+ * Array to hold how many moves are in each generation
+ * @constant {!Array}
+ * @default [50, 50, 50, 92, 95, 100, 100]
+ */
+const moves = [50, 50, 50, 92, 95, 100, 100];
 
 /**
- * Call a database, or a JSON file if database fails, and get Item information
- * @function ItemsOnLoad
+ * Call loadGen() with the default parameter of '1'
+ * @function MovesLoad
  */
 window.onload = () => {
-  $('#Center').text('Pokémon Item List');
-  $('#myInput').val('');
-  $('#items-container').empty().append(`&lt;div class="container mt-4">&lt;div class="row">&lt;div class="col-3">&lt;h4 class="KalosTextStyle">
-  Name&lt;/h4>&lt;/div>&lt;div class="col-1">&lt;h4 class="KalosTextStyle">Gen&lt;/h4>&lt;/div>&lt;div class="col-3">&lt;h4 class="KalosTextStyle pr-3">Category&lt;/h4>
-  &lt;/div>&lt;div class="col-5">&lt;h4 class="KalosTextStyle pr-5">Description&lt;/h4>&lt;/div>&lt;/div>&lt;/div>`);
+  loadGen(1);
+};
+
+/**
+ * Loads moves from specific generation
+ * @param {number} genSet A number to set the generation of moves wanted
+ */
+const loadGen = (genSet) => {
   /**
-   * Call the database to get Items information
-   * @function ItemsAjax
-   * @param   {string} data A JSON encoded list of Items
-   */
-  $.ajax('pkdata.php?content=items').then((data) => {
+  *  Set generation to be the nunmber loadGen was called with
+  *  @type {!number}
+  */
+  generation = genSet;
+  /**
+  *  Index within the List to be used with other functions
+  *  @type {!number}
+  */
+  index = 0;
+  /**
+  *  Array to hold the Pokemon objects
+  *  @type {!Array}
+  */
+  List = [];
+  $('#Center').text('Pokémon Moves List');
+  $('#myInput').val('');
+  $('#moves-container').empty().append(`
+  &lt;div style="width: 100%;">
+    &lt;h4 class="KalosTextStyle">Gen ${generation} Moves&lt;/h4>
+    &lt;div id="Gen${generation}" class="container">&lt;/div>
+  &lt;/div>
+  `);
+
+  $(`#Gen${generation}`).append(`&lt;div class="mt-4">&lt;div class="row">&lt;div class="col-5">&lt;h4 class="font-italic pl-5">Name&lt;/h4>&lt;/div>&lt;div class="col-3">
+  &lt;h4 class="font-italic pl-4" class="pr-3">TM&lt;/h4>&lt;/div>&lt;div class="col-3">&lt;h4 class="font-italic pl-4" class="pr-3">Type&lt;/h4>&lt;/div>&lt;/div>`);
+
+  /**
+  * Call the database to get Moves information
+  * @function MovesAjax
+  * @param   {string} data A JSON encoded list of Moves
+  */
+  $.ajax(`pkdata.php?content=${generation}`).then((data) => {
     try {
-      /**
-       * A JSON decoded array of Items information
-       * @type {!Array}
-       */
+    /**
+     *  A JSON decoded array of Move information
+     *  @type {!Array}
+     */
       data = JSON.parse(data);
       for (let i = 0; i &lt; data.length; i++) {
-        List.push(new Item(data[i][0], data[i][1], data[i][2], data[i][3]));
+        if (data[i][2].includes(',')) {
+          names = data[i][1].split(',');
+          types = data[i][2].split(',');
+          List.push(new Moves(data[i][0], [names[0], names[1]], [types[0], types[1].replace(/\n/, '')]));
+        } else {
+          List.push(new Moves(data[i][0], data[i][1], data[i][2].replace(/\n/, '')));
+        }
       }
     } catch (err) {
       throw err;
     }
   }).catch((xhr, status, error) => {
-    /**
-      * Gets the Items json file if the database query fails
-      * @function ITEMSJSON
-      *
-      * @param {Array} data A list of objects with the Item's name, id, category, and description
-      *
-      * @return {Array} An array of all the Items
-      */
-    return $.getJSON('../JSON/items.json', function(data) {
-      for (let i = 0; i &lt; data['item'].length; i++) {
-        List.push(new Item(data['item'][i].name, data['item'][i].id, data['item'][i].category, data['item'][i].description));
+  /**
+  * Gets the Moves json file if the database query fails
+  * @function MovesJSON
+  *
+  * @param {Array} data A list of objects with the Moves's imgName, name, and type
+  *
+  * @return {Array} An array of all the Moves of that specified generation
+  */
+    return $.getJSON('../JSON/moves.json', function(data) {
+      for (let i = 0; i &lt; data['moves'].length; i++) {
+        List.push(new Moves(data['moves'][i].imgName, data['moves'][i].name, data['moves'][i].type));
       }
     });
   }).always(() => {
-    for (index; index &lt; List.length; index++) {
+    for (index; index &lt; moves[generation - 1]; index++) {
       if ($(window).scrollTop() === $(document).height() - $(window).height()) {
-        List[index].loadItemsToPage();
+        List[index].loadMovesToPage(`#Gen${generation}`);
       } else {
+        List[index].loadMovesToPage(`#Gen${generation}`);
+        index++;
         break;
       }
     }

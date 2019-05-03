@@ -6,15 +6,21 @@
  */
 
 /**
- * @type {!number}
- */
+  *  Index within the List to be used with other functions
+  *  @type {!number}
+  *  @default 0
+  */
 let index = 0;
 /**
- * @type {!Array}
- */
+  *  Array to hold the Item objects
+  *  @constant
+  *  @type {!Array}
+  *  @default []
+  */
 const List = [];
 
 /**
+ * Call a database, or a JSON file if database fails, and get Item information
  * @function ItemsOnLoad
  */
 window.onload = () => {
@@ -24,12 +30,14 @@ window.onload = () => {
   Name</h4></div><div class="col-1"><h4 class="KalosTextStyle">Gen</h4></div><div class="col-3"><h4 class="KalosTextStyle pr-3">Category</h4>
   </div><div class="col-5"><h4 class="KalosTextStyle pr-5">Description</h4></div></div></div>`);
   /**
+   * Call the database to get Items information
    * @function ItemsAjax
    * @param   {string} data A JSON encoded list of Items
    */
   $.ajax('pkdata.php?content=items').then((data) => {
     try {
       /**
+       * A JSON decoded array of Items information
        * @type {!Array}
        */
       data = JSON.parse(data);
@@ -41,11 +49,12 @@ window.onload = () => {
     }
   }).catch((xhr, status, error) => {
     /**
+      * Gets the Items json file if the database query fails
       * @function ITEMSJSON
       *
       * @param {Array} data A list of objects with the Item's name, id, category, and description
       *
-      * @return {Array} An array of all the Pokemon of that specified region
+      * @return {Array} An array of all the Items
       */
     return $.getJSON('../JSON/items.json', function(data) {
       for (let i = 0; i < data['item'].length; i++) {
