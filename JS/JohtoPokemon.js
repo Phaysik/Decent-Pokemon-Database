@@ -14,7 +14,6 @@
 let index = 0;
 /**
   *  Array to hold the Pokemon objects
-  *  @constant
   *  @type {!Array}
   *  @default []
   */
