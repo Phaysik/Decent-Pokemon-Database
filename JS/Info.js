@@ -13,7 +13,7 @@ let val = '';
 const urlPath = window.location.href.split('?');
 let datalist;
 
-window.onload = function() {
+window.onload = () => {
   datalist = document.getElementById('datalist');
 
   $.getJSON('../JSON/national.json', function(data) {
@@ -56,7 +56,7 @@ window.onload = function() {
   });
 };
 
-window.onpopstate = function() { // If the user navigates back / forward in the history
+window.onpopstate = () => { // If the user navigates back / forward in the history
   document.location.reload();
 };
 

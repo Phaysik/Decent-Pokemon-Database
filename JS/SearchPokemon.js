@@ -5,6 +5,13 @@
  * @version 1.0.0
  * @since 1.0.0
  */
+
+/**
+ * A number to hold the id of the Pokemon to display
+ * @type {!number}
+ * @default 0
+ */
+let listIndex = 0;
 /**
  * Takes a string and changes the first character of each word to be uppercase
  * @example
@@ -37,16 +44,11 @@ const PokemonSearch = (type, func) => {
     value = (value.includes(':')) ? value.replace(/:/, '꞉') : value;
 
     if (value !== '') {
-      for (let g = 0; g < List.length; g++) {
-        for (let j = 0; j < searchList.length; j++) {
-          if (searchList[j].dataset.src.includes(List[g].name)) {
-            if (List[g].name.toLowerCase().includes(value) || (List[g].types.length === 1 && List[g].types[0].toLowerCase().indexOf(value) >= 0) ||
-              (List[g].types.length === 2 && (List[g].types[0].toLowerCase().indexOf(value) >= 0 || List[g].types[1].toLowerCase().indexOf(value) >= 0))) {
-              List[g].loadToPage();
-              List[g].showTypes();
-              break;
-            }
-          }
+      for (let g = 0; g < searchList.length; g++) {
+        if (searchList[g].dataset.src.toLowerCase().includes(value)) {
+          listIndex = List.find((x) => x.name == searchList[g].dataset.src.split('/')[2].split('.')[0].trim()).nid;
+          List[listIndex].loadToPage();
+          List[listIndex].showTypes();
         }
       }
     } else {

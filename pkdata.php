@@ -1,101 +1,109 @@
 <?php
 
-$content = $_REQUEST["content"];
+// $content = $_REQUEST["content"];
 
-switch ($content) {
-    case "national":
-        pokedex("SELECT * FROM pokemon ");
-        break;
-    case "kanto":
-        pokedex("SELECT * FROM pokemon JOIN generation1 WHERE generation1.game = 1 AND pokemon.id = generation1.id");
-        break;
-    case "LG":
-        pokedex("SELECT * FROM pokemon JOIN generation1 WHERE pokemon.id = generation1.id");
-        break;
-    case "johto":
-        pokedex("SELECT * FROM pokemon JOIN generation2 WHERE pokemon.id = generation2.id");
-        break;
-    case "hoenn":
-        pokedex("SELECT * FROM pokemon JOIN generation3 WHERE pokemon.id = generation3.id");
-        break;
-    case "sinnoh":
-        pokedex("SELECT * FROM pokemon JOIN generation4 WHERE pokemon.id = generation4.id");
-        break;
-    case "unova":
-        pokedex("SELECT * FROM pokemon JOIN generation5 WHERE pokemon.id = generation5.id");
-        break;
-    case "kalos":
-        pokedex("SELECT * FROM pokemon JOIN generation6 WHERE pokemon.id = generation6.id");
-        break;
-    case "central":
-        pokedex("SELECT * FROM generation6 WHERE region = 'Central'");
-        break;
-    case "coastal":
-        pokedex("SELECT * FROM generation6 WHERE region = 'Coastal'");
-        break;
-    case "mountain":
-        pokedex("SELECT * FROM generation6 WHERE region = 'Mountain'");
-        break;
-    case "alola":
-        pokedex("SELECT * FROM pokemon JOIN generation7 WHERE pokemon.id = generation7.id");
-        break;
-    case "melemele":
-        pokedex("SELECT * FROM generation7 WHERE region LIKE '%Melemele%'");
-        break;
-    case "akala":
-        pokedex("SELECT * FROM generation7 WHERE region LIKE '%Akala%'");
-        break;
-    case "ulaula":
-        pokedex("SELECT * FROM generation7 WHERE region LIKE '%Ulaula%'");
-        break;
-    case "poni":
-        pokedex("SELECT * FROM generation7 WHERE region LIKE '%Poni%'");
-        break;     
-    case "items":
-        items("SELECT * FROM items");
-        break;
-    case "1":
-        moves("SELECT * FROM moves WHERE gen = 1");
-        break;
-    case "2":
-        moves("SELECT * FROM moves WHERE gen = 2");
-        break;
-    case "3":
-        moves("SELECT * FROM moves WHERE gen = 3");
-        break;
-    case "4":
-        moves("SELECT * FROM moves WHERE gen = 4");
-        break;
-    case "5":
-        moves("SELECT * FROM moves WHERE gen = 5");
-        break;
-    case "6":
-        moves("SELECT * FROM moves WHERE gen = 6");
-        break;
-    case "7":
-        moves("SELECT * FROM moves WHERE gen = 7");
-        break;
-}
+// switch ($content) {
+//     case "national":
+//         pokedex("SELECT * FROM pokemon ");
+//         break;
+//     case "kanto":
+//         pokedex("SELECT * FROM pokemon JOIN generation1 WHERE generation1.game = 1 AND pokemon.id = generation1.id");
+//         break;
+//     case "LG":
+//         pokedex("SELECT * FROM pokemon JOIN generation1 WHERE pokemon.id = generation1.id");
+//         break;
+//     case "johto":
+//         pokedex("SELECT * FROM pokemon JOIN generation2 WHERE pokemon.id = generation2.id");
+//         break;
+//     case "hoenn":
+//         pokedex("SELECT * FROM pokemon JOIN generation3 WHERE pokemon.id = generation3.id");
+//         break;
+//     case "sinnoh":
+//         pokedex("SELECT * FROM pokemon JOIN generation4 WHERE pokemon.id = generation4.id");
+//         break;
+//     case "unova":
+//         pokedex("SELECT * FROM pokemon JOIN generation5 WHERE pokemon.id = generation5.id");
+//         break;
+//     case "kalos":
+//         pokedex("SELECT * FROM pokemon JOIN generation6 WHERE pokemon.id = generation6.id");
+//         break;
+//     case "central":
+//         pokedex("SELECT * FROM generation6 WHERE region = 'Central'");
+//         break;
+//     case "coastal":
+//         pokedex("SELECT * FROM generation6 WHERE region = 'Coastal'");
+//         break;
+//     case "mountain":
+//         pokedex("SELECT * FROM generation6 WHERE region = 'Mountain'");
+//         break;
+//     case "alola":
+//         pokedex("SELECT * FROM pokemon JOIN generation7 WHERE pokemon.id = generation7.id");
+//         break;
+//     case "melemele":
+//         pokedex("SELECT * FROM generation7 WHERE region LIKE '%Melemele%'");
+//         break;
+//     case "akala":
+//         pokedex("SELECT * FROM generation7 WHERE region LIKE '%Akala%'");
+//         break;
+//     case "ulaula":
+//         pokedex("SELECT * FROM generation7 WHERE region LIKE '%Ulaula%'");
+//         break;
+//     case "poni":
+//         pokedex("SELECT * FROM generation7 WHERE region LIKE '%Poni%'");
+//         break;     
+//     case "items":
+//         items("SELECT * FROM items");
+//         break;
+//     case "1":
+//         moves("SELECT * FROM moves WHERE gen = 1");
+//         break;
+//     case "2":
+//         moves("SELECT * FROM moves WHERE gen = 2");
+//         break;
+//     case "3":
+//         moves("SELECT * FROM moves WHERE gen = 3");
+//         break;
+//     case "4":
+//         moves("SELECT * FROM moves WHERE gen = 4");
+//         break;
+//     case "5":
+//         moves("SELECT * FROM moves WHERE gen = 5");
+//         break;
+//     case "6":
+//         moves("SELECT * FROM moves WHERE gen = 6");
+//         break;
+//     case "7":
+//         moves("SELECT * FROM moves WHERE gen = 7");
+//         break;
+// }
 
-// getFile();
+getFile();
 function getFile() {
     $file = fopen("Output.txt","r");
-    $tmName = array();
-    $name = array();
-    $type = array();
+    $hp = array();
+    $att = array();
+    $def = array();
+    $spat = array();
+    $spdef = array();
+    $speed = array();
+    $tot = array();
 
     while(!feof($file))
     {
-        // array_push($name, fgets($file));
+        // array_push($desc, fgets($file));
         $line = explode ("|", fgets($file));
-        array_push($tmName, $line[0]);
-        array_push($name, $line[1]);
-        array_push($type, $line[2]);
+        array_push($hp, $line[0]);
+        array_push($att, $line[1]);
+        array_push($def, $line[2]);
+        array_push($spat, $line[3]);
+        array_push($spdef, $line[4]);
+        array_push($speed, $line[5]);
+        array_push($tot, $line[6]);
     }
 
     $con = mysqli_connect('localhost','pkdata','LqMth9j8E9GuHYAL','pkdata', '8889');
-    for ($i = 0; $i < count($name); $i++) {
-        $sql = "INSERT INTO moves (tmName, name, type, gen) VALUES ('$tmName[$i]', '$name[$i]', '$type[$i]', 7)";
+    for ($i = 0; $i < count($hp); $i++) {
+        $sql = "INSERT INTO stats (HP, ATTACK, DEFENSE, SP_ATK, SP_DEF, SPEED, TOTAL) VALUES ('$hp[$i]', '$att[$i]', '$def[$i]', '$spat[$i]', '$spdef[$i]', '$speed[$i]', '$tot[$i]')";
         if ($con->query($sql) === TRUE) {
             continue;
         } else {
