@@ -44,6 +44,94 @@ const moves = [50, 50, 50, 92, 95, 100, 100];
  */
 window.onload = () => {
   loadGen(1);
+  $('#Moves').click(function() {
+    detGen();
+  });
+  $('#1').click(function() {
+    loadGen(1);
+  });
+  $('#2').click(function() {
+    loadGen(2);
+  });
+  $('#3').click(function() {
+    loadGen(3);
+  });
+  $('#4').click(function() {
+    loadGen(4);
+  });
+  $('#5').click(function() {
+    loadGen(5);
+  });
+  $('#6').click(function() {
+    loadGen(6);
+  });
+  $('#7').click(function() {
+    loadGen(7);
+  });
+  $('#Normal').click(function() {
+    displayMovesToScreen('Normal');
+  });
+  $('#Fire').click(function() {
+    displayMovesToScreen('Fire');
+  });
+  $('#Water').click(function() {
+    displayMovesToScreen('Water');
+  });
+  $('#Electric').click(function() {
+    displayMovesToScreen('Electric');
+  });
+  $('#Grass').click(function() {
+    displayMovesToScreen('Grass');
+  });
+  $('#Ice').click(function() {
+    displayMovesToScreen('Ice');
+  });
+  $('#Fighting').click(function() {
+    displayMovesToScreen('Fighting');
+  });
+  $('#Poison').click(function() {
+    displayMovesToScreen('Poison');
+  });
+  $('#Ground').click(function() {
+    displayMovesToScreen('Ground');
+  });
+  $('#Flying').click(function() {
+    displayMovesToScreen('Flying');
+  });
+  $('#Psychic').click(function() {
+    displayMovesToScreen('Psychic');
+  });
+  $('#Bug').click(function() {
+    displayMovesToScreen('Bug');
+  });
+  $('#Rock').click(function() {
+    displayMovesToScreen('Rock');
+  });
+  $('#Ghost').click(function() {
+    displayMovesToScreen('Ghost');
+  });
+  $('#Dragon').click(function() {
+    displayMovesToScreen('Dragon');
+  });
+  $('#Dark').click(function() {
+    displayMovesToScreen('Dark');
+  });
+  $('#Steel').click(function() {
+    displayMovesToScreen('Steel');
+  });
+  $('#Fairy').click(function() {
+    displayMovesToScreen('Fairy');
+  });
+  $('#myInput').keyup(function() {
+    MoveSearch();
+  });
+};
+
+/**
+ * Load the current generation of moves when getting all moves after only seeing a certain type
+ */
+const detGen = () => {
+  loadGen(generation);
 };
 
 /**
@@ -118,13 +206,8 @@ const loadGen = (genSet) => {
     });
   }).always(() => {
     for (index; index < moves[generation - 1]; index++) {
-      if ($(window).scrollTop() === $(document).height() - $(window).height()) {
-        List[index].loadMovesToPage(`#Gen${generation}`);
-      } else {
-        List[index].loadMovesToPage(`#Gen${generation}`);
-        index++;
-        break;
-      }
+      List[index].loadMovesToPage(`#Gen${generation}`);
     }
+    Lazy();
   });
 };

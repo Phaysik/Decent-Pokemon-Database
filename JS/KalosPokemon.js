@@ -23,13 +23,27 @@ let List = [];
  * @type {!Array}
  * @default []
  */
-let splitVal = [];
+splitVal = [];
 /**
  * Array to hold types of Pokemon if splitVal has a length of two
  * @type {!Array}
  * @default []
  */
-let types = [];
+types = [];
+
+/**
+ * String to hold the type of the Pokemon wanted
+ * @type {!string}
+ * @default '''
+ */
+let type = '';
+
+/**
+ * String to hold the region selected
+ * @type {!string}
+ * @default '''
+ */
+let region = '';
 
 /**
  * Call the loadKalos() function
@@ -38,7 +52,34 @@ let types = [];
  */
 window.onload = () => {
   loadKalos();
+  $('.Kalos').click(function() {
+    loadKalos();
+  });
+  $('#Central').click(function() {
+    loadCentral();
+  });
+  $('#Coastal').click(function() {
+    loadCoastal();
+  });
+  $('#Mountain').click(function() {
+    loadMountain();
+  });
+  typeClick();
+  $('#myInput').keyup(function() {
+    type = $('#Center').text().split(' ')[3];
+    region = $('#Center').text().split(' ')[2];
+    if (region === 'Pokémon') {
+      PokemonSearch(type, loadKalos);
+    } else if (region === 'Central') {
+      PokemonSearch(type, loadCentral);
+    } else if (region === 'Coastal') {
+      PokemonSearch(type, loadCoastal);
+    } else {
+      PokemonSearch(type, loadMountain);
+    }
+  });
 };
+
 
 /**
  * Will load all the Pokemon from the Melemele reigon to the page
@@ -97,12 +138,9 @@ const loadKalos = () => {
     });
   }).always(() => {
     for (index; index < List.length; index++) {
-      if ($(window).scrollTop() === $(document).height() - $(window).height()) {
-        List[index].loadToPage();
-        List[index].showTypes();
-      } else {
-        break;
-      }
+      List[index].loadToPage();
+      List[index].showTypes();
     }
+    Lazy();
   });
 };

@@ -61,7 +61,7 @@
           </ul>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mr-auto">
-              <input class="form-control" id="myInput" type="text" onkeyup="MoveSearch()" placeholder="Search for Moves...">
+              <input class="form-control" id="myInput" type="text" placeholder="Search for Moves...">
             </li>
 
             <li class="nav-item dropdown mr-auto">
@@ -69,13 +69,13 @@
                 Specify Generation
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item pointer" onclick="loadGen(1)">Gen 1 Moves</a>
-                <a class="dropdown-item pointer" onclick="loadGen(2)">Gen 2 Moves</a>
-                <a class="dropdown-item pointer" onclick="loadGen(3)">Gen 3 Moves</a>
-                <a class="dropdown-item pointer" onclick="loadGen(4)">Gen 4 Moves</a>
-                <a class="dropdown-item pointer" onclick="loadGen(5)">Gen 5 Moves</a>
-                <a class="dropdown-item pointer" onclick="loadGen(6)">Gen 6 Moves</a>
-                <a class="dropdown-item pointer" onclick="loadGen(7)">Gen 7 Moves</a>
+                <a class="dropdown-item pointer" id="1">Gen 1 Moves</a>
+                <a class="dropdown-item pointer" id="2">Gen 2 Moves</a>
+                <a class="dropdown-item pointer" id="3">Gen 3 Moves</a>
+                <a class="dropdown-item pointer" id="4">Gen 4 Moves</a>
+                <a class="dropdown-item pointer" id="5">Gen 5 Moves</a>
+                <a class="dropdown-item pointer" id="6">Gen 6 Moves</a>
+                <a class="dropdown-item pointer" id="7">Gen 7 Moves</a>
               </div>
             </li>
 
@@ -84,25 +84,25 @@
                 Sort by Move Type
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item pointer" onclick="loadSeen()">All Moves</a>
-                <a class="dropdown-item pointer" onclick="displayMovesToScreen('Normal')">Normal</a>
-                <a class="dropdown-item pointer" onclick="displayMovesToScreen('Fire')">Fire</a>
-                <a class="dropdown-item pointer" onclick="displayMovesToScreen('Water')">Water</a>
-                <a class="dropdown-item pointer" onclick="displayMovesToScreen('Electric')">Electric</a>
-                <a class="dropdown-item pointer" onclick="displayMovesToScreen('Grass')">Grass</a>
-                <a class="dropdown-item pointer" onclick="displayMovesToScreen('Ice')">Ice</a>
-                <a class="dropdown-item pointer" onclick="displayMovesToScreen('Fighting')">Fighting</a>
-                <a class="dropdown-item pointer" onclick="displayMovesToScreen('Poison')">Poison</a>
-                <a class="dropdown-item pointer" onclick="displayMovesToScreen('Ground')">Ground</a>
-                <a class="dropdown-item pointer" onclick="displayMovesToScreen('Flying')">Flying</a>
-                <a class="dropdown-item pointer" onclick="displayMovesToScreen('Psychic')">Psychic</a>
-                <a class="dropdown-item pointer" onclick="displayMovesToScreen('Bug')">Bug</a>
-                <a class="dropdown-item pointer" onclick="displayMovesToScreen('Rock')">Rock</a>
-                <a class="dropdown-item pointer" onclick="displayMovesToScreen('Ghost')">Ghost</a>
-                <a class="dropdown-item pointer" onclick="displayMovesToScreen('Dragon')">Dragon</a>
-                <a class="dropdown-item pointer" onclick="displayMovesToScreen('Dark')">Dark</a>
-                <a class="dropdown-item pointer" onclick="displayMovesToScreen('Steel')">Steel</a>
-                <a class="dropdown-item pointer" onclick="displayMovesToScreen('Fairy')">Fairy</a>
+                <a class="dropdown-item pointer" id="Moves">All Moves</a>
+                <a class="dropdown-item pointer" id="Normal">Normal</a>
+                <a class="dropdown-item pointer" id="Fire">Fire</a>
+                <a class="dropdown-item pointer" id="Water">Water</a>
+                <a class="dropdown-item pointer" id="Electric">Electric</a>
+                <a class="dropdown-item pointer" id="Grass">Grass</a>
+                <a class="dropdown-item pointer" id="Ice">Ice</a>
+                <a class="dropdown-item pointer" id="Fighting">Fighting</a>
+                <a class="dropdown-item pointer" id="Poison">Poison</a>
+                <a class="dropdown-item pointer" id="Ground">Ground</a>
+                <a class="dropdown-item pointer" id="Flying">Flying</a>
+                <a class="dropdown-item pointer" id="Psychic">Psychic</a>
+                <a class="dropdown-item pointer" id="Bug">Bug</a>
+                <a class="dropdown-item pointer" id="Rock">Rock</a>
+                <a class="dropdown-item pointer" id="Ghost">Ghost</a>
+                <a class="dropdown-item pointer" id="Dragon">Dragon</a>
+                <a class="dropdown-item pointer" id="Dark">Dark</a>
+                <a class="dropdown-item pointer" id="Steel">Steel</a>
+                <a class="dropdown-item pointer" id="Fairy">Fairy</a>
               </div>
             </li>
           </ul>

@@ -33,10 +33,33 @@ let splitVal = [];
 let types = [];
 
 /**
- * Call a database, or a JSON file if database fails, and get Pokemon information
+ * String to hold the type of the Pokemon wanted
+ * @type {!string}
+ * @default '''
+ */
+let type = '';
+
+/**
+ * Calls the loadJohto() function
  * @function JohtoOnLoad
+ * @see loadJohto
  */
 window.onload = () => {
+  loadJohto();
+  $('#Johto').click(function() {
+    loadJohto();
+  });
+  typeClick();
+  $('#myInput').keyup(function() {
+    type = $('#Center').text().split(' ')[2];
+    PokemonSearch(type, loadJohto);
+  });
+};
+
+/**
+ * Loads all the Johto Pokemon to the page
+ */
+const loadJohto = () => {
   $('#Center').text('The Johto Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
@@ -47,10 +70,10 @@ window.onload = () => {
    */
   $.ajax('pkdata.php?' + 'content=johto').then((data) => {
     try {
-    /**
-    *  A JSON decoded array of Pokemon information
-    *  @type {!Array}
-    */
+      /**
+       *  A JSON decoded array of Pokemon information
+       *  @type {!Array}
+       */
       data = JSON.parse(data);
       for (let i = 0; i < data.length; i++) {
         splitVal = data[i][2].replace(/\n/gi, '').replace(/\r/gi, '').split(' ');
@@ -66,13 +89,13 @@ window.onload = () => {
     }
   }).catch((xhr, status, error) => {
     /**
-      * Gets the Johto json file if the database query fails
-      * @function JohtoJSON
-      *
-      * @param {Array} data A list of objects with the Pokemon's name, type, and id
-      *
-      * @return {Array} An array of all the Johto Pokemon
-      */
+     * Gets the Johto json file if the database query fails
+     * @function JohtoJSON
+     *
+     * @param {Array} data A list of objects with the Pokemon's name, type, and id
+     *
+     * @return {Array} An array of all the Johto Pokemon
+     */
     return $.getJSON('../JSON/johto.json', function(data) {
       for (let i = 0; i < data['pokemon'].length; i++) {
         List.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
@@ -80,12 +103,9 @@ window.onload = () => {
     });
   }).always(() => {
     for (index; index < List.length; index++) {
-      if ($(window).scrollTop() === $(document).height() - $(window).height()) {
-        List[index].loadToPage();
-        List[index].showTypes();
-      } else {
-        break;
-      }
+      List[index].loadToPage();
+      List[index].showTypes();
     }
+    Lazy();
   });
 };

@@ -61,10 +61,33 @@ let splitVal = [];
 let types = [];
 
 /**
- * Call a database, or a JSON file if database fails, and get Pokemon information
+ * String to hold the type of the Pokemon wanted
+ * @type {!string}
+ * @default '''
+ */
+let type = '';
+
+/**
+ * calls the loadNational() function
  * @function NationalOnLoad
+ * @see loadNational
  */
 window.onload = () => {
+  loadNational();
+  $('#National').click(function() {
+    loadNational();
+  });
+  typeClick();
+  $('#myInput').keyup(function() {
+    type = $('#Center').text().split(' ')[2];
+    PokemonSearch(type, loadNational);
+  });
+};
+
+/**
+ * Loads the entire Pokedex to the page
+ */
+const loadNational = () => {
   $('#Center').text('The National Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
@@ -108,13 +131,10 @@ window.onload = () => {
     });
   }).always(() => {
     for (index; index &lt; List.length; index++) {
-      if ($(window).scrollTop() === $(document).height() - $(window).height()) {
-        List[index].loadToPage();
-        List[index].showTypes();
-      } else {
-        break;
-      }
+      List[index].loadToPage();
+      List[index].showTypes();
     }
+    Lazy();
   });
 };
 </code></pre>
@@ -127,13 +147,13 @@ window.onload = () => {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Item.html">Item</a></li><li><a href="Moves.html">Moves</a></li><li><a href="Pokemon.html">Pokemon</a></li><li><a href="TypeList.html">TypeList</a></li><li><a href="Types.html">Types</a></li></ul><h3>Global</h3><ul><li><a href="global.html#AJAX">AJAX</a></li><li><a href="global.html#AlolaAjax">AlolaAjax</a></li><li><a href="global.html#AlolanJSON">AlolanJSON</a></li><li><a href="global.html#AlolanRegionAjax">AlolanRegionAjax</a></li><li><a href="global.html#AlolanRegionsJSON">AlolanRegionsJSON</a></li><li><a href="global.html#AlolaOnLoad">AlolaOnLoad</a></li><li><a href="global.html#arrayIndex">arrayIndex</a></li><li><a href="global.html#attributes">attributes</a></li><li><a href="global.html#display">display</a></li><li><a href="global.html#displayMovesToScreen">displayMovesToScreen</a></li><li><a href="global.html#displayTypesToScreen">displayTypesToScreen</a></li><li><a href="global.html#displayTypesToScreenExtend">displayTypesToScreenExtend</a></li><li><a href="global.html#generation">generation</a></li><li><a href="global.html#HoennAjax">HoennAjax</a></li><li><a href="global.html#HoennJSON">HoennJSON</a></li><li><a href="global.html#HoennOnLoad">HoennOnLoad</a></li><li><a href="global.html#holder">holder</a></li><li><a href="global.html#index">index</a></li><li><a href="global.html#ItemsAjax">ItemsAjax</a></li><li><a href="global.html#itemScroll">itemScroll</a></li><li><a href="global.html#ItemSearch">ItemSearch</a></li><li><a href="global.html#ItemsJSON">ItemsJSON</a></li><li><a href="global.html#ItemsOnLoad">ItemsOnLoad</a></li><li><a href="global.html#JohtoAjax">JohtoAjax</a></li><li><a href="global.html#JohtoJSON">JohtoJSON</a></li><li><a href="global.html#JohtoOnLoad">JohtoOnLoad</a></li><li><a href="global.html#KalosAjax">KalosAjax</a></li><li><a href="global.html#KalosJSON">KalosJSON</a></li><li><a href="global.html#KalosOnLoad">KalosOnLoad</a></li><li><a href="global.html#KalosRegionAjax">KalosRegionAjax</a></li><li><a href="global.html#KalosRegionsJSON">KalosRegionsJSON</a></li><li><a href="global.html#KantoJSON">KantoJSON</a></li><li><a href="global.html#KantoLoad">KantoLoad</a></li><li><a href="global.html#KantoOnLoad">KantoOnLoad</a></li><li><a href="global.html#List">List</a></li><li><a href="global.html#loadAkala">loadAkala</a></li><li><a href="global.html#loadAlola">loadAlola</a></li><li><a href="global.html#loadCentral">loadCentral</a></li><li><a href="global.html#loadCoastal">loadCoastal</a></li><li><a href="global.html#loadGen">loadGen</a></li><li><a href="global.html#loadKalos">loadKalos</a></li><li><a href="global.html#loadKanto">loadKanto</a></li><li><a href="global.html#loadLetsGo">loadLetsGo</a></li><li><a href="global.html#loadMelemele">loadMelemele</a></li><li><a href="global.html#loadMountain">loadMountain</a></li><li><a href="global.html#loadPoni">loadPoni</a></li><li><a href="global.html#loadSeen">loadSeen</a></li><li><a href="global.html#loadUlaula">loadUlaula</a></li><li><a href="global.html#moveNames">moveNames</a></li><li><a href="global.html#moves">moves</a></li><li><a href="global.html#MovesAjax">MovesAjax</a></li><li><a href="global.html#moveScroll">moveScroll</a></li><li><a href="global.html#MoveSearch">MoveSearch</a></li><li><a href="global.html#MovesJSON">MovesJSON</a></li><li><a href="global.html#MovesLoad">MovesLoad</a></li><li><a href="global.html#moveTypes">moveTypes</a></li><li><a href="global.html#names">names</a></li><li><a href="global.html#NationalAjax">NationalAjax</a></li><li><a href="global.html#NationalJSON">NationalJSON</a></li><li><a href="global.html#NationalOnLoad">NationalOnLoad</a></li><li><a href="global.html#OnScroll">OnScroll</a></li><li><a href="global.html#PokemonSearch">PokemonSearch</a></li><li><a href="global.html#scroll">scroll</a></li><li><a href="global.html#SinnohAjax">SinnohAjax</a></li><li><a href="global.html#SinnohJSON">SinnohJSON</a></li><li><a href="global.html#SinnohOnLoad">SinnohOnLoad</a></li><li><a href="global.html#splitVal">splitVal</a></li><li><a href="global.html#textColors">textColors</a></li><li><a href="global.html#title">title</a></li><li><a href="global.html#tmConversion">tmConversion</a></li><li><a href="global.html#toTitleCase">toTitleCase</a></li><li><a href="global.html#typeColors">typeColors</a></li><li><a href="global.html#typeEffectiveness">typeEffectiveness</a></li><li><a href="global.html#typeList">typeList</a></li><li><a href="global.html#types">types</a></li><li><a href="global.html#UnovaAjax">UnovaAjax</a></li><li><a href="global.html#UnovaJSON">UnovaJSON</a></li><li><a href="global.html#UnovaOnLoad">UnovaOnLoad</a></li><li><a href="global.html#viewHeight">viewHeight</a></li><li><a href="global.html#width">width</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Item.html">Item</a></li><li><a href="Moves.html">Moves</a></li><li><a href="Pokemon.html">Pokemon</a></li><li><a href="TypeList.html">TypeList</a></li><li><a href="Types.html">Types</a></li></ul><h3>Global</h3><ul><li><a href="global.html#AJAX">AJAX</a></li><li><a href="global.html#AlolaAjax">AlolaAjax</a></li><li><a href="global.html#AlolanJSON">AlolanJSON</a></li><li><a href="global.html#AlolanRegionAjax">AlolanRegionAjax</a></li><li><a href="global.html#AlolanRegionsJSON">AlolanRegionsJSON</a></li><li><a href="global.html#AlolaOnLoad">AlolaOnLoad</a></li><li><a href="global.html#arrayIndex">arrayIndex</a></li><li><a href="global.html#attributes">attributes</a></li><li><a href="global.html#detGen">detGen</a></li><li><a href="global.html#display">display</a></li><li><a href="global.html#displayMovesToScreen">displayMovesToScreen</a></li><li><a href="global.html#displayTypesToScreen">displayTypesToScreen</a></li><li><a href="global.html#displayTypesToScreenExtend">displayTypesToScreenExtend</a></li><li><a href="global.html#generation">generation</a></li><li><a href="global.html#HoennAjax">HoennAjax</a></li><li><a href="global.html#HoennJSON">HoennJSON</a></li><li><a href="global.html#HoennOnLoad">HoennOnLoad</a></li><li><a href="global.html#holder">holder</a></li><li><a href="global.html#index">index</a></li><li><a href="global.html#itemLoad">itemLoad</a></li><li><a href="global.html#ItemsAjax">ItemsAjax</a></li><li><a href="global.html#ItemSearch">ItemSearch</a></li><li><a href="global.html#ItemsJSON">ItemsJSON</a></li><li><a href="global.html#ItemsOnLoad">ItemsOnLoad</a></li><li><a href="global.html#JohtoAjax">JohtoAjax</a></li><li><a href="global.html#JohtoJSON">JohtoJSON</a></li><li><a href="global.html#JohtoOnLoad">JohtoOnLoad</a></li><li><a href="global.html#KalosAjax">KalosAjax</a></li><li><a href="global.html#KalosJSON">KalosJSON</a></li><li><a href="global.html#KalosOnLoad">KalosOnLoad</a></li><li><a href="global.html#KalosRegionAjax">KalosRegionAjax</a></li><li><a href="global.html#KalosRegionsJSON">KalosRegionsJSON</a></li><li><a href="global.html#KantoJSON">KantoJSON</a></li><li><a href="global.html#KantoLoad">KantoLoad</a></li><li><a href="global.html#KantoOnLoad">KantoOnLoad</a></li><li><a href="global.html#Lazy">Lazy</a></li><li><a href="global.html#List">List</a></li><li><a href="global.html#loadAkala">loadAkala</a></li><li><a href="global.html#loadAlola">loadAlola</a></li><li><a href="global.html#loadCentral">loadCentral</a></li><li><a href="global.html#loadCoastal">loadCoastal</a></li><li><a href="global.html#loadGen">loadGen</a></li><li><a href="global.html#loadHoenn">loadHoenn</a></li><li><a href="global.html#loadJohto">loadJohto</a></li><li><a href="global.html#loadKalos">loadKalos</a></li><li><a href="global.html#loadKanto">loadKanto</a></li><li><a href="global.html#loadLetsGo">loadLetsGo</a></li><li><a href="global.html#loadMelemele">loadMelemele</a></li><li><a href="global.html#loadMountain">loadMountain</a></li><li><a href="global.html#loadNational">loadNational</a></li><li><a href="global.html#loadPoni">loadPoni</a></li><li><a href="global.html#loadSinnoh">loadSinnoh</a></li><li><a href="global.html#loadUlaula">loadUlaula</a></li><li><a href="global.html#loadUnova">loadUnova</a></li><li><a href="global.html#moveNames">moveNames</a></li><li><a href="global.html#moves">moves</a></li><li><a href="global.html#MovesAjax">MovesAjax</a></li><li><a href="global.html#MoveSearch">MoveSearch</a></li><li><a href="global.html#MovesJSON">MovesJSON</a></li><li><a href="global.html#MovesLoad">MovesLoad</a></li><li><a href="global.html#moveTypes">moveTypes</a></li><li><a href="global.html#names">names</a></li><li><a href="global.html#NationalAjax">NationalAjax</a></li><li><a href="global.html#NationalJSON">NationalJSON</a></li><li><a href="global.html#NationalOnLoad">NationalOnLoad</a></li><li><a href="global.html#PokemonSearch">PokemonSearch</a></li><li><a href="global.html#region">region</a></li><li><a href="global.html#SinnohAjax">SinnohAjax</a></li><li><a href="global.html#SinnohJSON">SinnohJSON</a></li><li><a href="global.html#SinnohOnLoad">SinnohOnLoad</a></li><li><a href="global.html#splitVal">splitVal</a></li><li><a href="global.html#textColors">textColors</a></li><li><a href="global.html#title">title</a></li><li><a href="global.html#tmConversion">tmConversion</a></li><li><a href="global.html#toTitleCase">toTitleCase</a></li><li><a href="global.html#type">type</a></li><li><a href="global.html#typeClick">typeClick</a></li><li><a href="global.html#typeColors">typeColors</a></li><li><a href="global.html#typeEffectiveness">typeEffectiveness</a></li><li><a href="global.html#typeList">typeList</a></li><li><a href="global.html#types">types</a></li><li><a href="global.html#UnovaAjax">UnovaAjax</a></li><li><a href="global.html#UnovaJSON">UnovaJSON</a></li><li><a href="global.html#UnovaOnLoad">UnovaOnLoad</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri May 03 2019 09:52:08 GMT-0500 (Central Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon May 06 2019 19:02:22 GMT-0500 (Central Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

@@ -33,10 +33,33 @@ let splitVal = [];
 let types = [];
 
 /**
- * Call a database, or a JSON file if database fails, and get Pokemon information
+ * String to hold the type of the Pokemon wanted
+ * @type {!string}
+ * @default '''
+ */
+let type = '';
+
+/**
+ * Call the loadHoenn() function
  * @function HoennOnLoad
+ * @see loadHoenn
  */
 window.onload = () => {
+  loadHoenn();
+  $('#Hoenn').click(function() {
+    loadHoenn();
+  });
+  typeClick();
+  $('#myInput').keyup(function() {
+    type = $('#Center').text().split(' ')[2];
+    PokemonSearch(type, loadHoenn);
+  });
+};
+
+/**
+ * Will load all the Pokemon from the Hoenn pokedex
+ */
+const loadHoenn = () => {
   $('#Center').text('The Hoenn Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
@@ -66,13 +89,13 @@ window.onload = () => {
     }
   }).catch((xhr, status, error) => {
     /**
-      * Gets the Hoenn json file if the database query fails
-      * @function HoennJSON
-      *
-      * @param {Array} data A list of objects with the Pokemon's name, type, and id
-      *
-      * @return {Array} An array of all the Hoenn Pokemon
-      */
+     * Gets the Hoenn json file if the database query fails
+     * @function HoennJSON
+     *
+     * @param {Array} data A list of objects with the Pokemon's name, type, and id
+     *
+     * @return {Array} An array of all the Hoenn Pokemon
+     */
     return $.getJSON('../JSON/hoenn.json', function(data) {
       for (let i = 0; i < data['pokemon'].length; i++) {
         List.push(new Pokemon(data['pokemon'][i].id, data['pokemon'][i].name, data['pokemon'][i].types));
@@ -80,12 +103,9 @@ window.onload = () => {
     });
   }).always(() => {
     for (index; index < List.length; index++) {
-      if ($(window).scrollTop() === $(document).height() - $(window).height()) {
-        List[index].loadToPage();
-        List[index].showTypes();
-      } else {
-        break;
-      }
+      List[index].loadToPage();
+      List[index].showTypes();
     }
+    Lazy();
   });
 };

@@ -130,12 +130,9 @@ const AJAX = (region) => {
     });
   }).always(() => {
     for (index; index < List.length; index++) {
-      if ($(window).scrollTop() === $(document).height() - $(window).height()) {
-        List[index].loadToPage();
-        List[index].showTypes();
-      } else {
-        break;
-      }
+      List[index].loadToPage();
+      List[index].showTypes();
     }
+    Lazy();
   });
 };

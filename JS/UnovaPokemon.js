@@ -33,10 +33,26 @@ let splitVal = [];
 let types = [];
 
 /**
- * Call a database, or a JSON file if database fails, and get Pokemon information
+ * Calls the loadUnova() function
  * @function UnovaOnLoad
+ * @see loadUnova
  */
 window.onload = function() {
+  loadUnova();
+  $('#Unova').click(function() {
+    loadUnova();
+  });
+  typeClick();
+  $('#myInput').keyup(function() {
+    type = $('#Center').text().split(' ')[2];
+    PokemonSearch(type, loadUnova);
+  });
+};
+
+/**
+ * Loads all the Unovan Pokemon to the page
+ */
+const loadUnova = () => {
   $('#Center').text('The Unova Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
@@ -80,12 +96,9 @@ window.onload = function() {
     });
   }).always(() => {
     for (index; index < List.length; index++) {
-      if ($(window).scrollTop() === $(document).height() - $(window).height()) {
-        List[index].loadToPage();
-        List[index].showTypes();
-      } else {
-        break;
-      }
+      List[index].loadToPage();
+      List[index].showTypes();
     }
+    Lazy();
   });
 };

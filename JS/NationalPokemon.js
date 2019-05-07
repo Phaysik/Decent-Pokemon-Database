@@ -33,10 +33,33 @@ let splitVal = [];
 let types = [];
 
 /**
- * Call a database, or a JSON file if database fails, and get Pokemon information
+ * String to hold the type of the Pokemon wanted
+ * @type {!string}
+ * @default '''
+ */
+let type = '';
+
+/**
+ * calls the loadNational() function
  * @function NationalOnLoad
+ * @see loadNational
  */
 window.onload = () => {
+  loadNational();
+  $('#National').click(function() {
+    loadNational();
+  });
+  typeClick();
+  $('#myInput').keyup(function() {
+    type = $('#Center').text().split(' ')[2];
+    PokemonSearch(type, loadNational);
+  });
+};
+
+/**
+ * Loads the entire Pokedex to the page
+ */
+const loadNational = () => {
   $('#Center').text('The National Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
@@ -80,12 +103,9 @@ window.onload = () => {
     });
   }).always(() => {
     for (index; index < List.length; index++) {
-      if ($(window).scrollTop() === $(document).height() - $(window).height()) {
-        List[index].loadToPage();
-        List[index].showTypes();
-      } else {
-        break;
-      }
+      List[index].loadToPage();
+      List[index].showTypes();
     }
+    Lazy();
   });
 };

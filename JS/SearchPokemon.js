@@ -22,29 +22,41 @@ const toTitleCase = (phrase) => {
 
 /**
  * Searches through a list of pokemon and then display their information to the page
+ * @param {!string} type A string representing what the Pokemon type searched is
+ * @param {!string} func A string representing what function to call if the search box is empty
  */
-const PokemonSearch = () => {
+const PokemonSearch = (type, func) => {
   $(document).ready(function() {
   /**
   * A string that the user inputs
   * @type {!string}
   */
     let value = $('#myInput').val().toLowerCase();
+    images = document.querySelectorAll('img');
     $('#pokemon-container').empty();
 
     value = (value.includes(':')) ? value.replace(/:/, '꞉') : value;
 
     if (value !== '') {
       for (let g = 0; g < List.length; g++) {
-        if (List[g].name.toLowerCase().includes(value) || (List[g].types.length === 1 && List[g].types[0].toLowerCase().indexOf(value) >= 0) ||
-          (List[g].types.length === 2 && (List[g].types[0].toLowerCase().indexOf(value) >= 0 || List[g].types[1].toLowerCase().indexOf(value) >= 0))) {
-          List[g].loadToPage();
-          List[g].showTypes();
+        for (let j = 0; j < images.length; j++) {
+          if (images[j].src.includes(List[g].name)) {
+            if (List[g].name.toLowerCase().includes(value) || (List[g].types.length === 1 && List[g].types[0].toLowerCase().indexOf(value) >= 0) ||
+              (List[g].types.length === 2 && (List[g].types[0].toLowerCase().indexOf(value) >= 0 || List[g].types[1].toLowerCase().indexOf(value) >= 0))) {
+              List[g].loadToPage();
+              List[g].showTypes();
+            }
+          }
         }
       }
     } else {
-      loadSeen();
+      if (type !== 'Pokémon') {
+        displayTypesToScreen(type);
+      } else {
+        func();
+      }
     }
+    Lazy();
   });
 };
 
@@ -60,17 +72,13 @@ const ItemSearch = () => {
   */
     const value = $('#myInput').val().toLowerCase();
     $('#items-container').empty();
-
-    if (value !== '') {
-      for (let g = 0; g < List.length; g++) {
-        if (List[g].name.toLowerCase().indexOf(value) >= 0 || List[g].id.toLowerCase().indexOf(value) >= 0 || List[g].category.toLowerCase().indexOf(value) >= 0
+    for (let g = 0; g < List.length; g++) {
+      if (List[g].name.toLowerCase().indexOf(value) >= 0 || List[g].id.toLowerCase().indexOf(value) >= 0 || List[g].category.toLowerCase().indexOf(value) >= 0
             || List[g].description.toLowerCase().indexOf(value) >= 0) {
-          List[g].loadItemsToPage();
-        }
+        List[g].loadItemsToPage();
       }
-    } else {
-      loadSeen();
     }
+    Lazy();
   });
 };
 
@@ -91,19 +99,16 @@ const MoveSearch = () => {
       Type</h4></div></div><div style="width=100%" id="moves"></div></div>
     `);
 
-    if (value !== '') {
-      for (let g = 0; g < moves[generation - 1]; g++) {
-        if (typeof List[g].name === 'object') {
-          if (List[g].imgName.toLowerCase().indexOf(value) >= 0 || List[g].name[0].toLowerCase().indexOf(value) >= 0 ||
+    for (let g = 0; g < moves[generation - 1]; g++) {
+      if (typeof List[g].name === 'object') {
+        if (List[g].imgName.toLowerCase().indexOf(value) >= 0 || List[g].name[0].toLowerCase().indexOf(value) >= 0 ||
           List[g].name[1].toLowerCase().indexOf(value) >= 0 || List[g].type[0].toLowerCase().indexOf(value) >= 0 || List[g].type[1].toLowerCase().indexOf(value) >= 0) {
-            List[g].loadMovesToPage('#moves');
-          }
-        } else if (List[g].imgName.toLowerCase().indexOf(value) >= 0 || List[g].name.toLowerCase().indexOf(value) >= 0 || List[g].type.toLowerCase().indexOf(value) >= 0) {
           List[g].loadMovesToPage('#moves');
         }
+      } else if (List[g].imgName.toLowerCase().indexOf(value) >= 0 || List[g].name.toLowerCase().indexOf(value) >= 0 || List[g].type.toLowerCase().indexOf(value) >= 0) {
+        List[g].loadMovesToPage('#moves');
       }
-    } else {
-      loadSeen();
     }
+    Lazy();
   });
 };

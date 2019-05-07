@@ -20,10 +20,21 @@ let index = 0;
 const List = [];
 
 /**
- * Call a database, or a JSON file if database fails, and get Item information
+ * Call the itemLoad() function
  * @function ItemsOnLoad
+ * @see itemLoad
  */
 window.onload = () => {
+  itemLoad();
+  $('#myInput').keyup(function() {
+    ItemSearch();
+  });
+};
+
+/**
+ * Loads all the items to the page
+ */
+const itemLoad = () => {
   $('#Center').text('Pokémon Item List');
   $('#myInput').val('');
   $('#items-container').empty().append(`<div class="container mt-4"><div class="row"><div class="col-3"><h4 class="KalosTextStyle">
@@ -49,13 +60,13 @@ window.onload = () => {
     }
   }).catch((xhr, status, error) => {
     /**
-      * Gets the Items json file if the database query fails
-      * @function ItemsJSON
-      *
-      * @param {Array} data A list of objects with the Item's name, id, category, and description
-      *
-      * @return {Array} An array of all the Items
-      */
+     * Gets the Items json file if the database query fails
+     * @function ItemsJSON
+     *
+     * @param {Array} data A list of objects with the Item's name, id, category, and description
+     *
+     * @return {Array} An array of all the Items
+     */
     return $.getJSON('../JSON/items.json', function(data) {
       for (let i = 0; i < data['item'].length; i++) {
         List.push(new Item(data['item'][i].name, data['item'][i].id, data['item'][i].category, data['item'][i].description));
@@ -63,11 +74,8 @@ window.onload = () => {
     });
   }).always(() => {
     for (index; index < List.length; index++) {
-      if ($(window).scrollTop() === $(document).height() - $(window).height()) {
-        List[index].loadItemsToPage();
-      } else {
-        break;
-      }
+      List[index].loadItemsToPage();
     }
+    Lazy();
   });
 };

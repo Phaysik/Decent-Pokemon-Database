@@ -182,21 +182,6 @@ const attributes = [];
 let title = [];
 
 /**
-  * A number denoting the max loop value of how many Pokemon to load
-  * @constant
-  * @type {!number}
-  * @default 0
-  */
-let width = 0;
-/**
-  * A number indicating how many items to load to the page
-  * @constant
-  * @type {!number}
-  * @default 0
-  */
-let viewHeight = 0;
-
-/**
  * For holding all the move information
  * @type {!string}
  * @default '''
@@ -250,7 +235,9 @@ class Pokemon {
     $('#pokemon-container').append(`
       <li class="list-group-item" style="border: none;">
             <div style="width:140px!important" class="d-flex mx-3 flex-column">
-              <a href="index.html?Search=${this.name}" class="my-2 align-self-center"><img height="100" width="100"  src="Images/Pokemon/${this.name}.png" alt="${this.name} Image"/></a>
+              <a href="index.html?Search=${this.name}" class="my-2 align-self-center">
+                <img height="100" width="100" class="lazy" data-src="Images/Pokemon/${this.name}.png" alt="${this.name} Image"/>
+              </a>
               <div id="${this.nid}" class="d-flex"></div>
               <h5 style="font-weight: normal; text-align: center;">${this.name}</h5>
             </div>
@@ -505,168 +492,114 @@ const displayTypesToScreenExtend = (type, num) => {
 };
 
 /**
- * Base scroll event that will then call other scroll functions
- * @function OnScroll
- * @see scroll
- * @see itemScroll
- * @see moveScroll
+ * Whenver the user clicks a type, execture a query to only get said type
  */
-window.onscroll = () => {
-  if ($('#Center').text().includes('Kanto')) {
-    scroll(2);
-  } else if ($('#Center').text().includes('Pokémon Item List')) {
-    itemScroll();
-  } else if ($('#Center').text().includes('Pokémon Moves List')) {
-    if ($('.KalosTextStyle').text().includes('1')) {
-      moveScroll('#Gen1', 0);
-    } else if ($('.KalosTextStyle').text().includes('2')) {
-      moveScroll('#Gen2', 1);
-    } else if ($('.KalosTextStyle').text().includes('3')) {
-      moveScroll('#Gen3', 2);
-    } else if ($('.KalosTextStyle').text().includes('4')) {
-      moveScroll('#Gen4', 3);
-    } else if ($('.KalosTextStyle').text().includes('5')) {
-      moveScroll('#Gen5', 4);
-    } else if ($('.KalosTextStyle').text().includes('6')) {
-      moveScroll('#Gen6', 5);
-    } else {
-      moveScroll('#Gen7', 6);
-    }
+const typeClick = () => {
+  $('#Normal').click(function() {
+    displayTypesToScreen('Normal');
+  });
+  $('#Fire').click(function() {
+    displayTypesToScreen('Fire');
+  });
+  $('#Water').click(function() {
+    displayTypesToScreen('Water');
+  });
+  $('#Electric').click(function() {
+    displayTypesToScreen('Electric');
+  });
+  $('#Grass').click(function() {
+    displayTypesToScreen('Grass');
+  });
+  $('#Ice').click(function() {
+    displayTypesToScreen('Ice');
+  });
+  $('#Fighting').click(function() {
+    displayTypesToScreen('Fighting');
+  });
+  $('#Poison').click(function() {
+    displayTypesToScreen('Poison');
+  });
+  $('#Ground').click(function() {
+    displayTypesToScreen('Ground');
+  });
+  $('#Flying').click(function() {
+    displayTypesToScreen('Flying');
+  });
+  $('#Psychic').click(function() {
+    displayTypesToScreen('Psychic');
+  });
+  $('#Bug').click(function() {
+    displayTypesToScreen('Bug');
+  });
+  $('#Rock').click(function() {
+    displayTypesToScreen('Rock');
+  });
+  $('#Ghost').click(function() {
+    displayTypesToScreen('Ghost');
+  });
+  $('#Dragon').click(function() {
+    displayTypesToScreen('Dragon');
+  });
+  $('#Dark').click(function() {
+    displayTypesToScreen('Dark');
+  });
+  $('#Steel').click(function() {
+    displayTypesToScreen('Steel');
+  });
+  $('#Fairy').click(function() {
+    displayTypesToScreen('Fairy');
+  });
+};
+
+/**
+ * A function that on certain events will change the data-src attribute of an image to the src of the image. i.e. Lazy Loading.
+ */
+const Lazy = () => {
+  let lazyloadImages;
+
+  if ('IntersectionObserver' in window) {
+    lazyloadImages = document.querySelectorAll('.lazy');
+    const imageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          const image = entry.target;
+          image.src = image.dataset.src;
+          image.classList.remove('lazy');
+          imageObserver.unobserve(image);
+        }
+      });
+    });
+
+    lazyloadImages.forEach(function(image) {
+      imageObserver.observe(image);
+    });
   } else {
-    scroll(0);
-  }
-};
+    let lazyloadThrottleTimeout;
+    lazyloadImages = document.querySelectorAll('.lazy');
 
-/**
- * Scrolls through the moves
- * @param {!number} id A number indicating what generation of moves to scroll through
- * @param {!number} ceil A number indicating where the max value of the loop should be as determined by the moves array
- * @see moves
- * @see Moves
- */
-const moveScroll = (id, ceil) => {
-  if (display === false) {
-    if ($('#myInput').val() == '') {
-      if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-        for (index; index < moves[ceil]; index++) {
-          viewHeight = Math.ceil($(window).height() / 90);
-          if (index < List.length) {
-            for (let i = 0; i < viewHeight; i++) {
-              if (index < moves[ceil]) {
-                List[index].loadMovesToPage(id);
-                index++;
-              } else {
-                break;
-              }
-            }
-          } else {
-            for (index; index < moves[0]; index++) {
-              List[index].loadMovesToPage(id);
-            }
-          }
-          break;
-        }
+    function lazyload() {
+      if (lazyloadThrottleTimeout) {
+        clearTimeout(lazyloadThrottleTimeout);
       }
-    }
-  }
-};
 
-/**
- * Scrolls through the items
- * @see Item
- */
-const itemScroll = () => {
-  if (display === false) {
-    if ($('#myInput').val() == '') {
-      if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-        for (index; index < List.length; index++) {
-          viewHeight = Math.ceil($(window).height() / 90);
-          if (index < List.length) {
-            for (let i = 0; i < viewHeight; i++) {
-              List[index].loadItemsToPage();
-              index++;
-            }
-          } else {
-            for (index; index < List.length; index++) {
-              List[index].loadItemsToPage();
-            }
+      lazyloadThrottleTimeout = setTimeout(function() {
+        const scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+          if (img.offsetTop < (window.innerHeight + scrollTop)) {
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
           }
-          break;
+        });
+        if (lazyloadImages.length == 0) {
+          document.removeEventListener('scroll', lazyload);
+          window.removeEventListener('resize', lazyload);
+          window.removeEventListener('orientationChange', lazyload);
         }
-      }
+      }, 20);
     }
-  }
-};
 
-/**
- * Scrolls through the Pokemon
- * @param {!number} value A number indicating what the max loop height should be based on List.length - value
- * @see Pokemon
- */
-const scroll = (value) => {
-  if (display === false) {
-    if ($('#myInput').val() == '') {
-      if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-        for (index; index < List.length - value; index++) {
-          width = (document.getElementById('pokemon-container').offsetWidth / $('.list-group-item').outerWidth()) * 2 - 1;
-          if (index < List.length - width) {
-            for (let i = 0; i < width; i++) {
-              List[index].loadToPage();
-              List[index].showTypes();
-              index++;
-            }
-          } else {
-            for (index; index < List.length - value; index++) {
-              List[index].loadToPage();
-              List[index].showTypes();
-            }
-          }
-          break;
-        }
-      }
-    }
-  }
-};
-
-/**
- * Loads all previously seen elements before searching or other means of manipulation
- */
-const loadSeen = () => {
-  $('#pokemon-container').empty();
-  title = $('#Center').text().split(' ');
-  display = false;
-
-  if (title[1] === 'Kalos' && title[2] !== 'Pokémon') {
-    $('#Center').text(`All ${title[1]} ${title[2]} Pokémon in Database`);
-    for (let i = 0; i < index; i++) {
-      List[i].loadToPage();
-      List[i].showTypes();
-    }
-  } else if (title[1] === 'Item') {
-    for (let i = 0; i < index; i++) {
-      List[i].loadItemsToPage();
-    }
-  } else if (title.includes('Moves')) {
-    $('#Center').text('Pokémon Moves List');
-    $('#moves-container').empty().append(`
-    <div style="width: 100%;">
-      <h4 class="KalosTextStyle">Gen ${generation} Moves</h4>
-      <div id="Gen${generation}" class="container"></div>
-    </div>
-  `);
-
-    $(`#Gen${generation}`).append(`<div class="mt-4"><div class="row"><div class="col-5"><h4 class="font-italic pl-5">Name</h4></div><div class="col-3">
-  <h4 class="font-italic pl-4" class="pr-3">TM</h4></div><div class="col-3"><h4 class="font-italic pl-4" class="pr-3">
-  Type</h4></div></div>`);
-
-    for (let i = 0; i < index; i++) {
-      List[i].loadMovesToPage(`#Gen${generation}`);
-    }
-  } else {
-    $('#Center').text(`All ${title[1]} Pokémon in Database`);
-    for (let i = 0; i < index; i++) {
-      List[i].loadToPage();
-      List[i].showTypes();
-    }
-  }
+    document.addEventListener('scroll', lazyload);
+    window.addEventListener('resize', lazyload);
+    window.addEventListener('orientationChange', lazyload);
+  };
 };

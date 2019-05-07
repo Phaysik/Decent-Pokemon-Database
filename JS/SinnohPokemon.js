@@ -33,10 +33,33 @@ let splitVal = [];
 let types = [];
 
 /**
- * Call a database, or a JSON file if database fails, and get Pokemon information
+ * String to hold the type of the Pokemon wanted
+ * @type {!string}
+ * @default '''
+ */
+let type = '';
+
+/**
+ * Calls the loadSinnoh() function
  * @function SinnohOnLoad
+ * @see loadSinnoh
  */
 window.onload = function() {
+  loadSinnoh();
+  $('#Sinnoh').click(function() {
+    loadSinnoh();
+  });
+  typeClick();
+  $('#myInput').keyup(function() {
+    type = $('#Center').text().split(' ')[2];
+    PokemonSearch(type, loadSinnoh);
+  });
+};
+
+/**
+ * Loads all the Sinnoh Pokemon to the page
+ */
+const loadSinnoh = () => {
   $('#Center').text('The Sinnoh Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();
@@ -80,12 +103,9 @@ window.onload = function() {
     });
   }).always(() => {
     for (index; index < List.length; index++) {
-      if ($(window).scrollTop() === $(document).height() - $(window).height()) {
-        List[index].loadToPage();
-        List[index].showTypes();
-      } else {
-        break;
-      }
+      List[index].loadToPage();
+      List[index].showTypes();
     }
+    Lazy();
   });
 };

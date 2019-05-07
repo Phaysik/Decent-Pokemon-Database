@@ -7,19 +7,6 @@
  */
 
 /**
- * Array to hold types of Pokemon
- * @type {!Array}
- * @default []
- */
-let splitVal = [];
-/**
- * Array to hold types of Pokemon if splitVal has a length of two
- * @type {!Array}
- * @default []
- */
-let types = [];
-
-/**
  * Will load all the Pokemon from the Central reigon to the page
  */
 const loadCentral = () => {
@@ -124,12 +111,9 @@ const AJAX = (region) => {
     });
   }).always(() => {
     for (index; index < List.length; index++) {
-      if ($(window).scrollTop() === $(document).height() - $(window).height()) {
-        List[index].loadToPage();
-        List[index].showTypes();
-      } else {
-        break;
-      }
+      List[index].loadToPage();
+      List[index].showTypes();
     }
+    Lazy();
   });
 };
