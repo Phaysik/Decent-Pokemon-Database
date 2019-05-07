@@ -209,5 +209,6 @@ const loadGen = (genSet) => {
       List[index].loadMovesToPage(`#Gen${generation}`);
     }
     Lazy();
+    searchList = document.querySelectorAll('img');
   });
 };

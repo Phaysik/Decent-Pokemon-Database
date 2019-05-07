@@ -108,5 +108,6 @@ const loadJohto = () => {
       List[index].showTypes();
     }
     Lazy();
+    searchList = document.querySelectorAll('img');
   });
 };

@@ -77,5 +77,6 @@ const itemLoad = () => {
       List[index].loadItemsToPage();
     }
     Lazy();
+    searchList = document.querySelectorAll('img');
   });
 };

@@ -101,5 +101,6 @@ const loadUnova = () => {
       List[index].showTypes();
     }
     Lazy();
+    searchList = document.querySelectorAll('img');
   });
 };

@@ -33,6 +33,13 @@ const typeColors = {
 };
 
 /**
+ * An array to hold all the images that should be searched through
+ * @type {!Array}
+ * @default []
+ */
+let searchList = [];
+
+/**
   * A dictionary to convert TM's to use a specific image
   * @constant
   * @type {!Object.<string, string>}
@@ -292,7 +299,7 @@ class Item {
           <div class="container">
             <div class="row searchVal">
               <div class="d-flex flex-row col-3 mb-3">
-                <img height="50" width="50" src="Images/Items/${tmConversion[this.name]}.png" alt="${this.name} Image"/>
+                <img height="50" width="50" class="lazy" data-src="Images/Items/${tmConversion[this.name]}.png" alt="${this.name} Image"/>
                 <h4 class="ml-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">${this.name}</h4>
               </div>
               <div class="flex-row col-1 mb-3">
@@ -342,14 +349,14 @@ class Moves {
     moveTypes = `<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">`;
     if (this.name.length == 2) {
       for (let i = 0; i < this.name.length; i++) {
-        holder += `<img height="45" width="45" src="Images/Items/${this.type[i]}.png" alt="${this.name[i]} Image"/>`;
+        holder += `<img height="45" width="45" class="lazy" data-src="Images/Items/${this.type[i]}.png" alt="${this.name[i]} Image"/>`;
         moveNames += `${this.name[i]}, `;
         moveTypes += `${this.type[i]}, `;
       }
       moveNames = moveNames.substring(0, moveNames.length - 2);
       moveTypes = moveTypes.substring(0, moveTypes.length - 2);
     } else {
-      holder = `<img height="45" width="45" src="Images/Items/${this.type}.png" alt="${this.name} Image"/>`;
+      holder = `<img height="45" width="45" class="lazy" data-src="Images/Items/${this.type}.png" alt="${this.name} Image"/>`;
       moveNames += `${this.name}`;
       moveTypes += `${this.type}`;
     }
@@ -389,14 +396,14 @@ const displayMovesToScreen = (type) => {
       if (List[i].name.length == 2) {
         for (let j = 0; j < List[i].name.length; j++) {
           if (List[i].type[j] === type) {
-            attributes.push([[`<img height="45" width="45" src="Images/Items/${List[i].type[j]}.png" alt="${List[i].name[j]} Image"/>`],
+            attributes.push([[`<img height="45" width="45" class="lazy" data-src="Images/Items/${List[i].type[j]}.png" alt="${List[i].name[j]} Image"/>`],
               [`<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">${List[i].type[j]}</h4>`],
               [`<h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 1.2em">${List[i].name[j]}</h4>`],
               [`<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">${List[i].imgName}</h4>`]]);
           }
         }
       } else {
-        attributes.push([[`<img height="45" width="45" src="Images/Items/${List[i].type}.png" alt="${List[i].name} Image"/>`],
+        attributes.push([[`<img height="45" width="45" class="lazy" data-src="Images/Items/${List[i].type}.png" alt="${List[i].name} Image"/>`],
           [`<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">${List[i].type}</h4>`],
           [`<h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 1.2em">${List[i].name}</h4>`],
           [`<h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">${List[i].imgName}</h4>`]]);
@@ -422,6 +429,7 @@ const displayMovesToScreen = (type) => {
           </div>
             `);
   }
+  Lazy();
 
   if ($('body').height() > $(window).height()) {
     if ($(window).scrollTop() !== 0) {
@@ -451,6 +459,7 @@ const displayTypesToScreen = (type) => {
   } else {
     displayTypesToScreenExtend(type, 0);
   }
+  Lazy();
 
   if ($('body').height() > $(window).height()) {
     if ($(window).scrollTop() !== 0) {
@@ -480,7 +489,7 @@ const displayTypesToScreenExtend = (type, num) => {
       $('#pokemon-container').append(`
         <li class="list-group-item" style="border: none;">
               <div style="width:140px!important" class="d-flex mx-3 flex-column">
-                <a href="index.html?Search=${List[i].name}" class="my-2 align-self-center"><img height="100" width="100" src="Images/Pokemon/${List[i].name}.png" 
+                <a href="index.html?Search=${List[i].name}" class="my-2 align-self-center"><img height="100" width="100" class="lazy" data-src="Images/Pokemon/${List[i].name}.png" 
                 alt="${List[i].name} Image"/></a>
                 <div id="${List[i].nid}" class="d-flex">${holder}</div>
                 <h5 style="font-weight: normal; text-align: center;">${List[i].name}</h5>
@@ -497,57 +506,75 @@ const displayTypesToScreenExtend = (type, num) => {
 const typeClick = () => {
   $('#Normal').click(function() {
     displayTypesToScreen('Normal');
+    searchList = document.querySelectorAll('img');
   });
   $('#Fire').click(function() {
     displayTypesToScreen('Fire');
+    searchList = document.querySelectorAll('img');
   });
   $('#Water').click(function() {
     displayTypesToScreen('Water');
+    searchList = document.querySelectorAll('img');
   });
   $('#Electric').click(function() {
     displayTypesToScreen('Electric');
+    searchList = document.querySelectorAll('img');
   });
   $('#Grass').click(function() {
     displayTypesToScreen('Grass');
+    searchList = document.querySelectorAll('img');
   });
   $('#Ice').click(function() {
     displayTypesToScreen('Ice');
+    searchList = document.querySelectorAll('img');
   });
   $('#Fighting').click(function() {
     displayTypesToScreen('Fighting');
+    searchList = document.querySelectorAll('img');
   });
   $('#Poison').click(function() {
     displayTypesToScreen('Poison');
+    searchList = document.querySelectorAll('img');
   });
   $('#Ground').click(function() {
     displayTypesToScreen('Ground');
+    searchList = document.querySelectorAll('img');
   });
   $('#Flying').click(function() {
     displayTypesToScreen('Flying');
+    searchList = document.querySelectorAll('img');
   });
   $('#Psychic').click(function() {
     displayTypesToScreen('Psychic');
+    searchList = document.querySelectorAll('img');
   });
   $('#Bug').click(function() {
     displayTypesToScreen('Bug');
+    searchList = document.querySelectorAll('img');
   });
   $('#Rock').click(function() {
     displayTypesToScreen('Rock');
+    searchList = document.querySelectorAll('img');
   });
   $('#Ghost').click(function() {
     displayTypesToScreen('Ghost');
+    searchList = document.querySelectorAll('img');
   });
   $('#Dragon').click(function() {
     displayTypesToScreen('Dragon');
+    searchList = document.querySelectorAll('img');
   });
   $('#Dark').click(function() {
     displayTypesToScreen('Dark');
+    searchList = document.querySelectorAll('img');
   });
   $('#Steel').click(function() {
     displayTypesToScreen('Steel');
+    searchList = document.querySelectorAll('img');
   });
   $('#Fairy').click(function() {
     displayTypesToScreen('Fairy');
+    searchList = document.querySelectorAll('img');
   });
 };
 

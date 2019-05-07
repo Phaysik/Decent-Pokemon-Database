@@ -32,19 +32,19 @@ const PokemonSearch = (type, func) => {
   * @type {!string}
   */
     let value = $('#myInput').val().toLowerCase();
-    images = document.querySelectorAll('img');
     $('#pokemon-container').empty();
 
     value = (value.includes(':')) ? value.replace(/:/, '꞉') : value;
 
     if (value !== '') {
       for (let g = 0; g < List.length; g++) {
-        for (let j = 0; j < images.length; j++) {
-          if (images[j].dataset.src.includes(List[g].name)) {
+        for (let j = 0; j < searchList.length; j++) {
+          if (searchList[j].dataset.src.includes(List[g].name)) {
             if (List[g].name.toLowerCase().includes(value) || (List[g].types.length === 1 && List[g].types[0].toLowerCase().indexOf(value) >= 0) ||
               (List[g].types.length === 2 && (List[g].types[0].toLowerCase().indexOf(value) >= 0 || List[g].types[1].toLowerCase().indexOf(value) >= 0))) {
               List[g].loadToPage();
               List[g].showTypes();
+              break;
             }
           }
         }

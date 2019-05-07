@@ -134,5 +134,6 @@ const AJAX = (region) => {
       List[index].showTypes();
     }
     Lazy();
+    searchList = document.querySelectorAll('img');
   });
 };

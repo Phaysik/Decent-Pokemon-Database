@@ -171,5 +171,6 @@ function AJAX(game) {
       List[index].showTypes();
     }
     Lazy();
+    searchList = document.querySelectorAll('img');
   });
 }
