@@ -18,7 +18,7 @@ let index = 0;
   *  @type {!Array}
   *  @default []
   */
-const List = [];
+let List = [];
 /**
  * Array to hold types of Pokemon
  * @type {!Array}
@@ -60,6 +60,8 @@ window.onload = () => {
  * Will load all the Pokemon from the Hoenn pokedex
  */
 const loadHoenn = () => {
+  List = [];
+  index = 0;
   $('#Center').text('The Hoenn Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();

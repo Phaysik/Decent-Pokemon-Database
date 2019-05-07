@@ -18,7 +18,7 @@ let index = 0;
   *  @type {!Array}
   *  @default []
   */
-const List = [];
+let List = [];
 /**
  * Array to hold types of Pokemon
  * @type {!Array}
@@ -53,6 +53,8 @@ window.onload = function() {
  * Loads all the Unovan Pokemon to the page
  */
 const loadUnova = () => {
+  List = [];
+  index = 0;
   $('#Center').text('The Unova Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();

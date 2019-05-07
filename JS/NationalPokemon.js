@@ -18,7 +18,7 @@ let index = 0;
   *  @type {!Array}
   *  @default []
   */
-const List = [];
+let List = [];
 /**
  * Array to hold types of Pokemon
  * @type {!Array}
@@ -60,6 +60,8 @@ window.onload = () => {
  * Loads the entire Pokedex to the page
  */
 const loadNational = () => {
+  List = [];
+  index = 0;
   $('#Center').text('The National Pokémon List by Pokédex Number');
   $('#myInput').val('');
   $('#pokemon-container').empty();

@@ -40,7 +40,7 @@ const PokemonSearch = (type, func) => {
     if (value !== '') {
       for (let g = 0; g < List.length; g++) {
         for (let j = 0; j < images.length; j++) {
-          if (images[j].src.includes(List[g].name)) {
+          if (images[j].dataset.src.includes(List[g].name)) {
             if (List[g].name.toLowerCase().includes(value) || (List[g].types.length === 1 && List[g].types[0].toLowerCase().indexOf(value) >= 0) ||
               (List[g].types.length === 2 && (List[g].types[0].toLowerCase().indexOf(value) >= 0 || List[g].types[1].toLowerCase().indexOf(value) >= 0))) {
               List[g].loadToPage();
