@@ -8,7 +8,7 @@ const stats = [];
 const descriptions = [];
 const family = [];
 const statNames = ['HP: ', 'Attack: ', 'Defense: ', 'Sp. Atk: ', 'Sp. Def: ', 'Speed: ', 'Total: '];
-let listIndex = 0;
+listIndex = 0;
 let val = '';
 const urlPath = window.location.href.split('?');
 let datalist;

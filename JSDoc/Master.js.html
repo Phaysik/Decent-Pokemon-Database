@@ -61,6 +61,13 @@ const typeColors = {
 };
 
 /**
+ * An array to hold all the images that should be searched through
+ * @type {!Array}
+ * @default []
+ */
+let searchList = [];
+
+/**
   * A dictionary to convert TM's to use a specific image
   * @constant
   * @type {!Object.&lt;string, string>}
@@ -320,7 +327,7 @@ class Item {
           &lt;div class="container">
             &lt;div class="row searchVal">
               &lt;div class="d-flex flex-row col-3 mb-3">
-                &lt;img height="50" width="50" src="Images/Items/${tmConversion[this.name]}.png" alt="${this.name} Image"/>
+                &lt;img height="50" width="50" class="lazy" data-src="Images/Items/${tmConversion[this.name]}.png" alt="${this.name} Image"/>
                 &lt;h4 class="ml-3 pt-3 font-weight-bold text-primary" style="font-size: 14pt">${this.name}&lt;/h4>
               &lt;/div>
               &lt;div class="flex-row col-1 mb-3">
@@ -370,14 +377,14 @@ class Moves {
     moveTypes = `&lt;h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">`;
     if (this.name.length == 2) {
       for (let i = 0; i &lt; this.name.length; i++) {
-        holder += `&lt;img height="45" width="45" src="Images/Items/${this.type[i]}.png" alt="${this.name[i]} Image"/>`;
+        holder += `&lt;img height="45" width="45" class="lazy" data-src="Images/Items/${this.type[i]}.png" alt="${this.name[i]} Image"/>`;
         moveNames += `${this.name[i]}, `;
         moveTypes += `${this.type[i]}, `;
       }
       moveNames = moveNames.substring(0, moveNames.length - 2);
       moveTypes = moveTypes.substring(0, moveTypes.length - 2);
     } else {
-      holder = `&lt;img height="45" width="45" src="Images/Items/${this.type}.png" alt="${this.name} Image"/>`;
+      holder = `&lt;img height="45" width="45" class="lazy" data-src="Images/Items/${this.type}.png" alt="${this.name} Image"/>`;
       moveNames += `${this.name}`;
       moveTypes += `${this.type}`;
     }
@@ -417,14 +424,14 @@ const displayMovesToScreen = (type) => {
       if (List[i].name.length == 2) {
         for (let j = 0; j &lt; List[i].name.length; j++) {
           if (List[i].type[j] === type) {
-            attributes.push([[`&lt;img height="45" width="45" src="Images/Items/${List[i].type[j]}.png" alt="${List[i].name[j]} Image"/>`],
+            attributes.push([[`&lt;img height="45" width="45" class="lazy" data-src="Images/Items/${List[i].type[j]}.png" alt="${List[i].name[j]} Image"/>`],
               [`&lt;h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">${List[i].type[j]}&lt;/h4>`],
               [`&lt;h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 1.2em">${List[i].name[j]}&lt;/h4>`],
               [`&lt;h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">${List[i].imgName}&lt;/h4>`]]);
           }
         }
       } else {
-        attributes.push([[`&lt;img height="45" width="45" src="Images/Items/${List[i].type}.png" alt="${List[i].name} Image"/>`],
+        attributes.push([[`&lt;img height="45" width="45" class="lazy" data-src="Images/Items/${List[i].type}.png" alt="${List[i].name} Image"/>`],
           [`&lt;h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">${List[i].type}&lt;/h4>`],
           [`&lt;h4 class="mx-3 pt-3 font-weight-bold text-primary" style="font-size: 1.2em">${List[i].name}&lt;/h4>`],
           [`&lt;h4 class="mx-3 pt-3" style="font-weight: normal; font-size: 1.2em">${List[i].imgName}&lt;/h4>`]]);
@@ -450,6 +457,7 @@ const displayMovesToScreen = (type) => {
           &lt;/div>
             `);
   }
+  Lazy();
 
   if ($('body').height() > $(window).height()) {
     if ($(window).scrollTop() !== 0) {
@@ -479,6 +487,7 @@ const displayTypesToScreen = (type) => {
   } else {
     displayTypesToScreenExtend(type, 0);
   }
+  Lazy();
 
   if ($('body').height() > $(window).height()) {
     if ($(window).scrollTop() !== 0) {
@@ -508,7 +517,7 @@ const displayTypesToScreenExtend = (type, num) => {
       $('#pokemon-container').append(`
         &lt;li class="list-group-item" style="border: none;">
               &lt;div style="width:140px!important" class="d-flex mx-3 flex-column">
-                &lt;a href="index.html?Search=${List[i].name}" class="my-2 align-self-center">&lt;img height="100" width="100" src="Images/Pokemon/${List[i].name}.png" 
+                &lt;a href="index.html?Search=${List[i].name}" class="my-2 align-self-center">&lt;img height="100" width="100" class="lazy" data-src="Images/Pokemon/${List[i].name}.png" 
                 alt="${List[i].name} Image"/>&lt;/a>
                 &lt;div id="${List[i].nid}" class="d-flex">${holder}&lt;/div>
                 &lt;h5 style="font-weight: normal; text-align: center;">${List[i].name}&lt;/h5>
@@ -525,57 +534,75 @@ const displayTypesToScreenExtend = (type, num) => {
 const typeClick = () => {
   $('#Normal').click(function() {
     displayTypesToScreen('Normal');
+    searchList = document.querySelectorAll('img');
   });
   $('#Fire').click(function() {
     displayTypesToScreen('Fire');
+    searchList = document.querySelectorAll('img');
   });
   $('#Water').click(function() {
     displayTypesToScreen('Water');
+    searchList = document.querySelectorAll('img');
   });
   $('#Electric').click(function() {
     displayTypesToScreen('Electric');
+    searchList = document.querySelectorAll('img');
   });
   $('#Grass').click(function() {
     displayTypesToScreen('Grass');
+    searchList = document.querySelectorAll('img');
   });
   $('#Ice').click(function() {
     displayTypesToScreen('Ice');
+    searchList = document.querySelectorAll('img');
   });
   $('#Fighting').click(function() {
     displayTypesToScreen('Fighting');
+    searchList = document.querySelectorAll('img');
   });
   $('#Poison').click(function() {
     displayTypesToScreen('Poison');
+    searchList = document.querySelectorAll('img');
   });
   $('#Ground').click(function() {
     displayTypesToScreen('Ground');
+    searchList = document.querySelectorAll('img');
   });
   $('#Flying').click(function() {
     displayTypesToScreen('Flying');
+    searchList = document.querySelectorAll('img');
   });
   $('#Psychic').click(function() {
     displayTypesToScreen('Psychic');
+    searchList = document.querySelectorAll('img');
   });
   $('#Bug').click(function() {
     displayTypesToScreen('Bug');
+    searchList = document.querySelectorAll('img');
   });
   $('#Rock').click(function() {
     displayTypesToScreen('Rock');
+    searchList = document.querySelectorAll('img');
   });
   $('#Ghost').click(function() {
     displayTypesToScreen('Ghost');
+    searchList = document.querySelectorAll('img');
   });
   $('#Dragon').click(function() {
     displayTypesToScreen('Dragon');
+    searchList = document.querySelectorAll('img');
   });
   $('#Dark').click(function() {
     displayTypesToScreen('Dark');
+    searchList = document.querySelectorAll('img');
   });
   $('#Steel').click(function() {
     displayTypesToScreen('Steel');
+    searchList = document.querySelectorAll('img');
   });
   $('#Fairy').click(function() {
     displayTypesToScreen('Fairy');
+    searchList = document.querySelectorAll('img');
   });
 };
 
@@ -641,13 +668,13 @@ const Lazy = () => {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Item.html">Item</a></li><li><a href="Moves.html">Moves</a></li><li><a href="Pokemon.html">Pokemon</a></li><li><a href="TypeList.html">TypeList</a></li><li><a href="Types.html">Types</a></li></ul><h3>Global</h3><ul><li><a href="global.html#AJAX">AJAX</a></li><li><a href="global.html#AlolaAjax">AlolaAjax</a></li><li><a href="global.html#AlolanJSON">AlolanJSON</a></li><li><a href="global.html#AlolanRegionAjax">AlolanRegionAjax</a></li><li><a href="global.html#AlolanRegionsJSON">AlolanRegionsJSON</a></li><li><a href="global.html#AlolaOnLoad">AlolaOnLoad</a></li><li><a href="global.html#arrayIndex">arrayIndex</a></li><li><a href="global.html#attributes">attributes</a></li><li><a href="global.html#detGen">detGen</a></li><li><a href="global.html#display">display</a></li><li><a href="global.html#displayMovesToScreen">displayMovesToScreen</a></li><li><a href="global.html#displayTypesToScreen">displayTypesToScreen</a></li><li><a href="global.html#displayTypesToScreenExtend">displayTypesToScreenExtend</a></li><li><a href="global.html#generation">generation</a></li><li><a href="global.html#HoennAjax">HoennAjax</a></li><li><a href="global.html#HoennJSON">HoennJSON</a></li><li><a href="global.html#HoennOnLoad">HoennOnLoad</a></li><li><a href="global.html#holder">holder</a></li><li><a href="global.html#index">index</a></li><li><a href="global.html#itemLoad">itemLoad</a></li><li><a href="global.html#ItemsAjax">ItemsAjax</a></li><li><a href="global.html#ItemSearch">ItemSearch</a></li><li><a href="global.html#ItemsJSON">ItemsJSON</a></li><li><a href="global.html#ItemsOnLoad">ItemsOnLoad</a></li><li><a href="global.html#JohtoAjax">JohtoAjax</a></li><li><a href="global.html#JohtoJSON">JohtoJSON</a></li><li><a href="global.html#JohtoOnLoad">JohtoOnLoad</a></li><li><a href="global.html#KalosAjax">KalosAjax</a></li><li><a href="global.html#KalosJSON">KalosJSON</a></li><li><a href="global.html#KalosOnLoad">KalosOnLoad</a></li><li><a href="global.html#KalosRegionAjax">KalosRegionAjax</a></li><li><a href="global.html#KalosRegionsJSON">KalosRegionsJSON</a></li><li><a href="global.html#KantoJSON">KantoJSON</a></li><li><a href="global.html#KantoLoad">KantoLoad</a></li><li><a href="global.html#KantoOnLoad">KantoOnLoad</a></li><li><a href="global.html#Lazy">Lazy</a></li><li><a href="global.html#List">List</a></li><li><a href="global.html#loadAkala">loadAkala</a></li><li><a href="global.html#loadAlola">loadAlola</a></li><li><a href="global.html#loadCentral">loadCentral</a></li><li><a href="global.html#loadCoastal">loadCoastal</a></li><li><a href="global.html#loadGen">loadGen</a></li><li><a href="global.html#loadHoenn">loadHoenn</a></li><li><a href="global.html#loadJohto">loadJohto</a></li><li><a href="global.html#loadKalos">loadKalos</a></li><li><a href="global.html#loadKanto">loadKanto</a></li><li><a href="global.html#loadLetsGo">loadLetsGo</a></li><li><a href="global.html#loadMelemele">loadMelemele</a></li><li><a href="global.html#loadMountain">loadMountain</a></li><li><a href="global.html#loadNational">loadNational</a></li><li><a href="global.html#loadPoni">loadPoni</a></li><li><a href="global.html#loadSinnoh">loadSinnoh</a></li><li><a href="global.html#loadUlaula">loadUlaula</a></li><li><a href="global.html#loadUnova">loadUnova</a></li><li><a href="global.html#moveNames">moveNames</a></li><li><a href="global.html#moves">moves</a></li><li><a href="global.html#MovesAjax">MovesAjax</a></li><li><a href="global.html#MoveSearch">MoveSearch</a></li><li><a href="global.html#MovesJSON">MovesJSON</a></li><li><a href="global.html#MovesLoad">MovesLoad</a></li><li><a href="global.html#moveTypes">moveTypes</a></li><li><a href="global.html#names">names</a></li><li><a href="global.html#NationalAjax">NationalAjax</a></li><li><a href="global.html#NationalJSON">NationalJSON</a></li><li><a href="global.html#NationalOnLoad">NationalOnLoad</a></li><li><a href="global.html#PokemonSearch">PokemonSearch</a></li><li><a href="global.html#region">region</a></li><li><a href="global.html#SinnohAjax">SinnohAjax</a></li><li><a href="global.html#SinnohJSON">SinnohJSON</a></li><li><a href="global.html#SinnohOnLoad">SinnohOnLoad</a></li><li><a href="global.html#splitVal">splitVal</a></li><li><a href="global.html#textColors">textColors</a></li><li><a href="global.html#title">title</a></li><li><a href="global.html#tmConversion">tmConversion</a></li><li><a href="global.html#toTitleCase">toTitleCase</a></li><li><a href="global.html#type">type</a></li><li><a href="global.html#typeClick">typeClick</a></li><li><a href="global.html#typeColors">typeColors</a></li><li><a href="global.html#typeEffectiveness">typeEffectiveness</a></li><li><a href="global.html#typeList">typeList</a></li><li><a href="global.html#types">types</a></li><li><a href="global.html#UnovaAjax">UnovaAjax</a></li><li><a href="global.html#UnovaJSON">UnovaJSON</a></li><li><a href="global.html#UnovaOnLoad">UnovaOnLoad</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Item.html">Item</a></li><li><a href="Moves.html">Moves</a></li><li><a href="Pokemon.html">Pokemon</a></li><li><a href="TypeList.html">TypeList</a></li><li><a href="Types.html">Types</a></li></ul><h3>Global</h3><ul><li><a href="global.html#AJAX">AJAX</a></li><li><a href="global.html#AlolaAjax">AlolaAjax</a></li><li><a href="global.html#AlolanJSON">AlolanJSON</a></li><li><a href="global.html#AlolanRegionAjax">AlolanRegionAjax</a></li><li><a href="global.html#AlolanRegionsJSON">AlolanRegionsJSON</a></li><li><a href="global.html#AlolaOnLoad">AlolaOnLoad</a></li><li><a href="global.html#arrayIndex">arrayIndex</a></li><li><a href="global.html#attributes">attributes</a></li><li><a href="global.html#dataSrc">dataSrc</a></li><li><a href="global.html#detGen">detGen</a></li><li><a href="global.html#display">display</a></li><li><a href="global.html#displayMovesToScreen">displayMovesToScreen</a></li><li><a href="global.html#displayTypesToScreen">displayTypesToScreen</a></li><li><a href="global.html#displayTypesToScreenExtend">displayTypesToScreenExtend</a></li><li><a href="global.html#generation">generation</a></li><li><a href="global.html#HoennAjax">HoennAjax</a></li><li><a href="global.html#HoennJSON">HoennJSON</a></li><li><a href="global.html#HoennOnLoad">HoennOnLoad</a></li><li><a href="global.html#holder">holder</a></li><li><a href="global.html#index">index</a></li><li><a href="global.html#itemLoad">itemLoad</a></li><li><a href="global.html#ItemsAjax">ItemsAjax</a></li><li><a href="global.html#ItemSearch">ItemSearch</a></li><li><a href="global.html#ItemsJSON">ItemsJSON</a></li><li><a href="global.html#ItemsOnLoad">ItemsOnLoad</a></li><li><a href="global.html#JohtoAjax">JohtoAjax</a></li><li><a href="global.html#JohtoJSON">JohtoJSON</a></li><li><a href="global.html#JohtoOnLoad">JohtoOnLoad</a></li><li><a href="global.html#KalosAjax">KalosAjax</a></li><li><a href="global.html#KalosJSON">KalosJSON</a></li><li><a href="global.html#KalosOnLoad">KalosOnLoad</a></li><li><a href="global.html#KalosRegionAjax">KalosRegionAjax</a></li><li><a href="global.html#KalosRegionsJSON">KalosRegionsJSON</a></li><li><a href="global.html#KantoJSON">KantoJSON</a></li><li><a href="global.html#KantoLoad">KantoLoad</a></li><li><a href="global.html#KantoOnLoad">KantoOnLoad</a></li><li><a href="global.html#Lazy">Lazy</a></li><li><a href="global.html#List">List</a></li><li><a href="global.html#listIndex">listIndex</a></li><li><a href="global.html#loadAkala">loadAkala</a></li><li><a href="global.html#loadAlola">loadAlola</a></li><li><a href="global.html#loadCentral">loadCentral</a></li><li><a href="global.html#loadCoastal">loadCoastal</a></li><li><a href="global.html#loadGen">loadGen</a></li><li><a href="global.html#loadHoenn">loadHoenn</a></li><li><a href="global.html#loadJohto">loadJohto</a></li><li><a href="global.html#loadKalos">loadKalos</a></li><li><a href="global.html#loadKanto">loadKanto</a></li><li><a href="global.html#loadLetsGo">loadLetsGo</a></li><li><a href="global.html#loadMelemele">loadMelemele</a></li><li><a href="global.html#loadMountain">loadMountain</a></li><li><a href="global.html#loadNational">loadNational</a></li><li><a href="global.html#loadPoni">loadPoni</a></li><li><a href="global.html#loadSinnoh">loadSinnoh</a></li><li><a href="global.html#loadUlaula">loadUlaula</a></li><li><a href="global.html#loadUnova">loadUnova</a></li><li><a href="global.html#moveNames">moveNames</a></li><li><a href="global.html#moves">moves</a></li><li><a href="global.html#MovesAjax">MovesAjax</a></li><li><a href="global.html#MoveSearch">MoveSearch</a></li><li><a href="global.html#MovesJSON">MovesJSON</a></li><li><a href="global.html#MovesLoad">MovesLoad</a></li><li><a href="global.html#moveTypes">moveTypes</a></li><li><a href="global.html#names">names</a></li><li><a href="global.html#NationalAjax">NationalAjax</a></li><li><a href="global.html#NationalJSON">NationalJSON</a></li><li><a href="global.html#NationalOnLoad">NationalOnLoad</a></li><li><a href="global.html#PokemonSearch">PokemonSearch</a></li><li><a href="global.html#region">region</a></li><li><a href="global.html#searchList">searchList</a></li><li><a href="global.html#SinnohAjax">SinnohAjax</a></li><li><a href="global.html#SinnohJSON">SinnohJSON</a></li><li><a href="global.html#SinnohOnLoad">SinnohOnLoad</a></li><li><a href="global.html#splitVal">splitVal</a></li><li><a href="global.html#textColors">textColors</a></li><li><a href="global.html#title">title</a></li><li><a href="global.html#tmConversion">tmConversion</a></li><li><a href="global.html#toTitleCase">toTitleCase</a></li><li><a href="global.html#type">type</a></li><li><a href="global.html#typeClick">typeClick</a></li><li><a href="global.html#typeColors">typeColors</a></li><li><a href="global.html#typeEffectiveness">typeEffectiveness</a></li><li><a href="global.html#typeList">typeList</a></li><li><a href="global.html#types">types</a></li><li><a href="global.html#UnovaAjax">UnovaAjax</a></li><li><a href="global.html#UnovaJSON">UnovaJSON</a></li><li><a href="global.html#UnovaOnLoad">UnovaOnLoad</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Tue May 07 2019 09:31:23 GMT-0500 (Central Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Tue May 07 2019 15:09:21 GMT-0500 (Central Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

@@ -12,6 +12,14 @@
  * @default 0
  */
 let listIndex = 0;
+
+/**
+ * A string to hold the the data-src of the image
+ * @type {!string}
+ * @default '''
+ */
+let dataSrc = '';
+
 /**
  * Takes a string and changes the first character of each word to be uppercase
  * @example
@@ -45,8 +53,9 @@ const PokemonSearch = (type, func) => {
 
     if (value !== '') {
       for (let g = 0; g < searchList.length; g++) {
-        if (searchList[g].dataset.src.toLowerCase().includes(value)) {
-          listIndex = List.find((x) => x.name == searchList[g].dataset.src.split('/')[2].split('.')[0].trim()).nid;
+        dataSrc = searchList[g].dataset.src.split('/')[2].split('.')[0].trim();
+        if (dataSrc.toLowerCase().includes(value)) {
+          listIndex = List.find((x) => x.name == dataSrc).nid - 1;
           List[listIndex].loadToPage();
           List[listIndex].showTypes();
         }
