@@ -53,9 +53,14 @@ const PokemonSearch = (type, func) => {
 
     if (value !== '') {
       for (let g = 0; g < searchList.length; g++) {
-        dataSrc = searchList[g].dataset.src.split('/')[2].split('.')[0].trim();
+        dataSrc = searchList[g].dataset.src.split('/')[2].trim();
+        if (dataSrc.includes(' ')) {
+          dataSrc = dataSrc.split(' ')[0] + ' ' + dataSrc.split(' ')[1].split('.')[0];
+        } else {
+          dataSrc = dataSrc.split('.')[0];
+        }
         if (dataSrc.toLowerCase().includes(value)) {
-          listIndex = List.find((x) => x.name == dataSrc).nid - 1;
+          listIndex = List.indexOf(List.find((x) => x.name == dataSrc));
           List[listIndex].loadToPage();
           List[listIndex].showTypes();
         }
