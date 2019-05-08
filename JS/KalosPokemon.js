@@ -66,16 +66,19 @@ window.onload = () => {
   });
   typeClick();
   $('#myInput').keyup(function() {
-    type = $('#Center').text().split(' ')[3];
     region = $('#Center').text().split(' ')[2];
-    if (region === 'Pokémon') {
-      PokemonSearch(type, loadKalos);
+    if (region === 'Pokémon' || typeColors[$('#Center').text().split(' ')[2].trim()] !== undefined) {
+      type = $('#Center').text().split(' ')[2];
+      PokemonSearch(type);
     } else if (region === 'Central') {
-      PokemonSearch(type, loadCentral);
+      type = $('#Center').text().split(' ')[3];
+      PokemonSearch(type);
     } else if (region === 'Coastal') {
-      PokemonSearch(type, loadCoastal);
+      type = $('#Center').text().split(' ')[3];
+      PokemonSearch(type);
     } else {
-      PokemonSearch(type, loadMountain);
+      type = $('#Center').text().split(' ')[3];
+      PokemonSearch(type);
     }
   });
 };

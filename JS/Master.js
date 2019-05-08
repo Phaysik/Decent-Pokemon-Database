@@ -448,11 +448,7 @@ const displayTypesToScreen = (type) => {
   title = $('#Center').text().split(' ');
 
   $('#myInput').val('');
-  if (title[1] === 'Kalos' && title[2] !== 'Pokémon') {
-    $('#Center').empty().text(`All ${title[1] + ' ' + title[2] + ' ' + type} Pokémon in Database`);
-  } else {
-    $('#Center').empty().text(`All ${title[1] + ' ' + type} Pokémon in Database`);
-  }
+  $('#Center').empty().text(`All ${title[1] + ' ' + type} Pokémon in Database`);
 
   if ($('#Center').text().includes('Kanto')) {
     displayTypesToScreenExtend(type, 2);

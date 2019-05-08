@@ -51,7 +51,7 @@ window.onload = function() {
   typeClick();
   $('#myInput').keyup(function() {
     type = $('#Center').text().split(' ')[2];
-    PokemonSearch(type, loadSinnoh);
+    PokemonSearch(type);
   });
 };
 

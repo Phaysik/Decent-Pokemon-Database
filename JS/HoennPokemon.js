@@ -51,7 +51,7 @@ window.onload = () => {
   typeClick();
   $('#myInput').keyup(function() {
     type = $('#Center').text().split(' ')[2];
-    PokemonSearch(type, loadHoenn);
+    PokemonSearch(type);
   });
 };
 

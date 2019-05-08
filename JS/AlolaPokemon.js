@@ -72,15 +72,15 @@ window.onload = () => {
     type = $('#Center').text().split(' ')[2];
     region = $('#Center').text().split(' ')[1];
     if (region === 'Alolan') {
-      PokemonSearch(type, loadAlola);
+      PokemonSearch(type);
     } else if (region === 'Melemele') {
-      PokemonSearch(type, loadMelemele);
+      PokemonSearch(type);
     } else if (region === 'Akala') {
-      PokemonSearch(type, loadAkala);
+      PokemonSearch(type);
     } else if (region === 'Ulaula') {
-      PokemonSearch(type, loadUlaula);
+      PokemonSearch(type);
     } else {
-      PokemonSearch(type, loadPoni);
+      PokemonSearch(type);
     }
   });
 };

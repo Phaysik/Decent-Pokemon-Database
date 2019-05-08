@@ -63,9 +63,9 @@ window.onload = () => {
     type = $('#Center').text().split(' ')[2];
     region = $('#Center').text().split(' ')[1];
     if (region === 'Kanto') {
-      PokemonSearch(type, loadKanto);
+      PokemonSearch(type);
     } else {
-      PokemonSearch(type, loadLetsGo);
+      PokemonSearch(type);
     }
   });
 };

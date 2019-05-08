@@ -38,9 +38,8 @@ const toTitleCase = (phrase) => {
 /**
  * Searches through a list of pokemon and then display their information to the page
  * @param {!string} type A string representing what the Pokemon type searched is
- * @param {!string} func A string representing what function to call if the search box is empty
  */
-const PokemonSearch = (type, func) => {
+const PokemonSearch = (type) => {
   $(document).ready(function() {
   /**
   * A string that the user inputs
@@ -55,9 +54,9 @@ const PokemonSearch = (type, func) => {
       for (let g = 0; g < searchList.length; g++) {
         dataSrc = searchList[g].dataset.src.split('/')[2].trim();
         if (dataSrc.includes(' ')) {
-          dataSrc = dataSrc.split(' ')[0] + ' ' + dataSrc.split(' ')[1].split('.')[0];
+          dataSrc = dataSrc.split(' ')[0] + ' ' + dataSrc.split(' ')[1].split('.png')[0];
         } else {
-          dataSrc = dataSrc.split('.')[0];
+          dataSrc = dataSrc.split('.png')[0];
         }
         if (dataSrc.toLowerCase().includes(value)) {
           listIndex = List.indexOf(List.find((x) => x.name == dataSrc));
@@ -69,7 +68,10 @@ const PokemonSearch = (type, func) => {
       if (type !== 'Pokémon') {
         displayTypesToScreen(type);
       } else {
-        func();
+        for (let g = 0; g < List.length; g++) {
+          List[g].loadToPage();
+          List[g].showTypes();
+        }
       }
     }
     Lazy();
